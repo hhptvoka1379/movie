@@ -30,6 +30,17 @@ python3 -m http.server 8000
 
 then open http://localhost:8000.
 
+## Testing
+
+Run the scraper unit tests, offline pipeline verifier, and end-to-end Playwright + `axe-core` smoke suite (`390x844` and `1280x800`):
+
+```sh
+cd scrape && npm test
+cd scrape && npm run smoke
+```
+
+See [`docs/QA.md`](docs/QA.md) for full venue/price coverage and QA notes.
+
 ## Attribution
 
 This product uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
