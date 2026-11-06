@@ -1,0 +1,14 @@
+import { chromium } from 'playwright';
+const [url] = process.argv.slice(2);
+const b = await chromium.launch();
+const p = await (await b.newContext({ locale: 'it-IT' })).newPage();
+await p.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+const html = await p.content();
+console.log('html len', html.length);
+const txt = await p.innerText('body');
+console.log(txt.slice(txt.indexOf('PROGRAMMAZIONE'), txt.indexOf('PROGRAMMAZIONE') + 200));
+const links = await p.$$eval('a', a => a.map(x => x.innerText.trim().replace(/\s+/g, ' ') + ' | ' + x.href).filter(s => /film|data|day|giorn|\d\d:\d\d/i.test(s)).slice(0, 25));
+console.log(links.join('\n'));
+const sel = await p.$$eval('[class*="date"],[class*="day"],[class*="calendar"]', e => e.slice(0, 10).map(x => x.className + ' :: ' + x.innerText.slice(0, 60).replace(/\s+/g, ' ')));
+console.log(sel.join('\n'));
+await b.close();

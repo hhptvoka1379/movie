@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const [url] = process.argv.slice(2);
+const b = await chromium.launch();
+const p = await (await b.newContext({ locale: 'it-IT' })).newPage();
+const xhr = [];
+p.on('response', async r => { if (['xhr', 'fetch'].includes(r.request().resourceType()) && /18tickets/.test(r.url())) { let t = ''; try { t = (await r.text()).slice(0, 250).replace(/\s+/g, ' '); } catch {} xhr.push(r.status() + ' ' + r.url().slice(0, 140) + '\n    ' + t); } });
+await p.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+console.log((await p.innerText('body')).slice(0, 1800));
+console.log((await p.$$eval('a', a => a.map(x => x.innerText.trim().replace(/\s+/g, ' ') + ' | ' + x.href).filter(s => /\d\d[:.]\d\d|#|sala|prenot|acquist/i.test(s)).slice(0, 15))).join('\n'));
+console.log(xhr.join('\n'));
+await b.close();
