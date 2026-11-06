@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import * as P from '../lib/prices.mjs';
-import { collectPrices, webticToShowings, webticPolicy, webticBooking } from '../adapters/webtic.mjs';
+import { collectPrices, webticToShowings, webticPolicy, webticBooking, mergeTariffPages } from '../adapters/webtic.mjs';
 import { tariffUrls, anteoToShowings } from '../adapters/anteo.mjs';
 
 const FX = new URL('./fixtures/', import.meta.url);
@@ -181,6 +181,35 @@ test('webtic booking: no invented deep link', () => {
   assert.equal(b.venue, 'https://www.webtic.it/#/shopping?action=loadLocal&localId=5351');
   assert.equal(b.perfTemplate, null);
   assert.match(b.reason, /no public per-performance URL/);
+});
+
+test('a venue tariff page fills the gap WebTic leaves', () => {
+  const cap = JSON.parse(read('webtic-prices.json'));
+  // WebTic alone: no tariffs on the public page.
+  const bare = collectPrices({ getFullScheduling: cap.getFullScheduling, getLocalInfo: cap.getLocalInfo }, [], 5068);
+  assert.match(bare.reason, /no tariff endpoint/);
+  // The venue's own tariff page states them.
+  const pages = [{ url: 'https://example.invalid/tariffe', status: 200, rates: P.ratesFromText(read('anteo-tariffe.html'), 'https://example.invalid/tariffe') }];
+  mergeTariffPages(bare, pages);
+  assert.equal(bare.reason, null);
+  assert.ok(bare.local.some(r => r.label === 'Intero feriali (lun-ven)' && r.eur === 7.5));
+  assert.deepEqual(bare.tariffUrls, ['https://example.invalid/tariffe']);
+  assert.equal(P.resolvePrice({ date: '2026-11-14', format: '2D' }, bare.local).eur, 9);
+});
+
+test('an unreachable tariff page is reported, not fatal', () => {
+  const prices = { local: [], rates: [], sources: [], reason: 'WebTic page exposes no tariff endpoint' };
+  mergeTariffPages(prices, [{ url: 'https://example.invalid/tariffe', status: 404, rates: [], reason: 'HTTP 404' }]);
+  assert.match(prices.reason, /Venue tariff page\(s\) tried: https:\/\/example.invalid\/tariffe \(HTTP 404\)/);
+  assert.equal(prices.local.length, 0);
+});
+
+test('policy falls back to the venue tariff page when WebTic states none', () => {
+  const st = webticPolicy({ DS: { Local: { LocalId: 1, Infos: {} } } },
+    [{ url: 'https://example.invalid/tariffe', text: read('anteo-tariffe.html') }]);
+  assert.match(st.reserve, /^yes/);
+  assert.match(st.group, /^stated/);
+  assert.equal(st.source, 'https://example.invalid/tariffe');
 });
 
 test('anteo tariff url candidates', () => {

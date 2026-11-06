@@ -52,7 +52,9 @@ for (const c of cinemas) {
     rates: prev.rates || [],
     prices_checked: prev.prices_checked === true,   // only a live run may claim prices were probed
     price_source: prev.price_source || null,
-    price_reason: prev.price_reason || 'tariffs were not probed: this evidence comes from a cached getLocalInfo capture',
+    tariff_urls: s.tariffUrls || s.tariffUrl || null,
+    price_reason: prev.price_reason || ('tariffs were not probed: this evidence comes from a cached getLocalInfo capture' +
+      ((s.tariffUrls || s.tariffUrl) ? '' : '; no source.tariffUrl configured in cinemas.json for this venue')),
     policy: { reserve: policy.reserve, group: policy.group },
     online_sale: onlineSale,
     booking,

@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
-import { scrapeWebtic, webticToShowings, collectPrices, webticPolicy, webticBooking } from './adapters/webtic.mjs';
+import { scrapeWebtic, webticToShowings, collectPrices, webticPolicy, webticBooking, mergeTariffPages } from './adapters/webtic.mjs';
 import { scrapeAnteo, anteoToShowings } from './adapters/anteo.mjs';
 import { scrapeTickets18, tickets18ToShowings } from './adapters/tickets18.mjs';
 import { normalizeTitle, displayTitle, filmType, isNonFilm, MergeLog } from './lib/normalize.mjs';
@@ -113,7 +113,7 @@ function buildPriceInfo(r, adapter) {
 
 // Reads a captured WebTic payload pair (logs/wt-<localId>.json scheduling, logs/wt-<localId>-info.json
 // local info) and returns the same shape scrapeWebtic() would, or null when there is no capture.
-function replayWebtic(localId) {
+function replayWebtic(localId, tariffUrls) {
   const schedFile = path.join(REPLAY_DIR, `wt-${localId}.json`);
   if (!fs.existsSync(schedFile)) return null;
   const payload = JSON.parse(fs.readFileSync(schedFile, 'utf8'));
@@ -123,10 +123,15 @@ function replayWebtic(localId) {
   const info = fs.existsSync(infoFile) ? JSON.parse(fs.readFileSync(infoFile, 'utf8')) : null;
   const got = { getFullScheduling: payload };
   if (info) got.getLocalInfo = info;
+  const prices = collectPrices(got, [], localId);
+  // A tariff page saved by an earlier live run can be replayed too: logs/wt-<localId>-tariff.json
+  const tariffFile = path.join(REPLAY_DIR, `wt-${localId}-tariff.json`);
+  const pages = fs.existsSync(tariffFile) ? JSON.parse(fs.readFileSync(tariffFile, 'utf8')) : [];
+  mergeTariffPages(prices, pages);
+  if (tariffUrls && !pages.length) console.log(`  [replay] tariff url(s) configured but no capture at ${tariffFile}`);
   return {
-    scheduling, info,
-    prices: collectPrices(got, [], localId),
-    policy: webticPolicy(info),
+    scheduling, info, prices,
+    policy: webticPolicy(info, pages),
     booking: webticBooking(localId),
   };
 }
@@ -136,7 +141,8 @@ async function fetchShowings(browser, c, generic) {
   const s = c.source;
   switch (s.adapter) {
     case 'webtic': {
-      const r = REPLAY ? replayWebtic(s.localId) : await scrapeWebtic(browser, s.localId);
+      const tariffUrls = s.tariffUrls || s.tariffUrl || null; // optional, set in cinemas.json
+      const r = REPLAY ? replayWebtic(s.localId, tariffUrls) : await scrapeWebtic(browser, s.localId, { tariffUrls });
       if (!r) return { noReplay: true };
       const all = webticToShowings(r.scheduling, s.localId, r.prices);
       const kept = all.filter(x => !isNonFilm(x.title));

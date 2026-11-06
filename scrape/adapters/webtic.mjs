@@ -5,13 +5,17 @@
 // (getLocalPrices / getTariffe / getPriceList / getEventPrices / getPerformancePrices
 // and anything else the page itself asks for). Only what the page loads on its own is
 // read: no login, no seat selection, no checkout step is ever reached.
-import { ratesFromJson, scopedRowRates, policyStatements, cleanRates } from '../lib/prices.mjs';
+import { ratesFromJson, scopedRowRates, policyStatements, cleanRates, ratesFromText, decodeHtml } from '../lib/prices.mjs';
 
 // Response names worth keeping in full; everything else is kept only when it mentions money.
 const WANTED = /(getFullScheduling|getLocalInfo|getLocalPrices|getPrices?|getTariff\w*|getPriceList|getTariffs?|getEventPrices|getPerformancePrices|getTickets?|getRates)/i;
 const MONEY_HINT = /(price|tariff|prezzo|importo|amount|rate\b)/i;
 
-export async function scrapeWebtic(browser, localId) {
+// opts.tariffUrls: public tariff page(s) of the venue's own site (ucicinemas.it, cinenauta.it,
+// orfeomultisala.com, ...). WebTic itself states no price, so this is where a stated price for a
+// WebTic venue can come from. Optional: set it per cinema in scrape/cinemas.json as
+// source.tariffUrl (string or array) - that file belongs to another chunk.
+export async function scrapeWebtic(browser, localId, opts = {}) {
   const ctx = await browser.newContext({ locale: 'it-IT' });
   const p = await ctx.newPage();
   const got = {};        // wtid -> payload
@@ -27,17 +31,65 @@ export async function scrapeWebtic(browser, localId) {
   });
   await p.goto(`https://www.webtic.it/#/shopping?action=loadLocal&localId=${localId}`, { waitUntil: 'networkidle', timeout: 60000 });
   for (let i = 0; i < 10 && !got.getFullScheduling; i++) await p.waitForTimeout(1000);
+  const tariffPages = await fetchTariffPages(p, opts.tariffUrls);
   await ctx.close();
   if (!got.getFullScheduling?.DS) throw new Error('webtic: no scheduling payload for local ' + localId);
   const prices = collectPrices(got, others, localId);
+  mergeTariffPages(prices, tariffPages);
   return {
     scheduling: got.getFullScheduling.DS.Scheduling,
     info: got.getLocalInfo,
-    captured: Object.keys(got).concat(others.map(o => o.url.slice(0, 80))),
+    captured: Object.keys(got).concat(others.map(o => o.url.slice(0, 80))).concat(tariffPages.map(t => t.url)),
     prices,
-    policy: webticPolicy(got.getLocalInfo),
+    policy: webticPolicy(got.getLocalInfo, tariffPages),
     booking: webticBooking(localId),
+    tariffPages,
   };
+}
+
+// Fetches public tariff pages in the page context. Failures are recorded, never thrown: a venue
+// without a reachable tariff page still has a schedule, it just has no stated price.
+export async function fetchTariffPages(page, urls) {
+  const list = (Array.isArray(urls) ? urls : urls ? [urls] : []).filter(u => /^https?:\/\//i.test(String(u)));
+  const out = [];
+  for (const url of list) {
+    try {
+      const res = await page.evaluate(async u => {
+        const r = await fetch(u, { headers: { Accept: 'text/html' } });
+        return { status: r.status, text: r.ok ? await r.text() : null };
+      }, url);
+      if (!res.text) { out.push({ url, status: res.status, rates: [], reason: `HTTP ${res.status}` }); continue; }
+      const text = await page.evaluate(t => {
+        const d = document.implementation.createHTMLDocument('t');
+        d.body.innerHTML = t;
+        return d.body.innerText || d.body.textContent || '';
+      }, res.text);
+      const rates = ratesFromText(text, url);
+      out.push({ url, status: res.status, rates, text: decodeHtml(res.text), reason: rates.length ? null : 'page states no euro amount' });
+    } catch (e) {
+      out.push({ url, status: null, rates: [], reason: String(e.message || e).split('\n')[0] });
+    }
+  }
+  return out;
+}
+
+// Tariff-page rates are venue-wide: they join the local rate set and become the stated source.
+export function mergeTariffPages(prices, pages) {
+  const stated = (pages || []).filter(pg => pg.rates && pg.rates.length);
+  if (!stated.length) {
+    if ((pages || []).length && prices.reason) {
+      prices.reason += ` Venue tariff page(s) tried: ${pages.map(pg => `${pg.url} (${pg.reason})`).join(', ')}.`;
+    }
+    return prices;
+  }
+  for (const pg of stated) {
+    prices.local.push(...cleanRates(pg.rates));
+    prices.sources.push(pg.url);
+  }
+  prices.rates = prices.local.length ? prices.local : prices.rates;
+  prices.reason = null;
+  prices.tariffUrls = stated.map(pg => pg.url);
+  return prices;
 }
 
 // Gathers tariff rows from every captured payload. Rows nested inside an object that carries a
@@ -94,9 +146,13 @@ export function collectPrices(got, others, localId) {
 }
 
 // Reservation-without-payment and group policy, only as getLocalInfo states them.
-export function webticPolicy(info) {
+export function webticPolicy(info, tariffPages) {
   const local = info?.DS?.Local;
-  if (!local) return { reserve: 'not stated', group: 'not stated', quotes: [], source: null };
+  if (!local) {
+    const texts = (tariffPages || []).map(pg => pg.text).filter(Boolean);
+    const st = texts.length ? policyStatements(texts) : { reserve: 'not stated', group: 'not stated', quotes: [] };
+    return { ...st, source: st.reserve !== 'not stated' || st.group !== 'not stated' ? (tariffPages || []).find(pg => pg.text)?.url || null : null };
+  }
   const i = local.Infos || {};
   const texts = [i.Booking, i.Purchases, i.Welcome, i.InfoLocal, i.Cards, i.ThankYouPage].filter(Boolean);
   const st = policyStatements(texts);
@@ -112,6 +168,14 @@ export function webticPolicy(info) {
     st.reserve = 'no \u2014 WebTic reports booking disabled and purchase enabled for this venue' +
       (st.reserve === 'not stated' ? '' : ' (the site only states the generic online-purchase fee)');
     st.source = 'webtic getLocalInfo BookingConfig/PurchaseConfig';
+  }
+  if ((st.reserve === 'not stated' || st.group === 'not stated') && (tariffPages || []).length) {
+    const pg = tariffPages.find(x => x.text);
+    if (pg) {
+      const extra = policyStatements([pg.text]);
+      if (st.reserve === 'not stated' && extra.reserve !== 'not stated') { st.reserve = extra.reserve; st.source = pg.url; }
+      if (st.group === 'not stated' && extra.group !== 'not stated') { st.group = extra.group; st.source = st.source || pg.url; }
+    }
   }
   return { ...st, source: st.source || (st.reserve !== 'not stated' || st.group !== 'not stated' ? 'webtic getLocalInfo Infos' : null) };
 }
