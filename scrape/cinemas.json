@@ -235,9 +235,9 @@
   {
     "id": "palestrina",
     "name": "Palestrina",
-    "address": "Via Palestrina 7, Milano",
-    "lat": 45.4195694,
-    "lng": 9.0788818,
+    "address": "Via Giovanni Pierluigi da Palestrina 7, Milano",
+    "lat": 45.4850056,
+    "lng": 9.2138936,
     "website": "https://www.mymovies.it/cinema/milano/5435/",
     "booking_url": null,
     "source": {

@@ -19,7 +19,7 @@ async function nominatim(q) {
   return j[0] ? { lat: +j[0].lat, lng: +j[0].lon, display: j[0].display_name } : null;
 }
 
-export const inMilan = (lat, lng) => lat >= 45.40 && lat <= 45.55 && lng >= 9.05 && lng <= 9.30;
+export const inMilan = (lat, lng) => lat >= 45.43 && lat <= 45.54 && lng >= 9.10 && lng <= 9.26;
 
 // Fills lat/lng for every cinema that lacks a valid in-Milan coordinate. Saves cinemas.json after each change.
 // Returns the list of cinema ids that could not be placed.

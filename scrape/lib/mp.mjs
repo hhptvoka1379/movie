@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const [url] = process.argv.slice(2);
+const b = await chromium.launch();
+const p = await (await b.newContext({ locale: 'it-IT' })).newPage();
+const xhr = [];
+p.on('response', async r => { if (['xhr', 'fetch'].includes(r.request().resourceType()) && /movieplayer/.test(r.url())) { let t = ''; try { t = (await r.text()).slice(0, 200).replace(/\s+/g, ' '); } catch {} xhr.push(r.status() + ' ' + r.url().slice(0, 140) + '\n    ' + t); } });
+await p.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+const t = await p.innerText('body');
+const i = t.indexOf('CINEMA:');
+console.log(t.slice(i, i + 1600));
+console.log(xhr.join('\n'));
+await b.close();
