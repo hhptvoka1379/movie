@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+import fs from 'fs';
+const b=await chromium.launch();
+const p=await (await b.newContext({locale:'it-IT',viewport:{width:1280,height:900}})).newPage();
+const seen=[];
+p.on('response',async r=>{const u=r.url();if(['xhr','fetch'].includes(r.request().resourceType())&&/uci/i.test(u)){let t='';try{t=(await r.text()).slice(0,150).replace(/\s+/g,' ')}catch{};seen.push(r.status()+' '+u.slice(0,150)+'\n    '+t)}});
+await p.goto('https://www.ucicinemas.it/',{waitUntil:'networkidle'});
+await p.getByRole('button',{name:/rifiuta|accetta tutti|accetta/i}).first().click({timeout:3000}).catch(()=>{});
+console.log(await p.$$eval('a',a=>a.map(x=>x.innerText.trim().replace(/\s+/g,' ')+'|'+x.href).filter(s=>/cinema|certosa|bicocca|milano|ucicinemas.it\/.+/i.test(s)).slice(0,40).join('\n')));
+console.log(seen.join('\n'));
+await b.close();

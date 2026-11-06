@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const b=await chromium.launch();
+const p=await (await b.newContext({locale:'it-IT',viewport:{width:1280,height:900}})).newPage();
+p.on('response',async r=>{const u=r.url();if(/odeon|showtime|schedul|film|session|cinema/i.test(u)&&['xhr','fetch'].includes(r.request().resourceType()))console.log(r.status(),u.slice(0,170))});
+await p.goto('https://www.thespacecinema.it/',{waitUntil:'networkidle'});
+await p.getByRole('button',{name:/rifiuta|accetta/i}).first().click({timeout:3000}).catch(()=>{});
+await p.getByText(/Odeon/i).first().click({timeout:3000}).catch(()=>console.log('no odeon text'));
+console.log((await p.innerText('body')).match(/.*(scegli|seleziona|cerca).*/gi));
+const t=await p.$$eval('a,button',e=>e.map(x=>(x.innerText||'').trim().replace(/\s+/g,' ')+'|'+(x.href||'')).filter(s=>/cine|sala|scegli|milano/i.test(s)).slice(0,25));
+console.log(t.join('\n'));
+await p.screenshot({path:'logs/space.png'});
+await b.close();

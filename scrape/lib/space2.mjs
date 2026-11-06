@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+import fs from 'fs';
+const b=await chromium.launch();
+const p=await (await b.newContext({locale:'it-IT',viewport:{width:1280,height:900}})).newPage();
+const got={};
+p.on('response',async r=>{const u=r.url();const m=u.match(/microservice\/showings\/(\w+)/);if(m){try{got[m[1]+(got[m[1]]?'2':'')]=await r.text()}catch{}}});
+await p.goto('https://www.thespacecinema.it/',{waitUntil:'networkidle'});
+fs.writeFileSync('logs/space-raw.json',JSON.stringify(got));
+for(const k in got)console.log(k,got[k].length,got[k].slice(0,300));
+const c=JSON.parse(got.cinemas);
+console.log(JSON.stringify((c.result||c).filter?.(x=>/odeon|milano/i.test(JSON.stringify(x))),null,0).slice(0,1200));
+await b.close();
