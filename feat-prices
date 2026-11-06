@@ -1,0 +1,34 @@
+feat-prices — CHUNK MARKER (do not delete)
+
+Branch: feat/prices (this work is committed on the Arena session branch
+arena/d8c70588-movie; this file is the marker so the chunk can be identified).
+
+Owned by this chunk (edit ONLY these):
+  scrape/adapters/webtic.mjs
+  scrape/adapters/anteo.mjs
+  scrape/adapters/tickets18.mjs
+  scrape/run.mjs
+  scrape/remap.mjs
+  data/showtimes.json          (only chunk allowed to regenerate it)
+
+Added by this chunk (also owned here):
+  scrape/lib/prices.mjs        shared euro/label parsing, full-price selection,
+                               day+format resolution, tariff-page parsing
+  scrape/apply-prices.mjs      idempotent: apply captured price/policy evidence
+                               to data/showtimes.json without re-scraping
+  scrape/verify-prices.mjs     offline fixture run of the whole price path
+  scrape/tests/prices.test.mjs unit tests for the parsers
+  scrape/tests/fixtures/*      SYNTHETIC fixtures for offline tests only.
+                               Not scraped data. No price in them is real.
+
+Goal: price_eur = the full-price ticket for each showing exactly as the source
+site states it (prices vary by day and format), else null. Only what a public
+page states is captured — no login, no payment, no scraping of checkout flows.
+
+Requires network: cd scrape && node run.mjs
+  Reaching webtic.it / spaziocinema.info / *.18tickets.it / ucicinemas.it needs
+  a normal machine. Cloud sandboxes with an allowlist (github/npm/pypi only)
+  cannot run it; run.mjs refuses to overwrite data/showtimes.json when every
+  scraped cinema errored, so a dead run cannot wipe the data.
+
+No model attribution is added to commit messages for this chunk.
