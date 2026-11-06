@@ -1,0 +1,112 @@
+{
+  "getLocalPrices?localId=5068": {
+    "userdata": {
+      "StatusOk": true
+    },
+    "DS": {
+      "LocalId": 5068,
+      "Currency": "EUR",
+      "Tariffs": [
+        {
+          "Description": "Intero",
+          "Price": 9.5,
+          "PerformanceId": 177377
+        },
+        {
+          "Description": "Ridotto",
+          "Price": 7.5,
+          "PerformanceId": 177377
+        },
+        {
+          "Description": "Intero 3D",
+          "Price": 12.0,
+          "PerformanceId": 177378
+        },
+        {
+          "Description": "Intero",
+          "Price": 8.5,
+          "EventId": 3016
+        }
+      ]
+    }
+  },
+  "getLocalInfo": {
+    "userdata": {
+      "StatusOk": true
+    },
+    "DS": {
+      "Local": {
+        "LocalId": 5068,
+        "Description": "Cinema di prova (fixture)",
+        "Currency": "EUR",
+        "BookingConfig": {
+          "Enabled": true
+        },
+        "Infos": {
+          "Booking": "Il Servizio di prenotazione vi permette di selezionare da mappa fino ad un massimo di 8 posti adiacenti tra loro. Il costo del servizio di prenotazione e' pari ad 1,00 € per ogni posto prenotato e ritirato. Le prenotazioni vanno ritirate almeno 30 minuti prima dall'inizio dello spettacolo. Per alcuni Spettacoli (ad es. quelli musicali o IMAX) non sara' attivo il servizio di prenotazione ma sara' possibile solo l'acquisto.",
+          "Purchases": "1) L'acquisto e' possibile solo attraverso le carte di credito VISA - MASTERCARD. 6) Per ogni biglietto prenotato e/o acquistato su Internet ci sara' un costo supplementare pari ad 1,00 €."
+        }
+      }
+    }
+  },
+  "getFullScheduling": {
+    "userdata": {
+      "StatusOk": true
+    },
+    "DS": {
+      "Scheduling": {
+        "LocalId": 5068,
+        "Events": [
+          {
+            "EventId": 3016,
+            "Title": "Film di prova",
+            "OriginalTitle": "Film di prova",
+            "Type": "CINEMA",
+            "Is3D": false,
+            "Duration": "02:00",
+            "Year": "2026",
+            "Properties": [
+              "IT",
+              "2D"
+            ],
+            "Days": [
+              {
+                "Day": "2026-11-10T00:00:00",
+                "GroupedByScreen": false,
+                "Performances": [
+                  {
+                    "PerformanceId": 177377,
+                    "Time": "21:30",
+                    "Screen": "ROSSA",
+                    "ScreenId": 73,
+                    "StartTime": "2026-11-10T21:30:00",
+                    "EndTime": "2026-11-10T23:30:00",
+                    "Duration": 120.0
+                  }
+                ]
+              },
+              {
+                "Day": "2026-11-14T00:00:00",
+                "GroupedByScreen": false,
+                "Performances": [
+                  {
+                    "PerformanceId": 177378,
+                    "Time": "20:00",
+                    "Screen": "BLU",
+                    "ScreenId": 74,
+                    "StartTime": "2026-11-14T20:00:00",
+                    "EndTime": "2026-11-14T22:00:00",
+                    "Duration": 120.0
+                  }
+                ]
+              }
+            ],
+            "IsStreaming": false
+          }
+        ]
+      },
+      "OptinRequired": false,
+      "TicketoFound": false
+    }
+  }
+}

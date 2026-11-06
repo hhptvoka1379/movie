@@ -5,7 +5,7 @@
 // (getLocalPrices / getTariffe / getPriceList / getEventPrices / getPerformancePrices
 // and anything else the page itself asks for). Only what the page loads on its own is
 // read: no login, no seat selection, no checkout step is ever reached.
-import { ratesFromJson, policyStatements, cleanRates } from '../lib/prices.mjs';
+import { ratesFromJson, scopedRowRates, policyStatements, cleanRates } from '../lib/prices.mjs';
 
 // Response names worth keeping in full; everything else is kept only when it mentions money.
 const WANTED = /(getFullScheduling|getLocalInfo|getLocalPrices|getPrices?|getTariff\w*|getPriceList|getTariffs?|getEventPrices|getPerformancePrices|getTickets?|getRates)/i;
@@ -40,39 +40,42 @@ export async function scrapeWebtic(browser, localId) {
   };
 }
 
-// Gathers tariff rows from every captured payload. Per-performance rows keep their
-// PerformanceId / EventId so a showing can be matched exactly; rows that apply to the
-// whole local are kept in `local`.
+// Gathers tariff rows from every captured payload. Rows nested inside an object that carries a
+// PerformanceId / EventId are kept per showing; anything else applies to the whole venue.
 export function collectPrices(got, others, localId) {
   const byPerformance = new Map(); // performanceId -> rates[]
   const byEvent = new Map();       // eventId -> rates[]
   const local = [];
   const sources = [];
-
-  const add = (rates, key, keyMap) => {
-    const list = cleanRates(rates);
-    if (!list.length) return false;
-    if (key == null) { local.push(...list); return true; }
-    if (!keyMap.has(key)) keyMap.set(key, []);
-    keyMap.get(key).push(...list);
-    return true;
-  };
+  const scopedSeen = new Set();
 
   const consider = (payload, source) => {
-    const found = ratesFromJson(payload, source);
-    if (!found.length) return false;
-    sources.push(source);
-    for (const r of found) {
-      const pid = performanceIdFor(r, payload);
-      const eid = eventIdFor(r, payload);
-      add([r], pid, byPerformance) || add([r], eid, byEvent) || add([r], null, null);
+    const scoped = scopedRowRates(payload, source);
+    let foundAny = false;
+    for (const r of scoped) {
+      const k = `${r.scope}:${r.id}:${r.label.toLowerCase()}:${r.eur}`;
+      if (scopedSeen.has(k)) continue;
+      scopedSeen.add(k);
+      foundAny = true;
+      const list = cleanRates([r]);
+      if (!list.length) continue;
+      const map = r.scope === 'performance' ? byPerformance : byEvent;
+      if (!map.has(r.id)) map.set(r.id, []);
+      map.get(r.id).push(...list);
+      sources.push(source);
     }
+    if (foundAny) return true;
+    // No per-showing rows: the payload states venue-wide tariffs, if any.
+    const rates = cleanRates(ratesFromJson(payload, source));
+    if (!rates.length) return false;
+    local.push(...rates);
+    sources.push(source);
     return true;
   };
 
   for (const [wtid, payload] of Object.entries(got)) {
-    // getFullScheduling / getLocalInfo never carry tariffs in the captures we have,
-    // but a platform update could add them: still look, and record what was checked.
+    // getFullScheduling / getLocalInfo carry no tariffs in the captures we have, but a platform
+    // update could add them: look anyway, and report what was checked when nothing is found.
     if (wtid === 'getFullScheduling' || wtid === 'getLocalInfo') {
       if (!ratesFromJson(payload, `webtic:${wtid}`).length) continue;
     }
@@ -88,17 +91,6 @@ export function collectPrices(got, others, localId) {
     local, rates, byPerformance: [...byPerformance], byEvent: [...byEvent],
     sources: [...new Set(sources)], reason,
   };
-}
-
-function performanceIdFor(rate, payload) {
-  const m = /PerformanceId=(\d+)/i.exec(rate.source || '');
-  if (m) return Number(m[1]);
-  const q = /performanceId["']?\s*[:=]\s*(\d+)/i.exec(JSON.stringify(payload).slice(0, 2000));
-  return q ? Number(q[1]) : null;
-}
-function eventIdFor(rate) {
-  const m = /EventId=(\d+)/i.exec(rate.source || '');
-  return m ? Number(m[1]) : null;
 }
 
 // Reservation-without-payment and group policy, only as getLocalInfo states them.
