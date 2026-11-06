@@ -9,10 +9,13 @@
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068",
     "source": {
       "adapter": "webtic",
-      "localId": 5068
+      "localId": 5068,
+      "tariffUrls": [
+        "https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano"
+      ]
     },
     "merged_from": [],
-    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+    "notes": "Online sale: yes (WebTic / ucicinemas.it). Reserve without paying: yes — ritiro in cassa almeno 30 min prima (+€1,00; alcuni spettacoli solo acquisto). Group policy: online max 8 posti adiacenti."
   },
   {
     "id": "uci-certosa",
@@ -20,17 +23,20 @@
     "address": "Via Giovanni Gentile 3, Milano",
     "lat": 45.5096401,
     "lng": 9.1281504,
-    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868",
+    "website": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/",
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868",
     "source": {
       "adapter": "webtic",
-      "localId": 5868
+      "localId": 5868,
+      "tariffUrls": [
+        "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+      ]
     },
     "merged_from": [
       "UCI Cinemas Certosa (movieplayer)",
       "Cinelandia Milano Certosa (MyMovies)"
     ],
-    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. Name/address discrepancy: WebTic lists Via Giovanni Gentile 3 (used here); movieplayer lists Via Stephenson 29; MyMovies calls it Cinelandia Milano Certosa. No official site confirmed; WebTic page used as website."
+    "notes": "Online sale: yes (WebTic 5868 / cinelandia.it). Reserve without paying: supplemento prenotazione €1,00 indicato su cinelandia.it. Group policy: not stated. Rebranded from UCI Certosa to Cinelandia Milano Certosa (Via Giovanni Gentile 3); full prices vary between Sale 7–8 and other halls on evenings/weekends."
   },
   {
     "id": "space-odeon",
@@ -56,7 +62,10 @@
     "booking_url": "https://www.spaziocinema.info/milano",
     "source": {
       "adapter": "anteo",
-      "cinemaParam": "Citylife anteo"
+      "cinemaParam": "Citylife anteo",
+      "tariffUrls": [
+        "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+      ]
     },
     "merged_from": [],
     "notes": "Online sale: yes (per-showing booking links). Reserve without paying: not stated. Group policy: not stated."
@@ -71,7 +80,10 @@
     "booking_url": "https://www.spaziocinema.info/milano",
     "source": {
       "adapter": "anteo",
-      "cinemaParam": "Ariosto"
+      "cinemaParam": "Ariosto",
+      "tariffUrls": [
+        "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+      ]
     },
     "merged_from": [
       "Ariosto (movieplayer)",
@@ -85,17 +97,20 @@
     "address": "Corso Vercelli 18, Milano",
     "lat": 45.4665478,
     "lng": 9.1618614,
-    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5491",
+    "website": "https://www.notoriouscinemas.it/gloria/",
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5491",
     "source": {
       "adapter": "webtic",
-      "localId": 5491
+      "localId": 5491,
+      "tariffUrls": [
+        "https://www.notoriouscinemas.it/gloria/prezzi.php"
+      ]
     },
     "merged_from": [
       "Gloria Multisala (movieplayer)",
       "Notorious Cinemas Gloria (movieplayer)"
     ],
-    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. Name discrepancy: movieplayer lists 'Gloria Multisala' and 'Notorious Cinemas Gloria' separately; merged. No official site confirmed; WebTic page used as website."
+    "notes": "Online sale: yes (WebTic 5491 via notoriouscinemas.it/gloria/). Reserve without paying: yes — ritiro in cassa almeno 20 min prima (+€1,00/+€1,20 online). Group policy: gruppi convenzionati oltre 30 persone €4,50; scuole mattutine €4,50."
   },
   {
     "id": "arcobaleno",
@@ -133,14 +148,17 @@
     "address": "Viale Monte Nero 84, Milano",
     "lat": 45.4616401,
     "lng": 9.2079373,
-    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062",
+    "website": "https://www.ilregnodelcinema.com/colosseo/",
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062",
     "source": {
       "adapter": "webtic",
-      "localId": 5062
+      "localId": 5062,
+      "tariffUrls": [
+        "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+      ]
     },
     "merged_from": [],
-    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+    "notes": "Online sale: yes (WebTic 5062 via ilregnodelcinema.com/colosseo/, preacquisto +€1,00). Reserve without paying: no (solo preacquisto con carta di credito). Group policy: not stated."
   },
   {
     "id": "eliseo",
@@ -148,14 +166,17 @@
     "address": "Via Torino 64, Milano",
     "lat": 45.4607911,
     "lng": 9.1827157,
-    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5064",
+    "website": "https://www.ilregnodelcinema.com/eliseo/",
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5064",
     "source": {
       "adapter": "webtic",
-      "localId": 5064
+      "localId": 5064,
+      "tariffUrls": [
+        "https://www.ilregnodelcinema.com/eliseo/prezzi.php"
+      ]
     },
     "merged_from": [],
-    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+    "notes": "Online sale: yes (WebTic 5064 via ilregnodelcinema.com/eliseo/, preacquisto +€1,00). Reserve without paying: no (solo preacquisto con carta di credito). Group policy: not stated."
   },
   {
     "id": "centrale",
@@ -170,7 +191,7 @@
       "localId": 5742
     },
     "merged_from": [],
-    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+    "notes": "Online sale: yes (WebTic 5742 linked from multisalacentrale.it). Reserve without paying: yes — ritiro almeno 30 min prima (+€1,00). Group policy: not stated. Tariffario intero non pubblicato su multisalacentrale.it (sito in revisione)."
   },
   {
     "id": "plinius",
@@ -178,14 +199,17 @@
     "address": "Viale Abruzzi 28/30, Milano",
     "lat": 45.4743796,
     "lng": 9.2173237,
-    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094",
+    "website": "https://multisalaplinius.com/",
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094",
     "source": {
       "adapter": "webtic",
-      "localId": 5094
+      "localId": 5094,
+      "tariffUrls": [
+        "https://multisalaplinius.com/informazioni-e-prezzi/"
+      ]
     },
     "merged_from": [],
-    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+    "notes": "Online sale: yes (WebTic 5094 / multisalaplinius.com, supplemento +€1,00). Reserve without paying: yes — ritiro in cassa almeno 30 min prima (+€1,00). Group policy: not stated."
   },
   {
     "id": "orfeo",
@@ -197,10 +221,13 @@
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351",
     "source": {
       "adapter": "webtic",
-      "localId": 5351
+      "localId": 5351,
+      "tariffUrls": [
+        "https://www.orfeomultisala.com/prezzi/"
+      ]
     },
     "merged_from": [],
-    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+    "notes": "Online sale: yes (WebTic 5351 / orfeomultisala.com, solo biglietti interi online +€1,00). Reserve without paying: yes — ritiro almeno 30 min prima (+€1,00). Group policy: online max 8 posti adiacenti."
   },
   {
     "id": "arlecchino",
@@ -212,7 +239,10 @@
     "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/",
     "source": {
       "adapter": "tickets18",
-      "base": "https://arlecchino.cinetecadimilano.18tickets.it/"
+      "base": "https://arlecchino.cinetecadimilano.18tickets.it/",
+      "tariffUrls": [
+        "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/"
+      ]
     },
     "merged_from": [],
     "notes": "Online sale: yes (18tickets). Reserve without paying: PRENOTA form-based links on some events (cinetecamilano.it); otherwise not stated. Group policy: not stated."
@@ -223,14 +253,16 @@
     "address": "Via Savona 57, Milano",
     "lat": 45.4529177,
     "lng": 9.1603582,
-    "website": "https://www.mymovies.it/cinema/milano/5546/",
+    "website": "https://www.progettolumiere.it/mexico/home.php",
     "booking_url": null,
     "source": {
-      "adapter": "mymovies",
-      "id": 5546
+      "adapter": "progettolumiere",
+      "slug": "mexico",
+      "url": "https://www.progettolumiere.it/mexico/home.php",
+      "cineforumPdfUrl": "https://www.progettolumiere.it/movie/cinefomex/cinefomex.pdf"
     },
     "merged_from": [],
-    "notes": "Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. No official site found; schedule from MyMovies (aggregator fallback)."
+    "notes": "Online sale: no (box office only; Cinema Mexico 5/10-entry card and Thursday 'Immagini e Immaginari' cineforum pass sold at box office). Reserve without paying: email reservation only for Rocky Horror special screenings (prenotazioni.rocky@gmail.com); otherwise not stated. Group policy: not stated. Official site is progettolumiere.it/mexico/home.php (legacy cinemamexico.it returns HTTP 500)."
   },
   {
     "id": "palestrina",
@@ -238,14 +270,16 @@
     "address": "Via Giovanni Pierluigi da Palestrina 7, Milano",
     "lat": 45.4850056,
     "lng": 9.2138936,
-    "website": "https://www.mymovies.it/cinema/milano/5435/",
+    "website": "https://www.progettolumiere.it/palestrina/home.php",
     "booking_url": null,
     "source": {
-      "adapter": "mymovies",
-      "id": 5435
+      "adapter": "progettolumiere",
+      "slug": "palestrina",
+      "url": "https://www.progettolumiere.it/palestrina/home.php",
+      "cineforumPdfUrl": "https://www.progettolumiere.it/palestrina/pdf/cineforum.pdf"
     },
     "merged_from": [],
-    "notes": "Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. No official site found; schedule from MyMovies (aggregator fallback)."
+    "notes": "Online sale: no (box office only; Cinema Palestrina 5/10-entry card and Thursday cineforum season pass sold at box office). Reserve without paying: not stated. Group policy: not stated. Managed by Progetto Lumiere (progettolumiere.it/palestrina/home.php, confirmed via sdcmilano.it/sala-palestrina)."
   },
   {
     "id": "auditorium-don-bosco",
@@ -253,13 +287,14 @@
     "address": "Via Melchiorre Gioia 48, Milano",
     "lat": 45.4882339,
     "lng": 9.1998219,
-    "website": "https://www.sdcmilano.it/sale-della-comunita",
+    "website": "https://www.cinebazin.it/new/",
     "booking_url": null,
     "source": {
-      "adapter": "none"
+      "adapter": "cinebazin",
+      "url": "https://www.cinebazin.it/new/"
     },
     "merged_from": [],
-    "notes": "No usable source found (no official site found, not on MyMovies). Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. Website is the SDC Milano sale-della-comunita page."
+    "notes": "Online sale: no (seasonal cineforum membership pass only — tessera personale ~€109 for 30 weekly films sold in person at Via Melchiorre Gioia 48 before screenings; no single-ticket sales). Reserve without paying: no. Group policy: membership-only cinecircolo (C.S.C. Cinecircolo André Bazin, cinebazin.it, confirmed via sdcmilano.it/sala-don-bosco-2; weekly screenings Sun 16:00 and Mon/Wed/Fri 21:00)."
   },
   {
     "id": "osoppo",
@@ -267,13 +302,14 @@
     "address": "Via Osoppo 2, Milano",
     "lat": 45.4697766,
     "lng": 9.1437241,
-    "website": "https://www.sdcmilano.it/sale-della-comunita",
+    "website": "https://www.sdcmilano.it/sala-osoppo-san-protaso",
     "booking_url": null,
     "source": {
-      "adapter": "none"
+      "adapter": "mymovies",
+      "id": 6637
     },
     "merged_from": [],
-    "notes": "No usable source found (no official site found, not on MyMovies). Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. Website is the SDC Milano sale-della-comunita page."
+    "notes": "Parish community hall (Parrocchia San Protaso, sdcmilano.it/sala-osoppo-san-protaso). All former official domains (parrocchiasanprotaso.org, sanprotaso.org, cinemateatroosoppo.org) are expired/parked and Mailticket operator 0131450216563 has 0 active events. Listed on MyMovies (id 6637, mymovies.it/cinema/milano/6637/), which shows active parish screening days when scheduled (0 films on 2026-11-06). Online sale: not stated. Reserve without paying: not stated. Group policy: not stated."
   },
   {
     "id": "milano-a-memoria",
@@ -281,12 +317,12 @@
     "address": "Piazza Armando Diaz 7, Milano",
     "lat": 45.4618633,
     "lng": 9.1899962,
-    "website": "https://www.sdcmilano.it/sale-della-comunita",
+    "website": null,
     "booking_url": null,
     "source": {
       "adapter": "none"
     },
     "merged_from": [],
-    "notes": "No usable source found (no official site found, not on MyMovies). Appears to be an umbrella network of parish halls incl. Osoppo/Palestrina. Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. Website is the SDC Milano sale-della-comunita page."
+    "notes": "Permanently closed 5D tourist cinema attraction ('Milano a Memoria 5D', opened 2013 at Piazza Armando Diaz 7; confirmed permanently closed via Zero.eu, Stardust, and MyMovies id 21468; not listed on sdcmilano.it). No active cinema operates at this address."
   }
 ]

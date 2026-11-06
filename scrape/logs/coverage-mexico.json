@@ -1,0 +1,457 @@
+{
+  "generated_at": "2026-11-06T18:06:26.089Z",
+  "range": {
+    "from": "2026-11-06",
+    "to": "2026-11-15"
+  },
+  "cinema": {
+    "id": "mexico",
+    "name": "Mexico",
+    "address": "Via Savona 57, Milano",
+    "lat": 45.4529177,
+    "lng": 9.1603582,
+    "website": "https://www.progettolumiere.it/mexico/home.php",
+    "booking_url": null,
+    "source_used": "progettolumiere",
+    "published_until": "2026-11-12",
+    "status": "ok",
+    "notes": "Online sale: no (box office only; Cinema Mexico 5/10-entry card and Thursday 'Immagini e Immaginari' cineforum pass sold at box office). Reserve without paying: email reservation only for Rocky Horror special screenings (prenotazioni.rocky@gmail.com); otherwise not stated. Group policy: not stated. Official site is progettolumiere.it/mexico/home.php (legacy cinemamexico.it returns HTTP 500)."
+  },
+  "raw_showings": [
+    {
+      "title": "Se domani non torno",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 117,
+      "date": "2026-11-06",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-06",
+      "time": "18:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "title": "Se domani non torno",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 117,
+      "date": "2026-11-06",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "title": "Se domani non torno",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 117,
+      "date": "2026-11-07",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-07",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-07",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "title": "Se domani non torno",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 117,
+      "date": "2026-11-08",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-08",
+      "time": "18:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "title": "Se domani non torno",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 117,
+      "date": "2026-11-08",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "title": "Se domani non torno",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 117,
+      "date": "2026-11-09",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-09",
+      "time": "18:15",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "title": "Mexico e briciole - I film indipendenti al cinema",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-09",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/Briciole.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-10",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "title": "Se domani non torno",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 117,
+      "date": "2026-11-10",
+      "time": "18:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "title": "Angelo - Il principe del vintage",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-10",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/angelo.php"
+    },
+    {
+      "title": "Se domani non torno",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 117,
+      "date": "2026-11-11",
+      "time": "15:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "title": "Tuner l'Accordatore",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 109,
+      "date": "2026-11-12",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 5,
+      "booking_url": "https://www.progettolumiere.it/mexico/single-moviecin.php"
+    },
+    {
+      "title": "Tuner l'Accordatore",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 109,
+      "date": "2026-11-12",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 6,
+      "booking_url": "https://www.progettolumiere.it/mexico/single-moviecin.php"
+    }
+  ],
+  "films": [
+    {
+      "id": "angelo-il-principe-del-vintage",
+      "title": "Angelo - Il principe del vintage",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    },
+    {
+      "id": "mexico-e-briciole-i-film-indipendenti-al-cinema",
+      "title": "Mexico e briciole - I film indipendenti al cinema",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    },
+    {
+      "id": "minotaur-nel-labirinto-del-potere",
+      "title": "Minotaur",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 135
+    },
+    {
+      "id": "se-domani-non-torno",
+      "title": "Se domani non torno",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 117
+    },
+    {
+      "id": "tuner-l-accordatore",
+      "title": "Tuner l'Accordatore",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 109
+    }
+  ],
+  "showings": [
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "mexico",
+      "date": "2026-11-06",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "mexico",
+      "date": "2026-11-06",
+      "time": "18:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "mexico",
+      "date": "2026-11-06",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "mexico",
+      "date": "2026-11-07",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "mexico",
+      "date": "2026-11-07",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "mexico",
+      "date": "2026-11-07",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "mexico",
+      "date": "2026-11-08",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "mexico",
+      "date": "2026-11-08",
+      "time": "18:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "mexico",
+      "date": "2026-11-08",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "mexico",
+      "date": "2026-11-09",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "mexico",
+      "date": "2026-11-09",
+      "time": "18:15",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "film_id": "mexico-e-briciole-i-film-indipendenti-al-cinema",
+      "cinema_id": "mexico",
+      "date": "2026-11-09",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/Briciole.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "mexico",
+      "date": "2026-11-10",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/minotaur.php"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "mexico",
+      "date": "2026-11-10",
+      "time": "18:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "film_id": "angelo-il-principe-del-vintage",
+      "cinema_id": "mexico",
+      "date": "2026-11-10",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/mexico/angelo.php"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "mexico",
+      "date": "2026-11-11",
+      "time": "15:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/mexico/domaninontorno.php"
+    },
+    {
+      "film_id": "tuner-l-accordatore",
+      "cinema_id": "mexico",
+      "date": "2026-11-12",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 5,
+      "booking_url": "https://www.progettolumiere.it/mexico/single-moviecin.php"
+    },
+    {
+      "film_id": "tuner-l-accordatore",
+      "cinema_id": "mexico",
+      "date": "2026-11-12",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 6,
+      "booking_url": "https://www.progettolumiere.it/mexico/single-moviecin.php"
+    }
+  ]
+}

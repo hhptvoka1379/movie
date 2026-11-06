@@ -1,11 +1,11 @@
 // Film title normalization, film typing, non-film filtering and merge logging for the showtimes pipeline.
 import fs from 'node:fs';
 
-// Leading version tags: "(O.V.) Title", "V.O. Title", "VO - Title". Requires a real tag, so "Vox Populi" is untouched.
-const VO_PREFIX = /^\s*(?:\(\s*(?:o\.?\s?v\.?|v\.?\s?o\.?)\s*\)|(?:o\.v\.|v\.o\.)|(?:ov|vo)(?=\s*[-–:]))\s*[-–:]?\s*/i;
-// Trailing version tags: "Title - V.O.", "Title (V.O.)", "Title - V.O. Sott. Ita"
-const VO_SUFFIX = /\s*[-–(]\s*v\.?\s?o\.?\s*(?:sott\.?\s*ita\.?)?\s*\)?\s*$/i;
-const RIED = /\(\s*ried\.?\s*\)|\s+-?\s*ried\.?\s*$/i;
+// Leading version/hall/rating tags: "(O.V.) Title", "(Lingua Originale) Title", "(Sala XL) Title", "(JP) Title", "V.M. 18 - Title".
+const VO_PREFIX = /^\s*(?:\(\s*(?:o\.?\s?v\.?|v\.?\s?o\.?|lingua\s+or[a-z]*\.?|sala\s+xl|xl(?:-[a-z]+)?|jp|ch|kor)\s*\)|(?:o\.v\.|v\.o\.|v\.?\s*m\.?\s*\d+)|(?:ov|vo|atmos|sala\s+xl)(?=\s*[-–:]))\s*[-–:]?\s*/i;
+// Trailing version tags: "Title - V.O.", "Title (V.O.)", "Title (O.V.)", "Title - V.O. Sott. Ita"
+const VO_SUFFIX = /\s*[-–(]\s*(?:o\.?\s?v\.?|v\.?\s?o\.?)\s*(?:sott\.?\s*ita\.?)?\s*\)?\s*$/i;
+const RIED = /\(\s*ried\.?(?:\s*4k)?\s*\)|\s+-?\s*ried\.?\s*$/i;
 // Format / presentation noise that does not change the film identity (format is kept on the showing itself).
 const NOISE = /\b(infinity vision|imax|4dx|screenx|dolby cinema|dolby atmos|3d|2d|anteprima)\b/gi;
 // Titles that are event-like (concert, preview, series, talk...). Event-like titles are never dropped as non-films.
@@ -15,16 +15,22 @@ const NONFILM = /\b(abbonament\w*|tessera|gift\s*card|buon[oi]|voucher|pop\s?cor
 
 export function stripNoise(raw) {
   let s = String(raw || '').trim();
-  s = s.replace(VO_PREFIX, '').replace(VO_SUFFIX, '');
-  s = s.replace(/\(\s*ried\.?\s*\)/gi, '').replace(/\s+-?\s*ried\.?\s*$/i, '');
+  // Repair mangled angle-bracket tour titles such as `<run it="">Live View</run>` -> `<RUN IT> Live View`
+  s = s.replace(/<run\s+it(?:="")?\s*>\s*/gi, '<RUN IT> ').replace(/<\/run>/gi, ' ');
+  let prev;
+  do {
+    prev = s;
+    s = s.replace(VO_PREFIX, '').replace(VO_SUFFIX, '');
+  } while (s !== prev);
+  s = s.replace(/\(\s*ried\.?(?:\s*4k)?\s*\)/gi, '').replace(/\s+-?\s*ried\.?\s*$/i, '');
   s = s.replace(NOISE, ' ').replace(/\s*[-–(]\s*(?:ospiti in sala|evento)\s*\)?\s*$/i, '');
   s = s.replace(/\s+/g, ' ').replace(/^[\s\-–:,]+/, '').replace(/[\s\-–:,]+$/, '').trim();
   return s;
 }
 
 // Presentation prefixes/suffixes that sneak into titles (sound formats, screening halls, version tags, truncations).
-const ID_PREFIX = /^(?:atmos|sala-xl|xl|jp|lingua-or[a-z]*)-/;
-const ID_SUFFIX = /-(?:evento|ospiti-in-sala)$/;
+const ID_PREFIX = /^(?:atmos|sala-xl|xl(?:-kor)?|jp|lingua-or[a-z]*)-/;
+const ID_SUFFIX = /-(?:evento|ospiti-in-sala|o-v|v-o)$/;
 // Same film, different spellings the rules above cannot catch (subtitles, truncations, typos, original titles).
 // Confirmed by matching TMDB ids or obvious title overlap; keep in sync with scrape/logs/merges.log.
 export const ID_ALIASES = {
@@ -40,6 +46,12 @@ export const ID_ALIASES = {
   'george-michael-the-fa': 'george-michael-the-faith-tour',
   'minotaur': 'minotaur-nel-labirinto-del-potere',
   'minotaur-nel-labirinto-del-potere-minotaure': 'minotaur-nel-labirinto-del-potere',
+  'prime-time': 'primetime',
+  'ragione-e-sentimento-sense-and-sensibility': 'ragione-e-sentimento-2026',
+  'trainspotting-ried-4k': 'trainspotting-30-anniversario-4k',
+  'l-impero-dei-sensi': 'v-m-18-ecco-l-impero-dei-sensi-o-v',
+  'v-m-18-ecco-l-impero-dei-sensi': 'v-m-18-ecco-l-impero-dei-sensi-o-v',
+  'stray-kids-wt-run-it-live-view-run': 'kor-stray-kids-wt-run-it-live-view-run',
   'godzilla-minus-zero': 'godzilla-minus-zero',
   'wild-horse-nine': 'wild-horse-nine',
 };

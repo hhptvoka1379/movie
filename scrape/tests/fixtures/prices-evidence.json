@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-11-06T00:00:00.000Z",
+  "range": {
+    "from": "2026-11-06",
+    "to": "2026-11-15"
+  },
+  "note": "fixture evidence (synthetic prices, not real)",
+  "cinemas": {
+    "orfeo": {
+      "cinema": "orfeo",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero",
+          "eur": 8.5,
+          "condition": null,
+          "source": "webtic:getLocalPrices?localId=5351"
+        }
+      ],
+      "price_source": "webtic:getLocalPrices?localId=5351",
+      "price_reason": null,
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price",
+        "group": "not stated (online booking is limited to 8 adjacent seats)"
+      },
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "showings": 72,
+      "priced": 72,
+      "pct": 100
+    },
+    "citylife-anteo": {
+      "cinema": "citylife-anteo",
+      "adapter": "anteo",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero feriali (lun-ven)",
+          "eur": 7.5,
+          "condition": "day",
+          "source": "https://www.spaziocinema.info/cinema/tariffe/citylife-anteo"
+        },
+        {
+          "label": "Intero festivi e prefestivi",
+          "eur": 9.0,
+          "condition": "day",
+          "source": "https://www.spaziocinema.info/cinema/tariffe/citylife-anteo"
+        },
+        {
+          "label": "Supplemento 3D",
+          "eur": 2.0,
+          "condition": "format",
+          "source": "https://www.spaziocinema.info/cinema/tariffe/citylife-anteo"
+        },
+        {
+          "label": "Ridotto under 26",
+          "eur": 5.0,
+          "condition": null,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/citylife-anteo"
+        }
+      ],
+      "price_source": "https://www.spaziocinema.info/cinema/tariffe/citylife-anteo",
+      "price_reason": null,
+      "policy": {
+        "reserve": "yes — online booking is made without prepayment and paid at the box office",
+        "group": "stated — groups over 20 people must write to the cinema"
+      },
+      "booking": null,
+      "showings": 220,
+      "priced": 220,
+      "pct": 100
+    },
+    "uci-bicocca": {
+      "cinema": "uci-bicocca",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "price_source": null,
+      "price_reason": "WebTic page exposes no tariff endpoint without entering the purchase flow (checked getFullScheduling, getLocalInfo); prices only appear after seat selection.",
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 30 minutes before the show",
+        "group": "not stated"
+      },
+      "booking": null,
+      "showings": 457,
+      "priced": 0,
+      "pct": 0
+    }
+  }
+}

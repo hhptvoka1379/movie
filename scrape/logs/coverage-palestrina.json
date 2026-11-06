@@ -1,0 +1,501 @@
+{
+  "generated_at": "2026-11-06T18:06:26.171Z",
+  "range": {
+    "from": "2026-11-06",
+    "to": "2026-11-15"
+  },
+  "cinema": {
+    "id": "palestrina",
+    "name": "Palestrina",
+    "address": "Via Giovanni Pierluigi da Palestrina 7, Milano",
+    "lat": 45.4850056,
+    "lng": 9.2138936,
+    "website": "https://www.progettolumiere.it/palestrina/home.php",
+    "booking_url": null,
+    "source_used": "progettolumiere",
+    "published_until": "2026-11-12",
+    "status": "ok",
+    "notes": "Online sale: no (box office only; Cinema Palestrina 5/10-entry card and Thursday cineforum season pass sold at box office). Reserve without paying: not stated. Group policy: not stated. Managed by Progetto Lumiere (progettolumiere.it/palestrina/home.php, confirmed via sdcmilano.it/sala-palestrina)."
+  },
+  "raw_showings": [
+    {
+      "title": "Dio ride",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-06",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-06",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "title": "Wild horse nine",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 118,
+      "date": "2026-11-06",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "title": "Dio ride",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-07",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-07",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "title": "Wild horse nine",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 118,
+      "date": "2026-11-07",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "title": "Dio ride",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-08",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-08",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "title": "Wild horse nine",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 118,
+      "date": "2026-11-08",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "title": "Dio ride",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-09",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-09",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "title": "Wild horse nine",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 118,
+      "date": "2026-11-09",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "title": "Dio ride",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-10",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "title": "Minotaur",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 135,
+      "date": "2026-11-10",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "title": "Wild horse nine",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 118,
+      "date": "2026-11-10",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "title": "Dio ride",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-11",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "title": "Wild horse nine",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 118,
+      "date": "2026-11-11",
+      "time": "18:15",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "title": "Rotta",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 82,
+      "date": "2026-11-11",
+      "time": "20:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/rotta.php"
+    },
+    {
+      "title": "Norimberga",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 148,
+      "date": "2026-11-12",
+      "time": "17:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/single-moviecin.php"
+    },
+    {
+      "title": "Norimberga",
+      "original_title": null,
+      "year": null,
+      "runtime_min": 148,
+      "date": "2026-11-12",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 6,
+      "booking_url": "https://www.progettolumiere.it/palestrina/single-moviecin.php"
+    }
+  ],
+  "films": [
+    {
+      "id": "dio-ride",
+      "title": "Dio ride",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    },
+    {
+      "id": "minotaur-nel-labirinto-del-potere",
+      "title": "Minotaur",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 135
+    },
+    {
+      "id": "norimberga",
+      "title": "Norimberga",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 148
+    },
+    {
+      "id": "rotta",
+      "title": "Rotta",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 82
+    },
+    {
+      "id": "wild-horse-nine",
+      "title": "Wild horse nine",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 118
+    }
+  ],
+  "showings": [
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "palestrina",
+      "date": "2026-11-06",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "palestrina",
+      "date": "2026-11-06",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "palestrina",
+      "date": "2026-11-06",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "palestrina",
+      "date": "2026-11-07",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "palestrina",
+      "date": "2026-11-07",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "palestrina",
+      "date": "2026-11-07",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "palestrina",
+      "date": "2026-11-08",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "palestrina",
+      "date": "2026-11-08",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "palestrina",
+      "date": "2026-11-08",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "palestrina",
+      "date": "2026-11-09",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "palestrina",
+      "date": "2026-11-09",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "palestrina",
+      "date": "2026-11-09",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "palestrina",
+      "date": "2026-11-10",
+      "time": "15:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "palestrina",
+      "date": "2026-11-10",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.progettolumiere.it/palestrina/minotaur.php"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "palestrina",
+      "date": "2026-11-10",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "palestrina",
+      "date": "2026-11-11",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 7,
+      "booking_url": "https://www.progettolumiere.it/palestrina/dio.php"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "palestrina",
+      "date": "2026-11-11",
+      "time": "18:15",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.progettolumiere.it/palestrina/wildhorse.php"
+    },
+    {
+      "film_id": "rotta",
+      "cinema_id": "palestrina",
+      "date": "2026-11-11",
+      "time": "20:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 8.5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/rotta.php"
+    },
+    {
+      "film_id": "norimberga",
+      "cinema_id": "palestrina",
+      "date": "2026-11-12",
+      "time": "17:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 5,
+      "booking_url": "https://www.progettolumiere.it/palestrina/single-moviecin.php"
+    },
+    {
+      "film_id": "norimberga",
+      "cinema_id": "palestrina",
+      "date": "2026-11-12",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 6,
+      "booking_url": "https://www.progettolumiere.it/palestrina/single-moviecin.php"
+    }
+  ]
+}

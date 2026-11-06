@@ -11,11 +11,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
 <link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="css/map.css">
+<link rel="stylesheet" href="css/panels.css">
 </head>
 <body>
 <div class="app">
 
   <header class="topbar" id="topbar">
+    <h1 class="sr-only">Cinema Milano — orari dei cinema dal 6 al 15 novembre 2026</h1>
     <div class="seg" role="group" aria-label="Vista">
       <button type="button" id="view-map" aria-pressed="true">Mappa</button>
       <button type="button" id="view-list" aria-pressed="false">Lista</button>
@@ -30,39 +33,43 @@
   </header>
 
   <section class="filters" id="filters" aria-label="Filtri" hidden>
+    <div class="frow frow-date">
+      <label class="flabel" for="fdate">Giorno</label>
+      <select id="fdate"><option disabled selected>Caricamento…</option></select>
+    </div>
     <fieldset class="fset">
       <legend>Lingua</legend>
       <div class="opts" id="opt-lang">
         <label><input type="radio" name="l" value="tutte"><span>Tutte</span></label>
-        <label><input type="radio" name="l" value="ita"><span>ITA</span></label>
+        <label><input type="radio" name="l" value="ita" checked><span>ITA</span></label>
         <label><input type="radio" name="l" value="vo"><span>VO / sottotitolato</span></label>
       </div>
     </fieldset>
     <fieldset class="fset">
       <legend>Orario</legend>
       <div class="opts" id="opt-time">
-        <label><input type="radio" name="t" value="tutti"><span>Tutti gli orari</span></label>
+        <label><input type="radio" name="t" value="tutti" checked><span>Tutti gli orari</span></label>
         <label><input type="radio" name="t" value="mattina"><span>Mattina (prima delle 14)</span></label>
         <label><input type="radio" name="t" value="pomeriggio"><span>Pomeriggio (14-18)</span></label>
         <label><input type="radio" name="t" value="sera"><span>Sera (dalle 18)</span></label>
-      </div>
-    </fieldset>
-    <fieldset class="fset">
-      <legend>Tipo</legend>
-      <div class="opts" id="opt-tipo">
-        <label><input type="radio" name="tipo" value="tutti"><span>Tutti</span></label>
-        <label><input type="radio" name="tipo" value="film"><span>Film</span></label>
-        <label><input type="radio" name="tipo" value="event"><span>Evento</span></label>
-        <label><input type="radio" name="tipo" value="classic"><span>Classico</span></label>
       </div>
     </fieldset>
     <div class="frow">
       <label class="flabel" for="fmt">Formato</label>
       <select id="fmt"><option value="tutti">Tutti i formati</option></select>
     </div>
+    <fieldset class="fset">
+      <legend>Tipo</legend>
+      <div class="opts" id="opt-tipo">
+        <label><input type="radio" name="tipo" value="tutti" checked><span>Tutti</span></label>
+        <label><input type="radio" name="tipo" value="film"><span>Film</span></label>
+        <label><input type="radio" name="tipo" value="event"><span>Evento</span></label>
+        <label><input type="radio" name="tipo" value="classic"><span>Classico</span></label>
+      </div>
+    </fieldset>
     <div class="frow">
       <label class="flabel" for="q">Cerca film o cinema</label>
-      <input type="search" id="q" autocomplete="off" placeholder="Es. Bicocca, Brera">
+      <input type="search" id="q" autocomplete="off" placeholder="Es. Bicocca, Brera, un titolo…">
     </div>
     <div class="factions">
       <button type="button" class="btn-ghost" id="reset-filters">Azzera filtri</button>
@@ -70,30 +77,36 @@
     </div>
   </section>
 
-  <main class="map-wrap" id="map-wrap" aria-label="Mappa dei cinema">
-    <div id="map"></div>
-    <div class="offscreen" id="offscreen"></div>
-    <div class="status-box" id="status-box" hidden></div>
+  <main class="stage" id="main">
+    <div class="map-wrap" id="map-wrap" role="region" aria-label="Mappa dei cinema">
+      <div id="map"></div>
+      <div class="offscreen" id="offscreen"></div>
+      <div class="status-box" id="status-box" hidden></div>
+    </div>
+
+    <div class="list" id="list" hidden></div>
+
+    <section class="dock is-collapsed" id="dock" aria-label="Cinema selezionato">
+      <button type="button" class="dock-handle" id="dock-handle" aria-expanded="false" aria-label="Apri o chiudi il pannello del cinema">
+        <span class="grip" aria-hidden="true"></span>
+        <span class="dock-hint" id="dock-hint"></span>
+      </button>
+      <div class="dock-head" id="dock-head"></div>
+      <div class="dock-body" id="dock-body"></div>
+    </section>
+
+    <div class="hover-preview" id="hover-preview" hidden></div>
   </main>
-
-  <div class="list" id="list" hidden></div>
-
-  <section class="dock is-collapsed" id="dock" aria-label="Cinema selezionato">
-    <button type="button" class="dock-handle" id="dock-handle" aria-expanded="false">
-      <span class="grip" aria-hidden="true"></span>
-      <span class="dock-hint" id="dock-hint"></span>
-    </button>
-    <div class="dock-head" id="dock-head"></div>
-    <div class="dock-body" id="dock-body"></div>
-  </section>
-
-  <div class="hover-preview" id="hover-preview" hidden></div>
 
   <dialog class="film-dialog" id="film-dialog" aria-labelledby="film-dialog-title"></dialog>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+<script src="js/map.js"></script>
 <script src="app.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/dock.js"></script>
+<script src="js/film-panel.js"></script>
 </body>
 </html>
