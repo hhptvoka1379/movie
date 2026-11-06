@@ -7,3 +7,7 @@ serve, but every title, cinema, tariff and text here is invented for the test.
 
 Do not read prices from these files as if they were real: real prices come only
 from a live `cd scrape && node run.mjs` on a machine that can reach the sites.
+
+`missing-tariff-page.html`, `missing-membership.html` and `missing-waf-block.html` are also
+synthetic: a tariff page, a membership-only page and a bot-wall page, used by
+`scrape/tests/fetch-missing-prices.test.mjs`. The prices in them are invented for the test.

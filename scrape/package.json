@@ -7,8 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "node --test tests/prices.test.mjs && node verify-prices.mjs",
-    "smoke": "node ../tests/smoke.mjs"
+    "test": "node --test tests/prices.test.mjs tests/fetch-missing-prices.test.mjs && node verify-prices.mjs",
+    "smoke": "node ../tests/smoke.mjs",
+    "prices:missing": "node fetch-missing-prices.mjs"
   },
   "keywords": [],
   "author": "",
