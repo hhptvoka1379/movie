@@ -25,7 +25,29 @@ Goal: price_eur = the full-price ticket for each showing exactly as the source
 site states it (prices vary by day and format), else null. Only what a public
 page states is captured — no login, no payment, no scraping of checkout flows.
 
-Requires network: cd scrape && node run.mjs
+Commands
+  cd scrape && npm ci && npx playwright install chromium
+  node run.mjs                     live run: fetches, prices, writes data + logs/prices.json
+  node run.mjs --dry-run           live run, report only, writes nothing
+  node run.mjs --replay [logs]     offline: rebuild a venue from a captured payload, never writes
+  node evidence-from-captures.mjs  read booking/group statements from cached getLocalInfo captures
+  node apply-prices.mjs            apply logs/prices.json to data/showtimes.json (idempotent)
+  node remap.mjs                   canonical ids only (unchanged behaviour)
+  node --test tests/prices.test.mjs   24 unit tests, offline
+  node verify-prices.mjs              13-step offline end-to-end check, offline
+
+State verified offline (see the report for detail)
+  24/24 unit tests and 13/13 pipeline steps pass with no network.
+  run.mjs --replay on the real logs/wt-5351.json capture rebuilds Orfeo's 72
+  showings - the count the committed data has - and reports 0% price coverage:
+  WebTic's public page exposes getFullScheduling and getLocalInfo only, no
+  tariff endpoint. No capture anywhere in scrape/logs carries a price, so
+  price_eur is still null on all 1369 showings and can only be filled by a
+  live run against webtic.it / spaziocinema.info / 18tickets.it.
+  data/showtimes.json currently differs from main only in cinema notes: the
+  reservation-without-payment and group statements each WebTic venue states.
+
+Needs a connected machine: cd scrape && node run.mjs
   Reaching webtic.it / spaziocinema.info / *.18tickets.it / ucicinemas.it needs
   a normal machine. Cloud sandboxes with an allowlist (github/npm/pypi only)
   cannot run it; run.mjs refuses to overwrite data/showtimes.json when every
