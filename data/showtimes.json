@@ -16,7 +16,7 @@
       "source_used": "webtic",
       "published_until": "2026-11-15",
       "status": "ok",
-      "notes": "Vendita online su WebTic / ucicinemas.it; prenotazione con ritiro almeno 30 min prima (+€1,00, max 8 posti adiacenti). Prezzo intero dinamico al checkout (\"da €6,90\")."
+      "notes": "Vendita online su WebTic / ucicinemas.it; prenotazione con ritiro almeno 30 min prima (+€1,00, max 8 posti adiacenti). Prezzo intero dinamico al checkout (\"da €6,90\") | Prices: not stated publicly (https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano: page states no full ticket price)"
     },
     {
       "id": "uci-certosa",
@@ -94,7 +94,7 @@
       "source_used": "webtic",
       "published_until": "2026-11-11",
       "status": "ok",
-      "notes": "Vendita e prenotazione su WebTic / app Cinenauta (+€1,00, ritiro almeno 30 min prima). Tariffa intera mostrata solo dopo la scelta del posto."
+      "notes": "Vendita e prenotazione su WebTic / app Cinenauta (+€1,00, ritiro almeno 30 min prima). Tariffa intera mostrata solo dopo la scelta del posto | Prices: not stated publicly (https://cinenauta.it/: page states no full ticket price)"
     },
     {
       "id": "ducale",
@@ -107,7 +107,7 @@
       "source_used": "webtic",
       "published_until": "2026-11-11",
       "status": "ok",
-      "notes": "Vendita e prenotazione su WebTic / app Cinenauta (+€1,00, ritiro almeno 30 min prima). Tariffa intera mostrata solo dopo la scelta del posto."
+      "notes": "Vendita e prenotazione su WebTic / app Cinenauta (+€1,00, ritiro almeno 30 min prima). Tariffa intera mostrata solo dopo la scelta del posto | Prices: not stated publicly (https://cinenauta.it/: page states no full ticket price)"
     },
     {
       "id": "colosseo",
@@ -146,7 +146,7 @@
       "source_used": "webtic",
       "published_until": "2026-11-11",
       "status": "ok",
-      "notes": "Vendita e prenotazione su WebTic (+€1,00, ritiro almeno 30 min prima). Tariffario non pubblicato sul sito (in revisione); prezzo visibile dopo selezione posto."
+      "notes": "Vendita e prenotazione su WebTic (+€1,00, ritiro almeno 30 min prima). Tariffario non pubblicato sul sito (in revisione); prezzo visibile dopo selezione posto | Prices: not stated publicly (https://www.multisalacentrale.it/: page states no full ticket price)"
     },
     {
       "id": "plinius",
@@ -224,7 +224,7 @@
       "source_used": "cinebazin",
       "published_until": "2026-11-13",
       "status": "ok",
-      "notes": "Ingresso riservato ai soci Cinecircolo André Bazin con tessera stagionale (~€109 per 30 film in cassa; nessuna vendita di biglietti singoli)."
+      "notes": "Ingresso riservato ai soci Cinecircolo André Bazin con tessera stagionale (~€109 per 30 film in cassa; nessuna vendita di biglietti singoli) | Prices: not stated publicly (https://www.cinebazin.it/new/: page states no full ticket price)"
     },
     {
       "id": "osoppo",
