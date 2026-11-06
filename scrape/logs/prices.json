@@ -1,0 +1,733 @@
+{
+  "generated_at": "2026-11-06T20:00:00+01:00",
+  "range": {
+    "from": "2026-11-06",
+    "to": "2026-11-15"
+  },
+  "note": "Public tariff rates verified from official Milan cinema websites + WebTic getLocalInfo policy statements.",
+  "cinemas": {
+    "uci-bicocca": {
+      "cinema": "uci-bicocca",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": true,
+      "price_source": null,
+      "price_reason": "ucicinemas.it/cinema/uci-cinemas-bicocca-milano only publishes floor copy (\"Da 6,90 €\" / \"Da 7,90 €\"); exact full price is dynamic per screening inside seat checkout",
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price; booking is not offered for some shows (purchase only)",
+        "group": "not stated (online booking is limited to 8 adjacent seats)",
+        "quotes": [
+          "Il Servizio di prenotazione vi permette di selezionare da mappa fino ad un massimo di 8 posti adiacenti tra loro."
+        ],
+        "source": "webtic getLocalInfo Infos"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": [
+        "https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano"
+      ]
+    },
+    "uci-certosa": {
+      "cinema": "uci-certosa",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Dal lunedì al giovedì fino alle 18:55 Intero",
+          "eur": 7,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        },
+        {
+          "label": "Mercoledì Intero",
+          "eur": 7,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        },
+        {
+          "label": "Dal lunedì al giovedì dalle 19:00 Sale 7 e 8 Intero",
+          "eur": 7,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        },
+        {
+          "label": "Dal lunedì al giovedì dalle 19:00 altre sale Intero",
+          "eur": 9,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        },
+        {
+          "label": "Venerdì fino alle 18:55 Sale 7 e 8 Intero",
+          "eur": 7.5,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        },
+        {
+          "label": "Venerdì fino alle 18:55 altre sale Intero",
+          "eur": 9.8,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        },
+        {
+          "label": "Festivi sabato e domenica Sale 7 e 8 Intero",
+          "eur": 7.5,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        },
+        {
+          "label": "Festivi sabato e domenica altre sale Intero",
+          "eur": 9.8,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        },
+        {
+          "label": "Supplemento Dolby Atmos",
+          "eur": 1,
+          "source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/",
+      "price_reason": null,
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated",
+        "quotes": [],
+        "source": null
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": [
+        "https://www.cinelandia.it/cinema-cinelandia-milano-certosa/"
+      ]
+    },
+    "space-odeon": {
+      "cinema": "space-odeon",
+      "adapter": "none",
+      "status": "no_schedule",
+      "rates": [],
+      "prices_checked": true,
+      "price_source": null,
+      "price_reason": "cinema closed since 31 Jul 2023 (reopening planned 2H 2027)",
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": null,
+      "booking": null,
+      "tariff_urls": null
+    },
+    "citylife-anteo": {
+      "cinema": "citylife-anteo",
+      "adapter": "anteo",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero matinée lun-ven prima delle 14:00",
+          "eur": 6,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Intero matinée sabato e domenica prima delle 14:00",
+          "eur": 6.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Intero pomeridiano lun-ven dalle 14:00 fino alle 17:45",
+          "eur": 6.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Sabato 1° spettacolo dalle 14:00 prima delle 15:30",
+          "eur": 8,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Intero festivi sabato dalle 15:30",
+          "eur": 9.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Intero festivi domenica dalle 14:00",
+          "eur": 9.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Intero serale feriali dopo le 17:45",
+          "eur": 9.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Mercoledì dopo le 17:45 Intero serale",
+          "eur": 8,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Ridotto feriali",
+          "eur": 5.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        },
+        {
+          "label": "Ridotto festivi",
+          "eur": 7,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo",
+      "price_reason": null,
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": null,
+      "booking": null,
+      "tariff_urls": [
+        "https://www.spaziocinema.info/cinema/tariffe/milano/citylife-anteo"
+      ]
+    },
+    "ariosto-anteo": {
+      "cinema": "ariosto-anteo",
+      "adapter": "anteo",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero pomeridiano lun-ven fino alle 17:45",
+          "eur": 6,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+        },
+        {
+          "label": "Sabato 1° spettacolo prima delle 15:30",
+          "eur": 6.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+        },
+        {
+          "label": "Intero festivi sabato dalle 15:30",
+          "eur": 8.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+        },
+        {
+          "label": "Intero festivi domenica",
+          "eur": 8.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+        },
+        {
+          "label": "Intero serale feriali dopo le 17:45",
+          "eur": 8.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+        },
+        {
+          "label": "Mercoledì dopo le 17:45 Intero serale",
+          "eur": 6.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+        },
+        {
+          "label": "Ridotto feriali",
+          "eur": 5.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+        },
+        {
+          "label": "Ridotto festivi",
+          "eur": 6.5,
+          "source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema",
+      "price_reason": null,
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": null,
+      "booking": null,
+      "tariff_urls": [
+        "https://www.spaziocinema.info/cinema/tariffe/milano/ariosto-spaziocinema"
+      ]
+    },
+    "gloria": {
+      "cinema": "gloria",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Festivo dalle 14:00 Intero",
+          "eur": 9,
+          "source": "https://www.notoriouscinemas.it/gloria/prezzi.php"
+        },
+        {
+          "label": "Festivo Matinée prima delle 14:00",
+          "eur": 5,
+          "source": "https://www.notoriouscinemas.it/gloria/prezzi.php"
+        },
+        {
+          "label": "Feriale pomeridiano fino alle 18:55 Intero",
+          "eur": 6.5,
+          "source": "https://www.notoriouscinemas.it/gloria/prezzi.php"
+        },
+        {
+          "label": "Feriale dopo le 18:55 Intero",
+          "eur": 9,
+          "source": "https://www.notoriouscinemas.it/gloria/prezzi.php"
+        },
+        {
+          "label": "Promo Day Mercoledì Intero",
+          "eur": 6.5,
+          "source": "https://www.notoriouscinemas.it/gloria/prezzi.php"
+        },
+        {
+          "label": "Ridotto feriale pomeridiano",
+          "eur": 5,
+          "source": "https://www.notoriouscinemas.it/gloria/prezzi.php"
+        },
+        {
+          "label": "Ridotto serale e festivo",
+          "eur": 6.5,
+          "source": "https://www.notoriouscinemas.it/gloria/prezzi.php"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://www.notoriouscinemas.it/gloria/prezzi.php",
+      "price_reason": null,
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 20 minutes before the show; booking costs €1,00 per ticket on top of the ticket price",
+        "group": "not stated",
+        "quotes": [
+          "\"Le ricordiamo che è obbligatorio il ritiro della prenotazione entro 20 minuti dall'inizio dello spettacolo."
+        ],
+        "source": "webtic getLocalInfo Infos"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5491",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": [
+        "https://www.notoriouscinemas.it/gloria/prezzi.php"
+      ]
+    },
+    "arcobaleno": {
+      "cinema": "arcobaleno",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": true,
+      "price_source": null,
+      "price_reason": "cinenauta.it/arcobaleno/ publishes student (€5) and Carta Giovani (€6–6,50) discounts only, and WebTic 5066 exposes full tariffs only after seat selection",
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price",
+        "group": "not stated",
+        "quotes": [
+          "SE HAI PRENOTATO CON LOGIN E PASSWORD, RICORDATI DI PRESENTARTI ALLE CASSE DEL CINEMA ALMENO 30 MINUTI PRIMA DELL`INIZIO DELLO SPETTACOLO !"
+        ],
+        "source": "webtic getLocalInfo Infos"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": null
+    },
+    "ducale": {
+      "cinema": "ducale",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": true,
+      "price_source": null,
+      "price_reason": "cinenauta.it publishes student (€5) and Carta Giovani (€6–6,50) discounts only, and WebTic 5065 exposes full tariffs only after seat selection",
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price",
+        "group": "not stated",
+        "quotes": [
+          "SE HAI PRENOTATO CON LOGIN E PASSWORD, RICORDATI DI PRESENTARTI ALLE CASSE DEL CINEMA ALMENO 30 MINUTI PRIMA DELL`INIZIO DELLO SPETTACOLO !"
+        ],
+        "source": "webtic getLocalInfo Infos"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5065",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": null
+    },
+    "colosseo": {
+      "cinema": "colosseo",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero dal lunedì al sabato entro le 17:30",
+          "eur": 8,
+          "source": "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+        },
+        {
+          "label": "Domenica matinée entro le 14:00",
+          "eur": 6.5,
+          "source": "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+        },
+        {
+          "label": "Intero feriali dopo le 17:30",
+          "eur": 11,
+          "source": "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+        },
+        {
+          "label": "Mercoledì dopo le 17:30 Intero",
+          "eur": 9,
+          "source": "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+        },
+        {
+          "label": "Sabato dopo le 17:30 Intero",
+          "eur": 11,
+          "source": "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+        },
+        {
+          "label": "Domenica dopo le 14:00 Intero",
+          "eur": 11,
+          "source": "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+        },
+        {
+          "label": "Intero 3D",
+          "eur": 12,
+          "source": "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://www.ilregnodelcinema.com/colosseo/prezzi.php",
+      "price_reason": null,
+      "policy": {
+        "reserve": "no — the site states La Prenotazione non è prevista per questo cinema",
+        "group": "not stated",
+        "quotes": [
+          "La Prenotazione non è prevista per questo cinema"
+        ],
+        "source": "webtic getLocalInfo Infos"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": [
+        "https://www.ilregnodelcinema.com/colosseo/prezzi.php"
+      ]
+    },
+    "eliseo": {
+      "cinema": "eliseo",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero lun-ven entro le 17:30",
+          "eur": 7.5,
+          "source": "https://www.ilregnodelcinema.com/eliseo/prezzi.php"
+        },
+        {
+          "label": "Domenica matinée entro le 14:00",
+          "eur": 6.5,
+          "source": "https://www.ilregnodelcinema.com/eliseo/prezzi.php"
+        },
+        {
+          "label": "Intero lun-ven dopo le 17:30",
+          "eur": 10.5,
+          "source": "https://www.ilregnodelcinema.com/eliseo/prezzi.php"
+        },
+        {
+          "label": "Mercoledì dopo le 17:30 Intero",
+          "eur": 8.5,
+          "source": "https://www.ilregnodelcinema.com/eliseo/prezzi.php"
+        },
+        {
+          "label": "Sabato Intero",
+          "eur": 10.5,
+          "source": "https://www.ilregnodelcinema.com/eliseo/prezzi.php"
+        },
+        {
+          "label": "Domenica dopo le 14:00 Intero",
+          "eur": 10.5,
+          "source": "https://www.ilregnodelcinema.com/eliseo/prezzi.php"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://www.ilregnodelcinema.com/eliseo/prezzi.php",
+      "price_reason": null,
+      "policy": {
+        "reserve": "no — WebTic reports booking disabled and purchase enabled for this venue (the site only states the generic online-purchase fee)",
+        "group": "not stated",
+        "quotes": [
+          "4)Per ogni biglietto prenotato e/o acquistato su Internet ci sara` un costo supplementare pari ad 1,80 €."
+        ],
+        "source": "webtic getLocalInfo BookingConfig/PurchaseConfig"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5064",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": [
+        "https://www.ilregnodelcinema.com/eliseo/prezzi.php"
+      ]
+    },
+    "centrale": {
+      "cinema": "centrale",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": true,
+      "price_source": null,
+      "price_reason": "multisalacentrale.it is under revision with no tariff page, and WebTic 5742 exposes tariffs only after seat selection",
+      "policy": {
+        "reserve": "no — WebTic reports booking disabled and purchase enabled for this venue",
+        "group": "not stated",
+        "quotes": [],
+        "source": "webtic getLocalInfo BookingConfig/PurchaseConfig"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5742",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": null
+    },
+    "plinius": {
+      "cinema": "plinius",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero lun-ven fino alle 17:55",
+          "eur": 6.5,
+          "source": "https://multisalaplinius.com/informazioni-e-prezzi/"
+        },
+        {
+          "label": "Intero lun-ven dopo le 17:55",
+          "eur": 10,
+          "source": "https://multisalaplinius.com/informazioni-e-prezzi/"
+        },
+        {
+          "label": "Intero festivi sabato e domenica",
+          "eur": 10,
+          "source": "https://multisalaplinius.com/informazioni-e-prezzi/"
+        },
+        {
+          "label": "Intero 3D",
+          "eur": 10,
+          "source": "https://multisalaplinius.com/informazioni-e-prezzi/"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://multisalaplinius.com/informazioni-e-prezzi/",
+      "price_reason": null,
+      "policy": {
+        "reserve": "no — the site states SERVIZIO NON ABILITATO",
+        "group": "not stated",
+        "quotes": [
+          "SERVIZIO NON ABILITATO"
+        ],
+        "source": "webtic getLocalInfo Infos"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": [
+        "https://multisalaplinius.com/informazioni-e-prezzi/"
+      ]
+    },
+    "orfeo": {
+      "cinema": "orfeo",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "2D lun-ven fino alle 18:00 Intero",
+          "eur": 7,
+          "source": "https://www.orfeomultisala.com/prezzi/"
+        },
+        {
+          "label": "2D lun-ven dopo le 18:00 Intero",
+          "eur": 10,
+          "source": "https://www.orfeomultisala.com/prezzi/"
+        },
+        {
+          "label": "2D Mercoledì dopo le 18:00 Intero",
+          "eur": 7,
+          "source": "https://www.orfeomultisala.com/prezzi/"
+        },
+        {
+          "label": "2D festivi sabato e domenica Intero",
+          "eur": 10,
+          "source": "https://www.orfeomultisala.com/prezzi/"
+        },
+        {
+          "label": "3D Intero",
+          "eur": 11.5,
+          "source": "https://www.orfeomultisala.com/prezzi/"
+        },
+        {
+          "label": "3D Mercoledì Intero",
+          "eur": 9.5,
+          "source": "https://www.orfeomultisala.com/prezzi/"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://www.orfeomultisala.com/prezzi/",
+      "price_reason": null,
+      "policy": {
+        "reserve": "no — WebTic reports booking disabled and purchase enabled for this venue",
+        "group": "not stated",
+        "quotes": [],
+        "source": "webtic getLocalInfo BookingConfig/PurchaseConfig"
+      },
+      "online_sale": "yes (WebTic purchase enabled)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "tariff_urls": [
+        "https://www.orfeomultisala.com/prezzi/"
+      ]
+    },
+    "arlecchino": {
+      "cinema": "arlecchino",
+      "adapter": "tickets18",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero",
+          "eur": 8.5,
+          "source": "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/"
+        },
+        {
+          "label": "Giovedì Intero",
+          "eur": 6.5,
+          "source": "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/"
+        },
+        {
+          "label": "Feriali ore 15:00 Intero",
+          "eur": 5,
+          "source": "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/"
+        },
+        {
+          "label": "Matinée prima delle 14:00 Intero",
+          "eur": 5,
+          "source": "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/"
+        },
+        {
+          "label": "Ridotto Over 65 / Under 25 / Cinetessera",
+          "eur": 7.5,
+          "source": "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/",
+      "price_reason": null,
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": null,
+      "booking": null,
+      "tariff_urls": [
+        "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/"
+      ]
+    },
+    "mexico": {
+      "cinema": "mexico",
+      "adapter": "progettolumiere",
+      "status": "ok",
+      "rates": [],
+      "preserve_showing_prices": true,
+      "prices_checked": true,
+      "price_source": "https://www.progettolumiere.it/mexico/contact.php",
+      "price_reason": null,
+      "policy": {
+        "reserve": "email reservation only for Rocky Horror special screenings",
+        "group": "not stated"
+      },
+      "online_sale": "no (box office only)",
+      "booking": null,
+      "tariff_urls": [
+        "https://www.progettolumiere.it/mexico/contact.php"
+      ]
+    },
+    "palestrina": {
+      "cinema": "palestrina",
+      "adapter": "progettolumiere",
+      "status": "ok",
+      "rates": [],
+      "preserve_showing_prices": true,
+      "prices_checked": true,
+      "price_source": "https://www.progettolumiere.it/palestrina/contact.php",
+      "price_reason": "weekday 18:00–19:59 cutoff between pomeridiano (€7) and intero (€8,50) not stated on contact.php",
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": "no (box office only)",
+      "booking": null,
+      "tariff_urls": [
+        "https://www.progettolumiere.it/palestrina/contact.php"
+      ]
+    },
+    "auditorium-don-bosco": {
+      "cinema": "auditorium-don-bosco",
+      "adapter": "cinebazin",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": true,
+      "price_source": null,
+      "price_reason": "cinebazin.it operates on a seasonal cineforum membership pass (~€109 for 30 films) with no single-ticket sales",
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": null,
+      "booking": null,
+      "tariff_urls": null
+    },
+    "osoppo": {
+      "cinema": "osoppo",
+      "adapter": "mymovies",
+      "status": "no_schedule",
+      "rates": [],
+      "prices_checked": true,
+      "price_source": null,
+      "price_reason": "0 scheduled screenings in range on MyMovies id 6637",
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": null,
+      "booking": null,
+      "tariff_urls": null
+    },
+    "milano-a-memoria": {
+      "cinema": "milano-a-memoria",
+      "adapter": "none",
+      "status": "no_schedule",
+      "rates": [],
+      "prices_checked": true,
+      "price_source": null,
+      "price_reason": "permanently closed tourist attraction",
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": null,
+      "booking": null,
+      "tariff_urls": null
+    }
+  }
+}
