@@ -1,0 +1,238 @@
+/* Map chunk styles. Load after the base stylesheet so these rules win over
+ * any legacy map rules left in app.css during the module split.
+ * Requires base custom properties: --accent, --paper, --sheet, --ink, --grey,
+ * --line, --hard, --ff-body, --ff-name, --tap, --dock-h. */
+
+.map-wrap { position: fixed; inset: 0; }
+#map { position: absolute; inset: 0; background: var(--paper); }
+.leaflet-container { font-family: var(--ff-body); background: var(--paper); }
+.leaflet-tile-pane { filter: grayscale(.7) brightness(1.05); }
+.leaflet-container a { color: var(--ink); }
+
+.leaflet-control-attribution {
+  font-size: 10.5px;
+  background: rgba(255, 255, 255, .92) !important;
+  border: var(--line);
+  max-width: min(92vw, 520px);
+  line-height: 1.3;
+}
+.leaflet-control-zoom {
+  border: var(--line) !important;
+  box-shadow: var(--hard);
+  border-radius: 0 !important;
+}
+.leaflet-control-zoom a,
+.leaflet-bar.leaflet-control-zoom a,
+.leaflet-touch .leaflet-control-zoom a {
+  width: var(--tap) !important;
+  height: var(--tap) !important;
+  line-height: var(--tap) !important;
+  color: var(--ink) !important;
+  background: var(--sheet);
+  border-bottom: var(--line) !important;
+}
+.leaflet-control-zoom a:last-child { border-bottom: 0 !important; }
+.leaflet-control-zoom a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -4px;
+}
+.leaflet-bottom { bottom: var(--dock-h); transition: bottom .2s ease; }
+.leaflet-bottom .leaflet-control { margin-bottom: 8px; margin-left: 8px; }
+.leaflet-left .leaflet-control { margin-left: 8px; }
+
+/* Pins: poster fan, caps tag, dot. The button is the full 140x84 hit area. */
+.pin-icon { background: none !important; border: 0 !important; }
+.pin {
+  position: relative;
+  display: block;
+  width: 140px;
+  height: 84px;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  cursor: pointer;
+}
+.pin:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.pin-fan {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 140px;
+  height: 42px;
+  pointer-events: none;
+}
+.thumb { position: absolute; top: 4px; width: 26px; height: 38px; }
+.thumb .poster { width: 26px; height: 38px; }
+.pin .poster.tiny {
+  border: var(--line);
+  box-shadow: var(--hard);
+}
+.pin-tag {
+  position: absolute;
+  left: 50%;
+  top: 47px;
+  transform: translateX(-50%);
+  max-width: 132px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 2px 6px 1px;
+  background: var(--sheet);
+  color: var(--ink);
+  border: var(--line);
+  box-shadow: var(--hard);
+  font-family: var(--ff-name);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+.pin-dot {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  background: var(--accent);
+  border: var(--line);
+  border-radius: 50%;
+}
+.pin.is-on .pin-tag {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--ink);
+  transform: translateX(-50%) scale(1.08);
+  transform-origin: 50% 0;
+}
+.pin.is-on .pin-dot { background: var(--ink); }
+/* Keep empty pins legible: mute only the decorative fan, never the caps tag. */
+.pin.is-empty { opacity: 1; filter: none; }
+.pin.is-empty .pin-fan { opacity: .48; filter: grayscale(1); }
+.pin.is-empty .pin-dot { background: var(--grey); }
+.pin:focus-visible .pin-dot,
+.pin:focus-visible .pin-tag { outline: none; }
+.pin.is-label-hidden .pin-tag { visibility: hidden; }
+.pin.is-label-hidden:hover .pin-tag,
+.pin.is-label-hidden:focus-visible .pin-tag,
+.pin.is-label-hidden.is-on .pin-tag { visibility: visible; }
+
+/* Clusters: 44px outlined count bubble. */
+.cluster-wrap { background: none !important; border: 0 !important; }
+.cluster-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap);
+  height: var(--tap);
+  min-width: var(--tap);
+  min-height: var(--tap);
+  border-radius: 50%;
+  background: var(--sheet);
+  border: var(--line);
+  box-shadow: var(--hard);
+  font-family: var(--ff-name);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.cluster-bubble:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Off-screen cinema pills: edge-anchored, stacked by JS, 44px targets. */
+.offscreen { position: absolute; inset: 0; pointer-events: none; z-index: 1001; }
+.offpill {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  max-width: min(46vw, 220px);
+  padding: 6px 12px;
+  background: var(--ink);
+  color: #fff;
+  border: var(--line);
+  box-shadow: var(--hard);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--ff-name);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.offpill.e-l { transform: translate(0, -50%); }
+.offpill.e-r { transform: translate(-100%, -50%); }
+.offpill.e-t { transform: translate(-50%, 0); }
+.offpill.e-b { transform: translate(-50%, -100%); }
+.offpill .arr { display: inline-block; vertical-align: -1px; margin-right: 5px; flex: 0 0 auto; }
+.offpill:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Desktop hover preview: cinema name + next three showtimes. */
+.hover-preview {
+  position: fixed;
+  z-index: 1200;
+  pointer-events: none;
+  width: 280px;
+  max-width: calc(100vw - 16px);
+  transform: translate(-50%, -100%);
+  background: var(--sheet);
+  border: var(--line);
+  box-shadow: var(--hard);
+  padding: 10px 12px;
+}
+.hover-preview h3,
+.hover-preview .hp-title {
+  margin: 0 0 6px;
+  font-family: var(--ff-name);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.hover-preview ul { list-style: none; margin: 0; padding: 0; }
+.hover-preview .hp-row {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  gap: 6px;
+  align-items: baseline;
+  padding: 3px 0;
+  border-top: 1px dashed var(--grey);
+  font-size: 13px;
+}
+.hover-preview .hp-row:first-child { border-top: 0; }
+.hover-preview .hp-time { font-family: var(--ff-name); font-weight: 700; font-size: 15px; }
+.hover-preview .hp-film { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hover-preview small { color: var(--grey); font-size: 12px; white-space: nowrap; }
+.hover-preview p { margin: 0; color: var(--grey); font-size: 13px; }
+
+@media (max-width: 899px) {
+  .leaflet-control-zoom { display: none; }
+}
+@media (min-width: 900px) {
+  .has-panel .map-wrap { right: 380px; }
+  .leaflet-bottom { bottom: 0; }
+  .leaflet-control-zoom { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaflet-bottom,
+  .pin-tag,
+  .offpill,
+  .hover-preview { transition: none !important; animation: none !important; }
+  .leaflet-cluster-anim .leaflet-marker-icon,
+  .leaflet-cluster-anim .leaflet-marker-shadow { transition: none !important; }
+  .leaflet-zoom-anim .leaflet-zoom-animated { transition: none !important; }
+}

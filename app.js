@@ -25,7 +25,8 @@
   var LOAD_STATE = 'loading'; // loading | ready | error
   var LAST_IDX = { list: [], byCinema: new Map() };
   var FILTERS_OPEN = false;
-  var map = null, cluster = null, attrib = null;
+  var FOCUS_DOCK_NEXT = false;
+  var mapCtrl = null;
   var dragY = null, dragged = false;
 
   // ---- helpers -----------------------------------------------------------
@@ -40,7 +41,7 @@
   function isNum(v) { return typeof v === 'number' && isFinite(v); }
   function pad(n) { return String(n).padStart(2, '0'); }
   function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
-  function uniq(a) { return Array.prototype.slice.call(new Set(a)); }
+  function uniq(a) { return Array.from(new Set(a)); }
   function isDesktop() { return window.matchMedia('(min-width: 900px)').matches; }
   function canHover() { return window.matchMedia('(hover: hover) and (min-width: 900px)').matches; }
   function hashStr(s) { var h = 5381; for (var i = 0; i < s.length; i++) { h = ((h << 5) + h + s.charCodeAt(i)) | 0; } return Math.abs(h); }
@@ -99,6 +100,7 @@
     var rangeTo = (json.range && json.range.to) || (dates.length ? dates[dates.length - 1] : '');
     return {
       generated_at: json.generated_at || null,
+      range: json.range || null,
       rangeTo: rangeTo,
       cinemas: cinemas, films: films,
       cinemaById: cinemaById, filmById: filmById,
@@ -171,13 +173,14 @@
   function posterSrc(id) {
     var e = POSTERS[id];
     if (e && e.file) return /\//.test(e.file) ? e.file : 'assets/posters/' + e.file;
-    return 'assets/posters/' + encodeURIComponent(id) + '.jpg';
+    return '';
   }
   function posterHTML(film, cls) {
     if (!film) return '';
+    var src = posterSrc(film.id);
     return '<span class="poster ' + (cls || '') + '" style="background:' + colorFor(film.id) + '">' +
       '<span class="poster-title">' + esc(film.title) + '</span>' +
-      '<img alt="" loading="lazy" decoding="async" data-poster="1" src="' + esc(posterSrc(film.id)) + '">' +
+      (src ? '<img alt="" loading="lazy" decoding="async" data-poster="1" src="' + esc(src) + '">' : '') +
       '</span>';
   }
   // a poster that fails to load simply loses its image and keeps the title card
@@ -232,160 +235,27 @@
       '<p><strong>' + label + '</strong> ' + esc(c.notes || '') + '</p>' + (site ? '<p>' + site + '</p>' : '') + '</article>';
   }
 
-  // ---- map ---------------------------------------------------------------
-  function pinIcon(c, films, count, selected) {
-    var n = films.length;
-    var cfg = n === 1 ? [[70, 4]] : n === 2 ? [[60, -8], [80, 6]] : [[52, -10], [70, 0], [88, 9]];
-    var thumbs = films.map(function (f, i) {
-      return '<span class="thumb" style="left:' + (cfg[i][0] - 13) + 'px;transform:rotate(' + cfg[i][1] + 'deg)">' + posterHTML(f, 'tiny') + '</span>';
-    }).join('');
-    var label = c.name + (count ? ', ' + count + (count === 1 ? ' proiezione' : ' proiezioni') : ', nessuna proiezione');
-    var html = '<button type="button" class="pin' + (selected ? ' is-on' : '') + (count ? '' : ' is-empty') + '" data-pin="' + esc(c.id) +
-      '" data-key="pin:' + esc(c.id) + '" aria-label="' + esc(label) + '">' +
-      '<span class="pin-fan">' + thumbs + '</span>' +
-      '<span class="pin-tag">' + esc(c.name) + '</span>' +
-      '<span class="pin-dot"></span></button>';
-    return L.divIcon({ className: 'pin-icon', html: html, iconSize: [PIN_W, PIN_H], iconAnchor: [PIN_W / 2, PIN_H - DOT_R] });
-  }
-
+  // ---- map (delegated to js/map.js controller) ---------------------------
   function initMap() {
-    map = L.map('map', { center: CENTER, zoom: ZOOM, minZoom: 11, maxZoom: 18, zoomControl: false, attributionControl: false });
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
-    L.control.zoom({ position: 'bottomleft' }).addTo(map);
-    attrib = L.control.attribution({ position: 'bottomleft', prefix: false }).addTo(map);
-    attrib.addAttribution(OSM_NOTE);
-    attrib.addAttribution(TMDB_NOTE);
-    cluster = L.markerClusterGroup({
-      showCoverageOnHover: false,
-      spiderfyOnMaxZoom: true,
-      maxClusterRadius: 56,
-      iconCreateFunction: function (cl) {
-        return L.divIcon({
-          className: 'cluster-wrap',
-          html: '<span class="cluster-bubble">' + cl.getChildCount() + '</span>',
-          iconSize: [38, 38], iconAnchor: [19, 19]
-        });
-      }
+    mapCtrl = window.CinemaMap.createMap({
+      getState: function () { return S; },
+      getData: function () { return DATA; },
+      getIndex: function () { return LAST_IDX; },
+      getPosters: function () { return POSTERS; },
+      isDesktop: isDesktop,
+      canHover: canHover,
+      todayISO: todayISO,
+      nowHHMM: nowHHMM,
+      filtersActive: filtersActive,
+      priceStr: priceStr,
+      languageLabel: function (l) { return LANG_LABEL[l] || ''; },
+      posterSrc: posterSrc,
+      onSelect: function (id, opts) { pickCinema(id, opts); },
+      onBackgroundClick: function () { if (S.dock && DATA) commit({ dock: false }); }
     });
-    cluster.addTo(map);
-    map.on('moveend', renderOffscreen);
-    map.on('click', function () {
-      hidePreview();
-      if (S.dock && DATA) commit({ dock: false });
-    });
+    mapCtrl.init();
   }
-
-  function renderMap(idx) {
-    cluster.clearLayers();
-    DATA.cinemas.forEach(function (c) {
-      if (c.status !== 'ok' || !isNum(c.lat) || !isNum(c.lng)) return;
-      var shows = idx.byCinema.get(c.id) || [];
-      var films = groupByFilm(shows).slice(0, 3).map(function (g) { return g.film; });
-      var selected = S.c === c.id;
-      var m = L.marker([c.lat, c.lng], {
-        icon: pinIcon(c, films, shows.length, selected),
-        keyboard: false,
-        riseOnHover: true,
-        zIndexOffset: selected ? 1000 : 0
-      });
-      m.on('click', function () { pickCinema(c.id); });
-      cluster.addLayer(m);
-    });
-  }
-
-  function visibleRect() {
-    var mr = $('#map').getBoundingClientRect();
-    var tb = $('#topbar').getBoundingClientRect();
-    var r = { l: 8, t: tb.bottom - mr.top + 8, r: mr.width - 8, b: mr.height - 8 };
-    var dock = $('#dock');
-    if (isDesktop()) {
-      if (S.c && S.dock && S.v === 'mappa') r.r = dock.getBoundingClientRect().left - mr.left - 8;
-    } else {
-      r.b = Math.min(r.b, dock.getBoundingClientRect().top - mr.top - 8);
-    }
-    // keep pills clear of the bottom-left control stack (zoom + attribution)
-    var corner = $('.leaflet-bottom.leaflet-left');
-    if (corner && corner.offsetHeight) {
-      r.b = Math.min(r.b, corner.getBoundingClientRect().top - mr.top - 8);
-    }
-    return r;
-  }
-
-  function shortName(n) {
-    return String(n).replace(/^UCI Cinemas /i, 'UCI ').replace(/\s*\(.*\)\s*$/, '').replace(/ Multisala$/i, '');
-  }
-
-  function renderOffscreen() {
-    var wrap = $('#offscreen');
-    wrap.innerHTML = '';
-    if (!map || !DATA || S.v !== 'mappa') return;
-    var r = visibleRect();
-    if (r.r - r.l < 120 || r.b - r.t < 80) return;
-    var cx = (r.l + r.r) / 2, cy = (r.t + r.b) / 2;
-    var hw = (r.r - r.l) / 2, hh = (r.b - r.t) / 2;
-    var mx = 80, my = 22; // approximate half size of a pill
-    var items = [];
-    DATA.cinemas.forEach(function (c) {
-      if (c.status !== 'ok' || !isNum(c.lat) || !isNum(c.lng)) return;
-      if (!(LAST_IDX.byCinema.get(c.id) || []).length) return;
-      var p = map.latLngToContainerPoint([c.lat, c.lng]);
-      if (p.x >= r.l && p.x <= r.r && p.y >= r.t && p.y <= r.b) return;
-      var dx = p.x - cx, dy = p.y - cy;
-      var sx = Math.abs(dx) > 0 ? Math.max(hw - mx, 0) / Math.abs(dx) : Infinity;
-      var sy = Math.abs(dy) > 0 ? Math.max(hh - my, 0) / Math.abs(dy) : Infinity;
-      var s = Math.min(sx, sy, 1);
-      var a = Math.atan2(dy, dx);
-      var k = (Math.round(a / (Math.PI / 4)) + 8) % 8;
-      // anchor flush to the edge the cinema lies beyond (side edges win over top/bottom)
-      var side = sx <= sy ? (dx < 0 ? 'l' : 'r') : (dy < 0 ? 't' : 'b');
-      var px = side === 'l' ? r.l : side === 'r' ? r.r : Math.min(Math.max(cx + dx * s, r.l + 70), r.r - 70);
-      var py = side === 't' ? r.t : side === 'b' ? r.b : cy + dy * s;
-      items.push({ c: c, x: px, y: py, side: side, dist: Math.hypot(dx, dy), arrow: ARROWS[k] });
-    });
-    items.sort(function (a, b) { return a.dist - b.dist; });
-    items = items.slice(0, 6);
-    // keep pills on the same edge from stacking on top of each other
-    ['l', 'r', 't', 'b'].forEach(function (sd) {
-      var g = items.filter(function (i) { return i.side === sd; });
-      g.sort(function (a, b) { return (sd === 't' || sd === 'b') ? a.x - b.x : a.y - b.y; });
-      for (var i = 1; i < g.length; i++) {
-        if (sd === 't' || sd === 'b') g[i].x = Math.max(g[i].x, g[i - 1].x + 150);
-        else g[i].y = Math.max(g[i].y, g[i - 1].y + 52);
-      }
-    });
-    wrap.innerHTML = items.map(function (it) {
-      return '<button type="button" class="offpill e-' + it.side + '" style="left:' + Math.round(it.x) + 'px;top:' + Math.round(it.y) + 'px" data-pan="' + esc(it.c.id) +
-        '" data-key="pan:' + esc(it.c.id) + '" aria-label="Vai a ' + esc(it.c.name) + '">' +
-        '<span class="arr" aria-hidden="true">' + it.arrow + '</span>' + esc(shortName(it.c.name)) + '</button>';
-    }).join('');
-  }
-
-  // hover preview (desktop)
-  function showPreview(pinEl) {
-    var id = pinEl.getAttribute('data-pin');
-    var c = DATA.cinemaById.get(id);
-    var list = LAST_IDX.byCinema.get(id) || [];
-    var next = list.slice(0, 3);
-    if (S.d === todayISO()) next = list.filter(function (s) { return s.time >= nowHHMM(); }).slice(0, 3);
-    var body;
-    if (next.length) {
-      body = '<ul>' + next.map(function (s) {
-        var p = priceStr(s.price_eur);
-        return '<li><span>' + esc(s.time) + '</span><small>' + esc(LANG_LABEL[s.language] || '') + (p ? ' · ' + esc(p) : '') + '</small></li>';
-      }).join('') + '</ul>';
-    } else if (!list.length) {
-      body = '<p>Nessuna proiezione' + (filtersActive() ? ' con questi filtri' : ' in questo giorno') + '.</p>';
-    } else {
-      body = '<p>Nessuna proiezione dopo le ' + nowHHMM() + '.</p>';
-    }
-    var el = $('#hover-preview');
-    el.innerHTML = '<h3>' + esc(c.name) + '</h3>' + body;
-    var rect = pinEl.getBoundingClientRect();
-    el.style.left = Math.round(rect.left + rect.width / 2) + 'px';
-    el.style.top = Math.round(rect.top + 4) + 'px';
-    el.hidden = false;
-  }
-  function hidePreview() { $('#hover-preview').hidden = true; }
+  function hidePreview() { if (mapCtrl) mapCtrl.hidePreview(); else $('#hover-preview').hidden = true; }
 
   // ---- panels ------------------------------------------------------------
   function renderTop() {
@@ -432,7 +302,7 @@
     wrap.hidden = !mapOn;
     $('#dock').hidden = !mapOn;
     $('#list').hidden = mapOn;
-    if (mapOn && !was && map) map.invalidateSize();
+    if (mapOn && !was && mapCtrl) mapCtrl.refresh();
   }
 
   function renderDock(idx) {
@@ -449,7 +319,8 @@
     var films = groupByFilm(shows);
     var meta = '<div class="dock-meta">' + esc(c.address || '') +
       (c.status === 'ok' ? '<br><span class="count">' + films.length + ' film</span>' : '') + '</div>';
-    head.innerHTML = '<h2 class="dock-name">' + esc(c.name) + '</h2>' + meta +
+    head.innerHTML = '<h2 class="dock-name" tabindex="-1">' + esc(c.name) + '</h2>' + meta +
+      (c.status === 'ok' && c.notes ? '<p class="dock-policy">' + esc(c.notes) + '</p>' : '') +
       (isStale(c) ? '<p class="fresh">Programmazione pubblicata solo fino al ' + ddmm(c.published_until) + '</p>' : '');
 
     if (c.status !== 'ok') { body.innerHTML = noteCard(c, 'dock'); return; }
@@ -462,10 +333,13 @@
     var el = $('#list');
     if (S.v !== 'lista' || !DATA) { el.innerHTML = ''; return; }
     var html = '<div class="list-inner"><h2 class="day-title">' + esc(cap(longDate(S.d))) + '</h2>';
-    DATA.cinemas.filter(isStale).forEach(function (c) {
-      if (c.status !== 'ok') return;
-      html += '<p class="fresh-note"><strong>' + esc(c.name) + '</strong> · Programmazione pubblicata solo fino al ' + ddmm(c.published_until) + '</p>';
+    var staleToday = DATA.cinemas.filter(function (c) {
+      return c.status === 'ok' && c.published_until && S.d > c.published_until;
     });
+    if (staleToday.length) {
+      html += '<p class="fresh-note"><strong>Programmazione non ancora pubblicata per questo giorno:</strong> ' +
+        staleToday.map(function (c) { return esc(c.name) + ' (fino al ' + ddmm(c.published_until) + ')'; }).join(', ') + '.</p>';
+    }
     var groups = groupByFilm(idx.list).sort(function (a, b) { return a.film.title.localeCompare(b.film.title, 'it'); });
     if (!groups.length) {
       html += '<div class="status-box">' + emptyInner() + '</div>';
@@ -575,22 +449,28 @@
   }
 
   function render() {
-    var key = keyOfActive();
+    var key = FOCUS_DOCK_NEXT ? null : keyOfActive();
     hidePreview();
     var idx = DATA ? dayIndex() : { list: [], byCinema: new Map() };
     LAST_IDX = idx;
     renderTop();
     renderMapVisibility();
-    if (DATA && LOAD_STATE === 'ready') {
-      renderMap(idx);
+    if (DATA && LOAD_STATE === 'ready' && mapCtrl) {
+      mapCtrl.render();
     }
     renderDock(idx);
     renderList(idx);
     renderFilm();
     renderStatus(idx);
     updateChromeVars();
-    renderOffscreen();
-    restoreFocus(key);
+    if (mapCtrl) mapCtrl.refresh();
+    if (FOCUS_DOCK_NEXT) {
+      FOCUS_DOCK_NEXT = false;
+      var dn = $('.dock-name', $('#dock-head'));
+      if (dn && dn.focus) dn.focus({ preventScroll: true });
+    } else {
+      restoreFocus(key);
+    }
   }
 
   function writeHash() {
@@ -602,7 +482,10 @@
     if (S.fmt !== 'tutti') p.set('fmt', S.fmt);
     if (S.tipo !== 'tutti') p.set('tipo', S.tipo);
     if (S.q) p.set('q', S.q);
-    if (S.c) p.set('c', S.c);
+    if (S.c) {
+      p.set('c', S.c);
+      if (!S.dock) p.set('dock', '0');
+    }
     if (S.film) p.set('film', S.film);
     if (S.v !== 'mappa') p.set('v', S.v);
     var h = '#' + p.toString();
@@ -613,7 +496,6 @@
 
   function readHash() {
     var p = new URLSearchParams(location.hash.replace(/^#/, ''));
-    var prevC = S.c;
     var dates = DATA.dates;
     var d = p.get('d');
     if (!d || dates.indexOf(d) < 0) {
@@ -634,7 +516,7 @@
     var film = p.get('film');
     S.film = film && DATA.filmById.has(film) ? film : null;
     S.v = p.get('v') === 'lista' ? 'lista' : 'mappa';
-    if (S.c !== prevC) S.dock = !!S.c;
+    S.dock = S.c ? p.get('dock') !== '0' : false;
   }
 
   function commit(patch) {
@@ -646,13 +528,14 @@
   function resetFilters() {
     commit({ l: 'ita', t: 'tutti', fmt: 'tutti', tipo: 'tutti', q: '' });
   }
-  function pickCinema(id) {
+  function pickCinema(id, opts) {
+    FOCUS_DOCK_NEXT = !!(opts && opts.viaKeyboard);
     commit({ c: id, dock: true });
   }
   function goToCinema(id) {
-    var c = DATA.cinemaById.get(id);
+    FOCUS_DOCK_NEXT = true;
     commit({ film: null, v: 'mappa', c: id, dock: true });
-    if (map && c && isNum(c.lat) && isNum(c.lng)) map.panTo([c.lat, c.lng]);
+    if (mapCtrl) mapCtrl.panTo(id);
   }
   function openFilm(id) { commit({ film: id }); }
   function toggleFilters(force, focusQ) {
@@ -703,7 +586,7 @@
     });
 
     document.addEventListener('click', function (e) {
-      var t = e.target.closest ? e.target.closest('[data-act],[data-film],[data-c],[data-day],[data-pan]') : null;
+      var t = e.target.closest ? e.target.closest('[data-act],[data-film],[data-c],[data-day]') : null;
       if (!t) return;
       if (t.hasAttribute('data-act')) {
         var act = t.getAttribute('data-act');
@@ -718,22 +601,9 @@
         openFilm(t.getAttribute('data-film'));
       } else if (t.hasAttribute('data-c')) {
         goToCinema(t.getAttribute('data-c'));
-      } else if (t.hasAttribute('data-day')) {
+      } else if (t.hasAttribute('data-day') && !t.classList.contains('fpg-day')) {
         commit({ d: t.getAttribute('data-day') });
-      } else if (t.hasAttribute('data-pan')) {
-        var c = DATA.cinemaById.get(t.getAttribute('data-pan'));
-        if (c && map) map.panTo([c.lat, c.lng]);
       }
-    });
-
-    var mapWrap = $('#map-wrap');
-    mapWrap.addEventListener('mouseover', function (e) {
-      var p = e.target.closest ? e.target.closest('[data-pin]') : null;
-      if (p && canHover() && DATA) showPreview(p);
-    });
-    mapWrap.addEventListener('mouseout', function (e) {
-      var p = e.target.closest ? e.target.closest('[data-pin]') : null;
-      if (p && !p.contains(e.relatedTarget)) hidePreview();
     });
 
     var handle = $('#dock-handle');
@@ -759,9 +629,9 @@
       readHash();
       render();
     });
-    window.addEventListener('resize', function () { updateChromeVars(); renderOffscreen(); });
+    window.addEventListener('resize', function () { updateChromeVars(); if (mapCtrl) mapCtrl.refresh(); });
     if ('ResizeObserver' in window) {
-      var ro = new ResizeObserver(function () { updateChromeVars(); renderOffscreen(); });
+      var ro = new ResizeObserver(function () { updateChromeVars(); if (mapCtrl) mapCtrl.refresh(); });
       ro.observe($('#topbar'));
       ro.observe($('#dock'));
     }
@@ -791,14 +661,22 @@
       buildStrip();
       buildFormats();
       readHash();
-      render();
       writeHash();
+      render();
     }).catch(function (err) {
       if (window.console) console.error(err);
       LOAD_STATE = 'error';
       render();
     });
   }
+
+  window.CinemaApp = {
+    getData: function () { return DATA; },
+    getState: function () { return S; },
+    getPosters: function () { return POSTERS; },
+    passes: passes,
+    commit: commit
+  };
 
   // ---- start -------------------------------------------------------------
   function start() {
