@@ -20,7 +20,7 @@
   },
   {
    "id": "uci-certosa",
-   "name": "UCI Cinemas Certosa (Cinelandia Milano Certosa)",
+   "name": "UCI Certosa",
    "address": "Via Giovanni Gentile 3, Milano",
    "lat": 45.5096401,
    "lng": 9.1281504,
@@ -262,7 +262,7 @@
    "runtime_min": 118
   },
   {
-   "id": "jp-godzilla-minus-zero",
+   "id": "godzilla-minus-zero",
    "title": "(JP) Godzilla Minus Zero",
    "original_title": "Godzilla Minus Zero",
    "type": "film",
@@ -270,112 +270,91 @@
   },
   {
    "id": "kor-stray-kids-wt-run-it-live-view-run",
-   "title": "(Kor) Stray Kids Wt <run it=\"\"> Live View</run>",
+   "title": "(Xl-Kor) Stray Kids Wt <run it=\"\">Live View</run>",
    "original_title": "Stray Kids WT <run it=\"\"> Live view</run>",
    "type": "event",
    "runtime_min": 195
   },
   {
-   "id": "lingua-orginale-george-michael-the-fa",
+   "id": "george-michael-the-faith-tour",
    "title": "(Lingua Orginale) George Michael: The Fa",
    "original_title": "George Michael: The Faith Tour",
-   "type": "film",
+   "type": "event",
    "runtime_min": 114
   },
   {
-   "id": "lingua-orig-wild-horse-nine",
-   "title": "(Lingua Orig) Wild Horse Nine",
-   "original_title": "Wild Horse Nine",
-   "type": "film",
-   "runtime_min": 120
-  },
-  {
-   "id": "lingua-originale-wild-horse-nine",
+   "id": "wild-horse-nine",
    "title": "(Lingua Originale) Wild Horse Nine",
    "original_title": "Wild Horse Nine",
    "type": "film",
    "runtime_min": 120
   },
   {
-   "id": "sala-xl-clayface",
+   "id": "clayface",
    "title": "(Sala XL) Clayface",
    "original_title": "Clayface",
    "type": "film",
    "runtime_min": 105
   },
   {
-   "id": "sala-xl-ice-cream-man",
+   "id": "ice-cream-man",
    "title": "(Sala XL) Ice Cream Man",
    "original_title": "Ice Cream Man",
    "type": "film",
    "runtime_min": 87
   },
   {
-   "id": "sala-xl-il-rumore-delle-cose-nuove",
+   "id": "il-rumore-delle-cose-nuove",
    "title": "(Sala XL) Il Rumore Delle Cose Nuove",
    "original_title": "Il rumore delle cose nuove",
-   "type": "film",
+   "type": "event",
    "runtime_min": 115
   },
   {
-   "id": "sala-xl-it-ends",
+   "id": "it-ends",
    "title": "(Sala XL) It Ends",
    "original_title": "It Ends",
    "type": "film",
    "runtime_min": 89
   },
   {
-   "id": "sala-xl-se-domani-non-torno",
-   "title": "(Sala XL) Se Domani Non Torno",
+   "id": "se-domani-non-torno",
+   "title": "Se Domani Non Torno",
    "original_title": "Se domani non torno",
    "type": "film",
    "runtime_min": 106
   },
   {
-   "id": "sala-xl-un-weekend-artificiale",
+   "id": "un-weekend-artificiale",
    "title": "(Sala XL) Un Weekend Artificiale",
    "original_title": "Un weekend artificiale",
    "type": "film",
    "runtime_min": 100
   },
   {
-   "id": "xl-kor-stray-kids-wt-run-it-live-view-run",
-   "title": "(Xl-Kor) Stray Kids Wt <run it=\"\">Live View</run>",
-   "original_title": "Beyond Live - Stray Kids World Tour RUN IT SEOUL",
-   "type": "event",
-   "runtime_min": 195
-  },
-  {
-   "id": "xl-shaun-vita-da-pecora-op-z-u-c-c-a",
-   "title": "(XL) Shaun Vita Da Pecora-Op. Z.U.C.C.A.",
+   "id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
+   "title": "Shaun vita da pecora - operazione z.u.c.c.a",
    "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
    "type": "film",
    "runtime_min": 91
   },
   {
-   "id": "xl-wildwood-i-segreti-del-bosco-p",
+   "id": "wildwood-i-segreti-del-bosco-p",
    "title": "(XL) Wildwood - I Segreti Del Bosco P.",
    "original_title": "Wildwood",
    "type": "film",
    "runtime_min": 132
   },
   {
-   "id": "atmos-clayface",
-   "title": "Atmos - Clayface",
-   "original_title": "Clayface",
-   "type": "film",
-   "runtime_min": 105
-  },
-  {
-   "id": "atmos-il-gatto-col-cappello",
-   "title": "Atmos - Il Gatto Col Cappello",
+   "id": "il-gatto-col-cappello",
+   "title": "Il gatto col cappello (the cat in the hat)",
    "original_title": "The Cat in the Hat",
-   "type": "film",
+   "type": "event",
    "runtime_min": 114
   },
   {
-   "id": "atmos-scrooge-e-gli-spiriti-del-natale",
-   "title": "Atmos - Scrooge E Gli Spiriti Del Natale",
+   "id": "scrooge-e-gli-spiriti-del-natale",
+   "title": "Scrooge E Gli Spiriti Del Natale",
    "original_title": "Ebenezer",
    "type": "film",
    "runtime_min": 118
@@ -409,13 +388,6 @@
    "runtime_min": 116
   },
   {
-   "id": "clayface",
-   "title": "Clayface",
-   "original_title": "Clayface",
-   "type": "film",
-   "runtime_min": 105
-  },
-  {
    "id": "come-rapinare-una-banca",
    "title": "Come Rapinare Una Banca",
    "original_title": "How to Rob a Bank",
@@ -437,13 +409,6 @@
    "runtime_min": 113
   },
   {
-   "id": "ebenezer",
-   "title": "Ebenezer",
-   "original_title": "Ebenezer",
-   "type": "film",
-   "runtime_min": 118
-  },
-  {
    "id": "el-partido-the-match",
    "title": "EL PARTIDO (THE MATCH)",
    "original_title": null,
@@ -463,20 +428,6 @@
    "original_title": "Ferine",
    "type": "film",
    "runtime_min": 105
-  },
-  {
-   "id": "george-michael-the-faith-tour",
-   "title": "George Michael: The Faith Tour",
-   "original_title": "George Michael: The Faith Tour",
-   "type": "event",
-   "runtime_min": 114
-  },
-  {
-   "id": "godzilla-minus-zero",
-   "title": "Godzilla Minus Zero",
-   "original_title": "Godzilla Minus Zero",
-   "type": "film",
-   "runtime_min": 135
   },
   {
    "id": "gruppo-di-famiglia-in-un-interno",
@@ -507,13 +458,6 @@
    "runtime_min": 142
   },
   {
-   "id": "ice-cream-man",
-   "title": "Ice Cream Man",
-   "original_title": "Ice Cream Man",
-   "type": "film",
-   "runtime_min": 87
-  },
-  {
    "id": "if-i-go-will-they-miss-me",
    "title": "IF I GO WILL THEY MISS ME",
    "original_title": null,
@@ -528,60 +472,11 @@
    "runtime_min": 104
   },
   {
-   "id": "il-gatto-col-cappello",
-   "title": "Il Gatto Col Cappello",
-   "original_title": "The Cat in the Hat",
-   "type": "film",
-   "runtime_min": 105
-  },
-  {
-   "id": "il-gatto-col-cappello-evento",
-   "title": "Il Gatto Col Cappello - Evento",
-   "original_title": "The Cat in the Hat",
-   "type": "event",
-   "runtime_min": 114
-  },
-  {
-   "id": "il-gatto-col-cappello-the-cat-in-the-hat",
-   "title": "Il gatto col cappello (the cat in the hat)",
-   "original_title": null,
-   "type": "film",
-   "runtime_min": 100
-  },
-  {
-   "id": "il-gatto-con-il-cappello",
-   "title": "Il Gatto Con Il Cappello",
-   "original_title": "The Cat in the Hat",
-   "type": "film",
-   "runtime_min": 114
-  },
-  {
-   "id": "il-gruffalo-e-la-sua-p-bastoncino-aut",
+   "id": "il-gruffalo-e-la-sua-picc-bastoncino",
    "title": "Il Gruffalo' E La Sua P+Bastoncino Aut.",
    "original_title": "The Gruffalo's Child",
    "type": "film",
    "runtime_min": 53
-  },
-  {
-   "id": "il-gruffalo-e-la-sua-picc-bastoncino",
-   "title": "Il Gruffalo' E La Sua Picc + Bastoncino",
-   "original_title": "The Gruffalo's Child",
-   "type": "film",
-   "runtime_min": 53
-  },
-  {
-   "id": "il-rumore-delle-cose-nuove",
-   "title": "Il Rumore Delle Cose Nuove",
-   "original_title": "Il rumore delle cose nuove",
-   "type": "event",
-   "runtime_min": 113
-  },
-  {
-   "id": "it-ends",
-   "title": "It Ends",
-   "original_title": "It Ends",
-   "type": "film",
-   "runtime_min": 89
   },
   {
    "id": "je-so-pazzo",
@@ -682,25 +577,11 @@
    "runtime_min": 114
   },
   {
-   "id": "minotaur",
-   "title": "Minotaur",
-   "original_title": null,
-   "type": "film",
-   "runtime_min": 135
-  },
-  {
    "id": "minotaur-nel-labirinto-del-potere",
-   "title": "Minotaur - Nel Labirinto Del Potere",
+   "title": "MINOTAUR NEL LABIRINTO DEL POTERE (MINOTAURE)",
    "original_title": "Minotaure",
    "type": "film",
    "runtime_min": 135
-  },
-  {
-   "id": "minotaur-nel-labirinto-del-potere-minotaure",
-   "title": "MINOTAUR NEL LABIRINTO DEL POTERE (MINOTAURE)",
-   "original_title": null,
-   "type": "film",
-   "runtime_min": 140
   },
   {
    "id": "naza",
@@ -808,53 +689,11 @@
    "runtime_min": 87
   },
   {
-   "id": "scrooge-e-gli-spiriti-del-natale",
-   "title": "Scrooge E Gli Spiriti Del Natale",
-   "original_title": "Ebenezer",
-   "type": "film",
-   "runtime_min": 118
-  },
-  {
-   "id": "se-domani-non-torno",
-   "title": "Se Domani Non Torno",
-   "original_title": "Se domani non torno",
-   "type": "film",
-   "runtime_min": 106
-  },
-  {
-   "id": "se-domani-non-torno-ospiti-in-sala",
-   "title": "Se Domani Non Torno - Ospiti In Sala",
-   "original_title": "Se domani non torno",
-   "type": "film",
-   "runtime_min": 106
-  },
-  {
    "id": "serpenti",
    "title": "Serpenti",
    "original_title": "Serpenti",
    "type": "film",
    "runtime_min": 90
-  },
-  {
-   "id": "shaun-vita-da-pecora-op-z-u-c-c-a",
-   "title": "Shaun Vita Da Pecora - Op. Z.U.C.C.A.",
-   "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
-   "type": "film",
-   "runtime_min": 91
-  },
-  {
-   "id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
-   "title": "Shaun vita da pecora - operazione z.u.c.c.a",
-   "original_title": null,
-   "type": "film",
-   "runtime_min": 81
-  },
-  {
-   "id": "shaun-vita-da-pecora-operazione-z-u-c",
-   "title": "Shaun, Vita Da Pecora - Operazione Z.U.C",
-   "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
-   "type": "film",
-   "runtime_min": 88
   },
   {
    "id": "sherlock-junior-one-week-la-palla-n-13-una-settimana",
@@ -878,18 +717,11 @@
    "runtime_min": 78
   },
   {
-   "id": "taddeo-l-esploratore-e-la-lampada-m",
-   "title": "Taddeo L'Esploratore E La Lampada M.",
-   "original_title": "Tadeo Jones y La Lámpara Maravillosa",
-   "type": "film",
-   "runtime_min": 95
-  },
-  {
    "id": "taddeo-l-esploratore-e-la-lampada-magica",
    "title": "Taddeo l'esploratore e la lampada magica",
    "original_title": "Tadeo Jones y La Lámpara Maravillosa",
    "type": "film",
-   "runtime_min": 94
+   "runtime_min": 95
   },
   {
    "id": "the-apartment-l-appartamento",
@@ -955,13 +787,6 @@
    "runtime_min": 98
   },
   {
-   "id": "un-weekend-artificiale",
-   "title": "Un Weekend Artificiale",
-   "original_title": "Un weekend artificiale",
-   "type": "film",
-   "runtime_min": 100
-  },
-  {
    "id": "v-m-18-ecco-l-impero-dei-sensi-o-v",
    "title": "V.M. 18 - Ecco L'Impero Dei Sensi (O.V.)",
    "original_title": "ECCO L'IMPERO DEI SENSI",
@@ -988,20 +813,6 @@
    "original_title": "Whalefall",
    "type": "film",
    "runtime_min": 106
-  },
-  {
-   "id": "wild-horse-nine",
-   "title": "Wild Horse Nine",
-   "original_title": "Wild Horse Nine",
-   "type": "film",
-   "runtime_min": 120
-  },
-  {
-   "id": "wildwood",
-   "title": "Wildwood",
-   "original_title": "Wildwood",
-   "type": "film",
-   "runtime_min": 132
   },
   {
    "id": "wildwood-i-segreti-del-bosco-proibito",
@@ -1204,7 +1015,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "colosseo",
    "date": "2026-11-06",
    "time": "15:00",
@@ -1304,7 +1115,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "15:10",
@@ -1334,7 +1145,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "15:15",
@@ -1344,7 +1155,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "orfeo",
    "date": "2026-11-06",
    "time": "15:20",
@@ -1454,7 +1265,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "16:30",
@@ -1494,7 +1305,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5742"
   },
   {
-   "film_id": "il-gatto-con-il-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "ducale",
    "date": "2026-11-06",
    "time": "16:45",
@@ -1764,7 +1575,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5065"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-06",
    "time": "17:15",
@@ -1834,7 +1645,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-certosa",
    "date": "2026-11-06",
    "time": "17:20",
@@ -1874,7 +1685,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "17:30",
@@ -1884,7 +1695,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-06",
    "time": "17:30",
@@ -1924,7 +1735,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "17:40",
@@ -1974,7 +1785,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5064"
   },
   {
-   "film_id": "minotaur",
+   "film_id": "minotaur-nel-labirinto-del-potere",
    "cinema_id": "palestrina",
    "date": "2026-11-06",
    "time": "18:00",
@@ -2024,7 +1835,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "minotaur",
+   "film_id": "minotaur-nel-labirinto-del-potere",
    "cinema_id": "mexico",
    "date": "2026-11-06",
    "time": "18:15",
@@ -2094,7 +1905,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5742"
   },
   {
-   "film_id": "il-gatto-con-il-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "ducale",
    "date": "2026-11-06",
    "time": "18:45",
@@ -2124,7 +1935,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "19:00",
@@ -2224,7 +2035,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062"
   },
   {
-   "film_id": "se-domani-non-torno-ospiti-in-sala",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "colosseo",
    "date": "2026-11-06",
    "time": "19:15",
@@ -2474,7 +2285,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-06",
    "time": "20:00",
@@ -2524,7 +2335,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "20:10",
@@ -2954,7 +2765,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "21:30",
@@ -3054,7 +2865,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "lingua-orginale-george-michael-the-fa",
+   "film_id": "george-michael-the-faith-tour",
    "cinema_id": "uci-certosa",
    "date": "2026-11-06",
    "time": "22:00",
@@ -3124,7 +2935,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-ice-cream-man",
+   "film_id": "ice-cream-man",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-06",
    "time": "22:40",
@@ -3134,7 +2945,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-clayface",
+   "film_id": "clayface",
    "cinema_id": "uci-certosa",
    "date": "2026-11-06",
    "time": "22:40",
@@ -3294,7 +3105,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/je-so-pazzo_2026-0bb3a01e-d867-4f80-a6db-67fc260903bd/853914#sala"
   },
   {
-   "film_id": "xl-shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "10:20",
@@ -3344,7 +3155,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "il-gruffalo-e-la-sua-p-bastoncino-aut",
+   "film_id": "il-gruffalo-e-la-sua-picc-bastoncino",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "10:40",
@@ -3354,7 +3165,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "minotaur-nel-labirinto-del-potere-minotaure",
+   "film_id": "minotaur-nel-labirinto-del-potere",
    "cinema_id": "arlecchino",
    "date": "2026-11-07",
    "time": "10:45",
@@ -3514,7 +3325,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5065"
   },
   {
-   "film_id": "xl-kor-stray-kids-wt-run-it-live-view-run",
+   "film_id": "kor-stray-kids-wt-run-it-live-view-run",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "13:00",
@@ -3544,7 +3355,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "14:00",
@@ -3794,7 +3605,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/856709#sala"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-07",
    "time": "15:00",
@@ -3854,7 +3665,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "colosseo",
    "date": "2026-11-07",
    "time": "15:00",
@@ -3914,7 +3725,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-07",
    "time": "15:00",
@@ -3954,7 +3765,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-certosa",
    "date": "2026-11-07",
    "time": "15:10",
@@ -3984,7 +3795,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "15:15",
@@ -3994,7 +3805,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "orfeo",
    "date": "2026-11-07",
    "time": "15:20",
@@ -4064,7 +3875,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "wildwood",
+   "film_id": "wildwood-i-segreti-del-bosco-proibito",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "16:10",
@@ -4084,7 +3895,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "16:30",
@@ -4374,7 +4185,7 @@
    "booking_url": "https://ariosto.spaziocinema.18tickets.it/film/fatherland_2026-8d1b510a-12f8-4527-b949-dc6a97836d5d/854280#sala"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-07",
    "time": "17:15",
@@ -4424,7 +4235,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "xl-kor-stray-kids-wt-run-it-live-view-run",
+   "film_id": "kor-stray-kids-wt-run-it-live-view-run",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "17:15",
@@ -4454,7 +4265,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-certosa",
    "date": "2026-11-07",
    "time": "17:20",
@@ -4474,7 +4285,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "17:30",
@@ -4484,7 +4295,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-07",
    "time": "17:30",
@@ -4714,7 +4525,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "19:00",
@@ -4764,7 +4575,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "19:10",
@@ -4994,7 +4805,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/un-tranquillo-funerale-di-famiglia_2026-79d1c509-ee0f-46f9-8ec1-3150933a8e16/853819#sala"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-07",
    "time": "20:00",
@@ -5184,7 +4995,7 @@
    "booking_url": "https://ariosto.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/854445#sala"
   },
   {
-   "film_id": "sala-xl-clayface",
+   "film_id": "clayface",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "21:15",
@@ -5384,7 +5195,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-07",
    "time": "21:30",
@@ -5514,7 +5325,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "lingua-orginale-george-michael-the-fa",
+   "film_id": "george-michael-the-faith-tour",
    "cinema_id": "uci-certosa",
    "date": "2026-11-07",
    "time": "22:00",
@@ -5574,7 +5385,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-clayface",
+   "film_id": "clayface",
    "cinema_id": "uci-certosa",
    "date": "2026-11-07",
    "time": "22:40",
@@ -5734,7 +5545,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/zustissia_2026-5a1ea452-41b6-4d4e-96c1-385b0104aa25/853760#sala"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "10:20",
@@ -5744,7 +5555,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "taddeo-l-esploratore-e-la-lampada-m",
+   "film_id": "taddeo-l-esploratore-e-la-lampada-magica",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "10:30",
@@ -5784,7 +5595,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "il-gatto-col-cappello-evento",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "colosseo",
    "date": "2026-11-08",
    "time": "10:45",
@@ -5814,7 +5625,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "il-gruffalo-e-la-sua-p-bastoncino-aut",
+   "film_id": "il-gruffalo-e-la-sua-picc-bastoncino",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "11:00",
@@ -5824,7 +5635,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "11:15",
@@ -5834,7 +5645,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "11:30",
@@ -5914,7 +5725,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-08",
    "time": "12:30",
@@ -5984,7 +5795,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "14:00",
@@ -6204,7 +6015,7 @@
    "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/film/118784/d3147a42-aec8-41ec-bbdb-21294261df07#theater-init"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-08",
    "time": "15:00",
@@ -6254,7 +6065,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "colosseo",
    "date": "2026-11-08",
    "time": "15:00",
@@ -6334,7 +6145,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-08",
    "time": "15:00",
@@ -6384,7 +6195,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "15:10",
@@ -6394,7 +6205,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-certosa",
    "date": "2026-11-08",
    "time": "15:10",
@@ -6424,7 +6235,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "15:15",
@@ -6444,7 +6255,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/856706#sala"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "orfeo",
    "date": "2026-11-08",
    "time": "15:20",
@@ -6514,7 +6325,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "wildwood",
+   "film_id": "wildwood-i-segreti-del-bosco-proibito",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "16:10",
@@ -6534,7 +6345,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "16:30",
@@ -6784,7 +6595,7 @@
    "booking_url": "https://ariosto.spaziocinema.18tickets.it/film/zustissia_2026-5a1ea452-41b6-4d4e-96c1-385b0104aa25/857019#sala"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-08",
    "time": "17:15",
@@ -6854,7 +6665,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-certosa",
    "date": "2026-11-08",
    "time": "17:20",
@@ -6894,7 +6705,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "17:30",
@@ -6904,7 +6715,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-08",
    "time": "17:30",
@@ -6954,7 +6765,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "17:40",
@@ -7134,7 +6945,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "19:00",
@@ -7444,7 +7255,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-08",
    "time": "20:00",
@@ -7484,7 +7295,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "20:10",
@@ -7814,7 +7625,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "21:30",
@@ -7934,7 +7745,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "lingua-orginale-george-michael-the-fa",
+   "film_id": "george-michael-the-faith-tour",
    "cinema_id": "uci-certosa",
    "date": "2026-11-08",
    "time": "22:00",
@@ -8004,7 +7815,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-ice-cream-man",
+   "film_id": "ice-cream-man",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-08",
    "time": "22:40",
@@ -8014,7 +7825,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-clayface",
+   "film_id": "clayface",
    "cinema_id": "uci-certosa",
    "date": "2026-11-08",
    "time": "22:40",
@@ -8404,7 +8215,7 @@
    "booking_url": "https://ariosto.spaziocinema.18tickets.it/film/serpenti_2026-f79f1fb3-0437-4b28-8608-8de17400bc11/853554#sala"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-09",
    "time": "15:00",
@@ -8564,7 +8375,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "15:10",
@@ -8594,7 +8405,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "xl-shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "15:15",
@@ -8664,7 +8475,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "wildwood",
+   "film_id": "wildwood-i-segreti-del-bosco-proibito",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "16:10",
@@ -8924,7 +8735,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-09",
    "time": "17:15",
@@ -8994,7 +8805,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-certosa",
    "date": "2026-11-09",
    "time": "17:20",
@@ -9034,7 +8845,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "xl-shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "17:30",
@@ -9044,7 +8855,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-09",
    "time": "17:30",
@@ -9074,7 +8885,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/un-tranquillo-funerale-di-famiglia_2026-79d1c509-ee0f-46f9-8ec1-3150933a8e16/853825#sala"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "17:40",
@@ -9264,7 +9075,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/wildwood-i-segreti-del-bosco-proibito_2026-5cd3b71c-41a0-49a1-aa3a-75d178c7fc12/856760#sala"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "19:10",
@@ -9444,7 +9255,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "xl-wildwood-i-segreti-del-bosco-p",
+   "film_id": "wildwood-i-segreti-del-bosco-p",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "19:45",
@@ -9494,7 +9305,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-09",
    "time": "20:00",
@@ -9544,7 +9355,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "20:10",
@@ -9614,7 +9425,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "lingua-originale-wild-horse-nine",
+   "film_id": "wild-horse-nine",
    "cinema_id": "uci-certosa",
    "date": "2026-11-09",
    "time": "20:30",
@@ -9944,7 +9755,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "lingua-orginale-george-michael-the-fa",
+   "film_id": "george-michael-the-faith-tour",
    "cinema_id": "uci-certosa",
    "date": "2026-11-09",
    "time": "22:00",
@@ -10004,7 +9815,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-ice-cream-man",
+   "film_id": "ice-cream-man",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "22:40",
@@ -10014,7 +9825,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-clayface",
+   "film_id": "clayface",
    "cinema_id": "uci-certosa",
    "date": "2026-11-09",
    "time": "22:40",
@@ -10044,7 +9855,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-it-ends",
+   "film_id": "it-ends",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "22:45",
@@ -10384,7 +10195,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/853711#sala"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-10",
    "time": "15:00",
@@ -10484,7 +10295,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "15:10",
@@ -10524,7 +10335,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "xl-shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "15:15",
@@ -10594,7 +10405,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "wildwood",
+   "film_id": "wildwood-i-segreti-del-bosco-proibito",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "16:10",
@@ -10784,7 +10595,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-10",
    "time": "17:15",
@@ -10864,7 +10675,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-certosa",
    "date": "2026-11-10",
    "time": "17:20",
@@ -10904,7 +10715,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "xl-shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "17:30",
@@ -10914,7 +10725,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-10",
    "time": "17:30",
@@ -10934,7 +10745,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "17:40",
@@ -11114,7 +10925,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5491"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "19:10",
@@ -11314,7 +11125,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "xl-wildwood-i-segreti-del-bosco-p",
+   "film_id": "wildwood-i-segreti-del-bosco-p",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "19:45",
@@ -11354,7 +11165,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-10",
    "time": "20:00",
@@ -11394,7 +11205,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "20:10",
@@ -11634,7 +11445,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "lingua-orig-wild-horse-nine",
+   "film_id": "wild-horse-nine",
    "cinema_id": "orfeo",
    "date": "2026-11-10",
    "time": "21:30",
@@ -11794,7 +11605,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "lingua-orginale-george-michael-the-fa",
+   "film_id": "george-michael-the-faith-tour",
    "cinema_id": "uci-certosa",
    "date": "2026-11-10",
    "time": "22:00",
@@ -11864,7 +11675,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-ice-cream-man",
+   "film_id": "ice-cream-man",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "22:40",
@@ -11874,7 +11685,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-clayface",
+   "film_id": "clayface",
    "cinema_id": "uci-certosa",
    "date": "2026-11-10",
    "time": "22:40",
@@ -11904,7 +11715,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-it-ends",
+   "film_id": "it-ends",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "22:45",
@@ -12224,7 +12035,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/856921#sala"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-11",
    "time": "15:00",
@@ -12324,7 +12135,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "15:10",
@@ -12354,7 +12165,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351"
   },
   {
-   "film_id": "xl-shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "15:15",
@@ -12444,7 +12255,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "wildwood",
+   "film_id": "wildwood-i-segreti-del-bosco-proibito",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "16:10",
@@ -12634,7 +12445,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/856897#sala"
   },
   {
-   "film_id": "il-gatto-col-cappello-the-cat-in-the-hat",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "citylife-anteo",
    "date": "2026-11-11",
    "time": "17:15",
@@ -12694,7 +12505,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "shaun-vita-da-pecora-operazione-z-u-c",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-certosa",
    "date": "2026-11-11",
    "time": "17:20",
@@ -12744,7 +12555,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "xl-shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "17:30",
@@ -12754,7 +12565,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-11",
    "time": "17:30",
@@ -12794,7 +12605,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5491"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "17:40",
@@ -12974,7 +12785,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "shaun-vita-da-pecora-op-z-u-c-c-a",
+   "film_id": "shaun-vita-da-pecora-operazione-z-u-c-c-a",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "19:10",
@@ -13144,7 +12955,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "xl-wildwood-i-segreti-del-bosco-p",
+   "film_id": "wildwood-i-segreti-del-bosco-p",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "19:45",
@@ -13184,7 +12995,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-il-gatto-col-cappello",
+   "film_id": "il-gatto-col-cappello",
    "cinema_id": "uci-certosa",
    "date": "2026-11-11",
    "time": "20:00",
@@ -13224,7 +13035,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-se-domani-non-torno",
+   "film_id": "se-domani-non-torno",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "20:10",
@@ -13594,7 +13405,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "lingua-orginale-george-michael-the-fa",
+   "film_id": "george-michael-the-faith-tour",
    "cinema_id": "uci-certosa",
    "date": "2026-11-11",
    "time": "22:00",
@@ -13664,7 +13475,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-ice-cream-man",
+   "film_id": "ice-cream-man",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "22:40",
@@ -13674,7 +13485,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-clayface",
+   "film_id": "clayface",
    "cinema_id": "uci-certosa",
    "date": "2026-11-11",
    "time": "22:40",
@@ -13704,7 +13515,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-it-ends",
+   "film_id": "it-ends",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "22:45",
@@ -13724,7 +13535,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "10:30",
@@ -13754,7 +13565,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "jp-godzilla-minus-zero",
+   "film_id": "godzilla-minus-zero",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "11:15",
@@ -13764,7 +13575,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "ebenezer",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "11:30",
@@ -13784,7 +13595,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "14:40",
@@ -13814,7 +13625,7 @@
    "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/film/120240/318c468e-27ee-4038-8ce8-b6a7141b28e6#theater-init"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "17:10",
@@ -13824,7 +13635,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-12",
    "time": "17:20",
@@ -13834,7 +13645,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "ebenezer",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "18:30",
@@ -13854,7 +13665,7 @@
    "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/film/119376/4da1556a-3246-4694-a0d9-b4d11f395a5d#theater-init"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "19:00",
@@ -13894,7 +13705,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/calle-malaga-calle-malaga-_2025-e992e9f4-a76d-4fdf-9714-db6b84b3efd8/847906#sala"
   },
   {
-   "film_id": "jp-godzilla-minus-zero",
+   "film_id": "godzilla-minus-zero",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "19:30",
@@ -13904,7 +13715,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "19:40",
@@ -13914,7 +13725,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-12",
    "time": "20:00",
@@ -13934,7 +13745,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "21:40",
@@ -13954,7 +13765,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-12",
    "time": "22:10",
@@ -13974,7 +13785,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-12",
    "time": "22:35",
@@ -13984,7 +13795,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "10:30",
@@ -14014,7 +13825,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "jp-godzilla-minus-zero",
+   "film_id": "godzilla-minus-zero",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "11:15",
@@ -14024,7 +13835,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "ebenezer",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "11:30",
@@ -14044,7 +13855,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "14:40",
@@ -14074,7 +13885,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "17:10",
@@ -14084,7 +13895,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-13",
    "time": "17:20",
@@ -14104,7 +13915,7 @@
    "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/film/120533/449df0c4-f11f-406b-b422-ae7911360289#theater-init"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "19:00",
@@ -14134,7 +13945,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "jp-godzilla-minus-zero",
+   "film_id": "godzilla-minus-zero",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "19:30",
@@ -14144,7 +13955,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "19:40",
@@ -14154,7 +13965,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-13",
    "time": "20:00",
@@ -14184,7 +13995,7 @@
    "booking_url": "https://citylife.spaziocinema.18tickets.it/film/v-o-sott-ita-trainspotting-ried-4k-_2026-5fbe63e2-814b-49d7-89bc-8786f4e0fa1e/848571#sala"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "21:40",
@@ -14204,7 +14015,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-13",
    "time": "22:10",
@@ -14224,7 +14035,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-13",
    "time": "22:35",
@@ -14234,7 +14045,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "10:30",
@@ -14264,7 +14075,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "jp-godzilla-minus-zero",
+   "film_id": "godzilla-minus-zero",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "11:15",
@@ -14274,7 +14085,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "ebenezer",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "11:30",
@@ -14294,7 +14105,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "14:40",
@@ -14304,7 +14115,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-14",
    "time": "14:45",
@@ -14334,7 +14145,7 @@
    "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/film/119377/43e503bf-1940-4be0-b345-c9e27528983b#theater-init"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "17:10",
@@ -14344,7 +14155,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-14",
    "time": "17:20",
@@ -14354,7 +14165,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "19:00",
@@ -14384,7 +14195,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "jp-godzilla-minus-zero",
+   "film_id": "godzilla-minus-zero",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "19:30",
@@ -14394,7 +14205,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "19:40",
@@ -14414,7 +14225,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-14",
    "time": "20:00",
@@ -14434,7 +14245,7 @@
    "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/film/120498/f9506f9b-49be-47dc-9d59-9a66a3d67557#theater-init"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "21:40",
@@ -14454,7 +14265,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-14",
    "time": "22:10",
@@ -14474,7 +14285,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-14",
    "time": "22:35",
@@ -14484,7 +14295,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "10:30",
@@ -14514,7 +14325,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "jp-godzilla-minus-zero",
+   "film_id": "godzilla-minus-zero",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "11:15",
@@ -14524,7 +14335,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "ebenezer",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "11:30",
@@ -14544,7 +14355,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "14:40",
@@ -14554,7 +14365,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-15",
    "time": "14:45",
@@ -14584,7 +14395,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "17:10",
@@ -14594,7 +14405,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-15",
    "time": "17:20",
@@ -14614,7 +14425,7 @@
    "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/film/120466/ed7e6d70-9030-44cb-a0cf-65b58e6f53db#theater-init"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "19:00",
@@ -14644,7 +14455,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "jp-godzilla-minus-zero",
+   "film_id": "godzilla-minus-zero",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "19:30",
@@ -14654,7 +14465,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "19:40",
@@ -14664,7 +14475,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-15",
    "time": "20:00",
@@ -14674,7 +14485,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "sala-xl-il-rumore-delle-cose-nuove",
+   "film_id": "il-rumore-delle-cose-nuove",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "21:40",
@@ -14694,7 +14505,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "sala-xl-un-weekend-artificiale",
+   "film_id": "un-weekend-artificiale",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-15",
    "time": "22:10",
@@ -14714,7 +14525,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068"
   },
   {
-   "film_id": "atmos-scrooge-e-gli-spiriti-del-natale",
+   "film_id": "scrooge-e-gli-spiriti-del-natale",
    "cinema_id": "uci-certosa",
    "date": "2026-11-15",
    "time": "22:35",

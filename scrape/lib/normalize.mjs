@@ -17,16 +17,42 @@ export function stripNoise(raw) {
   let s = String(raw || '').trim();
   s = s.replace(VO_PREFIX, '').replace(VO_SUFFIX, '');
   s = s.replace(/\(\s*ried\.?\s*\)/gi, '').replace(/\s+-?\s*ried\.?\s*$/i, '');
-  s = s.replace(NOISE, ' ');
+  s = s.replace(NOISE, ' ').replace(/\s*[-–(]\s*(?:ospiti in sala|evento)\s*\)?\s*$/i, '');
   s = s.replace(/\s+/g, ' ').replace(/^[\s\-–:,]+/, '').replace(/[\s\-–:,]+$/, '').trim();
   return s;
+}
+
+// Presentation prefixes/suffixes that sneak into titles (sound formats, screening halls, version tags, truncations).
+const ID_PREFIX = /^(?:atmos|sala-xl|xl|jp|lingua-or[a-z]*)-/;
+const ID_SUFFIX = /-(?:evento|ospiti-in-sala)$/;
+// Same film, different spellings the rules above cannot catch (subtitles, truncations, typos, original titles).
+// Confirmed by matching TMDB ids or obvious title overlap; keep in sync with scrape/logs/merges.log.
+export const ID_ALIASES = {
+  'wildwood': 'wildwood-i-segreti-del-bosco-proibito',
+  'il-gruffalo-e-la-sua-p-bastoncino-aut': 'il-gruffalo-e-la-sua-picc-bastoncino',
+  'taddeo-l-esploratore-e-la-lampada-m': 'taddeo-l-esploratore-e-la-lampada-magica',
+  'il-gatto-con-il-cappello': 'il-gatto-col-cappello',
+  'il-gatto-col-cappello-the-cat-in-the-hat': 'il-gatto-col-cappello',
+  'ebenezer': 'scrooge-e-gli-spiriti-del-natale',
+  'shaun-vita-da-pecora-op-z-u-c-c-a': 'shaun-vita-da-pecora-operazione-z-u-c-c-a',
+  'shaun-vita-da-pecora-operazione-z-u-c': 'shaun-vita-da-pecora-operazione-z-u-c-c-a',
+  'george-michael-the-fa': 'george-michael-the-faith-tour',
+  'minotaur': 'minotaur-nel-labirinto-del-potere',
+  'minotaur-nel-labirinto-del-potere-minotaure': 'minotaur-nel-labirinto-del-potere',
+  'godzilla-minus-zero': 'godzilla-minus-zero',
+  'wild-horse-nine': 'wild-horse-nine',
+};
+export function canonicalId(id) {
+  let x = id, prev;
+  do { prev = x; x = x.replace(ID_PREFIX, '').replace(ID_SUFFIX, ''); } while (x !== prev);
+  return ID_ALIASES[x] || x;
 }
 
 // Film id: lowercase, accents and punctuation stripped, words joined with '-'.
 export function normalizeTitle(raw) {
   const base = stripNoise(raw).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()
     .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
-  return base ? base.replace(/ /g, '-') : 'untitled-' + Buffer.from(String(raw)).toString('hex').slice(0, 12);
+  return base ? canonicalId(base.replace(/ /g, '-')) : 'untitled-' + Buffer.from(String(raw)).toString('hex').slice(0, 12);
 }
 
 // Human-readable title for the film record (original casing, noise removed).

@@ -311,6 +311,10 @@
     return r;
   }
 
+  function shortName(n) {
+    return String(n).replace(/^UCI Cinemas /i, 'UCI ').replace(/\s*\(.*\)\s*$/, '').replace(/ Multisala$/i, '');
+  }
+
   function renderOffscreen() {
     var wrap = $('#offscreen');
     wrap.innerHTML = '';
@@ -332,13 +336,27 @@
       var s = Math.min(sx, sy, 1);
       var a = Math.atan2(dy, dx);
       var k = (Math.round(a / (Math.PI / 4)) + 8) % 8;
-      items.push({ c: c, x: cx + dx * s, y: cy + dy * s, dist: Math.hypot(dx, dy), arrow: ARROWS[k] });
+      // anchor flush to the edge the cinema lies beyond (side edges win over top/bottom)
+      var side = sx <= sy ? (dx < 0 ? 'l' : 'r') : (dy < 0 ? 't' : 'b');
+      var px = side === 'l' ? r.l : side === 'r' ? r.r : Math.min(Math.max(cx + dx * s, r.l + 70), r.r - 70);
+      var py = side === 't' ? r.t : side === 'b' ? r.b : cy + dy * s;
+      items.push({ c: c, x: px, y: py, side: side, dist: Math.hypot(dx, dy), arrow: ARROWS[k] });
     });
     items.sort(function (a, b) { return a.dist - b.dist; });
-    wrap.innerHTML = items.slice(0, 6).map(function (it) {
-      return '<button type="button" class="offpill" style="left:' + Math.round(it.x) + 'px;top:' + Math.round(it.y) + 'px" data-pan="' + esc(it.c.id) +
+    items = items.slice(0, 6);
+    // keep pills on the same edge from stacking on top of each other
+    ['l', 'r', 't', 'b'].forEach(function (sd) {
+      var g = items.filter(function (i) { return i.side === sd; });
+      g.sort(function (a, b) { return (sd === 't' || sd === 'b') ? a.x - b.x : a.y - b.y; });
+      for (var i = 1; i < g.length; i++) {
+        if (sd === 't' || sd === 'b') g[i].x = Math.max(g[i].x, g[i - 1].x + 150);
+        else g[i].y = Math.max(g[i].y, g[i - 1].y + 52);
+      }
+    });
+    wrap.innerHTML = items.map(function (it) {
+      return '<button type="button" class="offpill e-' + it.side + '" style="left:' + Math.round(it.x) + 'px;top:' + Math.round(it.y) + 'px" data-pan="' + esc(it.c.id) +
         '" data-key="pan:' + esc(it.c.id) + '" aria-label="Vai a ' + esc(it.c.name) + '">' +
-        '<span class="arr" aria-hidden="true">' + it.arrow + '</span>' + esc(it.c.name) + '</button>';
+        '<span class="arr" aria-hidden="true">' + it.arrow + '</span>' + esc(shortName(it.c.name)) + '</button>';
     }).join('');
   }
 

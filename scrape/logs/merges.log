@@ -13,3 +13,5 @@ taddeo-l-esploratore-e-la-lampada-magica: "Taddeo L'Esploratore E La Lampada Mag
 ragione-e-sentimento-sense-and-sensibility: "ragione e sentimento (sense and sensibility)" [citylife-anteo] + "Ragione e sentimento (sense and sensibility)" [citylife-anteo]
 digger: "digger" [citylife-anteo] + "Digger" [colosseo, plinius]
 il-rumore-delle-cose-nuove: "Il rumore delle cose nuove" [citylife-anteo] + "Il Rumore Delle Cose Nuove - Anteprima" [colosseo]
+
+# Alias/prefix merges applied by scrape/remap.mjs (TMDB-id duplicates + title overlap), 2026-11-06

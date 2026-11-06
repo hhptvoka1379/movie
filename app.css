@@ -118,7 +118,7 @@ a { color: var(--ink); }
 /* offscreen pills */
 .offscreen { position: absolute; inset: 0; pointer-events: none; z-index: 1001; }
 .offpill {
-  max-width: min(70vw, 260px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  max-width: min(46vw, 220px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   position: absolute; transform: translate(-50%, -50%);
   pointer-events: auto; min-height: var(--tap); padding: 6px 12px;
   background: var(--ink); color: #fff; border: var(--line);
@@ -127,6 +127,10 @@ a { color: var(--ink); }
   font-family: var(--ff-name); font-weight: 700; font-size: 13px; letter-spacing: .04em;
   text-transform: uppercase;
 }
+.offpill.e-l { transform: translate(0, -50%); }
+.offpill.e-r { transform: translate(-100%, -50%); }
+.offpill.e-t { transform: translate(-50%, 0); }
+.offpill.e-b { transform: translate(-50%, -100%); }
 .offpill .arr { font-family: var(--ff-body); margin-right: 4px; }
 
 /* hover preview (desktop) */
