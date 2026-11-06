@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-11-06T18:06:26.208Z",
+  "range": {
+    "from": "2026-11-06",
+    "to": "2026-11-15"
+  },
+  "cinema": {
+    "id": "auditorium-don-bosco",
+    "name": "Auditorium Don Bosco",
+    "address": "Via Melchiorre Gioia 48, Milano",
+    "lat": 45.4882339,
+    "lng": 9.1998219,
+    "website": "https://www.cinebazin.it/new/",
+    "booking_url": null,
+    "source_used": "cinebazin",
+    "published_until": "2026-11-13",
+    "status": "ok",
+    "notes": "Online sale: no (seasonal cineforum membership pass only — tessera personale ~€109 for 30 weekly films sold in person at Via Melchiorre Gioia 48 before screenings; no single-ticket sales). Reserve without paying: no. Group policy: membership-only cinecircolo (C.S.C. Cinecircolo André Bazin, cinebazin.it, confirmed via sdcmilano.it/sala-don-bosco-2; weekly screenings Sun 16:00 and Mon/Wed/Fri 21:00)."
+  },
+  "raw_showings": [
+    {
+      "title": "La grazia",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-08",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.cinebazin.it/new/index.php?option=com_content&view=article&id=334:grazia&catid=8&Itemid=117"
+    },
+    {
+      "title": "La grazia",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-09",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.cinebazin.it/new/index.php?option=com_content&view=article&id=334:grazia&catid=8&Itemid=117"
+    },
+    {
+      "title": "La grazia",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-11",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.cinebazin.it/new/index.php?option=com_content&view=article&id=334:grazia&catid=8&Itemid=117"
+    },
+    {
+      "title": "La grazia",
+      "original_title": null,
+      "year": null,
+      "runtime_min": null,
+      "date": "2026-11-13",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.cinebazin.it/new/index.php?option=com_content&view=article&id=334:grazia&catid=8&Itemid=117"
+    }
+  ],
+  "films": [
+    {
+      "id": "la-grazia",
+      "title": "La grazia",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    }
+  ],
+  "showings": [
+    {
+      "film_id": "la-grazia",
+      "cinema_id": "auditorium-don-bosco",
+      "date": "2026-11-08",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.cinebazin.it/new/index.php?option=com_content&view=article&id=334:grazia&catid=8&Itemid=117"
+    },
+    {
+      "film_id": "la-grazia",
+      "cinema_id": "auditorium-don-bosco",
+      "date": "2026-11-09",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.cinebazin.it/new/index.php?option=com_content&view=article&id=334:grazia&catid=8&Itemid=117"
+    },
+    {
+      "film_id": "la-grazia",
+      "cinema_id": "auditorium-don-bosco",
+      "date": "2026-11-11",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.cinebazin.it/new/index.php?option=com_content&view=article&id=334:grazia&catid=8&Itemid=117"
+    },
+    {
+      "film_id": "la-grazia",
+      "cinema_id": "auditorium-don-bosco",
+      "date": "2026-11-13",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "booking_url": "https://www.cinebazin.it/new/index.php?option=com_content&view=article&id=334:grazia&catid=8&Itemid=117"
+    }
+  ]
+}
