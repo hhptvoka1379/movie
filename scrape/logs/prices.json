@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T18:07:20.277Z",
+  "generated_at": "2026-11-06T18:28:12.612Z",
   "range": {
     "from": "2026-11-06",
     "to": "2026-11-15"
@@ -24,7 +24,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5068-info.json"
+      "evidence_file": "scrape/logs/wt-5068-info.json",
+      "tariff_urls": null
     },
     "uci-certosa": {
       "cinema": "uci-certosa",
@@ -44,7 +45,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5868-info.json"
+      "evidence_file": "scrape/logs/wt-5868-info.json",
+      "tariff_urls": null
     },
     "gloria": {
       "cinema": "gloria",
@@ -64,7 +66,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5491-info.json"
+      "evidence_file": "scrape/logs/wt-5491-info.json",
+      "tariff_urls": null
     },
     "arcobaleno": {
       "cinema": "arcobaleno",
@@ -84,7 +87,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5066-info.json"
+      "evidence_file": "scrape/logs/wt-5066-info.json",
+      "tariff_urls": null
     },
     "ducale": {
       "cinema": "ducale",
@@ -104,7 +108,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5065-info.json"
+      "evidence_file": "scrape/logs/wt-5065-info.json",
+      "tariff_urls": null
     },
     "colosseo": {
       "cinema": "colosseo",
@@ -124,7 +129,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5062-info.json"
+      "evidence_file": "scrape/logs/wt-5062-info.json",
+      "tariff_urls": null
     },
     "eliseo": {
       "cinema": "eliseo",
@@ -144,7 +150,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5064-info.json"
+      "evidence_file": "scrape/logs/wt-5064-info.json",
+      "tariff_urls": null
     },
     "centrale": {
       "cinema": "centrale",
@@ -164,7 +171,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5742-info.json"
+      "evidence_file": "scrape/logs/wt-5742-info.json",
+      "tariff_urls": null
     },
     "plinius": {
       "cinema": "plinius",
@@ -184,7 +192,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5094-info.json"
+      "evidence_file": "scrape/logs/wt-5094-info.json",
+      "tariff_urls": null
     },
     "orfeo": {
       "cinema": "orfeo",
@@ -204,7 +213,8 @@
         "perfTemplate": null,
         "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
       },
-      "evidence_file": "scrape/logs/wt-5351-info.json"
+      "evidence_file": "scrape/logs/wt-5351-info.json",
+      "tariff_urls": null
     }
   }
 }

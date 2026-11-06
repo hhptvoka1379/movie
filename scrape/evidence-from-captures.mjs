@@ -77,6 +77,18 @@ const payload = {
         'prices_checked=false, so no price is claimed. Run `node run.mjs` on a connected machine for tariffs.',
   cinemas: evidence,
 };
+// Keep the previous timestamp when nothing but the timestamp changed, so re-running this on the
+// same captures does not churn a committed file.
+const prevRaw = fs.existsSync(OUT) ? fs.readFileSync(OUT, 'utf8') : null;
+if (prevRaw) {
+  const prev = JSON.parse(prevRaw);
+  payload.generated_at = prev.generated_at;
+  if (JSON.stringify(prev, null, 2) + '\n' === JSON.stringify(payload, null, 2) + '\n') {
+    console.log(`\n${OUT} already up to date (${Object.keys(evidence).length} cinema(s)); nothing written`);
+    process.exit(0);
+  }
+  payload.generated_at = new Date().toISOString();
+}
 if (DRY) {
   console.log(`\n[dry-run] not writing ${OUT}`);
 } else {
