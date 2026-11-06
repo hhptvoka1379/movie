@@ -1,0 +1,432 @@
+{
+  "atmos-clayface": {
+    "file": "assets/posters/atmos-clayface.jpg",
+    "tmdb_id": 1400940,
+    "matched_title": "Clayface"
+  },
+  "atmos-il-gatto-col-cappello": {
+    "file": "assets/posters/atmos-il-gatto-col-cappello.jpg",
+    "tmdb_id": 1117898,
+    "matched_title": "Il gatto col cappello"
+  },
+  "atmos-scrooge-e-gli-spiriti-del-natale": {
+    "file": "assets/posters/atmos-scrooge-e-gli-spiriti-del-natale.jpg",
+    "tmdb_id": 1567605,
+    "matched_title": "Scrooge e gli spiriti del Natale"
+  },
+  "calle-malaga": {
+    "file": "assets/posters/calle-malaga.jpg",
+    "tmdb_id": 1399462,
+    "matched_title": "Calle Malaga"
+  },
+  "ch-dear-you": {
+    "file": "assets/posters/ch-dear-you.jpg",
+    "tmdb_id": 1550003,
+    "matched_title": "Dear You,"
+  },
+  "clayface": {
+    "file": "assets/posters/clayface.jpg",
+    "tmdb_id": 1400940,
+    "matched_title": "Clayface"
+  },
+  "come-rapinare-una-banca": {
+    "file": "assets/posters/come-rapinare-una-banca.jpg",
+    "tmdb_id": 1437511,
+    "matched_title": "Come rapinare una banca"
+  },
+  "digger": {
+    "file": "assets/posters/digger.jpg",
+    "tmdb_id": 1248832,
+    "matched_title": "Digger"
+  },
+  "dio-ride": {
+    "file": "assets/posters/dio-ride.jpg",
+    "tmdb_id": 1506710,
+    "matched_title": "Dio ride"
+  },
+  "ebenezer": {
+    "file": "assets/posters/ebenezer.jpg",
+    "tmdb_id": 1567605,
+    "matched_title": "Scrooge e gli spiriti del Natale"
+  },
+  "fatherland": {
+    "file": "assets/posters/fatherland.jpg",
+    "tmdb_id": 1437696,
+    "matched_title": "Fatherland"
+  },
+  "ferine": {
+    "file": "assets/posters/ferine.jpg",
+    "tmdb_id": 1357952,
+    "matched_title": "Ferine"
+  },
+  "george-michael-the-faith-tour": {
+    "file": "assets/posters/george-michael-the-faith-tour.jpg",
+    "tmdb_id": 1649403,
+    "matched_title": "George Michael: The Faith Tour"
+  },
+  "godzilla-minus-zero": {
+    "file": "assets/posters/godzilla-minus-zero.jpg",
+    "tmdb_id": 1381071,
+    "matched_title": "Godzilla Minus Zero"
+  },
+  "gruppo-di-famiglia-in-un-interno": {
+    "file": "assets/posters/gruppo-di-famiglia-in-un-interno.jpg",
+    "tmdb_id": 56142,
+    "matched_title": "Gruppo di famiglia in un interno"
+  },
+  "heart-of-the-beast-nel-profondo": {
+    "file": "assets/posters/heart-of-the-beast-nel-profondo.jpg",
+    "tmdb_id": 1263337,
+    "matched_title": "Heart of the Beast - Nel profondo selvaggio"
+  },
+  "hope": {
+    "file": "assets/posters/hope.jpg",
+    "tmdb_id": 1058424,
+    "matched_title": "Hope"
+  },
+  "ice-cream-man": {
+    "file": "assets/posters/ice-cream-man.jpg",
+    "tmdb_id": 1477712,
+    "matched_title": "Ice Cream Man"
+  },
+  "if-i-go-will-they-miss-me": {
+    "file": "assets/posters/if-i-go-will-they-miss-me.jpg",
+    "tmdb_id": 1596248,
+    "matched_title": "If I Go Will They Miss Me"
+  },
+  "il-gatto-col-cappello": {
+    "file": "assets/posters/il-gatto-col-cappello.jpg",
+    "tmdb_id": 1117898,
+    "matched_title": "Il gatto col cappello"
+  },
+  "il-gatto-col-cappello-evento": {
+    "file": "assets/posters/il-gatto-col-cappello-evento.jpg",
+    "tmdb_id": 1117898,
+    "matched_title": "Il gatto col cappello"
+  },
+  "il-gatto-con-il-cappello": {
+    "file": "assets/posters/il-gatto-con-il-cappello.jpg",
+    "tmdb_id": 1117898,
+    "matched_title": "Il gatto col cappello"
+  },
+  "il-gruffalo-e-la-sua-p-bastoncino-aut": {
+    "file": "assets/posters/il-gruffalo-e-la-sua-p-bastoncino-aut.jpg",
+    "tmdb_id": 81684,
+    "matched_title": "Il Gruffalò e la sua piccolina"
+  },
+  "il-gruffalo-e-la-sua-picc-bastoncino": {
+    "file": "assets/posters/il-gruffalo-e-la-sua-picc-bastoncino.jpg",
+    "tmdb_id": 81684,
+    "matched_title": "Il Gruffalò e la sua piccolina"
+  },
+  "il-rumore-delle-cose-nuove": {
+    "file": "assets/posters/il-rumore-delle-cose-nuove.jpg",
+    "tmdb_id": 1544126,
+    "matched_title": "Il rumore delle cose nuove"
+  },
+  "it-ends": {
+    "file": "assets/posters/it-ends.jpg",
+    "tmdb_id": 1422011,
+    "matched_title": "It Ends"
+  },
+  "je-so-pazzo": {
+    "file": "assets/posters/je-so-pazzo.jpg",
+    "tmdb_id": 1438966,
+    "matched_title": "Je so’ pazzo"
+  },
+  "jp-godzilla-minus-zero": {
+    "file": "assets/posters/jp-godzilla-minus-zero.jpg",
+    "tmdb_id": 1381071,
+    "matched_title": "Godzilla Minus Zero"
+  },
+  "l-estranea": {
+    "file": "assets/posters/l-estranea.jpg",
+    "tmdb_id": 1412795,
+    "matched_title": "L'estranea"
+  },
+  "l-isola-dei-ricordi-2026": {
+    "file": "assets/posters/l-isola-dei-ricordi-2026.jpg",
+    "tmdb_id": 1465063,
+    "matched_title": "L'isola dei ricordi"
+  },
+  "la-guerra-dei-prezzi": {
+    "file": "assets/posters/la-guerra-dei-prezzi.jpg",
+    "tmdb_id": 1376412,
+    "matched_title": "La guerra dei prezzi"
+  },
+  "lingua-orginale-george-michael-the-fa": {
+    "file": "assets/posters/lingua-orginale-george-michael-the-fa.jpg",
+    "tmdb_id": 1649403,
+    "matched_title": "George Michael: The Faith Tour"
+  },
+  "lingua-orig-wild-horse-nine": {
+    "file": "assets/posters/lingua-orig-wild-horse-nine.jpg",
+    "tmdb_id": 891621,
+    "matched_title": "Wild Horse Nine"
+  },
+  "lingua-originale-wild-horse-nine": {
+    "file": "assets/posters/lingua-originale-wild-horse-nine.jpg",
+    "tmdb_id": 891621,
+    "matched_title": "Wild Horse Nine"
+  },
+  "look-back": {
+    "file": "assets/posters/look-back.jpg",
+    "tmdb_id": 1244492,
+    "matched_title": "Look Back"
+  },
+  "ludwig": {
+    "file": "assets/posters/ludwig.jpg",
+    "tmdb_id": 3478,
+    "matched_title": "Ludwig"
+  },
+  "mammina": {
+    "file": "assets/posters/mammina.jpg",
+    "tmdb_id": 1400837,
+    "matched_title": "Mammina"
+  },
+  "mani-nude": {
+    "file": "assets/posters/mani-nude.jpg",
+    "tmdb_id": 1276261,
+    "matched_title": "Mani nude"
+  },
+  "minnie-e-moskowitz": {
+    "file": "assets/posters/minnie-e-moskowitz.jpg",
+    "tmdb_id": 24349,
+    "matched_title": "Minnie e Moskowitz"
+  },
+  "minotaur": {
+    "file": "assets/posters/minotaur.jpg",
+    "tmdb_id": 18870,
+    "matched_title": "Minotauro"
+  },
+  "minotaur-nel-labirinto-del-potere": {
+    "file": "assets/posters/minotaur-nel-labirinto-del-potere.jpg",
+    "tmdb_id": 848700,
+    "matched_title": "Minotaur - Nel labirinto del potere"
+  },
+  "naza": {
+    "file": "assets/posters/naza.jpg",
+    "tmdb_id": 1755291,
+    "matched_title": "NAZA"
+  },
+  "nel-silenzio-delle-stanze": {
+    "file": "assets/posters/nel-silenzio-delle-stanze.jpg",
+    "tmdb_id": 1119548,
+    "matched_title": "Nel silenzio delle stanze"
+  },
+  "nessun-dolore": {
+    "file": "assets/posters/nessun-dolore.jpg",
+    "tmdb_id": 1594043,
+    "matched_title": "Nessun dolore"
+  },
+  "nysferatu-symphony-of-a-century": {
+    "file": "assets/posters/nysferatu-symphony-of-a-century.jpg",
+    "tmdb_id": 480493,
+    "matched_title": "NYsferatu - Symphony of a Century"
+  },
+  "odissea": {
+    "file": "assets/posters/odissea.jpg",
+    "tmdb_id": 1368337,
+    "matched_title": "Odissea"
+  },
+  "prime-time": {
+    "file": "assets/posters/prime-time.jpg",
+    "tmdb_id": 745078,
+    "matched_title": "Prime Time"
+  },
+  "primetime": {
+    "file": "assets/posters/primetime.jpg",
+    "tmdb_id": 1375441,
+    "matched_title": "Primetime"
+  },
+  "quello-che-resta-di-noi": {
+    "file": "assets/posters/quello-che-resta-di-noi.jpg",
+    "tmdb_id": 1704895,
+    "matched_title": "Quello che resta di noi"
+  },
+  "ragione-e-sentimento-2026": {
+    "file": "assets/posters/ragione-e-sentimento-2026.jpg",
+    "tmdb_id": 1503762,
+    "matched_title": "Ragione e sentimento"
+  },
+  "rammstein-live-in-mexico-city": {
+    "file": "assets/posters/rammstein-live-in-mexico-city.jpg",
+    "tmdb_id": 1753205,
+    "matched_title": "Rammstein – Live in Mexico City"
+  },
+  "rebuilding-come-l-acqua-per-il-fuoco": {
+    "file": "assets/posters/rebuilding-come-l-acqua-per-il-fuoco.jpg",
+    "tmdb_id": 1211442,
+    "matched_title": "Rebuilding – Come l’acqua per il fuoco"
+  },
+  "rider": {
+    "file": "assets/posters/rider.jpg",
+    "tmdb_id": 1276418,
+    "matched_title": "Rider"
+  },
+  "sala-xl-clayface": {
+    "file": "assets/posters/sala-xl-clayface.jpg",
+    "tmdb_id": 1400940,
+    "matched_title": "Clayface"
+  },
+  "sala-xl-ice-cream-man": {
+    "file": "assets/posters/sala-xl-ice-cream-man.jpg",
+    "tmdb_id": 1477712,
+    "matched_title": "Ice Cream Man"
+  },
+  "sala-xl-il-rumore-delle-cose-nuove": {
+    "file": "assets/posters/sala-xl-il-rumore-delle-cose-nuove.jpg",
+    "tmdb_id": 1544126,
+    "matched_title": "Il rumore delle cose nuove"
+  },
+  "sala-xl-it-ends": {
+    "file": "assets/posters/sala-xl-it-ends.jpg",
+    "tmdb_id": 1422011,
+    "matched_title": "It Ends"
+  },
+  "sala-xl-se-domani-non-torno": {
+    "file": "assets/posters/sala-xl-se-domani-non-torno.jpg",
+    "tmdb_id": 1583853,
+    "matched_title": "Se domani non torno"
+  },
+  "sala-xl-un-weekend-artificiale": {
+    "file": "assets/posters/sala-xl-un-weekend-artificiale.jpg",
+    "tmdb_id": 1723882,
+    "matched_title": "Un weekend artificiale"
+  },
+  "scrooge-e-gli-spiriti-del-natale": {
+    "file": "assets/posters/scrooge-e-gli-spiriti-del-natale.jpg",
+    "tmdb_id": 1567605,
+    "matched_title": "Scrooge e gli spiriti del Natale"
+  },
+  "se-domani-non-torno": {
+    "file": "assets/posters/se-domani-non-torno.jpg",
+    "tmdb_id": 1583853,
+    "matched_title": "Se domani non torno"
+  },
+  "se-domani-non-torno-ospiti-in-sala": {
+    "file": "assets/posters/se-domani-non-torno-ospiti-in-sala.jpg",
+    "tmdb_id": 1583853,
+    "matched_title": "Se domani non torno"
+  },
+  "serpenti": {
+    "file": "assets/posters/serpenti.jpg",
+    "tmdb_id": 1645164,
+    "matched_title": "Serpenti"
+  },
+  "shaun-vita-da-pecora-op-z-u-c-c-a": {
+    "file": "assets/posters/shaun-vita-da-pecora-op-z-u-c-c-a.jpg",
+    "tmdb_id": 1477104,
+    "matched_title": "Shaun, vita da pecora - Operazione Z.U.C.C.A."
+  },
+  "shaun-vita-da-pecora-operazione-z-u-c": {
+    "file": "assets/posters/shaun-vita-da-pecora-operazione-z-u-c.jpg",
+    "tmdb_id": 1477104,
+    "matched_title": "Shaun, vita da pecora - Operazione Z.U.C.C.A."
+  },
+  "shaun-vita-da-pecora-operazione-z-u-c-c-a": {
+    "file": "assets/posters/shaun-vita-da-pecora-operazione-z-u-c-c-a.jpg",
+    "tmdb_id": 1477104,
+    "matched_title": "Shaun, vita da pecora - Operazione Z.U.C.C.A."
+  },
+  "social-landscapes": {
+    "file": "assets/posters/social-landscapes.jpg",
+    "tmdb_id": 1604443,
+    "matched_title": "Social Landscapes"
+  },
+  "taddeo-l-esploratore-e-la-lampada-m": {
+    "file": "assets/posters/taddeo-l-esploratore-e-la-lampada-m.jpg",
+    "tmdb_id": 1187326,
+    "matched_title": "Taddeo l’esploratore e la lampada magica"
+  },
+  "taddeo-l-esploratore-e-la-lampada-magica": {
+    "file": "assets/posters/taddeo-l-esploratore-e-la-lampada-magica.jpg",
+    "tmdb_id": 1187326,
+    "matched_title": "Taddeo l’esploratore e la lampada magica"
+  },
+  "the-echo-chamber": {
+    "file": "assets/posters/the-echo-chamber.jpg",
+    "tmdb_id": 1576934,
+    "matched_title": "The Echo Chamber"
+  },
+  "the-invite-il-piacere-e-tutto-nostro": {
+    "file": "assets/posters/the-invite-il-piacere-e-tutto-nostro.jpg",
+    "tmdb_id": 950028,
+    "matched_title": "The Invite - Il piacere è tutto nostro"
+  },
+  "the-nameless-ballad": {
+    "file": "assets/posters/the-nameless-ballad.jpg",
+    "tmdb_id": 1511829,
+    "matched_title": "The Nameless Ballad"
+  },
+  "tony-diario-di-un-giovane-cuoco": {
+    "file": "assets/posters/tony-diario-di-un-giovane-cuoco.jpg",
+    "tmdb_id": 1329016,
+    "matched_title": "Tony - Diario di un giovane cuoco"
+  },
+  "trainspotting-30-anniversario-4k": {
+    "file": "assets/posters/trainspotting-30-anniversario-4k.jpg",
+    "tmdb_id": 627,
+    "matched_title": "Trainspotting"
+  },
+  "un-tranquillo-funerale-di-famiglia": {
+    "file": "assets/posters/un-tranquillo-funerale-di-famiglia.jpg",
+    "tmdb_id": 1678120,
+    "matched_title": "Un tranquillo funerale di famiglia"
+  },
+  "un-weekend-artificiale": {
+    "file": "assets/posters/un-weekend-artificiale.jpg",
+    "tmdb_id": 1723882,
+    "matched_title": "Un weekend artificiale"
+  },
+  "v-m-18-ecco-l-impero-dei-sensi-o-v": {
+    "file": "assets/posters/v-m-18-ecco-l-impero-dei-sensi-o-v.jpg",
+    "tmdb_id": 5879,
+    "matched_title": "Ecco l'impero dei sensi"
+  },
+  "verity": {
+    "file": "assets/posters/verity.jpg",
+    "tmdb_id": 1283515,
+    "matched_title": "Verity"
+  },
+  "whalefall-nella-balena": {
+    "file": "assets/posters/whalefall-nella-balena.jpg",
+    "tmdb_id": 1255833,
+    "matched_title": "Whalefall - Nella balena"
+  },
+  "wild-horse-nine": {
+    "file": "assets/posters/wild-horse-nine.jpg",
+    "tmdb_id": 891621,
+    "matched_title": "Wild Horse Nine"
+  },
+  "wildwood": {
+    "file": "assets/posters/wildwood.jpg",
+    "tmdb_id": 791523,
+    "matched_title": "Wildwood - I segreti del bosco proibito"
+  },
+  "wildwood-i-segreti-del-bosco-proibito": {
+    "file": "assets/posters/wildwood-i-segreti-del-bosco-proibito.jpg",
+    "tmdb_id": 791523,
+    "matched_title": "Wildwood - I segreti del bosco proibito"
+  },
+  "xl-kor-stray-kids-wt-run-it-live-view-run": {
+    "file": "assets/posters/xl-kor-stray-kids-wt-run-it-live-view-run.jpg",
+    "tmdb_id": 1738187,
+    "matched_title": "Beyond Live - Stray Kids World Tour RUN IT SEOUL"
+  },
+  "xl-shaun-vita-da-pecora-op-z-u-c-c-a": {
+    "file": "assets/posters/xl-shaun-vita-da-pecora-op-z-u-c-c-a.jpg",
+    "tmdb_id": 1477104,
+    "matched_title": "Shaun, vita da pecora - Operazione Z.U.C.C.A."
+  },
+  "xl-wildwood-i-segreti-del-bosco-p": {
+    "file": "assets/posters/xl-wildwood-i-segreti-del-bosco-p.jpg",
+    "tmdb_id": 791523,
+    "matched_title": "Wildwood - I segreti del bosco proibito"
+  },
+  "zustissia": {
+    "file": "assets/posters/zustissia.jpg",
+    "tmdb_id": 1639616,
+    "matched_title": "Zustìssia"
+  }
+}
