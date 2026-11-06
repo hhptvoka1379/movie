@@ -169,6 +169,30 @@ step('run.mjs refuses to overwrite data when nothing could be fetched', () => {
   return 'guards present in run.mjs';
 });
 
+step('run.mjs --replay rebuilds a real venue offline and writes nothing', () => {
+  const before = fs.readFileSync(path.join(ROOT, 'data', 'showtimes.json'), 'utf8');
+  const out = execFileSync(process.execPath, [path.join(HERE, 'run.mjs'), '--replay', path.join(HERE, 'logs')], { stdio: 'pipe' }).toString();
+  if (!/\[replay\] rebuilding from captured payloads/.test(out)) throw new Error('replay did not start');
+  if (!/^orfeo\s+ok\s+72/m.test(out)) throw new Error('orfeo was not rebuilt from its capture');
+  if (!/total price coverage: 0\/72/.test(out)) throw new Error('no price coverage reported');
+  if (!/no tariff endpoint without entering the purchase flow/.test(out)) throw new Error('the WebTic no-price reason was not reported');
+  if (!/left untouched/.test(out)) throw new Error('replay claimed to write');
+  eq(fs.readFileSync(path.join(ROOT, 'data', 'showtimes.json'), 'utf8') === before, true, 'data/showtimes.json unchanged by the replay');
+  return 'orfeo: 72 showings rebuilt from logs/wt-5351.json, 0 prices (WebTic exposes none publicly), data untouched';
+});
+
+step('run.mjs refuses to let a replay overwrite the data', () => {
+  try {
+    execFileSync(process.execPath, [path.join(HERE, 'run.mjs'), '--replay', '--write'], { stdio: 'pipe' });
+  } catch (e) {
+    const out = (e.stdout || '').toString() + (e.stderr || '').toString();
+    if (!/--replay cannot be combined with --write/.test(out)) throw new Error('wrong refusal: ' + out.slice(0, 120));
+    eq(e.status, 2, 'exit code');
+    return 'exit 2 with the reason';
+  }
+  throw new Error('--replay --write was accepted');
+});
+
 step('the real data/showtimes.json was not touched by this check', () => {
   const real = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'showtimes.json'), 'utf8'));
   eq(real.showings.every(s => s.price_eur === null), true, 'no fixture price leaked into real data');

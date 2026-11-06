@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 // Scrapes Milan cinema showtimes for FROM..TO, normalizes them and writes ../data/showtimes.json.
 // Usage: cd scrape && node run.mjs      (rerunnable; exit code 1 if a cinema errored unexpectedly)
+//        node run.mjs --replay [logs]   (offline: rebuild from captured payloads, never writes)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
-import { scrapeWebtic, webticToShowings } from './adapters/webtic.mjs';
+import { scrapeWebtic, webticToShowings, collectPrices, webticPolicy, webticBooking } from './adapters/webtic.mjs';
 import { scrapeAnteo, anteoToShowings } from './adapters/anteo.mjs';
 import { scrapeTickets18, tickets18ToShowings } from './adapters/tickets18.mjs';
 import { normalizeTitle, displayTitle, filmType, isNonFilm, MergeLog } from './lib/normalize.mjs';
 import { ensureGeocoded } from './lib/geocode.mjs';
-import { resolvePrice, ratesNote, cleanRates, coverageRow, formatEur } from './lib/prices.mjs';
+import { resolvePrice, ratesNote, cleanRates, coverageRow } from './lib/prices.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
@@ -23,11 +24,30 @@ const LANGS = new Set(['ita', 'vo', 'vos', 'other']);
 const BLOCK_RE = /\b(403|429)\b|captcha|cloudflare|access denied|forbidden|too many requests|bot detection|blocked/i;
 const PRICE_EVIDENCE = path.join(HERE, 'logs', 'prices.json');
 
+// --replay [dir]: rebuild a venue from a payload already captured in scrape/logs instead of
+// fetching it. Runs the whole normalization, price and coverage path offline on a machine that
+// cannot reach the cinema sites. Never writes: replay implies --dry-run unless --write is given.
+const replayIdx = process.argv.indexOf('--replay');
+const REPLAY = replayIdx >= 0;
+const REPLAY_DIR = REPLAY
+  ? path.resolve(HERE, (process.argv[replayIdx + 1] && !process.argv[replayIdx + 1].startsWith('--'))
+      ? process.argv[replayIdx + 1] : 'logs')
+  : null;
+
 // --dry-run : scrape and report, but write neither data/showtimes.json nor logs/prices.json
 // --no-prices: skip price capture (schedules only, price_eur stays null)
-const DRY_RUN = process.argv.includes('--dry-run');
+const DRY_RUN = process.argv.includes('--dry-run') || REPLAY;
+// A replay only covers the venues that happen to have a capture, so writing its output would
+// delete every other cinema from data/showtimes.json. Refuse instead of trusting a flag.
+if (REPLAY && process.argv.includes('--write')) {
+  console.error('\n!!!!! --replay cannot be combined with --write: a replay only covers the venues ' +
+    'that have a capture,\nwriting it would drop every other cinema from data/showtimes.json. ' +
+    'Run without --replay on a connected machine. !!!!!\n');
+  process.exit(2);
+}
 const NO_PRICES = process.argv.includes('--no-prices');
 const FORCE = process.argv.includes('--force');   // skip the pre-flight reachability check
+
 
 // Origins the adapters need. A sandbox or a firewall that blocks them makes every cinema fail,
 // so say so once, loudly, before the run wastes minutes producing nothing.
@@ -91,28 +111,52 @@ function buildPriceInfo(r, adapter) {
   return { rates, source, reason: rates.length ? null : (t.reason || 'no public page states a price') };
 }
 
-// Returns { showings, warnings } or { noAdapter: true }. Throws on scrape failure.
+// Reads a captured WebTic payload pair (logs/wt-<localId>.json scheduling, logs/wt-<localId>-info.json
+// local info) and returns the same shape scrapeWebtic() would, or null when there is no capture.
+function replayWebtic(localId) {
+  const schedFile = path.join(REPLAY_DIR, `wt-${localId}.json`);
+  if (!fs.existsSync(schedFile)) return null;
+  const payload = JSON.parse(fs.readFileSync(schedFile, 'utf8'));
+  const scheduling = payload?.DS?.Scheduling;
+  if (!scheduling) throw new Error(`replay: ${schedFile} has no DS.Scheduling payload`);
+  const infoFile = path.join(REPLAY_DIR, `wt-${localId}-info.json`);
+  const info = fs.existsSync(infoFile) ? JSON.parse(fs.readFileSync(infoFile, 'utf8')) : null;
+  const got = { getFullScheduling: payload };
+  if (info) got.getLocalInfo = info;
+  return {
+    scheduling, info,
+    prices: collectPrices(got, [], localId),
+    policy: webticPolicy(info),
+    booking: webticBooking(localId),
+  };
+}
+
+// Returns { showings, warnings } or { noAdapter: true } or { noReplay: true }. Throws on scrape failure.
 async function fetchShowings(browser, c, generic) {
   const s = c.source;
   switch (s.adapter) {
     case 'webtic': {
-      const r = await scrapeWebtic(browser, s.localId);
+      const r = REPLAY ? replayWebtic(s.localId) : await scrapeWebtic(browser, s.localId);
+      if (!r) return { noReplay: true };
       const all = webticToShowings(r.scheduling, s.localId, r.prices);
       const kept = all.filter(x => !isNonFilm(x.title));
       if (kept.length !== all.length) console.log(`  [${c.id}] dropped non-film events: ${[...new Set(all.filter(x => isNonFilm(x.title)).map(x => x.title))].join(' | ')}`);
       return { showings: kept, warnings: [], prices: r.prices, policy: r.policy, booking: r.booking };
     }
     case 'anteo': {
+      if (REPLAY) return { noReplay: true };
       const r = await scrapeAnteo(browser, { from: FROM, to: TO, cinemaParam: s.cinemaParam, perProjection: !NO_PRICES });
       const showings = anteoToShowings(r, r.tariffs);
       return { showings, warnings: r.projectionPrices?.warnings || [], tariffs: r.tariffs, policy: r.tariffs?.policy || null };
     }
     case 'tickets18': {
+      if (REPLAY) return { noReplay: true };
       const rows = await scrapeTickets18(browser, { base: s.base, from: FROM, to: TO, perProjection: !NO_PRICES });
       const showings = tickets18ToShowings(rows);
       return { showings, warnings: rows.warnings || [], tariffs: rows.tariffs || null, policy: rows.policy || null };
     }
     case 'mymovies': {
+      if (REPLAY) return { noReplay: true };
       if (!generic || typeof generic.scrapeMymovies !== 'function') return { noAdapter: true };
       const showings = await generic.scrapeMymovies(browser, { id: s.id, from: FROM, to: TO });
       return { showings: showings || [], warnings: [] };
@@ -122,7 +166,8 @@ async function fetchShowings(browser, c, generic) {
   }
 }
 
-if (!FORCE) await preflight();
+if (REPLAY) console.log(`[replay] rebuilding from captured payloads in ${REPLAY_DIR}; nothing will be written${DRY_RUN ? '' : ' (--write given)'}`);
+else if (!FORCE) await preflight();
 
 const cinemas = JSON.parse(fs.readFileSync(CINEMAS_FILE, 'utf8'));
 const unplaced = await ensureGeocoded(cinemas, CINEMAS_FILE);
@@ -138,8 +183,9 @@ const cinemaOut = [];
 const summary = [];
 const priceCoverage = [];
 const evidence = {};
+const replaySkipped = [];
 
-const browser = await chromium.launch({ headless: true });
+const browser = REPLAY ? null : await chromium.launch({ headless: true });
 try {
   for (const c of cinemas) {
     const s = c.source;
@@ -153,11 +199,20 @@ try {
     let bookingInfo = null; // { venue, perfTemplate, reason }
 
     console.log(`\n== ${c.id} (${s.adapter}) ==`);
+    if (REPLAY && s.adapter !== 'none') {
+      const hasCapture = s.adapter === 'webtic' && fs.existsSync(path.join(REPLAY_DIR, `wt-${s.localId}.json`));
+      if (!hasCapture) { replaySkipped.push(c.id); console.log(`  [replay] skipped: no captured payload for ${s.adapter}`); continue; }
+    }
     if (s.adapter === 'none') {
       status = 'no_schedule';
     } else {
       try {
         const r = await fetchShowings(browser, c, generic);
+        if (r.noReplay) {
+          replaySkipped.push(c.id);
+          console.log(`  [replay] skipped: adapter ${s.adapter} cannot be replayed from a capture`);
+          continue;
+        }
         if (r.noAdapter) {
           status = 'no_schedule';
           notes.push('MyMovies adapter not available yet (adapters/generic.mjs missing scrapeMymovies).');
@@ -233,7 +288,7 @@ try {
     priceCoverage.push(coverage);
     if (sourceUsed && !count) console.error(`  !! ${c.id}: source ${sourceUsed} returned 0 showings in range`);
     if (sourceUsed && count && !coverage.priced) console.error(`  !! ${c.id}: NO PRICE captured for ${count} showing(s): ${coverage.reason || 'unknown reason'}`);
-    console.log(`  prices: ${coverage.priced}/${coverage.showings} (${coverage.pct}%)${priceInfo?.source ? ' via ' + priceInfo.source : ''}`);
+    if (sourceUsed) console.log(`  prices: ${coverage.priced}/${coverage.showings} (${coverage.pct}%)${priceInfo?.source ? ' via ' + priceInfo.source : ''}`);
 
     evidence[c.id] = {
       cinema: c.id, adapter: s.adapter, status,
@@ -264,7 +319,7 @@ try {
     console.log(`  -> ${status}, ${count} showings, published_until=${published_until}`);
   }
 } finally {
-  await browser.close();
+  if (browser) await browser.close();
 }
 
 // Film records: type from all raw titles seen; display title = most frequent cleaned title.
@@ -322,10 +377,12 @@ for (const r of priceCoverage) {
   console.log([r.cinema.padEnd(26), String(r.showings).padStart(9), String(r.priced).padStart(8), (r.pct + '%').padStart(5),
     '  ' + (r.source || r.reason || '-')].join(' '));
 }
+if (REPLAY) console.log(`[replay] rebuilt ${priceCoverage.length} cinema(s); skipped ${replaySkipped.length}: ${replaySkipped.join(', ') || '-'}`);
 const priced = showingRows.filter(r => r.price_eur != null).length;
 console.log(`${bar}\ntotal price coverage: ${priced}/${showingRows.length} showings (${showingRows.length ? Math.round(priced / showingRows.length * 100) : 0}%)`);
 console.log(`${bar}\nfilms ${filmsFinal.length}, showings ${showingRows.length}, film merges logged ${merges} (${MERGE_LOG})`);
-console.log(`wrote ${OUT_FILE}`);
+if (DRY_RUN) console.log(`[dry-run] ${OUT_FILE} left untouched`);
+else console.log(`wrote ${OUT_FILE}`);
 
 const bad = summary.filter(r => r.unexpected);
 if (bad.length) {
