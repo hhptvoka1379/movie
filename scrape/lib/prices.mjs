@@ -381,6 +381,9 @@ const BOOKING_FEE = /(?:costo|corrispettivo|commissione|diritti|supplemento|fee)
 const BOOKING_FEE2 = /(\d+(?:[.,]\d{1,2})?)\s*(?:\u20ac|eur)[^.]*?(?:per ogni (?:posto|biglietto)|a biglietto|per biglietto|per posto)/i;
 const MAX_SEATS = /(?:massimo(?:\s+di)?|fino\s+(?:ad|a)(?:\s+un)?(?:\s+massimo\s+(?:di)?)?|max(?:\s+di)?|up\s+to)\s+(\d{1,3})\s+(?:posti|postazioni|tickets|seats)/i;
 const NO_PREPAY = /senza\s+(?:alcun\s+)?pagamento\s+anticipato|senza\s+pagare|non\s+richiede\s+(?:alcun\s+)?pagamento|pagamento\s+(?:in|alla)\s+cassa|pay\s+at\s+the\s+(?:box\s?office|cinema)|without\s+(?:any\s+)?(?:advance\s+)?payment/i;
+// The venue itself says booking is not offered at all (vs. generic platform wording that
+// merely describes how bookings work when they exist).
+const NO_RESERVE_AT_ALL = /prenot\w*\s+(?:non\s+)?(?:\w+\s+){0,2}non\s+(?:\u00e8|e'|è)\s+previst[ao]|(?:il\s+)?servizio\s+(?:di\s+)?prenot\w+\s+non\s+(?:\u00e8|e')\s+(?:attivo|abilitato|disponibile|previst)\w*|prenot\w+\s+non\s+(?:\u00e8|e')\s+(?:attivo|abilitato|disponibile|previst)\w*|servizio\s+non\s+abilitato|booking\s+(?:is\s+)?not\s+(?:available|offered)/i;
 const NO_RESERVE = /(?:non\s+(?:\u00e8\s+)?(?:attivo|disponibile|possibile)|not available)[^.]*?prenot\w+|prenot\w+[^.]*?non\s+(?:\u00e8\s+)?(?:attivo|disponibile|possibile)|solo\s+l['\u2019]?acquisto/i;
 const GROUP = /\bgrupp\w*|\bgroup\b|scolaresch\w*|comitive/i;
 
@@ -391,6 +394,14 @@ export function policyStatements(texts) {
 
   const reserveBits = [];
   const quotes = [];
+  const qNo = bestSentence(body, NO_RESERVE_AT_ALL);
+  if (qNo) {
+    // An explicit "booking is not offered here" beats every generic sentence about bookings.
+    const st = { reserve: `no \u2014 the site states ${trimSentence(qNo, 160)}`, group: 'not stated', quotes: [qNo] };
+    const g = bestSentence(body, GROUP);
+    if (g) st.group = groupStatement(g);
+    return st;
+  }
   if (RESERVE_YES.test(body)) {
     const m = body.match(PICKUP);
     if (m) reserveBits.push(`bookings must be collected at the box office at least ${m[1]} minutes before the show`);
@@ -410,14 +421,10 @@ export function policyStatements(texts) {
   const reserve = reserveBits.length ? `yes \u2014 ${reserveBits.join('; ')}` : 'not stated';
 
   let group = 'not stated';
-  if (GROUP.test(body)) {
-    const q = bestSentence(body, GROUP);
-    if (q) {
-      group = /@|mail|e-mail|telefon|chiam|contatt|scrivere/i.test(q)
-        ? 'stated \u2014 the site describes group bookings and asks to contact the cinema'
-        : `stated \u2014 ${trimSentence(q)}`;
-      quotes.push(q);
-    }
+  const g = GROUP.test(body) ? bestSentence(body, GROUP) : null;
+  if (g) {
+    group = groupStatement(g);
+    quotes.push(g);
   } else {
     const seats = body.match(MAX_SEATS);
     if (seats && reserveBits.length) group = `not stated (online booking is limited to ${seats[1]} adjacent seats)`;
@@ -430,6 +437,12 @@ function firstSentence(text, re) {
     if (re.test(s)) return s.trim();
   }
   return null;
+}
+
+function groupStatement(sentence) {
+  return /@|mail|e-mail|telefon|chiam|contatt|scrivere/i.test(sentence)
+    ? 'stated \u2014 the site describes group bookings and asks to contact the cinema'
+    : `stated \u2014 ${trimSentence(sentence)}`;
 }
 
 // Headings match a keyword too, so take the longest matching sentence: that is the one that

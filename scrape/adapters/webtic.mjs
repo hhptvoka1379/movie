@@ -100,7 +100,20 @@ export function webticPolicy(info) {
   const i = local.Infos || {};
   const texts = [i.Booking, i.Purchases, i.Welcome, i.InfoLocal, i.Cards, i.ThankYouPage].filter(Boolean);
   const st = policyStatements(texts);
-  return { ...st, source: st.reserve !== 'not stated' || st.group !== 'not stated' ? 'webtic getLocalInfo Infos' : null };
+  // The venue's own text wins. The platform flags are only a tie-breaker, and only as a flag -
+  // never as a price or a deadline. Generic WebTic wording ("per ogni biglietto prenotato e/o
+  // acquistato ... 1,80 \u20ac") describes online purchase too, so on its own it is not evidence
+  // that this venue lets you reserve without paying: when the venue filed no booking text of its
+  // own and WebTic reports booking disabled, the answer is no.
+  const hasVenueBookingText = Boolean((i.Booking || '').trim());
+  const bookingEnabled = local.BookingConfig && local.BookingConfig.Enabled;
+  const purchaseEnabled = local.PurchaseConfig && local.PurchaseConfig.Enabled;
+  if (bookingEnabled === false && (!hasVenueBookingText || st.reserve === 'not stated') && purchaseEnabled === true) {
+    st.reserve = 'no \u2014 WebTic reports booking disabled and purchase enabled for this venue' +
+      (st.reserve === 'not stated' ? '' : ' (the site only states the generic online-purchase fee)');
+    st.source = 'webtic getLocalInfo BookingConfig/PurchaseConfig';
+  }
+  return { ...st, source: st.source || (st.reserve !== 'not stated' || st.group !== 'not stated' ? 'webtic getLocalInfo Infos' : null) };
 }
 
 // Deep per-showing links: the WebTic SPA addresses a venue by localId in the hash. A

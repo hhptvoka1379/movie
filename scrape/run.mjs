@@ -238,6 +238,7 @@ try {
     evidence[c.id] = {
       cinema: c.id, adapter: s.adapter, status,
       rates: cleanRates(priceInfo?.rates || []),
+      prices_checked: true,
       price_source: priceInfo?.source || null,
       price_reason: priceInfo?.reason || null,
       policy: policy ? { reserve: policy.reserve || 'not stated', group: policy.group || 'not stated' } : null,

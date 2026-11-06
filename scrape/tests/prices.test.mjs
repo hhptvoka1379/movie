@@ -155,6 +155,27 @@ test('webtic policy is "not stated" when the payload has none', () => {
   assert.equal(webticPolicy(null).reserve, 'not stated');
 });
 
+test('an explicit "booking is not offered here" beats generic platform wording', () => {
+  // Colosseo's own getLocalInfo capture, already committed in scrape/logs: its Booking text says
+  // booking is not offered, while the shared WebTic Purchases text mentions a 1,80 € online fee.
+  const real = JSON.parse(fs.readFileSync(fileURLToPath(new URL('../logs/wt-5062-info.json', import.meta.url)), 'utf8'));
+  const st = webticPolicy(real);
+  assert.match(st.reserve, /^no \u2014 the site states/);
+  assert.match(st.reserve, /non \u00e8 prevista/i);
+  assert.equal(st.group, 'not stated');
+
+  // No venue text at all: the platform flags answer, and no fee is claimed.
+  const flagged = webticPolicy({ DS: { Local: { LocalId: 1, BookingConfig: { Enabled: false }, PurchaseConfig: { Enabled: true },
+    Infos: { Purchases: 'Per ogni biglietto acquistato su Internet ci sara` un costo supplementare pari ad 1,80 \u20ac.' } } } });
+  assert.match(flagged.reserve, /^no \u2014 WebTic reports booking disabled/);
+
+  // Venue text describing the booking service means booking exists.
+  const open = webticPolicy({ DS: { Local: { LocalId: 1, BookingConfig: { Enabled: true }, PurchaseConfig: { Enabled: true },
+    Infos: { Booking: 'Le prenotazioni vanno ritirate almeno 30 minuti prima dall\'inizio dello spettacolo.' } } } });
+  assert.match(open.reserve, /^yes/);
+  assert.match(open.reserve, /30 minutes before the show/);
+});
+
 test('webtic booking: no invented deep link', () => {
   const b = webticBooking(5351);
   assert.equal(b.venue, 'https://www.webtic.it/#/shopping?action=loadLocal&localId=5351');

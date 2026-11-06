@@ -53,18 +53,31 @@ for (const s of d.showings) {
   const r = resolvePrice(s, rates);
   const before = s.price_eur;
   s.price_eur = r ? r.eur : null;
-  s.price_note = ratesNote(rates) || null;
+  // Only write price_note where there is something to say, so showings with no stated price
+  // keep the shape they already have in the committed file.
+  const note = ratesNote(rates);
+  if (r || note) s.price_note = note;
   if (s.price_eur != null) priced++;
   if (before !== s.price_eur) touched++;
 }
 
 // ---------------------------------------------------------------- cinemas
+// Replaces a "Label: ..." statement in a cinema's notes. Existing notes separate sentences
+// with ". " and appended ones with " | ", so normalise to " | " segments first; that keeps the
+// update idempotent instead of stacking a second copy of the same statement.
 const statement = (notes, label, value) => {
-  const re = new RegExp(`(?:^|\\| )${label}: [^|]*(\\||$)`);
-  const clean = String(notes || '').replace(re, m => (m.endsWith('|') ? '| ' : '')).replace(/\s*\|\s*(\|\s*)+/g, ' | ').replace(/^\s*\|\s*/, '').replace(/\s*\|\s*$/, '');
-  return value && value !== 'not stated'
-    ? [clean, `${label}: ${value}`].filter(Boolean).join(' | ')
-    : (clean || `${label}: not stated`);
+  const esc = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`^${esc}:`, 'i');
+  const segments = String(notes || '')
+    .split(' | ')
+    .flatMap(seg => seg.split(/\.\s+(?=[A-Z][^:]{0,40}:)/))
+    .map(seg => seg.replace(/\.+\s*$/, '').trim())
+    .filter(Boolean)
+    .filter(seg => !re.test(seg));
+  const v = String(value == null ? '' : value).replace(/\.+\s*$/, '').trim();
+  if (v && v !== 'not stated') segments.push(`${label}: ${v}`);
+  else if (!segments.some(seg => re.test(seg))) segments.push(`${label}: not stated`);
+  return segments.join(' | ');
 };
 
 for (const c of d.cinemas) {
@@ -78,7 +91,7 @@ for (const c of d.cinemas) {
   }
   if (rates.length) {
     c.notes = statement(c.notes, 'Prices', `as stated by ${e.price_source || 'the site'}: ${ratesNote(rates, 6)}`);
-  } else if (e.price_reason) {
+  } else if (e.price_reason && e.prices_checked !== false) {
     c.notes = statement(c.notes, 'Prices', `not stated publicly (${e.price_reason})`);
   }
   if (c.notes !== before) notesChanged++;
