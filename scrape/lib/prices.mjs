@@ -82,20 +82,22 @@ const SUPPLEMENT = /\b(supplement\w*|maggiorazion\w*|sovrapprezz\w*|extra\b|plus
 // The full/standard rate as Italian sites word it.
 const FULL = /\b(intero|full|normale|standard|base|ordinario|regolare|biglietto\s+intero|prezzo\s+intero|tariffa\s+intera|adult\w*)\b/i;
 // Rates the site ties to a day (or to a named day promo such as "Luned\u00ec 5,50").
-const DAY_COND = /\b(ferial[i|e]|festiv[i|e]|prefestiv[i|e]|week\s?end|fine settimana|luned[i\u00ec]|marted[i\u00ec]|mercoled[i\u00ec]|gioved[i\u00ec]|venerd[i\u00ec]|sabato|domenica|giorn[oa]|day\b|daily|dal lun|al lun|ogni giorno|tutti i giorni|notte|midnight|mercoled\u00ec cinema|cinema\s?revolution|estivo|invernale|stagione)\b/i;
-const WEEKDAY_WORD = /\b(luned[i\u00ec]|marted[i\u00ec]|mercoled[i\u00ec]|gioved[i\u00ec]|venerd[i\u00ec]|lun|mar|mer|gio|ven|sab|dom)\b/i;
+const DAY_COND = /\b(ferial[i|e]|festiv[i|e]|prefestiv[i|e]|week\s?end|fine settimana|luned[i\u00ec]|marted[i\u00ec]|mercoled[i\u00ec]|gioved[i\u00ec]|venerd[i\u00ec]|sabato|domenica|giorn[oa]|day|daily|dal lun|al lun|giornata|notte|midnight|cinema\s?revolution|estivo|invernale|stagione)(?![a-z\u00ec\u00e8])/i;
+const WEEKDAY_WORD = /\b(luned[i\u00ec]|marted[i\u00ec]|mercoled[i\u00ec]|gioved[i\u00ec]|venerd[i\u00ec]|sabato|domenica|lun|mar|mer|gio|ven|sab|dom)(?![a-z\u00ec\u00e8])/i;
 // Rates the site ties to a presentation format.
-const FORMAT_COND = /\b(3d|2d|imax|4dx|screen\s?x|screenx|dolby(?:\s?cinema|\s?atmos)?|atmos|vip|poltronissim\w*|galleria|platea|premium|lux[e]?|sala\s?xl|xl|dbox|onix|grande schermo|vhs)\b/i;
-const FORMAT_3D = /\b(3d|imax|4dx|screen\s?x|screenx|dolby(?:\s?cinema|\s?atmos)?|atmos|dbox|onix|vip|poltronissim\w*|premium|lux[e]?|sala\s?xl)\b/i;
+const FORMAT_COND = /\b(3d|2d|imax|4dx|screen\s?x|screenx|dolby(?:\s?cinema|\s?atmos)?|atmos|vip|poltronissim\w*|galleria|platea|premium|luxe|lux|dbox|onix|sala\s?xl|grande schermo)(?![a-z])/i;
+const FORMAT_3D = /\b(3d|imax|4dx|screen\s?x|screenx|dolby(?:\s?cinema|\s?atmos)?|atmos|dbox|onix|vip|poltronissim\w*|premium|luxe|sala\s?xl)(?![a-z])/i;
 
 export function labelIsSupplement(label) { return SUPPLEMENT.test(String(label || '')); }
 
+// True when the site states this rate as a full ticket price rather than a discount, a
+// subscription or an extra on top of a ticket. A rate may still be limited to some days or
+// formats ("Mercoled\u00ec 5,50", "Intero 3D 12,00"): that limit is a condition the resolver
+// matches against the showing, not a reason to call the rate reduced.
 export function labelIsFull(label) {
   const s = String(label || '');
   if (REDUCED.test(s) || NOT_TICKET.test(s) || labelIsSupplement(s)) return false;
-  if (FULL.test(s)) return true;
-  // "3D" or "Luned\u00ec" alone is a condition, not a statement that it is the full rate.
-  return !FORMAT_COND.test(s) && !DAY_COND.test(s);
+  return true;
 }
 
 export function labelCondition(label) {
@@ -162,16 +164,21 @@ export function resolvePrice(showing, rates) {
   const is3D = /3D|IMAX|4DX|SCREENX|DOLBY/.test(fmt);
   const DAYNUM = { lun: 1, mar: 2, mer: 3, gio: 4, ven: 5, sab: 6, dom: 0 };
 
+  // Day names stated as ranges or inside brackets ("Intero feriali (lun-ven)") describe a
+  // class, not a named-day price: only a day name standing alone ("Lunedì cinema") counts as
+  // one, and it wins over the class that also covers that day.
+  const NAMED_DAY = /(^|[^\p{L}\p{N}-])(luned[i\u00ec]|marted[i\u00ec]|mercoled[i\u00ec]|gioved[i\u00ec]|venerd[i\u00ec]|sabato|domenica)(?![\p{L}-])/iu;
   const dayMatches = label => {
-    if (/\bferial/i.test(label)) return weekend === false;
-    if (/\bfestiv|prefestiv|week\s?end|fine settimana/i.test(label)) return weekend === true;
-    const w = WEEKDAY_WORD.exec(label);
-    if (w) {
-      const key = w[1].toLowerCase().replace(/\u00ec/g, 'i').replace(/\u00e8/g, 'e').slice(0, 3);
+    if (NAMED_DAY.test(label)) {
+      const key = label.match(NAMED_DAY)[2].toLowerCase().replace(/[\u00ec]/g, 'i').slice(0, 3);
       const dw = DAYNUM[key];
       return dw != null && weekday != null && dw === weekday;
     }
-    return null; // says nothing about days
+    if (/\bferial/i.test(label)) return weekend === false;
+    if (/\b(?:pre)?festiv/i.test(label) || /\bweek\s?end\b|\bfine settimana\b/i.test(label)) return weekend === true;
+    const w = WEEKDAY_WORD.exec(label);
+    if (w) return null; // names days but as a range or a class: not a single-day price
+    return null;        // says nothing about days
   };
 
   const score = r => {
@@ -182,8 +189,11 @@ export function resolvePrice(showing, rates) {
     else if (c.format) s += -4;            // depends on format but names none we know
     else s += is3D ? -1 : 1;               // unqualified rate: the plain 2D ticket
     const dm = dayMatches(r.label);
-    if (dm === true) s += 3;
-    else if (dm === false) s += -6;
+    if (dm === true) {
+      // A rate naming this exact weekday ("Mercoled\u00ec 5,50") beats a day class that also
+      // covers it ("Intero feriali"), which is how the venues state their weekly promos.
+      s += NAMED_DAY.test(r.label) ? 4 : 3;
+    } else if (dm === false) s += -6;
     else if (c.day) s += -2;               // varies by day but names none
     else s += 1;
     // A rate that names a day or a day class only applies to those days. Until it matches,
@@ -296,7 +306,8 @@ function stripAmount(line) {
     .replace(new RegExp('(?:\\u20ac|\\beur(?:o|i)?\\b)\\s*(?:' + AMOUNT_SRC + ')', 'gi'), ' ')
     .replace(new RegExp('(?:' + AMOUNT_SRC + ')\\s*(?:\\u20ac|\\beur(?:o|i)?\\b)', 'gi'), ' ')
     .replace(/\s+/g, ' ')
-    .replace(/^[^A-Za-z0-9]+/, '').replace(/[^A-Za-z0-9)\]]+$/, '')
+    .replace(/^[^\p{L}\p{N}]+/u, '').replace(/[^\p{L}\p{N})\]]+$/u, '')   // accents are letters
+    .replace(/[,;:\s]+$/, '')
     .trim();
 }
 

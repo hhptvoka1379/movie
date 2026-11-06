@@ -71,7 +71,9 @@ test('scopedRowRates ties a tariff row to its performance', () => {
 test('resolvePrice follows the day the site states', () => {
   const rates = P.ratesFromText(read('anteo-tariffe.html'), 'fixture');
   assert.equal(P.resolvePrice({ date: '2026-11-11', format: '2D' }, rates).eur, 7.5); // Wed -> feriali
-  assert.equal(P.resolvePrice({ date: '2026-11-09', format: null }, rates).eur, 7.5);  // Mon
+  assert.equal(P.resolvePrice({ date: '2026-11-10', format: null }, rates).eur, 7.5);  // Tue -> feriali
+  // The venue also states "Lunedì cinema 3,50 €": on a Monday that is the price stated.
+  assert.equal(P.resolvePrice({ date: '2026-11-09', format: null }, rates).eur, 3.5);  // Mon promo
   assert.equal(P.resolvePrice({ date: '2026-11-14', format: '2D' }, rates).eur, 9);     // Sat -> festivi
   assert.equal(P.resolvePrice({ date: '2026-11-15', format: '2D' }, rates).eur, 9);     // Sun
 });
@@ -186,6 +188,16 @@ test('anteo showings take the venue tariff and the projection page price', () =>
   // the second showing falls back to the venue tariff: Sun festivi + 3D supplement
   assert.equal(P.resolvePrice(showings[1], showings[1].rates).eur, 11);
   assert.equal(showings[0].booking_url, 'https://example.invalid/p/1');
+});
+
+test('a day promo price never becomes the price of another day', () => {
+  const rates = P.ratesFromText(read('tickets18-film.html'), 'fixture');
+  const byLabel = Object.fromEntries(rates.map(r => [r.label, r.eur]));
+  assert.equal(byLabel['Biglietto intero'], 7.5);
+  assert.equal(byLabel['Mercoled\u00ec'], 5.5);
+  assert.equal(byLabel['Ridotto studenti'], 5);
+  assert.equal(P.resolvePrice({ date: '2026-11-11', format: null }, rates).eur, 5.5); // that Wednesday
+  assert.equal(P.resolvePrice({ date: '2026-11-15', format: null }, rates).eur, 7.5); // Sunday, full price
 });
 
 test('policyStatements reads reservation and group text', () => {

@@ -1,10 +1,21 @@
 // Idempotent: apply canonicalId() to an existing data/showtimes.json without re-scraping.
+//   node remap.mjs                # data/showtimes.json + data/posters.json
+//   node remap.mjs --data <file> --posters <file>   # other files (e.g. temp copies for a test)
 import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { canonicalId } from './lib/normalize.mjs';
 
-const F = new URL('../data/showtimes.json', import.meta.url);
-const P = new URL('../data/posters.json', import.meta.url);
-const poster = id => new URL(`../assets/posters/${id}.jpg`, import.meta.url);
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const args = process.argv.slice(2);
+const flagPath = (name, dflt) => {
+  const i = args.indexOf(name);
+  return i >= 0 && args[i + 1] ? path.resolve(args[i + 1]) : dflt;
+};
+const F = flagPath('--data', path.join(ROOT, 'data', 'showtimes.json'));
+const P = flagPath('--posters', path.join(ROOT, 'data', 'posters.json'));
+const POSTER_DIR = path.join(ROOT, 'assets', 'posters');
+const poster = id => path.join(POSTER_DIR, `${id}.jpg`);
 const d = JSON.parse(fs.readFileSync(F));
 const posters = fs.existsSync(P) ? JSON.parse(fs.readFileSync(P)) : {};
 const PREFIX = /^(?:atmos|sala xl|xl|jp|lingua or\w*\.?)\s*[-–:]?\s*/i;
@@ -52,3 +63,9 @@ for (const [oldId, nid] of map) {
 fs.writeFileSync(P, JSON.stringify(posters, null, 1));
 console.log(`films ${map.size} -> ${films.size}; showings ${d.showings.length}; posters moved/removed ${moved}`);
 console.log(log.join('\n'));
+
+// Prices are applied by apply-prices.mjs (it keeps ids canonical via canonicalId) so that
+// remapping ids here never has to know about tariffs, and neither script touches the other's
+// output. Point at it when captured evidence is waiting.
+const EVIDENCE = new URL('./logs/prices.json', import.meta.url);
+if (fs.existsSync(EVIDENCE)) console.log('price evidence present: run `node apply-prices.mjs` to apply it to data/showtimes.json');
