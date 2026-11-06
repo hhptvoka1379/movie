@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-11-06T18:06:26.214Z",
+  "range": {
+    "from": "2026-11-06",
+    "to": "2026-11-15"
+  },
+  "cinema": {
+    "id": "osoppo",
+    "name": "Osoppo",
+    "address": "Via Osoppo 2, Milano",
+    "lat": 45.4697766,
+    "lng": 9.1437241,
+    "website": "https://www.sdcmilano.it/sala-osoppo-san-protaso",
+    "booking_url": null,
+    "source_used": "mymovies",
+    "published_until": null,
+    "status": "no_schedule",
+    "notes": "Parish community hall (Parrocchia San Protaso, sdcmilano.it/sala-osoppo-san-protaso). All former official domains (parrocchiasanprotaso.org, sanprotaso.org, cinemateatroosoppo.org) are expired/parked and Mailticket operator 0131450216563 has 0 active events. Listed on MyMovies (id 6637, mymovies.it/cinema/milano/6637/), which shows active parish screening days when scheduled (0 films on 2026-11-06). Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. | No showings found for 2026-11-06 to 2026-11-15."
+  },
+  "raw_showings": [],
+  "films": [],
+  "showings": []
+}

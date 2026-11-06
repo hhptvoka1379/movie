@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-11-06T18:06:26.214Z",
+  "range": {
+    "from": "2026-11-06",
+    "to": "2026-11-15"
+  },
+  "cinema": {
+    "id": "milano-a-memoria",
+    "name": "Milano a Memoria",
+    "address": "Piazza Armando Diaz 7, Milano",
+    "lat": 45.4618633,
+    "lng": 9.1899962,
+    "website": null,
+    "booking_url": null,
+    "source_used": null,
+    "published_until": null,
+    "status": "no_schedule",
+    "notes": "Permanently closed 5D tourist cinema attraction ('Milano a Memoria 5D', opened 2013 at Piazza Armando Diaz 7; confirmed permanently closed via Zero.eu, Stardust, and MyMovies id 21468; not listed on sdcmilano.it). No active cinema operates at this address."
+  },
+  "raw_showings": [],
+  "films": [],
+  "showings": []
+}
