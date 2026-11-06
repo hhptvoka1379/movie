@@ -1,0 +1,292 @@
+[
+  {
+    "id": "uci-bicocca",
+    "name": "UCI Cinemas Bicocca",
+    "address": "Viale Sarca 336, Milano",
+    "lat": 45.5224458,
+    "lng": 9.219668,
+    "website": "https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5068
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+  },
+  {
+    "id": "uci-certosa",
+    "name": "UCI Cinemas Certosa (Cinelandia Milano Certosa)",
+    "address": "Via Giovanni Gentile 3, Milano",
+    "lat": 45.5096401,
+    "lng": 9.1281504,
+    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5868
+    },
+    "merged_from": [
+      "UCI Cinemas Certosa (movieplayer)",
+      "Cinelandia Milano Certosa (MyMovies)"
+    ],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. Name/address discrepancy: WebTic lists Via Giovanni Gentile 3 (used here); movieplayer lists Via Stephenson 29; MyMovies calls it Cinelandia Milano Certosa. No official site confirmed; WebTic page used as website."
+  },
+  {
+    "id": "space-odeon",
+    "name": "The Space Odeon",
+    "address": "Via Santa Radegonda 8, Milano",
+    "lat": 45.4651207,
+    "lng": 9.192365,
+    "website": "https://www.thespacecinema.it/",
+    "booking_url": null,
+    "source": {
+      "adapter": "none"
+    },
+    "merged_from": [],
+    "notes": "Closed since 31 Jul 2023; reopening planned 2H 2027. Online sale: not stated. Reserve without paying: not stated. Group policy: not stated."
+  },
+  {
+    "id": "citylife-anteo",
+    "name": "CityLife Anteo",
+    "address": "Piazza Tre Torri 1/L, Milano",
+    "lat": 45.4783108,
+    "lng": 9.1570584,
+    "website": "https://www.spaziocinema.info/milano",
+    "booking_url": "https://www.spaziocinema.info/milano",
+    "source": {
+      "adapter": "anteo",
+      "cinemaParam": "Citylife anteo"
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (per-showing booking links). Reserve without paying: not stated. Group policy: not stated."
+  },
+  {
+    "id": "ariosto-anteo",
+    "name": "Ariosto Anteo spazioCinema",
+    "address": "Via Ariosto 16, Milano",
+    "lat": 45.4691531,
+    "lng": 9.1658805,
+    "website": "https://www.spaziocinema.info/milano",
+    "booking_url": "https://www.spaziocinema.info/milano",
+    "source": {
+      "adapter": "anteo",
+      "cinemaParam": "Ariosto"
+    },
+    "merged_from": [
+      "Ariosto (movieplayer)",
+      "Ariosto Anteo spazioCinema (movieplayer)"
+    ],
+    "notes": "Online sale: yes (per-showing booking links). Reserve without paying: not stated. Group policy: not stated. movieplayer lists 'Ariosto' and 'Ariosto Anteo spazioCinema' separately; merged."
+  },
+  {
+    "id": "gloria",
+    "name": "Notorious Cinemas Gloria (Gloria Multisala)",
+    "address": "Corso Vercelli 18, Milano",
+    "lat": 45.4665478,
+    "lng": 9.1618614,
+    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5491",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5491",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5491
+    },
+    "merged_from": [
+      "Gloria Multisala (movieplayer)",
+      "Notorious Cinemas Gloria (movieplayer)"
+    ],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. Name discrepancy: movieplayer lists 'Gloria Multisala' and 'Notorious Cinemas Gloria' separately; merged. No official site confirmed; WebTic page used as website."
+  },
+  {
+    "id": "arcobaleno",
+    "name": "Arcobaleno Filmcenter",
+    "address": "Viale Tunisia 11, Milano",
+    "lat": 45.4770752,
+    "lng": 9.2056724,
+    "website": "https://cinenauta.it/arcobaleno/",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5066
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: tickets can be reserved online, at the cinema or via app (cinenauta.it); payment terms not stated. Group policy: not stated."
+  },
+  {
+    "id": "ducale",
+    "name": "Ducale",
+    "address": "Piazza Napoli 27, Milano",
+    "lat": 45.4524492,
+    "lng": 9.1546667,
+    "website": "https://cinenauta.it/",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5065",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5065
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: tickets can be reserved online, at the cinema or via app (cinenauta.it); payment terms not stated. Group policy: not stated."
+  },
+  {
+    "id": "colosseo",
+    "name": "Colosseo",
+    "address": "Viale Monte Nero 84, Milano",
+    "lat": 45.4616401,
+    "lng": 9.2079373,
+    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5062
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+  },
+  {
+    "id": "eliseo",
+    "name": "Eliseo Multisala",
+    "address": "Via Torino 64, Milano",
+    "lat": 45.4607911,
+    "lng": 9.1827157,
+    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5064",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5064",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5064
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+  },
+  {
+    "id": "centrale",
+    "name": "Centrale",
+    "address": "Via Torino 30/32, Milano",
+    "lat": 45.4634008,
+    "lng": 9.1878821,
+    "website": "https://www.multisalacentrale.it/",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5742",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5742
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+  },
+  {
+    "id": "plinius",
+    "name": "Plinius Multisala",
+    "address": "Viale Abruzzi 28/30, Milano",
+    "lat": 45.4743796,
+    "lng": 9.2173237,
+    "website": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5094
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+  },
+  {
+    "id": "orfeo",
+    "name": "Orfeo Multisala",
+    "address": "Viale Coni Zugna 50, Milano",
+    "lat": 45.4569503,
+    "lng": 9.1693344,
+    "website": "https://www.orfeomultisala.com/",
+    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351",
+    "source": {
+      "adapter": "webtic",
+      "localId": 5351
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+  },
+  {
+    "id": "arlecchino",
+    "name": "Cineteca Milano Arlecchino",
+    "address": "Via S. Pietro all'Orto 9, Milano",
+    "lat": 45.4664614,
+    "lng": 9.1953168,
+    "website": "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/",
+    "booking_url": "https://arlecchino.cinetecadimilano.18tickets.it/",
+    "source": {
+      "adapter": "tickets18",
+      "base": "https://arlecchino.cinetecadimilano.18tickets.it/"
+    },
+    "merged_from": [],
+    "notes": "Online sale: yes (18tickets). Reserve without paying: PRENOTA form-based links on some events (cinetecamilano.it); otherwise not stated. Group policy: not stated."
+  },
+  {
+    "id": "mexico",
+    "name": "Mexico",
+    "address": "Via Savona 57, Milano",
+    "lat": 45.4529177,
+    "lng": 9.1603582,
+    "website": "https://www.mymovies.it/cinema/milano/5546/",
+    "booking_url": null,
+    "source": {
+      "adapter": "mymovies",
+      "id": 5546
+    },
+    "merged_from": [],
+    "notes": "Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. No official site found; schedule from MyMovies (aggregator fallback)."
+  },
+  {
+    "id": "palestrina",
+    "name": "Palestrina",
+    "address": "Via Palestrina 7, Milano",
+    "lat": 45.4195694,
+    "lng": 9.0788818,
+    "website": "https://www.mymovies.it/cinema/milano/5435/",
+    "booking_url": null,
+    "source": {
+      "adapter": "mymovies",
+      "id": 5435
+    },
+    "merged_from": [],
+    "notes": "Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. No official site found; schedule from MyMovies (aggregator fallback)."
+  },
+  {
+    "id": "auditorium-don-bosco",
+    "name": "Auditorium Don Bosco",
+    "address": "Via Melchiorre Gioia 48, Milano",
+    "lat": 45.4882339,
+    "lng": 9.1998219,
+    "website": "https://www.sdcmilano.it/sale-della-comunita",
+    "booking_url": null,
+    "source": {
+      "adapter": "none"
+    },
+    "merged_from": [],
+    "notes": "No usable source found (no official site found, not on MyMovies). Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. Website is the SDC Milano sale-della-comunita page."
+  },
+  {
+    "id": "osoppo",
+    "name": "Osoppo",
+    "address": "Via Osoppo 2, Milano",
+    "lat": 45.4697766,
+    "lng": 9.1437241,
+    "website": "https://www.sdcmilano.it/sale-della-comunita",
+    "booking_url": null,
+    "source": {
+      "adapter": "none"
+    },
+    "merged_from": [],
+    "notes": "No usable source found (no official site found, not on MyMovies). Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. Website is the SDC Milano sale-della-comunita page."
+  },
+  {
+    "id": "milano-a-memoria",
+    "name": "Milano a Memoria",
+    "address": "Piazza Armando Diaz 7, Milano",
+    "lat": 45.4618633,
+    "lng": 9.1899962,
+    "website": "https://www.sdcmilano.it/sale-della-comunita",
+    "booking_url": null,
+    "source": {
+      "adapter": "none"
+    },
+    "merged_from": [],
+    "notes": "No usable source found (no official site found, not on MyMovies). Appears to be an umbrella network of parish halls incl. Osoppo/Palestrina. Online sale: not stated. Reserve without paying: not stated. Group policy: not stated. Website is the SDC Milano sale-della-comunita page."
+  }
+]
