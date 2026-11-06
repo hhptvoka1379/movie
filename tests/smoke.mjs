@@ -228,7 +228,8 @@ async function main() {
       assert.ok(/^\d{2}:\d{2}$/.test(s.time), `bad time ${s.time}`);
       assert.ok(filmIds.has(s.film_id), `missing film ${s.film_id}`);
       if (s.price_eur !== null) {
-        assert.ok(typeof s.price_eur === 'number' && s.price_eur >= 3 && s.price_eur <= 25, `implausible price ${s.price_eur}`);
+        // cap 30: live-event tickets (e.g. a 26 EUR concert viewing) are real prices
+        assert.ok(typeof s.price_eur === 'number' && s.price_eur >= 3 && s.price_eur <= 30, `implausible price ${s.price_eur}`);
         priced++;
       }
     }
