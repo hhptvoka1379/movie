@@ -1,13 +1,21 @@
-// MyMovies.it cinema-page adapter (aggregator fallback for small independents).
+// MyMovies.it cinema-page adapter (aggregator fallback for small independents)
+// plus re-exports of official venue adapters (progettolumiere, cinebazin).
 //
 // Findings about https://www.mymovies.it/cinema/milano/<id>/ :
 // - The page publishes only the cinema's schedule for the current day ("OGGI AL CINEMA").
 //   Query strings (?data=, ?giorno=, ?day=, ?offset=, ...) and paths (/domani/, /settimana/, ...)
 //   are ignored or 404, and no day selector exists in the DOM or scripts. So the adapter emits
 //   showings only for the site's current day (Europe/Rome) and only when that day lies in [from,to].
+// - When a listed venue has no screenings today (e.g. parish hall Cinema Osoppo id=6637 on dark days),
+//   MyMovies renders "Non sono presenti film in programmazione." without an "OGGI AL CINEMA" block;
+//   we return [] so run.mjs records status="no_schedule" cleanly rather than an unexpected error.
 // - Film blocks: `.schedine-titolo a` (title), `.schedine-lancio` (genre, country, year, "Durata N Minuti"),
 //   and `.orari-dettaglio` holding the showtimes (HH:MM). VO is labelled inside the block, e.g.
 //   "Versione originale con sottotitoli:".
+import { scrapeProgettoLumiere } from './progettolumiere.mjs';
+import { scrapeCinebazin } from './cinebazin.mjs';
+
+export { scrapeProgettoLumiere, scrapeCinebazin };
 
 const SITE = 'https://www.mymovies.it/cinema/milano/';
 
@@ -30,25 +38,30 @@ async function dismissConsent(page) {
   } catch { /* no banner */ }
 }
 
-export async function scrapeMymovies(browser, { id, from, to }) {
-  if (!id) throw new Error('mymovies: missing cinema id');
-  const ctx = await browser.newContext({ locale: 'it-IT', timezone: 'Europe/Rome' });
+export async function scrapeMymovies(browser, { id, url: overrideUrl, from, to }) {
+  if (!id && !overrideUrl) throw new Error('mymovies: missing cinema id');
+  const ctx = await browser.newContext({ locale: 'it-IT', timezoneId: 'Europe/Rome' });
   try {
     const page = await ctx.newPage();
-    const url = `${SITE}${id}/`;
+    const url = overrideUrl || `${SITE}${id}/`;
     const resp = await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
     const status = resp ? resp.status() : 0;
-    if (status === 403 || status === 429 || status === 503) {
+    if (status === 401 || status === 403 || status === 429 || status === 503) {
       throw new Error(`BLOCKED: mymovies ${url} returned HTTP ${status}`);
     }
     await dismissConsent(page);
 
     const bodyText = await page.innerText('body').catch(() => '');
-    if (/captcha|access denied|accesso negato|verifica di sicurezza/i.test(bodyText) && !/OGGI AL CINEMA/i.test(bodyText)) {
+    if (/captcha|cloudflare|verify you are human|access denied|accesso negato|verifica di sicurezza/i.test(bodyText) && !/OGGI AL CINEMA|Non sono presenti film in programmazione/i.test(bodyText)) {
       throw new Error(`BLOCKED: mymovies ${url} shows a bot/access check`);
     }
     if (status === 404 || /La pagina cercata non esiste/i.test(bodyText)) {
       throw new Error(`mymovies: cinema page ${url} not found (HTTP ${status})`);
+    }
+
+    // Valid venue page with zero scheduled screenings today (e.g. parish hall dark day).
+    if (/Non sono presenti film in programmazione/i.test(bodyText)) {
+      return [];
     }
 
     // Walk titles and schedule blocks in DOM order; each schedule block belongs to the last title seen.
@@ -76,7 +89,6 @@ export async function scrapeMymovies(browser, { id, from, to }) {
       throw new Error(`mymovies: page structure not recognised for cinema ${id} (no "OGGI AL CINEMA" section or film blocks)`);
     }
     if (blocks.films > 0 && blocks.blocks.length === 0 && /\b\d{1,2}:\d{2}\b/.test(bodyText)) {
-      // Times on the page but not in the expected .orari-dettaglio blocks: the structure changed.
       throw new Error(`mymovies: showtimes present for cinema ${id} but not in the expected .orari-dettaglio blocks`);
     }
 
