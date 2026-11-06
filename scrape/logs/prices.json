@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-11-06T18:07:20.277Z",
+  "range": {
+    "from": "2026-11-06",
+    "to": "2026-11-15"
+  },
+  "note": "policy statements read from cached webtic getLocalInfo captures in scrape/logs; prices_checked=false, so no price is claimed. Run `node run.mjs` on a connected machine for tariffs.",
+  "cinemas": {
+    "uci-bicocca": {
+      "cinema": "uci-bicocca",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price; booking is not offered for some shows (purchase only)",
+        "group": "not stated (online booking is limited to 8 adjacent seats)"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5068",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5068-info.json"
+    },
+    "uci-certosa": {
+      "cinema": "uci-certosa",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "not stated",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5868-info.json"
+    },
+    "gloria": {
+      "cinema": "gloria",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 20 minutes before the show; booking costs €1,00 per ticket on top of the ticket price",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5491",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5491-info.json"
+    },
+    "arcobaleno": {
+      "cinema": "arcobaleno",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5066-info.json"
+    },
+    "ducale": {
+      "cinema": "ducale",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5065",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5065-info.json"
+    },
+    "colosseo": {
+      "cinema": "colosseo",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "no — the site states La Prenotazione non è prevista per questo cinema",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5062",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5062-info.json"
+    },
+    "eliseo": {
+      "cinema": "eliseo",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "no — WebTic reports booking disabled and purchase enabled for this venue (the site only states the generic online-purchase fee)",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5064",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5064-info.json"
+    },
+    "centrale": {
+      "cinema": "centrale",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "no — WebTic reports booking disabled and purchase enabled for this venue",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5742",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5742-info.json"
+    },
+    "plinius": {
+      "cinema": "plinius",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "no — the site states SERVIZIO NON ABILITATO",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5094",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5094-info.json"
+    },
+    "orfeo": {
+      "cinema": "orfeo",
+      "adapter": "webtic",
+      "status": "ok",
+      "rates": [],
+      "prices_checked": false,
+      "price_source": null,
+      "price_reason": "tariffs were not probed: this evidence comes from a cached getLocalInfo capture",
+      "policy": {
+        "reserve": "no — WebTic reports booking disabled and purchase enabled for this venue",
+        "group": "not stated"
+      },
+      "online_sale": "yes (WebTic purchase enabled for this venue)",
+      "booking": {
+        "venue": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5351",
+        "perfTemplate": null,
+        "reason": "no public per-performance URL: the WebTic SPA addresses venues by localId only"
+      },
+      "evidence_file": "scrape/logs/wt-5351-info.json"
+    }
+  }
+}

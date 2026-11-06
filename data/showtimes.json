@@ -16,7 +16,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-15",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+   "notes": "Online sale: yes (WebTic) | Reserve without paying: yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price; booking is not offered for some shows (purchase only) | Group policy: not stated (online booking is limited to 8 adjacent seats)"
   },
   {
    "id": "uci-certosa",
@@ -29,7 +29,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-15",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. Name/address discrepancy: WebTic lists Via Giovanni Gentile 3 (used here); movieplayer lists Via Stephenson 29; MyMovies calls it Cinelandia Milano Certosa. No official site confirmed; WebTic page used as website."
+   "notes": "Online sale: yes (WebTic) | Name/address discrepancy: WebTic lists Via Giovanni Gentile 3 (used here); movieplayer lists Via Stephenson 29; MyMovies calls it Cinelandia Milano Certosa. No official site confirmed; WebTic page used as website | Reserve without paying: not stated | Group policy: not stated"
   },
   {
    "id": "space-odeon",
@@ -81,7 +81,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-11",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. Name discrepancy: movieplayer lists 'Gloria Multisala' and 'Notorious Cinemas Gloria' separately; merged. No official site confirmed; WebTic page used as website."
+   "notes": "Online sale: yes (WebTic) | Name discrepancy: movieplayer lists 'Gloria Multisala' and 'Notorious Cinemas Gloria' separately; merged. No official site confirmed; WebTic page used as website | Reserve without paying: yes — bookings must be collected at the box office at least 20 minutes before the show; booking costs €1,00 per ticket on top of the ticket price | Group policy: not stated"
   },
   {
    "id": "arcobaleno",
@@ -94,7 +94,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-11",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: tickets can be reserved online, at the cinema or via app (cinenauta.it); payment terms not stated. Group policy: not stated."
+   "notes": "Online sale: yes (WebTic) | Reserve without paying: yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price | Group policy: not stated"
   },
   {
    "id": "ducale",
@@ -107,7 +107,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-11",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: tickets can be reserved online, at the cinema or via app (cinenauta.it); payment terms not stated. Group policy: not stated."
+   "notes": "Online sale: yes (WebTic) | Reserve without paying: yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price | Group policy: not stated"
   },
   {
    "id": "colosseo",
@@ -120,7 +120,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-09",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+   "notes": "Online sale: yes (WebTic) | Reserve without paying: no — the site states La Prenotazione non è prevista per questo cinema | Group policy: not stated"
   },
   {
    "id": "eliseo",
@@ -133,7 +133,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-11",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+   "notes": "Online sale: yes (WebTic) | Reserve without paying: no — WebTic reports booking disabled and purchase enabled for this venue (the site only states the generic online-purchase fee) | Group policy: not stated"
   },
   {
    "id": "centrale",
@@ -146,7 +146,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-11",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+   "notes": "Online sale: yes (WebTic) | Reserve without paying: no — WebTic reports booking disabled and purchase enabled for this venue | Group policy: not stated"
   },
   {
    "id": "plinius",
@@ -159,7 +159,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-11",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated. No official site confirmed; WebTic page used as website."
+   "notes": "Online sale: yes (WebTic) | Reserve without paying: no — the site states SERVIZIO NON ABILITATO | Group policy: not stated"
   },
   {
    "id": "orfeo",
@@ -172,7 +172,7 @@
    "source_used": "webtic",
    "published_until": "2026-11-11",
    "status": "ok",
-   "notes": "Online sale: yes (WebTic). Reserve without paying: not stated. Group policy: not stated."
+   "notes": "Online sale: yes (WebTic) | Reserve without paying: no — WebTic reports booking disabled and purchase enabled for this venue | Group policy: not stated"
   },
   {
    "id": "arlecchino",
