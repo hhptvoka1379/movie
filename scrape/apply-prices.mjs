@@ -125,8 +125,10 @@ for (const c of d.cinemas) {
   if (!row.priced) noEvidence.push(c.id);
 }
 const total = d.showings.length;
+// Count over the whole file: "priced" above only tallies the cinemas that had evidence.
+const pricedAll = d.showings.filter(s => s.price_eur != null).length;
 console.log(bar);
-console.log(`showings ${total}, priced ${priced} (${total ? Math.round(priced / total * 100) : 0}%), price values changed ${touched}, cinema notes updated ${notesChanged}`);
+console.log(`showings ${total}, priced ${pricedAll} (${total ? Math.round(pricedAll / total * 100) : 0}%), price values changed ${touched}, cinema notes updated ${notesChanged}`);
 
 if (DRY) {
   console.log('[dry-run] nothing written');
