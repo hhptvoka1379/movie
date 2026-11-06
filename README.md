@@ -32,7 +32,7 @@ then open http://localhost:8000.
 
 ## Attribution
 
-This product uses the TMDB API but is not endorsed or certified by TMDB.
+This product uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
 
 Required wording and logo rules from the TMDB API terms of use
 (https://www.themoviedb.org/api-terms-of-use, read 2026-11-06): the notice must

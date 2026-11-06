@@ -13,7 +13,7 @@
   var LANG_LABEL = { ita: 'ITA', vo: 'VO', vos: 'VOS', other: 'ALTRO' };
   var TYPE_LABEL = { film: 'Film', event: 'Evento', classic: 'Classico' };
   var ARROWS = ['→', '↘', '↓', '↙', '←', '↖', '↑', '↗'];
-  var TMDB_NOTE = 'Poster: This product uses the TMDB API but is not endorsed or certified by TMDB.';
+  var TMDB_NOTE = 'Poster: This product uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
   var OSM_NOTE = '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>';
   var TIME_LABEL = { tutti: 'tutti gli orari', mattina: 'mattina', pomeriggio: 'pomeriggio', sera: 'sera' };
 

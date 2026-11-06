@@ -118,6 +118,7 @@ a { color: var(--ink); }
 /* offscreen pills */
 .offscreen { position: absolute; inset: 0; pointer-events: none; z-index: 1001; }
 .offpill {
+  max-width: min(70vw, 260px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   position: absolute; transform: translate(-50%, -50%);
   pointer-events: auto; min-height: var(--tap); padding: 6px 12px;
   background: var(--ink); color: #fff; border: var(--line);
