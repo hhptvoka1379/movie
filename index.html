@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cinema Milano · orari sulla mappa</title>
+<meta name="description" content="Orari dei cinema di Milano su una mappa: filtra per giorno, lingua, orario e formato.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Archivo+Narrow:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar" id="topbar">
+    <div class="seg" role="group" aria-label="Vista">
+      <button type="button" id="view-map" aria-pressed="true">Mappa</button>
+      <button type="button" id="view-list" aria-pressed="false">Lista</button>
+    </div>
+    <div class="tools">
+      <button type="button" class="btn-icon" id="search-btn" aria-label="Cerca film o cinema" aria-controls="filters" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg>
+      </button>
+      <button type="button" class="pill-btn" id="filter-pill" aria-controls="filters" aria-expanded="false">ITA · tutti gli orari</button>
+    </div>
+    <nav class="strip" id="strip" aria-label="Giorni"></nav>
+  </header>
+
+  <section class="filters" id="filters" aria-label="Filtri" hidden>
+    <fieldset class="fset">
+      <legend>Lingua</legend>
+      <div class="opts" id="opt-lang">
+        <label><input type="radio" name="l" value="tutte"><span>Tutte</span></label>
+        <label><input type="radio" name="l" value="ita"><span>ITA</span></label>
+        <label><input type="radio" name="l" value="vo"><span>VO / sottotitolato</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="fset">
+      <legend>Orario</legend>
+      <div class="opts" id="opt-time">
+        <label><input type="radio" name="t" value="tutti"><span>Tutti gli orari</span></label>
+        <label><input type="radio" name="t" value="mattina"><span>Mattina (prima delle 14)</span></label>
+        <label><input type="radio" name="t" value="pomeriggio"><span>Pomeriggio (14-18)</span></label>
+        <label><input type="radio" name="t" value="sera"><span>Sera (dalle 18)</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="fset">
+      <legend>Tipo</legend>
+      <div class="opts" id="opt-tipo">
+        <label><input type="radio" name="tipo" value="tutti"><span>Tutti</span></label>
+        <label><input type="radio" name="tipo" value="film"><span>Film</span></label>
+        <label><input type="radio" name="tipo" value="event"><span>Evento</span></label>
+        <label><input type="radio" name="tipo" value="classic"><span>Classico</span></label>
+      </div>
+    </fieldset>
+    <div class="frow">
+      <label class="flabel" for="fmt">Formato</label>
+      <select id="fmt"><option value="tutti">Tutti i formati</option></select>
+    </div>
+    <div class="frow">
+      <label class="flabel" for="q">Cerca film o cinema</label>
+      <input type="search" id="q" autocomplete="off" placeholder="Es. Bicocca, Brera">
+    </div>
+    <div class="factions">
+      <button type="button" class="btn-ghost" id="reset-filters">Azzera filtri</button>
+      <button type="button" class="btn-solid" id="close-filters">Fatto</button>
+    </div>
+  </section>
+
+  <main class="map-wrap" id="map-wrap" aria-label="Mappa dei cinema">
+    <div id="map"></div>
+    <div class="offscreen" id="offscreen"></div>
+    <div class="status-box" id="status-box" hidden></div>
+  </main>
+
+  <div class="list" id="list" hidden></div>
+
+  <section class="dock is-collapsed" id="dock" aria-label="Cinema selezionato">
+    <button type="button" class="dock-handle" id="dock-handle" aria-expanded="false">
+      <span class="grip" aria-hidden="true"></span>
+      <span class="dock-hint" id="dock-hint"></span>
+    </button>
+    <div class="dock-head" id="dock-head"></div>
+    <div class="dock-body" id="dock-body"></div>
+    <p class="dock-foot">Ognuno compra il suo biglietto · tocca un orario per prenotare</p>
+  </section>
+
+  <div class="hover-preview" id="hover-preview" hidden></div>
+
+  <dialog class="film-dialog" id="film-dialog" aria-labelledby="film-dialog-title"></dialog>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
