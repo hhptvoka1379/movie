@@ -1,0 +1,128 @@
+[
+ {
+  "name": "Arcobaleno Filmcenter",
+  "url": "https://movieplayer.it/cinema/arcobaleno-filmcenter_759/",
+  "address": "Viale Tunisia 11 - Milano (MI). Telefono: 02/29406054",
+  "mp_empty": false
+ },
+ {
+  "name": "Ariosto Anteo spazioCinema",
+  "url": "https://movieplayer.it/cinema/ariosto-anteo-spaziocinema_2949/",
+  "address": "?",
+  "mp_empty": false
+ },
+ {
+  "name": "Ariosto",
+  "url": "https://movieplayer.it/cinema/ariosto_760/",
+  "address": "Via Ariosto, 16 - Milano (MI).",
+  "mp_empty": true
+ },
+ {
+  "name": "Arlecchino",
+  "url": "https://movieplayer.it/cinema/arlecchino_761/",
+  "address": "Via S. Pietro all'Orto, 9 - Milano (MI). Telefono: 02/76001214",
+  "mp_empty": true
+ },
+ {
+  "name": "Auditorium Don Bosco",
+  "url": "https://movieplayer.it/cinema/auditorium-don-bosco_764/",
+  "address": "Via Melchiorre Gioia, 48 - Milano (MI).",
+  "mp_empty": true
+ },
+ {
+  "name": "Centrale",
+  "url": "https://movieplayer.it/cinema/centrale_767/",
+  "address": "Via Torino 30/32 - Milano (MI). Telefono: 02/874826",
+  "mp_empty": false
+ },
+ {
+  "name": "CityLife Anteo",
+  "url": "https://movieplayer.it/cinema/citylife-anteo_2951/",
+  "address": "Piazza Tre Torri 1/L - Milano (MI).",
+  "mp_empty": false
+ },
+ {
+  "name": "Colosseo",
+  "url": "https://movieplayer.it/cinema/colosseo_769/",
+  "address": "Viale Montenero 84 - Milano (MI). Telefono: 02/59901361",
+  "mp_empty": false
+ },
+ {
+  "name": "Ducale",
+  "url": "https://movieplayer.it/cinema/ducale_771/",
+  "address": "Piazza Napoli 27 - Milano (MI). Telefono: 02/47719279",
+  "mp_empty": false
+ },
+ {
+  "name": "Eliseo Multisala",
+  "url": "https://movieplayer.it/cinema/eliseo-multisala_772/",
+  "address": "Via Torino 64 - Milano (MI). Telefono: 02/72008219",
+  "mp_empty": false
+ },
+ {
+  "name": "Gloria Multisala",
+  "url": "https://movieplayer.it/cinema/gloria-multisala_775/",
+  "address": "Corso Vercelli 18 - Milano (MI). Telefono: 02 48008908",
+  "mp_empty": true
+ },
+ {
+  "name": "Mexico",
+  "url": "https://movieplayer.it/cinema/mexico_780/",
+  "address": "Via Savona 57 - Milano (MI). Telefono: 02/48951802",
+  "mp_empty": false
+ },
+ {
+  "name": "Milano a Memoria",
+  "url": "https://movieplayer.it/cinema/milano-a-memoria_2812/",
+  "address": "Piazza Armando Diaz 7 - Milano (MI). Telefono: 02/49438217",
+  "mp_empty": true
+ },
+ {
+  "name": "Notorious Cinemas Gloria",
+  "url": "https://movieplayer.it/cinema/notorious-cinemas-gloria_2952/",
+  "address": "?",
+  "mp_empty": false
+ },
+ {
+  "name": "Orfeo Multisala",
+  "url": "https://movieplayer.it/cinema/orfeo-multisala_784/",
+  "address": "Viale Coni Zugna 50 - Milano (MI). Telefono: 02/89403039",
+  "mp_empty": false
+ },
+ {
+  "name": "Osoppo",
+  "url": "https://movieplayer.it/cinema/osoppo_788/",
+  "address": "Via Osoppo, 2 - Milano (MI).",
+  "mp_empty": true
+ },
+ {
+  "name": "Palestrina",
+  "url": "https://movieplayer.it/cinema/palestrina_789/",
+  "address": "Via Palestrina 7 - Milano (MI). Telefono: 02/6702700",
+  "mp_empty": false
+ },
+ {
+  "name": "Plinius Multisala",
+  "url": "https://movieplayer.it/cinema/plinius-multisala_790/",
+  "address": "Viale Abruzzi 28/30 - Milano (MI). Telefono: 02/29531103",
+  "mp_empty": false
+ },
+ {
+  "name": "The Space Cinema Milano Odeon",
+  "url": "https://movieplayer.it/cinema/the-space-cinema-milano-odeon_1737/",
+  "address": "Via Santa Radegonda, 8 - Milano (MI).",
+  "mp_empty": true
+ },
+ {
+  "name": "Uci Cinemas Bicocca",
+  "url": "https://movieplayer.it/cinema/uci-cinemas-bicocca_773/",
+  "address": "?",
+  "mp_empty": false
+ },
+ {
+  "name": "Uci Cinemas Certosa",
+  "url": "https://movieplayer.it/cinema/uci-cinemas-certosa_1658/",
+  "address": "?",
+  "mp_empty": true
+ }
+]

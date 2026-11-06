@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+import fs from 'fs';
+const b=await chromium.launch();
+const p=await (await b.newContext({locale:'it-IT'})).newPage();
+let body=null;
+p.on('response',async r=>{if(r.url().includes('WebticPortalData')) body=await r.text();});
+await p.goto('https://www.webtic.it/#/shopping?action=loadLocal&localId=5351',{waitUntil:'networkidle',timeout:60000}).catch(()=>{});
+await p.waitForTimeout(3000);
+fs.writeFileSync('logs/wt-portal.json',body||'');
+await b.close();

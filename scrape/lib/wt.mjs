@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+import fs from 'fs';
+const id=process.argv[2];
+const b=await chromium.launch();
+const p=await (await b.newContext({locale:'it-IT'})).newPage();
+let body=null;
+p.on('response',async r=>{if(r.url().includes('getFullScheduling')) body=await r.text();});
+await p.goto(`https://www.webtic.it/#/shopping?action=loadLocal&localId=${id}`,{waitUntil:'networkidle',timeout:60000}).catch(()=>{});
+await p.waitForTimeout(3000);
+fs.writeFileSync(`logs/wt-${id}.json`,body||'');
+console.log(id,body?body.length:'none');
+await b.close();
