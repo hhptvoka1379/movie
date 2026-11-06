@@ -79,7 +79,7 @@ export function collectPrices(got, others, localId) {
     if (wtid === 'getFullScheduling' || wtid === 'getLocalInfo') {
       if (!ratesFromJson(payload, `webtic:${wtid}`).length) continue;
     }
-    consider(payload, `webtic:${wtid}?localId=${localId}`);
+    consider(payload, /localId=/.test(wtid) ? `webtic:${wtid}` : `webtic:${wtid}?localId=${localId}`);
   }
   for (const o of others) consider(o.payload, o.url.slice(0, 200));
 

@@ -27,6 +27,46 @@ const PRICE_EVIDENCE = path.join(HERE, 'logs', 'prices.json');
 // --no-prices: skip price capture (schedules only, price_eur stays null)
 const DRY_RUN = process.argv.includes('--dry-run');
 const NO_PRICES = process.argv.includes('--no-prices');
+const FORCE = process.argv.includes('--force');   // skip the pre-flight reachability check
+
+// Origins the adapters need. A sandbox or a firewall that blocks them makes every cinema fail,
+// so say so once, loudly, before the run wastes minutes producing nothing.
+const NEEDED_ORIGINS = [
+  ['webtic', 'https://www.webtic.it/'],
+  ['spaziocinema', 'https://www.spaziocinema.info/milano/cinema'],
+  ['18tickets', 'https://arlecchino.cinetecadimilano.18tickets.it/'],
+];
+
+async function preflight() {
+  const problems = [];
+  let browser = null;
+  try {
+    browser = await chromium.launch({ headless: true });
+  } catch (e) {
+    problems.push(`playwright cannot start a browser: ${String(e.message || e).split('\n')[0]}
+      -> in scrape/: npm ci && npx playwright install chromium`);
+  } finally {
+    if (browser) await browser.close();
+  }
+  for (const [name, url] of NEEDED_ORIGINS) {
+    try {
+      const ctl = new AbortController();
+      const t = setTimeout(() => ctl.abort(), 8000);
+      const res = await fetch(url, { method: 'GET', redirect: 'follow', signal: ctl.signal });
+      clearTimeout(t);
+      console.log(`[preflight] ${name}: reachable (HTTP ${res.status})`);
+    } catch (e) {
+      problems.push(`${name} (${url}) unreachable: ${String(e.message || e).split('\n')[0]}`);
+    }
+  }
+  if (problems.length) {
+    console.error(`\n!!!!! PRE-FLIGHT FAILED - the pipeline cannot fetch anything !!!!!\n` +
+      problems.map(p => '  - ' + p).join('\n') +
+      `\nNothing was written. Re-run on a machine that can reach the cinema sites,` +
+      `\nor use --force to run anyway (each cinema will fail loudly).\n`);
+    process.exit(2);
+  }
+}
 
 // Generic (MyMovies) adapter is written by another agent; load it if present, else null.
 async function loadGeneric() {
@@ -81,6 +121,8 @@ async function fetchShowings(browser, c, generic) {
       throw new Error(`unknown adapter "${s.adapter}"`);
   }
 }
+
+if (!FORCE) await preflight();
 
 const cinemas = JSON.parse(fs.readFileSync(CINEMAS_FILE, 'utf8'));
 const unplaced = await ensureGeocoded(cinemas, CINEMAS_FILE);
