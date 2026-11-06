@@ -1,0 +1,182 @@
+/*
+  Panels: mobile dock, desktop side panel, list view, film dialog grid, filters sheet.
+  Read after app.css; overrides only what the panels/filters need.
+  Riso/print look: --accent single accent, 1.5px outlines, hard 2px shadows, no gradients.
+*/
+
+/* ---------- shared bits ---------- */
+.btn-solid, .btn-ghost, .btn-icon, .pill-btn, .dlg-close {
+  min-height: var(--tap);
+}
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+/* price shown small and grey wherever times are listed */
+.time small, .time-plain small, .hover-preview li small {
+  color: var(--grey); font-size: 11px; font-weight: 600; letter-spacing: .02em;
+}
+/* 44px hit targets for every showtime link/plain row */
+.times .time, .times .time-plain {
+  min-height: var(--tap); display: inline-flex; align-items: center; gap: 5px;
+  padding: 2px 2px;
+}
+.times .time-plain { color: var(--grey); }
+
+/* ---------- mobile dock: short sheet, snap drag ---------- */
+.dock {
+  height: 34vh; min-height: 208px;
+  border-top: 3px solid var(--ink);
+  transition: transform .18s ease, height .18s ease;
+}
+/* while dragging we drive transform directly: no transition fights the finger */
+.dock.is-dragging { transition: none; }
+.dock.is-collapsed { height: 56px; min-height: 0; }
+
+.dock-handle {
+  min-height: 56px; touch-action: none; cursor: grab;
+  -webkit-user-select: none; user-select: none;
+}
+.dock.is-dragging .dock-handle, .dock-handle:active { cursor: grabbing; }
+.dock-handle .grip { width: 48px; height: 5px; border-radius: 3px; }
+.dock.is-dragging .grip { background: var(--accent); }
+
+/* carousel: snap + peeking next card */
+.dock-body {
+  gap: 12px; padding: 2px 16px 14px;
+  scroll-snap-type: x mandatory; scroll-padding-left: 16px;
+  -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+}
+.fcard {
+  flex: 0 0 min(78vw, 320px); scroll-snap-align: start; scroll-snap-stop: always;
+  background: var(--sheet); border: var(--line); box-shadow: var(--hard);
+  padding: 10px 12px; overflow-y: auto; min-width: 0;
+}
+.fcard:last-child { margin-right: 8px; }
+.fbody .times { gap: 0 12px; }
+
+/* ---------- desktop (>=900px): 380px panel, stacked cards ---------- */
+@media (min-width: 900px) {
+  .dock {
+    width: 380px; border-left: 3px solid var(--ink); border-top: 0;
+    box-shadow: -2px 0 0 var(--ink); height: auto; min-height: 0; top: 0;
+  }
+  .dock-handle { display: none; }
+  .dock-head { padding: 14px 16px 10px; border-bottom: var(--line); margin: 0 16px; padding-left: 0; padding-right: 0; }
+  .dock-body {
+    flex-direction: column; overflow-x: hidden; overflow-y: auto;
+    scroll-snap-type: none; gap: 14px; padding: 14px 16px 18px;
+  }
+  .fcard {
+    flex: 0 0 auto; width: 100%; scroll-snap-align: none;
+    background: var(--sheet); overflow: visible;
+  }
+  .dock-name { font-size: 22px; }
+}
+
+/* ---------- list view: grouped by film ---------- */
+.list-inner { max-width: 760px; }
+.list h2.day-title {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--paper); padding: 10px 2px 8px; margin: 0 -2px 10px;
+  border-bottom: var(--line);
+}
+.lcard {
+  align-items: flex-start; background: var(--sheet);
+  border: var(--line); box-shadow: var(--hard); padding: 12px;
+  margin-bottom: 14px;
+}
+.lcard h3 button { min-height: var(--tap); }
+.lrow { border-top: 1px dashed #bdb7a8; padding: 4px 0 6px; }
+.lrow:first-of-type { border-top: 0; }
+.lcin { min-height: var(--tap); }
+.blocked-head {
+  margin: 24px 0 10px; padding: 6px 0; border-top: var(--line);
+}
+.cnote { box-shadow: var(--hard); }
+
+/* ---------- film dialog: day-by-cinema grid (6-15 Nov) ---------- */
+.dlg .fpg-summary {
+  margin: 0 0 10px; font-size: 12px; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--grey);
+}
+.fpg-scroll {
+  overflow-x: auto; margin: 0 -16px; padding: 2px 16px 10px;
+  -webkit-overflow-scrolling: touch;
+}
+.fpg-scroll:focus-visible { outline-offset: -2px; }
+.fpg-table {
+  border-collapse: separate; border-spacing: 8px; min-width: 100%;
+  font-size: 13px;
+}
+.fpg-table th, .fpg-table td {
+  border: var(--line); background: var(--sheet); box-shadow: var(--hard);
+  padding: 6px 8px; vertical-align: top; text-align: left;
+}
+.fpg-table thead th {
+  background: var(--ink); color: #fff; padding: 4px 6px; text-align: center;
+  min-width: 120px; box-shadow: none;
+}
+.fpg-day {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  min-width: 96px; min-height: var(--tap); padding: 4px 6px; color: inherit;
+  font-family: var(--ff-name);
+}
+.fpg-day .fpg-wd { font-size: 10px; letter-spacing: .1em; font-weight: 700; opacity: .85; }
+.fpg-day .fpg-dn { font-size: 18px; font-weight: 700; line-height: 1; }
+.fpg-day:hover { text-decoration: underline; text-underline-offset: 3px; }
+.fpg-corner { min-width: 160px; }
+.fpg-table tbody th[scope="row"] { min-width: 160px; }
+.fpg-cin {
+  display: block; text-align: left; font-family: var(--ff-name); font-weight: 700;
+  font-size: 13px; letter-spacing: .03em; text-transform: uppercase;
+  min-height: var(--tap); width: 100%; text-decoration: underline;
+  text-decoration-thickness: 1px; text-underline-offset: 3px; padding: 4px 0;
+}
+.fpg-none {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: var(--tap); color: var(--grey); width: 100%;
+}
+.fpg-table td .times { display: grid; grid-template-columns: 1fr; gap: 2px; }
+.fpg-table td .time, .fpg-table td .time-plain {
+  flex-direction: column; align-items: flex-start; justify-content: center; gap: 0;
+  width: 100%; min-height: var(--tap); height: auto; padding: 4px 6px;
+}
+.fpg-table td .time small, .fpg-table td .time-plain small { white-space: nowrap; }
+.fpg-table td .time { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.fpg-table td .time:hover { background: var(--paper); border-color: var(--ink); }
+@media (min-width: 900px) {
+  .fpg-table thead th { position: sticky; top: 0; z-index: 2; }
+}
+
+/* ---------- filters sheet ---------- */
+.filters {
+  background: var(--sheet); border: var(--line); box-shadow: var(--hard);
+  padding: 14px 16px 16px;
+}
+.filters .frow-date { margin-top: 2px; }
+.filters .frow select, .filters .frow input {
+  border-radius: 0; border: var(--line); background: var(--sheet);
+  min-height: var(--tap); font-size: 15px;
+}
+.filters .frow select:focus-visible, .filters .frow input:focus-visible {
+  outline: 2px solid var(--ink); outline-offset: 2px;
+}
+.opts span { min-height: 44px; }
+.opts input:checked + span { background: var(--ink); color: #fff; }
+.filters .factions { border-top: var(--line); padding-top: 10px; margin-top: 12px; }
+
+/* ---------- empty / loading / error states ---------- */
+.status-box {
+  background: var(--sheet); border: var(--line); box-shadow: var(--hard);
+  padding: 14px 16px;
+}
+.status-box p { margin: 0 0 10px; font-weight: 600; }
+.empty-msg {
+  background: var(--card); border: var(--line); box-shadow: var(--hard);
+  padding: 12px 14px;
+}
+.empty-msg p { margin: 0 0 10px; font-weight: 600; }
+.note-block { border: var(--line); box-shadow: var(--hard); background: var(--card); }
+.loader { display: flex; align-items: center; gap: 10px; }
+.btn-solid[data-act="retry"], .btn-solid[data-act="reset"] { min-height: var(--tap); }
+
+/* reduced motion respected globally in app.css; nothing here animates beyond it */

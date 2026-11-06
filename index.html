@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
 <link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="css/panels.css">
 </head>
 <body>
 <div class="app">
@@ -30,10 +31,14 @@
   </header>
 
   <section class="filters" id="filters" aria-label="Filtri" hidden>
+    <div class="frow frow-date">
+      <label class="flabel" for="fdate">Giorno</label>
+      <select id="fdate"><option disabled selected>Caricamento…</option></select>
+    </div>
     <fieldset class="fset">
       <legend>Lingua</legend>
       <div class="opts" id="opt-lang">
-        <label><input type="radio" name="l" value="tutte"><span>Tutte</span></label>
+        <label><input type="radio" name="l" value="tutte"><span>Tutte (All)</span></label>
         <label><input type="radio" name="l" value="ita"><span>ITA</span></label>
         <label><input type="radio" name="l" value="vo"><span>VO / sottotitolato</span></label>
       </div>
@@ -47,6 +52,10 @@
         <label><input type="radio" name="t" value="sera"><span>Sera (dalle 18)</span></label>
       </div>
     </fieldset>
+    <div class="frow">
+      <label class="flabel" for="fmt">Formato</label>
+      <select id="fmt"><option value="tutti">Tutti i formati</option></select>
+    </div>
     <fieldset class="fset">
       <legend>Tipo</legend>
       <div class="opts" id="opt-tipo">
@@ -57,12 +66,8 @@
       </div>
     </fieldset>
     <div class="frow">
-      <label class="flabel" for="fmt">Formato</label>
-      <select id="fmt"><option value="tutti">Tutti i formati</option></select>
-    </div>
-    <div class="frow">
       <label class="flabel" for="q">Cerca film o cinema</label>
-      <input type="search" id="q" autocomplete="off" placeholder="Es. Bicocca, Brera">
+      <input type="search" id="q" autocomplete="off" placeholder="Es. Bicocca, Brera, un titolo…">
     </div>
     <div class="factions">
       <button type="button" class="btn-ghost" id="reset-filters">Azzera filtri</button>
@@ -79,7 +84,7 @@
   <div class="list" id="list" hidden></div>
 
   <section class="dock is-collapsed" id="dock" aria-label="Cinema selezionato">
-    <button type="button" class="dock-handle" id="dock-handle" aria-expanded="false">
+    <button type="button" class="dock-handle" id="dock-handle" aria-expanded="false" aria-label="Apri o chiudi il pannello del cinema">
       <span class="grip" aria-hidden="true"></span>
       <span class="dock-hint" id="dock-hint"></span>
     </button>
@@ -95,5 +100,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
 <script src="app.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/dock.js"></script>
+<script src="js/film-panel.js"></script>
 </body>
 </html>
