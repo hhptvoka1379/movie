@@ -339,8 +339,8 @@
    "runtime_min": 91
   },
   {
-   "id": "wildwood-i-segreti-del-bosco-p",
-   "title": "(XL) Wildwood - I Segreti Del Bosco P.",
+   "id": "wildwood-i-segreti-del-bosco-proibito",
+   "title": "Wildwood - I Segreti Del Bosco Proibito",
    "original_title": "Wildwood",
    "type": "film",
    "runtime_min": 132
@@ -813,13 +813,6 @@
    "original_title": "Whalefall",
    "type": "film",
    "runtime_min": 106
-  },
-  {
-   "id": "wildwood-i-segreti-del-bosco-proibito",
-   "title": "Wildwood - I Segreti Del Bosco Proibito",
-   "original_title": "Wildwood",
-   "type": "film",
-   "runtime_min": 132
   },
   {
    "id": "youth-hard-times-pinyin-qing-chun-ku",
@@ -9255,7 +9248,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "wildwood-i-segreti-del-bosco-p",
+   "film_id": "wildwood-i-segreti-del-bosco-proibito",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-09",
    "time": "19:45",
@@ -11125,7 +11118,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "wildwood-i-segreti-del-bosco-p",
+   "film_id": "wildwood-i-segreti-del-bosco-proibito",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-10",
    "time": "19:45",
@@ -12955,7 +12948,7 @@
    "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
   },
   {
-   "film_id": "wildwood-i-segreti-del-bosco-p",
+   "film_id": "wildwood-i-segreti-del-bosco-proibito",
    "cinema_id": "uci-bicocca",
    "date": "2026-11-11",
    "time": "19:45",

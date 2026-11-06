@@ -29,6 +29,7 @@ const ID_SUFFIX = /-(?:evento|ospiti-in-sala)$/;
 // Confirmed by matching TMDB ids or obvious title overlap; keep in sync with scrape/logs/merges.log.
 export const ID_ALIASES = {
   'wildwood': 'wildwood-i-segreti-del-bosco-proibito',
+  'wildwood-i-segreti-del-bosco-p': 'wildwood-i-segreti-del-bosco-proibito',
   'il-gruffalo-e-la-sua-p-bastoncino-aut': 'il-gruffalo-e-la-sua-picc-bastoncino',
   'taddeo-l-esploratore-e-la-lampada-m': 'taddeo-l-esploratore-e-la-lampada-magica',
   'il-gatto-con-il-cappello': 'il-gatto-col-cappello',

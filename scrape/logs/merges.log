@@ -14,4 +14,17 @@ ragione-e-sentimento-sense-and-sensibility: "ragione e sentimento (sense and sen
 digger: "digger" [citylife-anteo] + "Digger" [colosseo, plinius]
 il-rumore-delle-cose-nuove: "Il rumore delle cose nuove" [citylife-anteo] + "Il Rumore Delle Cose Nuove - Anteprima" [colosseo]
 
-# Alias/prefix merges applied by scrape/remap.mjs (TMDB-id duplicates + title overlap), 2026-11-06
+# Alias merges applied by scrape/remap.mjs (same TMDB id or obvious title overlap), 2026-11-06
+wildwood -> wildwood-i-segreti-del-bosco-proibito
+wildwood-i-segreti-del-bosco-p -> wildwood-i-segreti-del-bosco-proibito
+il-gruffalo-e-la-sua-p-bastoncino-aut -> il-gruffalo-e-la-sua-picc-bastoncino
+taddeo-l-esploratore-e-la-lampada-m -> taddeo-l-esploratore-e-la-lampada-magica
+il-gatto-con-il-cappello -> il-gatto-col-cappello
+il-gatto-col-cappello-the-cat-in-the-hat -> il-gatto-col-cappello
+ebenezer -> scrooge-e-gli-spiriti-del-natale
+shaun-vita-da-pecora-op-z-u-c-c-a -> shaun-vita-da-pecora-operazione-z-u-c-c-a
+shaun-vita-da-pecora-operazione-z-u-c -> shaun-vita-da-pecora-operazione-z-u-c-c-a
+george-michael-the-fa -> george-michael-the-faith-tour
+minotaur -> minotaur-nel-labirinto-del-potere
+minotaur-nel-labirinto-del-potere-minotaure -> minotaur-nel-labirinto-del-potere
+# prefixes stripped from ids: atmos-, sala-xl-, xl-, jp-, lingua-orig*-; suffixes: -evento, -ospiti-in-sala
