@@ -122,7 +122,10 @@
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066",
     "source": {
       "adapter": "webtic",
-      "localId": 5066
+      "localId": 5066,
+      "tariffUrls": [
+        "https://cinenauta.it/"
+      ]
     },
     "merged_from": [],
     "notes": "Online sale: yes (WebTic). Reserve without paying: tickets can be reserved online, at the cinema or via app (cinenauta.it); payment terms not stated. Group policy: not stated."
@@ -137,7 +140,10 @@
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5065",
     "source": {
       "adapter": "webtic",
-      "localId": 5065
+      "localId": 5065,
+      "tariffUrls": [
+        "https://cinenauta.it/"
+      ]
     },
     "merged_from": [],
     "notes": "Online sale: yes (WebTic). Reserve without paying: tickets can be reserved online, at the cinema or via app (cinenauta.it); payment terms not stated. Group policy: not stated."
@@ -188,7 +194,10 @@
     "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5742",
     "source": {
       "adapter": "webtic",
-      "localId": 5742
+      "localId": 5742,
+      "tariffUrls": [
+        "https://www.multisalacentrale.it/"
+      ]
     },
     "merged_from": [],
     "notes": "Online sale: yes (WebTic 5742 linked from multisalacentrale.it). Reserve without paying: yes — ritiro almeno 30 min prima (+€1,00). Group policy: not stated. Tariffario intero non pubblicato su multisalacentrale.it (sito in revisione)."
@@ -276,7 +285,10 @@
       "adapter": "progettolumiere",
       "slug": "palestrina",
       "url": "https://www.progettolumiere.it/palestrina/home.php",
-      "cineforumPdfUrl": "https://www.progettolumiere.it/palestrina/pdf/cineforum.pdf"
+      "cineforumPdfUrl": "https://www.progettolumiere.it/palestrina/pdf/cineforum.pdf",
+      "tariffUrls": [
+        "https://www.progettolumiere.it/palestrina/contact.php"
+      ]
     },
     "merged_from": [],
     "notes": "Online sale: no (box office only; Cinema Palestrina 5/10-entry card and Thursday cineforum season pass sold at box office). Reserve without paying: not stated. Group policy: not stated. Managed by Progetto Lumiere (progettolumiere.it/palestrina/home.php, confirmed via sdcmilano.it/sala-palestrina)."
@@ -291,7 +303,10 @@
     "booking_url": null,
     "source": {
       "adapter": "cinebazin",
-      "url": "https://www.cinebazin.it/new/"
+      "url": "https://www.cinebazin.it/new/",
+      "tariffUrls": [
+        "https://www.cinebazin.it/new/"
+      ]
     },
     "merged_from": [],
     "notes": "Online sale: no (seasonal cineforum membership pass only — tessera personale ~€109 for 30 weekly films sold in person at Via Melchiorre Gioia 48 before screenings; no single-ticket sales). Reserve without paying: no. Group policy: membership-only cinecircolo (C.S.C. Cinecircolo André Bazin, cinebazin.it, confirmed via sdcmilano.it/sala-don-bosco-2; weekly screenings Sun 16:00 and Mon/Wed/Fri 21:00)."
