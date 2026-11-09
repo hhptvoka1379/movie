@@ -1,34 +1,19 @@
-# film merges, generated 2026-11-06T14:13:15.570Z
+# film merges, generated 2026-11-09T16:33:36.045Z
 # format: film-id: "raw title" [cinema ids] + "other raw title" [cinema ids]
-wild-horse-nine: "Wild Horse Nine" [uci-bicocca, uci-certosa, arcobaleno, ducale, colosseo, eliseo, plinius, orfeo, palestrina] + "wild horse nine" [citylife-anteo] + "Wild horse nine" [citylife-anteo]
-il-gatto-col-cappello: "3d - Il Gatto Col Cappello" [uci-bicocca] + "Il Gatto Col Cappello" [uci-bicocca, colosseo, plinius]
-dio-ride: "Dio Ride" [uci-bicocca, uci-certosa, gloria, arcobaleno, ducale, colosseo, eliseo, plinius, palestrina] + "Dio ride" [citylife-anteo, ariosto-anteo]
-hope: "Hope" [uci-bicocca, uci-certosa, citylife-anteo, arcobaleno, colosseo] + "hope" [citylife-anteo]
-je-so-pazzo: "Je So' Pazzo" [uci-bicocca] + "Je so pazzo" [citylife-anteo]
-l-estranea: "L'Estranea" [uci-bicocca, uci-certosa, arcobaleno, ducale, colosseo, orfeo] + "L'estranea" [citylife-anteo] + "L'ESTRANEA" [arlecchino]
+scrooge-e-gli-spiriti-del-natale: "Ebenezer" [uci-bicocca] + "Scrooge E Gli Spiriti Del Natale" [uci-bicocca, uci-certosa, plinius]
+george-michael-the-faith-tour: "George Michael: The Faith Tour" [uci-bicocca, plinius, orfeo] + "George Michael: The Fa" [uci-certosa] + "George michael: the faith tour" [citylife-anteo]
+wild-horse-nine: "Wild Horse Nine" [uci-bicocca, uci-certosa, arcobaleno, ducale, colosseo, eliseo, plinius, orfeo] + "wild horse nine" [citylife-anteo] + "Wild horse nine" [citylife-anteo, palestrina]
+wildwood-i-segreti-del-bosco-proibito: "Wildwood" [uci-bicocca] + "Wildwood - I Segreti Del Bosco P." [uci-bicocca] + "Wildwood - I Segreti Del Bosco Proibito" [uci-bicocca, uci-certosa] + "Wildwood – i segreti del bosco proibito" [citylife-anteo]
+il-rumore-delle-cose-nuove: "Il Rumore Delle Cose Nuove" [uci-bicocca] + "Il rumore delle cose nuove" [citylife-anteo] + "Il Rumore Delle Cose Nuove - Anteprima" [colosseo]
 se-domani-non-torno: "Se Domani Non Torno" [uci-bicocca, uci-certosa, gloria, ducale, colosseo, orfeo] + "Se domani non torno" [citylife-anteo, ariosto-anteo, mexico]
+shaun-vita-da-pecora-operazione-z-u-c-c-a: "Shaun Vita Da Pecora-Op. Z.U.C.C.A." [uci-bicocca] + "Shaun, Vita Da Pecora - Operazione Z.U.C" [uci-certosa, colosseo] + "Shaun vita da pecora - operazione z.u.c.c.a" [citylife-anteo]
+il-gatto-col-cappello: "3d - Il Gatto Col Cappello" [uci-bicocca] + "Il Gatto Col Cappello" [uci-bicocca, uci-certosa, colosseo, plinius] + "Il gatto col cappello (the cat in the hat)" [citylife-anteo] + "Il Gatto Con Il Cappello" [ducale]
+dio-ride: "Dio Ride" [uci-bicocca, uci-certosa, gloria, arcobaleno, ducale, colosseo, eliseo, plinius] + "Dio ride" [citylife-anteo, ariosto-anteo, palestrina]
+hope: "Hope" [uci-bicocca, uci-certosa, arcobaleno, colosseo] + "hope" [citylife-anteo]
+je-so-pazzo: "Je So' Pazzo" [uci-bicocca] + "Je so pazzo" [citylife-anteo]
+l-estranea: "L'Estranea" [uci-bicocca, uci-certosa, arcobaleno, ducale, colosseo, orfeo] + "L'estranea" [citylife-anteo]
+primetime: "Primetime" [uci-bicocca, colosseo] + "Prime time" [citylife-anteo]
+ragione-e-sentimento-2026: "Ragione E Sentimento (2026)" [uci-bicocca, eliseo, plinius] + "ragione e sentimento (sense and sensibility)" [citylife-anteo] + "Ragione e sentimento (sense and sensibility)" [citylife-anteo]
 un-tranquillo-funerale-di-famiglia: "Un Tranquillo Funerale Di Famiglia" [uci-bicocca, uci-certosa, ducale, colosseo, orfeo] + "Un tranquillo funerale di famiglia" [citylife-anteo]
-wildwood-i-segreti-del-bosco-proibito: "Wildwood - I Segreti Del Bosco Proibito" [uci-bicocca, uci-certosa] + "Wildwood – i segreti del bosco proibito" [citylife-anteo]
-taddeo-l-esploratore-e-la-lampada-magica: "Taddeo L'Esploratore E La Lampada Magica" [uci-certosa] + "Taddeo l'esploratore e la lampada magica" [citylife-anteo]
-ragione-e-sentimento-sense-and-sensibility: "ragione e sentimento (sense and sensibility)" [citylife-anteo] + "Ragione e sentimento (sense and sensibility)" [citylife-anteo]
-digger: "digger" [citylife-anteo] + "Digger" [colosseo, plinius]
-il-rumore-delle-cose-nuove: "Il rumore delle cose nuove" [citylife-anteo] + "Il Rumore Delle Cose Nuove - Anteprima" [colosseo]
-
-# Alias merges applied by scrape/remap.mjs (same TMDB id or obvious title overlap), 2026-11-06
-wildwood -> wildwood-i-segreti-del-bosco-proibito
-wildwood-i-segreti-del-bosco-p -> wildwood-i-segreti-del-bosco-proibito
-il-gruffalo-e-la-sua-p-bastoncino-aut -> il-gruffalo-e-la-sua-picc-bastoncino
-taddeo-l-esploratore-e-la-lampada-m -> taddeo-l-esploratore-e-la-lampada-magica
-il-gatto-con-il-cappello -> il-gatto-col-cappello
-il-gatto-col-cappello-the-cat-in-the-hat -> il-gatto-col-cappello
-ebenezer -> scrooge-e-gli-spiriti-del-natale
-shaun-vita-da-pecora-op-z-u-c-c-a -> shaun-vita-da-pecora-operazione-z-u-c-c-a
-shaun-vita-da-pecora-operazione-z-u-c -> shaun-vita-da-pecora-operazione-z-u-c-c-a
-george-michael-the-fa -> george-michael-the-faith-tour
-minotaur -> minotaur-nel-labirinto-del-potere
-minotaur-nel-labirinto-del-potere-minotaure -> minotaur-nel-labirinto-del-potere
-prime-time -> primetime
-ragione-e-sentimento-sense-and-sensibility -> ragione-e-sentimento-2026
-trainspotting-ried-4k -> trainspotting-30-anniversario-4k
-l-impero-dei-sensi-o-v -> v-m-18-ecco-l-impero-dei-sensi-o-v
-# prefixes stripped from ids: atmos-, sala-xl-, xl-, xl-kor-, jp-, lingua-orig*-; suffixes: -evento, -ospiti-in-sala, -o-v, -v-o
+digger: "digger" [citylife-anteo] + "Digger" [colosseo]
+minotaur-nel-labirinto-del-potere: "Minotaur - Nel Labirinto Del Potere" [eliseo] + "Minotaur" [mexico, palestrina]
