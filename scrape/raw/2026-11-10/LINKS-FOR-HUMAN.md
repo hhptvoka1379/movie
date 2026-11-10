@@ -10,3 +10,7 @@
 | Arlecchino ticket page https://arlecchino.cinetecadimilano.18tickets.it/ | per-day schedule 6-15 Nov and prices | single shell JSON captured, no per-day calls made | curl, Chromium render; per-day tabs not clicked |
 | https://www.ilcinemino.it/programmazione | Il Cinemino schedule 6-15 Nov, prices | static HTML saved, prices not found | curl crawl one level only |
 | Milano a Memoria | schedule/prices | no first-party URL found | none |
+
+## Added in second pass
+- 18tickets (arlecchino.cinetecadimilano.18tickets.it) rate-limits: 37 of 60 per-performance requests at 1 req/s returned HTTP 429. Remaining performance pages (`/film/<id>/<uuid>`) and per-day views need a slow pass (3s+ spacing) or a manual Safari save.
+- WebTic getFullScheduling (secure.webtic.it) directly with date params: it ignores them; only 10-11 Nov exist. Not a fetch gap, the data is not published yet.
