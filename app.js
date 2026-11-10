@@ -324,7 +324,22 @@
       (isStale(c) ? '<p class="fresh">Programmazione pubblicata solo fino al ' + ddmm(c.published_until) + '</p>' : '');
 
     if (c.status !== 'ok') { body.innerHTML = noteCard(c, 'dock'); return; }
-    if (!films.length) { body.innerHTML = '<div class="empty-msg">' + emptyInner() + '</div>'; return; }
+    if (!films.length) {
+      // This venue may still have programming on other days: link to them
+      // instead of leaving the panel looking empty.
+      var days = [];
+      DATA.showings.forEach(function (s) {
+        if (s.cinema_id === c.id && days.indexOf(s.date) < 0) days.push(s.date);
+      });
+      days.sort();
+      var other = days.length
+        ? '<p class="sub">Programmazione disponibile in:</p><div class="empty-days">' + days.map(function (d) {
+            return '<button type="button" class="btn-ghost" data-day="' + d + '">' + esc(cap(longDate(d))) + '</button>';
+          }).join('') + '</div>'
+        : '';
+      body.innerHTML = '<div class="empty-msg">' + emptyInner() + other + '</div>';
+      return;
+    }
     body.innerHTML = films.map(filmCard).join('');
     body.scrollLeft = 0;
   }
