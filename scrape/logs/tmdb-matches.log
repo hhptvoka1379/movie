@@ -1,112 +1,124 @@
-# run 2026-11-06T16:00:09.525Z in=data/showtimes.json dry=false films=111
-2026-11-06T16:00:10.210Z film_id=ch-dear-you query="Dear You" matched="Dear You," tmdb_id=1550003 year=2024 confidence=exact poster=downloaded
-2026-11-06T16:00:10.847Z film_id=jp-godzilla-minus-zero query="Godzilla Minus Zero" matched="Godzilla Minus Zero" tmdb_id=1381071 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:11.458Z film_id=kor-stray-kids-wt-run-it-live-view-run query="(Kor) Stray Kids Wt <run it=\"\"> Live View</run> | Stray Kids WT <run it=\"\"> Live view</run>" NO MATCH
-2026-11-06T16:00:12.074Z film_id=lingua-orginale-george-michael-the-fa query="George Michael: The Faith Tour" matched="George Michael: The Faith Tour" tmdb_id=1649403 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:12.827Z film_id=lingua-orig-wild-horse-nine query="Wild Horse Nine" matched="Wild Horse Nine" tmdb_id=891621 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:13.746Z film_id=lingua-originale-wild-horse-nine query="Wild Horse Nine" matched="Wild Horse Nine" tmdb_id=891621 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:14.522Z film_id=sala-xl-clayface query="Clayface" matched="Clayface" tmdb_id=1400940 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:15.249Z film_id=sala-xl-ice-cream-man query="Ice Cream Man" matched="Ice Cream Man" tmdb_id=1477712 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:16.062Z film_id=sala-xl-il-rumore-delle-cose-nuove query="Il rumore delle cose nuove" matched="Il rumore delle cose nuove" tmdb_id=1544126 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:16.752Z film_id=sala-xl-it-ends query="It Ends" matched="It Ends" tmdb_id=1422011 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:17.504Z film_id=sala-xl-se-domani-non-torno query="Se domani non torno" matched="Se domani non torno" tmdb_id=1583853 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:18.261Z film_id=sala-xl-un-weekend-artificiale query="Un weekend artificiale" matched="Un weekend artificiale" tmdb_id=1723882 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:19.030Z film_id=xl-kor-stray-kids-wt-run-it-live-view-run query="Beyond Live - Stray Kids World Tour RUN IT SEOUL" matched="Beyond Live - Stray Kids World Tour RUN IT SEOUL" tmdb_id=1738187 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:19.784Z film_id=xl-shaun-vita-da-pecora-op-z-u-c-c-a query="Shaun the Sheep: The Beast of Mossy Bottom" matched="Shaun, vita da pecora - Operazione Z.U.C.C.A." tmdb_id=1477104 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:20.522Z film_id=xl-wildwood-i-segreti-del-bosco-p query="Wildwood" matched="Wildwood - I segreti del bosco proibito" tmdb_id=791523 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:21.332Z film_id=atmos-clayface query="Clayface" matched="Clayface" tmdb_id=1400940 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:22.038Z film_id=atmos-il-gatto-col-cappello query="The Cat in the Hat" matched="Il gatto col cappello" tmdb_id=1117898 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:22.904Z film_id=atmos-scrooge-e-gli-spiriti-del-natale query="Ebenezer" matched="Scrooge e gli spiriti del Natale" tmdb_id=1567605 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:23.114Z film_id=barca-zou-rewind-barcelona query="BARCA ZOU (REWIND BARCELONA)" NO MATCH
-2026-11-06T16:00:23.415Z film_id=black-lions-roman-wolves-parte-2 query="BLACK LIONS, ROMAN WOLVES - PARTE 2" NO MATCH
-2026-11-06T16:00:23.608Z film_id=black-lions-roman-wolves-parte-3 query="BLACK LIONS, ROMAN WOLVES - PARTE 3" NO MATCH
-2026-11-06T16:00:24.024Z film_id=calle-malaga query="Calle Malaga" matched="Calle Malaga" tmdb_id=1399462 year=2025 confidence=exact poster=downloaded
-2026-11-06T16:00:24.528Z film_id=clayface query="Clayface" matched="Clayface" tmdb_id=1400940 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:25.033Z film_id=come-rapinare-una-banca query="Come Rapinare Una Banca" matched="Come rapinare una banca" tmdb_id=1437511 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:25.544Z film_id=digger query="Digger" matched="Digger" tmdb_id=1248832 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:26.117Z film_id=dio-ride query="Dio Ride" matched="Dio ride" tmdb_id=1506710 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:26.616Z film_id=ebenezer query="Ebenezer" matched="Scrooge e gli spiriti del Natale" tmdb_id=1567605 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:27.071Z film_id=el-partido-the-match query="EL PARTIDO (THE MATCH)" NO MATCH
-2026-11-06T16:00:27.367Z film_id=fatherland query="Fatherland" matched="Fatherland" tmdb_id=1437696 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:27.961Z film_id=ferine query="Ferine" matched="Ferine" tmdb_id=1357952 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:28.377Z film_id=george-michael-the-faith-tour query="George Michael: The Faith Tour" matched="George Michael: The Faith Tour" tmdb_id=1649403 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:28.874Z film_id=godzilla-minus-zero query="Godzilla Minus Zero" matched="Godzilla Minus Zero" tmdb_id=1381071 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:29.497Z film_id=gruppo-di-famiglia-in-un-interno query="GRUPPO DI FAMIGLIA IN UN INTERNO" matched="Gruppo di famiglia in un interno" tmdb_id=56142 year=1974 confidence=exact poster=downloaded
-2026-11-06T16:00:30.246Z film_id=heart-of-the-beast-nel-profondo query="Heart of the Beast" matched="Heart of the Beast - Nel profondo selvaggio" tmdb_id=1263337 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:30.769Z film_id=hope query="Hope" matched="Hope" tmdb_id=1058424 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:31.387Z film_id=hunger-games-re-release query="Hunger Games (Re-Release) | The Hunger Games (RE-RELEASE)" NO MATCH
-2026-11-06T16:00:31.820Z film_id=ice-cream-man query="Ice Cream Man" matched="Ice Cream Man" tmdb_id=1477712 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:32.321Z film_id=if-i-go-will-they-miss-me query="IF I GO WILL THEY MISS ME" matched="If I Go Will They Miss Me" tmdb_id=1596248 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:32.646Z film_id=il-braccio-violento-della-legge-the-french-connection query="IL BRACCIO VIOLENTO DELLA LEGGE (THE FRENCH CONNECTION)" NO MATCH
-2026-11-06T16:00:33.024Z film_id=il-gatto-col-cappello query="Il Gatto Col Cappello" matched="Il gatto col cappello" tmdb_id=1117898 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:33.769Z film_id=il-gatto-col-cappello-evento query="The Cat in the Hat" matched="Il gatto col cappello" tmdb_id=1117898 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:34.410Z film_id=il-gatto-col-cappello-the-cat-in-the-hat query="Il gatto col cappello (the cat in the hat)" NO MATCH
-2026-11-06T16:00:34.699Z film_id=il-gatto-con-il-cappello query="Il Gatto Con Il Cappello" matched="Il gatto col cappello" tmdb_id=1117898 year=2026 confidence=0.88 poster=downloaded
-2026-11-06T16:00:35.784Z film_id=il-gruffalo-e-la-sua-p-bastoncino-aut query="The Gruffalo's Child" matched="Il Gruffalò e la sua piccolina" tmdb_id=81684 year=2011 confidence=exact poster=downloaded
-2026-11-06T16:00:36.332Z film_id=il-gruffalo-e-la-sua-picc-bastoncino query="The Gruffalo's Child" matched="Il Gruffalò e la sua piccolina" tmdb_id=81684 year=2011 confidence=exact poster=downloaded
-2026-11-06T16:00:36.819Z film_id=il-rumore-delle-cose-nuove query="Il Rumore Delle Cose Nuove" matched="Il rumore delle cose nuove" tmdb_id=1544126 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:37.317Z film_id=it-ends query="It Ends" matched="It Ends" tmdb_id=1422011 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:37.825Z film_id=je-so-pazzo query="Je So' Pazzo" matched="Je so’ pazzo" tmdb_id=1438966 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:38.327Z film_id=l-estranea query="L'Estranea" matched="L'estranea" tmdb_id=1412795 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:38.979Z film_id=l-impero-dei-sensi-o-v query="L'Impero Dei Sensi (O.V.) | Ai no korîda" NO MATCH
-2026-11-06T16:00:39.654Z film_id=l-isola-dei-ricordi-2026 query="Forgotten Island" matched="L'isola dei ricordi" tmdb_id=1465063 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:40.087Z film_id=la-guerra-dei-prezzi query="La Guerra Dei Prezzi" matched="La guerra dei prezzi" tmdb_id=1376412 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:40.468Z film_id=le-rocce-rosse-les-roches-rouges query="LE ROCCE ROSSE (LES ROCHES ROUGES)" NO MATCH
-2026-11-06T16:00:41.026Z film_id=league-of-legends-worlds-26 query="League Of Legends Worlds 26 | LEAGUE OF LEGENDS WORLDS 26" NO MATCH
-2026-11-06T16:00:41.225Z film_id=light-pillar-寒夜灯柱 query="LIGHT PILLAR (寒夜灯柱)" NO MATCH
-2026-11-06T16:00:41.602Z film_id=look-back query="Look Back" matched="Look Back" tmdb_id=1244492 year=2024 confidence=exact poster=downloaded
-2026-11-06T16:00:42.392Z film_id=ludwig query="LUDWIG" matched="Ludwig" tmdb_id=3478 year=1973 confidence=exact poster=downloaded
-2026-11-06T16:00:42.701Z film_id=mammina query="Mammina" matched="Mammina" tmdb_id=1400837 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:43.177Z film_id=mani-nude query="Mani Nude" matched="Mani nude" tmdb_id=1276261 year=2025 confidence=exact poster=downloaded
-2026-11-06T16:00:43.517Z film_id=memorizu-メモリィス query="MEMORIZU (メモリィズ)" NO MATCH
-2026-11-06T16:00:43.930Z film_id=minnie-e-moskowitz query="Minnie E Moskowitz" matched="Minnie e Moskowitz" tmdb_id=24349 year=1971 confidence=exact poster=downloaded
-2026-11-06T16:00:44.436Z film_id=minotaur query="Minotaur" matched="Minotauro" tmdb_id=18870 year=2006 confidence=exact poster=downloaded
-2026-11-06T16:00:44.939Z film_id=minotaur-nel-labirinto-del-potere query="Minotaur - Nel Labirinto Del Potere" matched="Minotaur - Nel labirinto del potere" tmdb_id=848700 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:45.330Z film_id=minotaur-nel-labirinto-del-potere-minotaure query="MINOTAUR NEL LABIRINTO DEL POTERE (MINOTAURE)" NO MATCH
-2026-11-06T16:00:45.685Z film_id=naza query="naza" matched="NAZA" tmdb_id=1755291 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:46.189Z film_id=nel-silenzio-delle-stanze query="Nel Silenzio Delle Stanze" matched="Nel silenzio delle stanze" tmdb_id=1119548 year=2025 confidence=exact poster=downloaded
-2026-11-06T16:00:46.688Z film_id=nessun-dolore query="Nessun dolore" matched="Nessun dolore" tmdb_id=1594043 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:47.193Z film_id=nysferatu-symphony-of-a-century query="NYSFERATU - SYMPHONY OF A CENTURY" matched="NYsferatu - Symphony of a Century" tmdb_id=480493 year=2017 confidence=exact poster=downloaded
-2026-11-06T16:00:47.696Z film_id=odissea query="Odissea" matched="Odissea" tmdb_id=1368337 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:48.040Z film_id=panda-伤寒杂病论 query="PANDA (伤寒杂病论)" NO MATCH
-2026-11-06T16:00:48.452Z film_id=prime-time query="Prime time" matched="Prime Time" tmdb_id=745078 year=2021 confidence=exact poster=downloaded
-2026-11-06T16:00:48.989Z film_id=primetime query="Primetime" matched="Primetime" tmdb_id=1375441 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:49.457Z film_id=quello-che-resta-di-noi query="Quello Che Resta Di Noi" matched="Quello che resta di noi" tmdb_id=1704895 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:50.205Z film_id=ragione-e-sentimento-2026 query="Sense and Sensibility" matched="Ragione e sentimento" tmdb_id=1503762 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:50.563Z film_id=ragione-e-sentimento-sense-and-sensibility query="Ragione e sentimento (sense and sensibility)" NO MATCH
-2026-11-06T16:00:50.960Z film_id=rammstein-live-in-mexico-city query="Rammstein - Live In Mexico City" matched="Rammstein – Live in Mexico City" tmdb_id=1753205 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:51.372Z film_id=rear-window-la-finestra-sul-cortile query="REAR WINDOW (LA FINESTRA SUL CORTILE)" NO MATCH
-2026-11-06T16:00:51.743Z film_id=rebuilding-come-l-acqua-per-il-fuoco query="Rebuilding - come l'acqua per il fuoco" matched="Rebuilding – Come l’acqua per il fuoco" tmdb_id=1211442 year=2025 confidence=exact poster=downloaded
-2026-11-06T16:00:52.238Z film_id=rider query="Rider" matched="Rider" tmdb_id=1276418 year=2025 confidence=exact poster=downloaded
-2026-11-06T16:00:52.712Z film_id=scrooge-e-gli-spiriti-del-natale query="Scrooge E Gli Spiriti Del Natale" matched="Scrooge e gli spiriti del Natale" tmdb_id=1567605 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:53.214Z film_id=se-domani-non-torno query="Se Domani Non Torno" matched="Se domani non torno" tmdb_id=1583853 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:53.971Z film_id=se-domani-non-torno-ospiti-in-sala query="Se domani non torno" matched="Se domani non torno" tmdb_id=1583853 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:54.583Z film_id=serpenti query="Serpenti" matched="Serpenti" tmdb_id=1645164 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:55.412Z film_id=shaun-vita-da-pecora-op-z-u-c-c-a query="Shaun the Sheep: The Beast of Mossy Bottom" matched="Shaun, vita da pecora - Operazione Z.U.C.C.A." tmdb_id=1477104 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:55.836Z film_id=shaun-vita-da-pecora-operazione-z-u-c-c-a query="Shaun vita da pecora - operazione z.u.c.c.a" matched="Shaun, vita da pecora - Operazione Z.U.C.C.A." tmdb_id=1477104 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:56.343Z film_id=shaun-vita-da-pecora-operazione-z-u-c query="Shaun, Vita Da Pecora - Operazione Z.U.C" matched="Shaun, vita da pecora - Operazione Z.U.C.C.A." tmdb_id=1477104 year=2026 confidence=0.9 poster=downloaded
-2026-11-06T16:00:56.670Z film_id=sherlock-junior-one-week-la-palla-n-13-una-settimana query="SHERLOCK JUNIOR + ONE WEEK (LA PALLA N 13 + UNA SETTIMANA)" NO MATCH
-2026-11-06T16:00:57.091Z film_id=social-landscapes query="SOCIAL LANDSCAPES" matched="Social Landscapes" tmdb_id=1604443 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:57.673Z film_id=storia-di-una-mistress query="Storia Di Una Mistress | Storia di una Mistress" NO MATCH
-2026-11-06T16:00:58.338Z film_id=taddeo-l-esploratore-e-la-lampada-m query="Taddeo L'Esploratore E La Lampada M." matched="Taddeo l’esploratore e la lampada magica" tmdb_id=1187326 year=2026 confidence=0.88 poster=downloaded
-2026-11-06T16:00:58.847Z film_id=taddeo-l-esploratore-e-la-lampada-magica query="Taddeo l'esploratore e la lampada magica" matched="Taddeo l’esploratore e la lampada magica" tmdb_id=1187326 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:59.206Z film_id=the-apartment-l-appartamento query="THE APARTMENT (L'APPARTAMENTO)" NO MATCH
-2026-11-06T16:00:59.601Z film_id=the-echo-chamber query="The echo chamber" matched="The Echo Chamber" tmdb_id=1576934 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:00:59.973Z film_id=the-evil-dead-la-casa query="THE EVIL DEAD (LA CASA)" NO MATCH
-2026-11-06T16:01:00.344Z film_id=the-invite-il-piacere-e-tutto-nostro query="the invite - il piacere È tutto nostro" matched="The Invite - Il piacere è tutto nostro" tmdb_id=950028 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:00.843Z film_id=the-nameless-ballad query="The Nameless Ballad" matched="The Nameless Ballad" tmdb_id=1511829 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:01.345Z film_id=tony-diario-di-un-giovane-cuoco query="Tony - Diario Di Un Giovane Cuoco" matched="Tony - Diario di un giovane cuoco" tmdb_id=1329016 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:02.103Z film_id=trainspotting-30-anniversario-4k query="Trainspotting" matched="Trainspotting" tmdb_id=627 year=1996 confidence=exact poster=downloaded
-2026-11-06T16:01:02.433Z film_id=trainspotting-ried-4k query="trainspotting (ried. 4k)" NO MATCH
-2026-11-06T16:01:02.849Z film_id=un-tranquillo-funerale-di-famiglia query="Un Tranquillo Funerale Di Famiglia" matched="Un tranquillo funerale di famiglia" tmdb_id=1678120 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:03.357Z film_id=un-weekend-artificiale query="Un Weekend Artificiale" matched="Un weekend artificiale" tmdb_id=1723882 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:04.107Z film_id=v-m-18-ecco-l-impero-dei-sensi-o-v query="ECCO L'IMPERO DEI SENSI" matched="Ecco l'impero dei sensi" tmdb_id=5879 year=1976 confidence=exact poster=downloaded
-2026-11-06T16:01:04.478Z film_id=va-sentiero query="Va' sentiero" NO MATCH
-2026-11-06T16:01:04.864Z film_id=verity query="Verity" matched="Verity" tmdb_id=1283515 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:05.378Z film_id=whalefall-nella-balena query="Whalefall: Nella Balena" matched="Whalefall - Nella balena" tmdb_id=1255833 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:05.901Z film_id=wild-horse-nine query="Wild Horse Nine" matched="Wild Horse Nine" tmdb_id=891621 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:06.420Z film_id=wildwood query="Wildwood" matched="Wildwood - I segreti del bosco proibito" tmdb_id=791523 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:06.949Z film_id=wildwood-i-segreti-del-bosco-proibito query="Wildwood - I Segreti Del Bosco Proibito" matched="Wildwood - I segreti del bosco proibito" tmdb_id=791523 year=2026 confidence=exact poster=downloaded
-2026-11-06T16:01:07.220Z film_id=youth-hard-times-pinyin-qing-chun-ku query="YOUTH: HARD TIMES (PINYIN: QING CHUN KU)" NO MATCH
-2026-11-06T16:01:07.477Z film_id=youth-homecoming-qing-chun-gui query="YOUTH: HOMECOMING (QING CHUN: GUI)" NO MATCH
-2026-11-06T16:01:07.964Z film_id=zustissia query="Zustissia" matched="Zustìssia" tmdb_id=1639616 year=2026 confidence=exact poster=downloaded
+# run 2026-11-10T14:36:04.578Z in=data/showtimes.json dry=false films=123
+2026-11-10T14:36:04.857Z film_id=2001-odissea-nello-spazio-ried-2018-2001-a-space-odissey query="2001: odissea nello spazio (ried. 2018) (2001: a space odissey)" NO MATCH
+2026-11-10T14:36:04.989Z film_id=45-anni-45-years query="45 anni (45 years)" NO MATCH
+2026-11-10T14:36:05.236Z film_id=8-e-mezzo query="8 e mezzo" NO MATCH
+2026-11-10T14:36:06.121Z film_id=angelo-il-principe-del-vintage query="Angelo - Il principe del vintage" matched="Angelo - Il Principe del Vintage" tmdb_id=1720248 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:06.248Z film_id=balcanica-incontro-con-sceneggiatore query="BALCANICA - INCONTRO CON SCENEGGIATORE" NO MATCH
+2026-11-10T14:36:06.567Z film_id=barca-zou-rewind-barcelona query="BARCA ZOU (REWIND BARCELONA)" NO MATCH
+2026-11-10T14:36:06.747Z film_id=black-lions-roman-wolves-parte-1 query="BLACK LIONS, ROMAN WOLVES - PARTE 1" NO MATCH
+2026-11-10T14:36:07.054Z film_id=black-lions-roman-wolves-parte-2 query="BLACK LIONS, ROMAN WOLVES - PARTE 2" NO MATCH
+2026-11-10T14:36:07.240Z film_id=black-lions-roman-wolves-parte-3 query="BLACK LIONS, ROMAN WOLVES - PARTE 3" NO MATCH
+2026-11-10T14:36:07.581Z film_id=calle-malaga query="Calle Malaga" matched="Calle Malaga" tmdb_id=1399462 year=2025 confidence=exact poster=exists
+2026-11-10T14:36:08.273Z film_id=caro-mondo-crudele query="Caro mondo crudele" matched="Caro mondo crudele" tmdb_id=1508704 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:08.568Z film_id=cenere-e-diamanti query="Cenere e diamanti" matched="Cenere e diamanti" tmdb_id=5055 year=1958 confidence=exact poster=downloaded
+2026-11-10T14:36:08.889Z film_id=clayface query="Clayface" matched="Clayface" tmdb_id=1400940 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:09.189Z film_id=come-rapinare-una-banca query="Come Rapinare Una Banca" matched="Come rapinare una banca" tmdb_id=1437511 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:09.565Z film_id=come-rapinare-una-banca-how-to-rob-a-bank query="Come rapinare una banca (how to rob a bank)" NO MATCH
+2026-11-10T14:36:09.690Z film_id=d-o-a-a-right-of-passage query="D.O.A. - A Right of Passage" NO MATCH
+2026-11-10T14:36:10.121Z film_id=danton query="Danton" matched="Danton" tmdb_id=4202 year=1983 confidence=exact poster=downloaded
+2026-11-10T14:36:10.676Z film_id=dear-you query="Dear You" matched="Dear You" tmdb_id=1637323 year=2025 confidence=exact poster=downloaded
+2026-11-10T14:36:10.844Z film_id=ch-dear-you query="Dear You" matched="Dear You" tmdb_id=1637323 year=2025 confidence=exact poster=exists
+2026-11-10T14:36:11.247Z film_id=digger query="digger" matched="Digger" tmdb_id=1248832 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:11.436Z film_id=dio-ride query="Dio Ride" matched="Dio ride" tmdb_id=1506710 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:11.880Z film_id=douglas-gordon-by-douglas-gordon query="Douglas Gordon by Douglas Gordon" matched="Douglas Gordon by Douglas Gordon" tmdb_id=1616189 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:12.372Z film_id=east-of-paradise query="East of Paradise" matched="East of Paradise" tmdb_id=175678 year=2005 confidence=exact poster=downloaded
+2026-11-10T14:36:12.867Z film_id=ecco-l-impero-dei-sensi query="Ecco L'Impero Dei Sensi" matched="Ecco l'impero dei sensi" tmdb_id=5879 year=1976 confidence=exact poster=downloaded
+2026-11-10T14:36:13.247Z film_id=el-partido-the-match query="EL PARTIDO (THE MATCH)" NO MATCH
+2026-11-10T14:36:13.623Z film_id=elon-musk-uncovered-the-tesla-experiment query="Elon musk uncovered. the tesla experiment" matched="Elon Musk Unveiled. The Tesla Experiment" tmdb_id=1567688 year=2026 confidence=0.93 poster=downloaded
+2026-11-10T14:36:14.007Z film_id=fatherland query="Fatherland" matched="Fatherland" tmdb_id=1437696 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:14.199Z film_id=ferine query="Ferine" matched="Ferine" tmdb_id=1357952 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:14.516Z film_id=firenze-vr-me-moire-the-italian-baba-proto-vr query="Firenze vr - me/moire -the italian baba - proto vr" NO MATCH
+2026-11-10T14:36:14.875Z film_id=fjord query="fjord" matched="Fjord" tmdb_id=1401459 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:15.689Z film_id=generazione query="Generazione" matched="Generazione" tmdb_id=43322 year=1955 confidence=exact poster=downloaded
+2026-11-10T14:36:15.854Z film_id=george-michael-the-faith-tour query="George Michael: The Faith Tour" matched="George Michael: The Faith Tour" tmdb_id=1649403 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:16.076Z film_id=godzilla-minus-zero query="Godzilla Minus Zero" matched="Godzilla Minus Zero" tmdb_id=1381071 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:16.308Z film_id=gruppo-di-famiglia-in-un-interno query="GRUPPO DI FAMIGLIA IN UN INTERNO" matched="Gruppo di famiglia in un interno" tmdb_id=56142 year=1974 confidence=exact poster=exists
+2026-11-10T14:36:16.904Z film_id=heart-of-the-beast-nel-profondo query="Heart of the Beast" matched="Heart of the Beast - Nel profondo selvaggio" tmdb_id=1263337 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:17.066Z film_id=hope query="Hope" matched="Hope" tmdb_id=1058424 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:17.651Z film_id=hunger-games-re-release query="Hunger Games (Re-Release) | The Hunger Games (RE-RELEASE)" NO MATCH
+2026-11-10T14:36:17.859Z film_id=ice-cream-man query="Ice Cream Man" matched="Ice Cream Man" tmdb_id=1477712 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:18.155Z film_id=if-i-go-will-they-miss-me query="IF I GO WILL THEY MISS ME" matched="If I Go Will They Miss Me" tmdb_id=1596248 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:18.478Z film_id=il-braccio-violento-della-legge-the-french-connection query="IL BRACCIO VIOLENTO DELLA LEGGE (THE FRENCH CONNECTION)" NO MATCH
+2026-11-10T14:36:18.614Z film_id=il-canto-della-foresta-le-chant-des-forets query="Il canto della foresta (le chant des forets)" NO MATCH
+2026-11-10T14:36:18.856Z film_id=il-gatto-col-cappello query="Il Gatto Col Cappello" matched="Il gatto col cappello" tmdb_id=1117898 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:19.395Z film_id=il-gruffalo-e-la-sua-picc-bastoncino query="The Gruffalo's Child" matched="Il Gruffalò e la sua piccolina" tmdb_id=81684 year=2011 confidence=exact poster=exists
+2026-11-10T14:36:19.702Z film_id=il-rumore-delle-cose-nuove query="Il rumore delle cose nuove" matched="Il rumore delle cose nuove" tmdb_id=1544126 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:19.873Z film_id=incontro-con-angela-davis-a-seguire-the-black-power-mixtape-1967-1975 query="Incontro con Angela Davis, a seguire The Black Power Mixtape 1967-1975" NO MATCH
+2026-11-10T14:36:20.179Z film_id=indocili-1-indocili-queer query="INDOCILI #1 - INDOCILI QUEER" NO MATCH
+2026-11-10T14:36:20.481Z film_id=it-ends query="It Ends" matched="It Ends" tmdb_id=1422011 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:20.615Z film_id=je-so-pazzo query="Je So' Pazzo" matched="Je so’ pazzo" tmdb_id=1438966 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:21.211Z film_id=l-assurda-storia-della-gialappa-s-band query="L'assurda storia della gialappa's band" matched="L'assurda storia della Gialappa's Band" tmdb_id=1713924 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:21.537Z film_id=l-essere-amato query="L'ESSERE AMATO" matched="L'essere amato" tmdb_id=1074074 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:21.881Z film_id=l-essere-amato-el-ser-querido query="L'essere amato (el ser querido)" NO MATCH
+2026-11-10T14:36:22.147Z film_id=l-estranea query="L'Estranea" matched="L'estranea" tmdb_id=1412795 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:22.709Z film_id=v-m-18-ecco-l-impero-dei-sensi-o-v query="L'Impero Dei Sensi | Ai no korîda" NO MATCH
+2026-11-10T14:36:23.126Z film_id=l-isola-dei-ricordi-2026 query="Forgotten Island" matched="L'isola dei ricordi" tmdb_id=1465063 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:23.555Z film_id=la-ballata-del-re-delle-api query="la ballata del re delle api" matched="La ballata del re delle api" tmdb_id=1124142 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:24.108Z film_id=la-bambola query="LA BAMBOLA" matched="La bambola" tmdb_id=1309396 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:24.388Z film_id=la-citta-dei-bambini query="LA CITTÀ DEI BAMBINI" NO MATCH
+2026-11-10T14:36:24.801Z film_id=la-grazia query="la grazia" matched="La grazia" tmdb_id=1397364 year=2025 confidence=exact poster=downloaded
+2026-11-10T14:36:25.293Z film_id=la-guerra-dei-prezzi query="La Guerra Dei Prezzi" matched="La guerra dei prezzi" tmdb_id=1376412 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:25.410Z film_id=la-linea-dell-orizzonte query="La linea dell'orizzonte" NO MATCH
+2026-11-10T14:36:25.860Z film_id=la-storia-infinita-die-unendliche-geschichte query="La storia infinita (die unendliche geschichte)" NO MATCH
+2026-11-10T14:36:26.435Z film_id=le-signorine-di-wilko query="Le signorine di wilko" matched="Le signorine di Wilko" tmdb_id=117483 year=1979 confidence=exact poster=downloaded
+2026-11-10T14:36:26.866Z film_id=league-of-legends-worlds-26 query="League Of Legends Worlds 26 | LEAGUE OF LEGENDS WORLDS 26" NO MATCH
+2026-11-10T14:36:27.065Z film_id=light-pillar-寒夜灯柱 query="LIGHT PILLAR (寒夜灯柱)" NO MATCH
+2026-11-10T14:36:27.500Z film_id=look-back query="Look Back" matched="Look Back" tmdb_id=1244492 year=2024 confidence=exact poster=exists
+2026-11-10T14:36:27.618Z film_id=mammina query="Mammina" matched="Mammina" tmdb_id=1400837 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:27.916Z film_id=mani-nude query="Mani Nude" matched="Mani nude" tmdb_id=1276261 year=2025 confidence=exact poster=exists
+2026-11-10T14:36:28.150Z film_id=memorizu-メモリィス query="MEMORIZU (メモリィズ)" NO MATCH
+2026-11-10T14:36:28.438Z film_id=mexico-e-briciole-i-film-indipendenti-al-cinema query="Mexico e briciole - I film indipendenti al cinema" NO MATCH
+2026-11-10T14:36:28.791Z film_id=minnie-moskowitz query="minnie & moskowitz" matched="Minnie e Moskowitz" tmdb_id=24349 year=1971 confidence=exact poster=downloaded
+2026-11-10T14:36:29.126Z film_id=minnie-e-moskowitz query="Minnie E Moskowitz" matched="Minnie e Moskowitz" tmdb_id=24349 year=1971 confidence=exact poster=exists
+2026-11-10T14:36:29.490Z film_id=minotaur-nel-labirinto-del-potere query="Minotaur" matched="Minotauro" tmdb_id=18870 year=2006 confidence=exact poster=exists
+2026-11-10T14:36:30.184Z film_id=mustang query="Mustang" matched="Mustang" tmdb_id=336804 year=2015 confidence=exact poster=downloaded
+2026-11-10T14:36:30.300Z film_id=naza query="naza" matched="NAZA" tmdb_id=1755291 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:30.660Z film_id=nel-silenzio-delle-stanze query="Nel silenzio delle stanze" matched="Nel silenzio delle stanze" tmdb_id=1119548 year=2025 confidence=exact poster=exists
+2026-11-10T14:36:30.805Z film_id=nessun-dolore query="Nessun dolore" matched="Nessun dolore" tmdb_id=1594043 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:31.104Z film_id=nysferatu-symphony-of-a-century query="NYSFERATU - SYMPHONY OF A CENTURY" matched="NYsferatu - Symphony of a Century" tmdb_id=480493 year=2017 confidence=exact poster=exists
+2026-11-10T14:36:31.312Z film_id=odissea query="Odissea" matched="Odissea" tmdb_id=1368337 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:31.640Z film_id=panda-伤寒杂病论 query="PANDA (伤寒杂病论)" NO MATCH
+2026-11-10T14:36:31.811Z film_id=powiedz-mi-co-czujesz-tell-me-what-you-feel query="POWIEDZ MI, CO CZUJESZ (TELL ME WHAT YOU FEEL)" NO MATCH
+2026-11-10T14:36:32.129Z film_id=pre-roll-4-riccardo-fasana query="PRE-ROLL #4 RICCARDO FASANA" NO MATCH
+2026-11-10T14:36:32.310Z film_id=primetime query="Prime time" matched="Prime Time" tmdb_id=745078 year=2021 confidence=exact poster=exists
+2026-11-10T14:36:32.643Z film_id=quello-che-resta-di-noi query="Quello Che Resta Di Noi" matched="Quello che resta di noi" tmdb_id=1704895 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:33.089Z film_id=ragione-e-sentimento-2026 query="Sense and Sensibility" matched="Ragione e sentimento" tmdb_id=1503762 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:33.319Z film_id=rammstein-live-in-mexico-city query="Rammstein - Live In Mexico City" matched="Rammstein – Live in Mexico City" tmdb_id=1753205 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:33.805Z film_id=rear-window-la-finestra-sul-cortile query="REAR WINDOW (LA FINESTRA SUL CORTILE)" NO MATCH
+2026-11-10T14:36:33.930Z film_id=rebuilding-come-l-acqua-per-il-fuoco query="Rebuilding - come l'acqua per il fuoco" matched="Rebuilding – Come l’acqua per il fuoco" tmdb_id=1211442 year=2025 confidence=exact poster=exists
+2026-11-10T14:36:34.208Z film_id=rider query="Rider" matched="Rider" tmdb_id=1276418 year=2025 confidence=exact poster=exists
+2026-11-10T14:36:34.432Z film_id=rotta query="Rotta" NO MATCH
+2026-11-10T14:36:34.729Z film_id=scrooge-e-gli-spiriti-del-natale query="Scrooge E Gli Spiriti Del Natale" matched="Scrooge e gli spiriti del Natale" tmdb_id=1567605 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:34.919Z film_id=scrooge-e-gli-spiriti-del-natale-ebenezer query="Scrooge e gli spiriti del natale (ebenezer)" NO MATCH
+2026-11-10T14:36:35.175Z film_id=se-domani-non-torno query="Se Domani Non Torno" matched="Se domani non torno" tmdb_id=1583853 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:35.434Z film_id=serpenti query="Serpenti" matched="Serpenti" tmdb_id=1645164 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:35.684Z film_id=shaun-vita-da-pecora-operazione-z-u-c-c-a query="Shaun vita da pecora - operazione z.u.c.c.a" matched="Shaun, vita da pecora - Operazione Z.U.C.C.A." tmdb_id=1477104 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:35.945Z film_id=sherlock-junior-one-week-la-palla-n-13-una-settimana query="SHERLOCK JUNIOR + ONE WEEK (LA PALLA N 13 + UNA SETTIMANA)" NO MATCH
+2026-11-10T14:36:36.205Z film_id=social-landscapes query="SOCIAL LANDSCAPES" matched="Social Landscapes" tmdb_id=1604443 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:36.683Z film_id=storia-di-una-mistress query="Storia Di Una Mistress | Storia di una Mistress" NO MATCH
+2026-11-10T14:36:36.941Z film_id=kor-stray-kids-wt-run-it-live-view-run query="Stray Kids World Tour <RUN IT> Live Viewing" matched="Stray Kids World Tour 'RUN IT' LIVE VIEWING" tmdb_id=1795555 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:37.190Z film_id=taddeo-l-esploratore-e-la-lampada-magica query="Taddeo l'esploratore e la lampada magica" matched="Taddeo l’esploratore e la lampada magica" tmdb_id=1187326 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:37.463Z film_id=the-echo-chamber query="The echo chamber" matched="The Echo Chamber" tmdb_id=1576934 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:37.726Z film_id=the-evil-dead-la-casa query="THE EVIL DEAD (LA CASA)" NO MATCH
+2026-11-10T14:36:38.069Z film_id=the-invite-il-piacere-e-tutto-nostro query="the invite - il piacere È tutto nostro" matched="The Invite - Il piacere è tutto nostro" tmdb_id=950028 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:38.232Z film_id=the-nameless-ballad query="The Nameless Ballad" matched="The Nameless Ballad" tmdb_id=1511829 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:38.444Z film_id=tony-diario-di-un-giovane-cuoco query="Tony - Diario Di Un Giovane Cuoco" matched="Tony - Diario di un giovane cuoco" tmdb_id=1329016 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:39.013Z film_id=trainspotting query="trainspotting" matched="Trainspotting" tmdb_id=627 year=1996 confidence=exact poster=downloaded
+2026-11-10T14:36:39.605Z film_id=trainspotting-30-anniversario-4k query="Trainspotting" matched="Trainspotting" tmdb_id=627 year=1996 confidence=exact poster=exists
+2026-11-10T14:36:39.767Z film_id=tuttaunanotte-2-programma-1 query="Tuttaunanotte 2 - Programma 1" NO MATCH
+2026-11-10T14:36:39.990Z film_id=tuttaunanotte-2-programma-2 query="Tuttaunanotte 2 - Programma 2" NO MATCH
+2026-11-10T14:36:40.256Z film_id=twin-peaks-stag-03-ep-11-e-12 query="TWIN PEAKS – STAG. 03 EP 11 e 12" NO MATCH
+2026-11-10T14:36:40.497Z film_id=twin-peaks-stag-03-ep-13-e-14 query="TWIN PEAKS – STAG. 03 EP 13 e 14" NO MATCH
+2026-11-10T14:36:40.730Z film_id=un-tranquillo-funerale-di-famiglia query="Un Tranquillo Funerale Di Famiglia" matched="Un tranquillo funerale di famiglia" tmdb_id=1678120 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:41.130Z film_id=un-weekend-artificiale query="Un Weekend Artificiale" matched="Un weekend artificiale" tmdb_id=1723882 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:41.416Z film_id=una-giornata-particolare query="UNA GIORNATA PARTICOLARE" matched="Una giornata particolare" tmdb_id=42229 year=1977 confidence=exact poster=downloaded
+2026-11-10T14:36:41.757Z film_id=va-sentiero query="Va' sentiero" NO MATCH
+2026-11-10T14:36:42.182Z film_id=verity query="Verity" matched="Verity" tmdb_id=1283515 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:42.308Z film_id=whalefall-nella-balena query="Whalefall: Nella Balena" matched="Whalefall - Nella balena" tmdb_id=1255833 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:42.595Z film_id=white-lies-doc-italiani query="WHITE LIES - DOC ITALIANI" NO MATCH
+2026-11-10T14:36:42.860Z film_id=wild-horse-nine query="Wild Horse Nine" matched="Wild Horse Nine" tmdb_id=891621 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:43.231Z film_id=wildwood-i-segreti-del-bosco-proibito query="Wildwood – i segreti del bosco proibito" matched="Wildwood - I segreti del bosco proibito" tmdb_id=791523 year=2026 confidence=exact poster=exists
+2026-11-10T14:36:43.522Z film_id=yellow-letters query="Yellow Letters" matched="Yellow Letters" tmdb_id=1315657 year=2026 confidence=exact poster=downloaded
+2026-11-10T14:36:43.868Z film_id=youth-hard-times-pinyin-qing-chun-ku query="YOUTH: HARD TIMES (PINYIN: QING CHUN KU)" NO MATCH
+2026-11-10T14:36:44.296Z film_id=youth-homecoming-qing-chun-gui query="YOUTH: HOMECOMING (QING CHUN: GUI)" NO MATCH
+2026-11-10T14:36:44.436Z film_id=zustissia query="Zustissia" matched="Zustìssia" tmdb_id=1639616 year=2026 confidence=exact poster=exists
