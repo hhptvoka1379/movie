@@ -339,5 +339,20 @@
     },
     "merged_from": [],
     "notes": "Permanently closed 5D tourist cinema attraction ('Milano a Memoria 5D', opened 2013 at Piazza Armando Diaz 7; confirmed permanently closed via Zero.eu, Stardust, and MyMovies id 21468; not listed on sdcmilano.it). No active cinema operates at this address."
+  },
+  {
+    "id": "beltrade",
+    "name": "Cinema Beltrade",
+    "address": "Via Oxilia 10, Milano",
+    "lat": 45.4924673,
+    "lng": 9.214887,
+    "website": "https://bandhi.it/bah/beltrade/",
+    "booking_url": "https://bandhi.it/bah/beltrade/",
+    "source": {
+      "adapter": "snapshot",
+      "file": "logs/beltrade-snapshot.json"
+    },
+    "merged_from": [],
+    "notes": "Programme read from a saved copy of the site (node beltrade-archive.mjs <saved page>); the live site blocks automated access."
   }
 ]

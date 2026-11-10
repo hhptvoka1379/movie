@@ -197,6 +197,12 @@ async function fetchShowings(browser, c, generic) {
       const showings = await generic.scrapeMymovies(browser, { id: s.id, from: FROM, to: TO });
       return { showings: showings || [], warnings: [] };
     }
+    case 'snapshot': {
+      // Showings imported from a saved page (see beltrade-archive.mjs); not refetched.
+      if (REPLAY) return { noReplay: true };
+      const snap = JSON.parse(fs.readFileSync(path.resolve(HERE, s.file), 'utf8'));
+      return { showings: snap.showings || [], warnings: [], tariffs: { url: c.website, rates: [], reason: 'no price on the schedule page' } };
+    }
     default:
       throw new Error(`unknown adapter "${s.adapter}"`);
   }
