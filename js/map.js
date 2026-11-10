@@ -53,11 +53,26 @@ function hashStr(s) {
   return Math.abs(h);
 }
 function colorFor(id) { return PALETTE[hashStr(String(id)) % PALETTE.length]; }
+/* Pin/chip label: one distinctive word per cinema (Ariosto, Orfeo, CityLife…). */
+const SHORT_NAMES = [
+  [/^UCI Cinemas Bicocca/i, 'Bicocca'],
+  [/^UCI Cinemas Certosa/i, 'Certosa'],
+  [/^The Space Odeon/i, 'Odeon'],
+  [/^Auditorium Don Bosco/i, 'Don Bosco'],
+  [/^Notorious Cinemas Gloria/i, 'Gloria'],
+  [/^Cineteca Milano Arlecchino/i, 'Arlecchino'],
+  [/^Anteo Palazzo/i, 'Anteo'],
+  [/^Milano a Memoria/i, 'Memoria'],
+  [/^Il Cinemino/i, 'Cinemino'],
+  [/^Cinema (Beltrade|Godard)/i, null],
+];
 function shortName(n) {
-  return String(n)
-    .replace(/^UCI Cinemas /i, 'UCI ')
-    .replace(/\s*\(.*\)\s*$/, '')
-    .replace(/ Multisala$/i, '');
+  const s = String(n).replace(/\s*\(.*\)\s*$/, '').trim();
+  for (const [re, label] of SHORT_NAMES) {
+    const m = s.match(re);
+    if (m) return label || m[1];
+  }
+  return s.split(/\s+/)[0];
 }
 function intersects(a, b) {
   return a.l < b.r && a.r > b.l && a.t < b.b && a.b > b.t;
