@@ -1,0 +1,353 @@
+{
+  "manifest_version": 1,
+  "capture_date": "2026-11-10",
+  "capture_time_utc": "2026-11-10T10:30:00Z",
+  "collector": "Arena agent (fetch-only pass)",
+  "transport": {
+    "method": "platform page-fetch tool (server-side HTTP, text/markdown extraction + PDF text)",
+    "why": "sandbox egress firewall allows only github.com/api.github.com/codeload/registry.npmjs.org/pypi/files.pythonhosted; curl to cinema hosts returns curl exit 6/35. GitHub Actions unusable (token lacks workflows permission).",
+    "raw_html_available": false,
+    "note": "Files are UTF-8 text extractions of the fetched documents (markdown-ish), not byte-exact HTML. Cookie banners, nav menus and image markup were trimmed; schedule/price text is verbatim.",
+    "requested_user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+    "user_agent_used": "platform fetch service default (iPhone-Safari UA could not be applied: no direct HTTP control in this sandbox)",
+    "playwright": "unavailable: browser binaries are downloaded from cdn.playwright.dev, which is blocked"
+  },
+  "entries": [
+    {
+      "path": "scrape/raw/2026-11-10/notorious-merlata/notoriouscinemas.it__prices__all.md",
+      "url": "https://www.notoriouscinemas.it/merlata/prezzi.php",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 2107,
+      "sha256": "116fac930160a550",
+      "venue": "notorious-merlata",
+      "kind": "prices",
+      "dates_covered": "all (current tariff)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/notorious-merlata/notoriouscinemas.it__schedule__2026-11-05_to_2026-11-11.md",
+      "url": "https://www.notoriouscinemas.it/merlata/index.php",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 1819,
+      "sha256": "348cee8d47b03b74",
+      "venue": "notorious-merlata",
+      "kind": "schedule",
+      "dates_covered": "2026-11-05..2026-11-11 (partial: 10-11 Nov complete for 4 titles)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/notorious-merlata/notoriouscinemas.it__schedule__2026-11-12_to_2026-11-18.md",
+      "url": "https://www.notoriouscinemas.it/merlata/index.php?week=next",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 780,
+      "sha256": "02417386d3f278d7",
+      "venue": "notorious-merlata",
+      "kind": "schedule",
+      "dates_covered": "2026-11-12..2026-11-18 (partial: 1 title)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/notorious-gloria/notoriouscinemas.it__prices__all.md",
+      "url": "https://www.notoriouscinemas.it/gloria/prezzi.php",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 2161,
+      "sha256": "21a3efb5635840b5",
+      "venue": "notorious-gloria",
+      "kind": "prices",
+      "dates_covered": "all (current tariff)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/notorious-gloria/notoriouscinemas.it__schedule__2026-11-05_to_2026-11-11.md",
+      "url": "https://www.notoriouscinemas.it/gloria/printProg.php",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 1108,
+      "sha256": "a779f243f6548edd",
+      "venue": "notorious-gloria",
+      "kind": "schedule",
+      "dates_covered": "2026-11-05..2026-11-11 (also fetched ?week=next: identical, next week unpublished)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/uci-bicocca/ucicinemas.it__schedule__2026-11-10.md",
+      "url": "https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 1853,
+      "sha256": "1eba91e40670823c",
+      "venue": "uci-bicocca",
+      "kind": "schedule+prices(shows 'Da X €' per showtime)",
+      "dates_covered": "2026-11-10 (default tab); 2026-11-11..15 only as date tabs",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/uci-certosa/ucicinemas.it__schedule__2026-11-10.md",
+      "url": "https://ucicinemas.it/cinema/uci-cinemas-certosa-milano",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 1455,
+      "sha256": "a31db193b2acaa28",
+      "venue": "uci-certosa",
+      "kind": "schedule (empty shell - JS injected)",
+      "dates_covered": "2026-11-10 tab selected, no showtimes in DOM extract",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cineteca-mic/cinetecamilano.it__info-prices__2026-11-10.md",
+      "url": "https://www.cinetecamilano.it/luogo/cineteca-milano-mic/",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 2296,
+      "sha256": "41bcbb979538c798",
+      "venue": "cineteca-mic",
+      "kind": "info+prices+schedule",
+      "dates_covered": "2026-11-10..2026-11-11 + 2026-11-14 event",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cineteca-milano/cinetecamilano.it__PGC2026-programme-pdf__2026-11-05_to_2026-11-15.pdf.txt",
+      "url": "https://www.cinetecamilano.it/wp-content/uploads/2026/11/PGC2026_CALENDARIO_DIGITALE_V2.pdf",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 10483,
+      "sha256": "764352c23e83fef7",
+      "venue": "cineteca-milano (Arlecchino/MIC/Metropolis) + festival",
+      "kind": "schedule+prices (PDF text extract)",
+      "dates_covered": "2026-11-05..2026-11-12 (PDF parse capped at 30 pages; 13-15 Nov missing)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/arcobaleno-filmcenter/filmmakerfest.com__prices__all.md",
+      "url": "https://www.filmmakerfest.com/Festival/2542",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 1819,
+      "sha256": "00d98934d2eb2765",
+      "venue": "arcobaleno-filmcenter + cineteca-arlecchino",
+      "kind": "prices",
+      "dates_covered": "all (current tariff)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cinema-beltrade/dice.fm__schedule__2026-11-10_to_2026-11-13.md",
+      "url": "https://dice.fm/venue/cinema-beltrade-bd3k",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 1855,
+      "sha256": "9da1f200e7de645b",
+      "venue": "cinema-beltrade",
+      "kind": "schedule+prices('From €7/€9')",
+      "dates_covered": "2026-11-10..2026-11-13 (14-15 cut off by chunk boundary)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/anteo-palazzo/spaziocinema.info__prices-subscriptions__all.md",
+      "url": "https://www.spaziocinema.info/cinema/abbonamenti-e-tessere/milano/anteo-palazzo-del-cinema",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 1471,
+      "sha256": "be975a9cd9484a88",
+      "venue": "anteo-palazzo",
+      "kind": "prices (subscriptions/cards only)",
+      "dates_covered": "all",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cineteatro-arcobaleno/cinearcobaleno.com__schedule__2026-11-14_to_2026-11-25.md",
+      "url": "https://www.cinearcobaleno.com/programmazione/",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 1849,
+      "sha256": "f5bad8831ed8109d",
+      "venue": "cineteatro-arcobaleno",
+      "kind": "schedule",
+      "dates_covered": "2026-11-14..2026-11-25 (nothing published 6-13 Nov)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cineteatro-arcobaleno/cinearcobaleno.com__home__2026-11-10.md",
+      "url": "https://www.cinearcobaleno.com/",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 517,
+      "sha256": "3f6d081a8cf04d97",
+      "venue": "cineteatro-arcobaleno",
+      "kind": "home/info",
+      "dates_covered": "2026-11-14..",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/sdcmilano/sdcmilano.it__venue-inventory__all.md",
+      "url": "https://www.sdcmilano.it/sale-della-comunita",
+      "fetched_at": "2026-11-10T10:30:00Z",
+      "http_status": 200,
+      "bytes": 999,
+      "sha256": "1c0b1a0788d85a0d",
+      "venue": "sdcmilano (parish circuit)",
+      "kind": "venue-inventory (map-only render)",
+      "dates_covered": "n/a",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/uci-cinemas/ucicinemas.it__venue-index__all.md",
+      "url": "https://ucicinemas.it/cinema",
+      "fetched_at": "2026-11-10T11:05:00Z",
+      "http_status": 200,
+      "bytes": 1438,
+      "sha256": "",
+      "venue": "uci-cinemas (chain index)",
+      "kind": "venue-inventory",
+      "dates_covered": "n/a",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    }
+  ],
+  "failed_attempts": [
+    {
+      "url": "https://www.spaziocinema.info/milano/prezzi",
+      "status": 404,
+      "venue": "anteo-palazzo",
+      "tried": "guessed tariff path"
+    },
+    {
+      "url": "https://www.spaziocinema.info/milano/cinema/anteo-palazzo-del-cinema",
+      "status": 404,
+      "venue": "anteo-palazzo",
+      "tried": "guessed venue path"
+    },
+    {
+      "url": "https://www.spaziocinema.info/cinema/le-sale/milano/anteo-palazzo-del-cinema",
+      "status": 200,
+      "venue": "anteo-palazzo",
+      "tried": "resolved -> rental/'Le Sale' page, no tariffs"
+    },
+    {
+      "url": "https://ucicinemas.it/prezzi",
+      "status": 404,
+      "venue": "uci-*",
+      "tried": "guessed tariff path"
+    },
+    {
+      "url": "https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano/info",
+      "status": 404,
+      "venue": "uci-bicocca",
+      "tried": "guessed info/tariff sub-page"
+    },
+    {
+      "url": "https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano?date=2026-11-13",
+      "status": 200,
+      "venue": "uci-bicocca",
+      "tried": "date query param ignored by server; tab content is JS-only"
+    },
+    {
+      "url": "https://www.notoriouscinemas.it/merlata/prezzi",
+      "status": 404,
+      "venue": "notorious-merlata",
+      "tried": "extensionless path (real: prezzi.php)"
+    },
+    {
+      "url": "https://www.notoriouscinemas.it/merlata/printProg.php",
+      "status": 404,
+      "venue": "notorious-merlata",
+      "tried": "print view linked from page (works only for /gloria/)"
+    },
+    {
+      "url": "https://www.cinetecamilano.it/biglietti/",
+      "status": 404,
+      "venue": "cineteca-mic",
+      "tried": "guessed tariff path"
+    },
+    {
+      "url": "https://www.cinearcobaleno.com/prezzi/",
+      "status": 200,
+      "venue": "cineteatro-arcobaleno",
+      "tried": "guessed tariff path -> 404 template"
+    },
+    {
+      "url": "https://www.beltrade.it/",
+      "status": 500,
+      "venue": "cinema-beltrade",
+      "tried": "www + https; domain is a register.it parking page"
+    },
+    {
+      "url": "http://www.beltrade.it/",
+      "status": 200,
+      "venue": "cinema-beltrade",
+      "tried": "parking page (register.it courtesy), real site is cinemabeltrade.net -> bandhi.it/bah/beltrade/"
+    },
+    {
+      "url": "https://bandhi.it/bah/beltrade/prezzi/",
+      "status": 404,
+      "venue": "cinema-beltrade",
+      "tried": "guessed tariff path on real site"
+    },
+    {
+      "url": "https://www.cinemamexico.it/",
+      "status": 500,
+      "venue": "cinema-mexico",
+      "tried": "https www"
+    },
+    {
+      "url": "http://www.cinemamexico.it/",
+      "status": 500,
+      "venue": "cinema-mexico",
+      "tried": "http www (ARR-OK rewrite-map 500)"
+    },
+    {
+      "url": "https://cinemamexico.it/",
+      "status": 500,
+      "venue": "cinema-mexico",
+      "tried": "https apex"
+    },
+    {
+      "url": "https://www.arcobalenofilmcenter.it/",
+      "status": "fetch-error",
+      "venue": "arcobaleno-filmcenter",
+      "tried": "guessed domain (no DNS/site)"
+    },
+    {
+      "url": "https://www.spaziocinema.info/milano",
+      "status": 200,
+      "venue": "anteeo/spaziocinema",
+      "tried": "homepage: programme teasers only, no per-day grid"
+    },
+    {
+      "url": "https://web.archive.org/web/20260917111403/http://www.cinemamexico.it/",
+      "status": "archived 500",
+      "venue": "cinema-mexico",
+      "tried": "Wayback snapshot: the ORIGINAL is recorded as HTTP 500 too, i.e. the site has been broken since at least 17 Sep 2026"
+    },
+    {
+      "url": "https://web.archive.org/web/2026-11-08/https://www.cinearcobaleno.com/programmazione/",
+      "status": "redirected to 2019 capture",
+      "venue": "cineteatro-arcobaleno",
+      "tried": "Wayback for 6-9 Nov: no 2026 capture exists (newest 19 May 2026) -> served 2019 page"
+    },
+    {
+      "url": "https://web.archive.org/web/2026-11-06/https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano",
+      "status": "redirected to 2025-06-20 capture",
+      "venue": "uci-bicocca",
+      "tried": "Wayback for 13 Nov / past days: no Nov-2026 capture (newest 24 Sep 2026)"
+    }
+  ]
+}
