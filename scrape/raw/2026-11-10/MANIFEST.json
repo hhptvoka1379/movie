@@ -220,6 +220,45 @@
       "dates_covered": "n/a",
       "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
       "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/fondazione-prada/fondazioneprada.org__programme-pdf__2026-11-01_to_2026-11-29.md",
+      "url": "https://www.fondazioneprada.org/wp-content/uploads/CinemaGodard_programma.pdf",
+      "fetched_at": "2026-11-10T11:40:00Z",
+      "http_status": 200,
+      "bytes": 4828,
+      "sha256": "292f05c22e1119b4",
+      "venue": "fondazione-prada / cinema-godard",
+      "kind": "schedule+prices (PDF text extract, chunks 0/7/8)",
+      "dates_covered": "2026-11-01..2026-11-29 (full month incl. 6,7,8,12,13,14,15)",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cinema-san-fedele/centrosanfedele.net__cinema__2026-11-10.md",
+      "url": "https://www.centrosanfedele.net/cinema/",
+      "fetched_at": "2026-11-10T11:40:00Z",
+      "http_status": 200,
+      "bytes": 1450,
+      "sha256": "27fe9d824810a9cf",
+      "venue": "cinema-san-fedele",
+      "kind": "schedule (venue page + calendar link map)",
+      "dates_covered": "2026-11-10, 2026-11-12 (+ later dates); calendar URL pattern for all days",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cinema-san-fedele/centrosanfedele.net__prices__all.md",
+      "url": "https://www.centrosanfedele.net/cinema/abbonamenti-e-biglietti/",
+      "fetched_at": "2026-11-10T11:40:00Z",
+      "http_status": 200,
+      "bytes": 1113,
+      "sha256": "5380170604d47095",
+      "venue": "cinema-san-fedele",
+      "kind": "prices (season block, page still labelled 2024-2025)",
+      "dates_covered": "all",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
     }
   ],
   "failed_attempts": [
@@ -348,6 +387,36 @@
       "status": "redirected to 2025-06-20 capture",
       "venue": "uci-bicocca",
       "tried": "Wayback for 13 Nov / past days: no Nov-2026 capture (newest 24 Sep 2026)"
+    },
+    {
+      "url": "https://anteo.spaziocinema.18tickets.it/?ref_date=2026-11-13",
+      "status": 200,
+      "venue": "anteo-palazzo",
+      "tried": "date-scoped root: param ignored (same 2-day film carousel)"
+    },
+    {
+      "url": "https://anteo.spaziocinema.18tickets.it/film/125614?ref_date=2026-11-13",
+      "status": 200,
+      "venue": "anteo-palazzo",
+      "tried": "date-scoped film page: 'Dates' strip offers ONLY 10 and 11 November -> Anteo sells on a ~2-day rolling window, 13 Nov not yet purchasable"
+    },
+    {
+      "url": "https://ucicinemas.it/film/se-domani-non-torno",
+      "status": 200,
+      "venue": "uci-bicocca",
+      "tried": "per-film page: 'Scegli un cinema' selector is JS; no per-date grid in extraction"
+    },
+    {
+      "url": "https://www.centrosanfedele.it/cinema/",
+      "status": 404,
+      "venue": "cinema-san-fedele",
+      "tried": "wrong TLD (.it) -> resolved real site is centrosanfedele.net"
+    },
+    {
+      "url": "https://www.fondazioneprada.org/cinema",
+      "status": "not needed",
+      "venue": "fondazione-prada",
+      "tried": "resolved via search to the monthly PDF, which is richer than the HTML page"
     }
   ]
 }

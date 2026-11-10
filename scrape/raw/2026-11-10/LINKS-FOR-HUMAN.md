@@ -13,8 +13,9 @@ Should contain: showtimes per day for 11–15 Nov (page shows the tab strip "ogg
 sab 14 nov / dom 15 nov" and would print "Stai guardando la programmazione di venerdì 13 novembre" plus the film grid).
 Why not fetched: day tabs are client-side; the server returns the 10 Nov grid regardless of URL.
 Attempts: (1) `?date=2026-11-13` → ignored, same 10 Nov payload; (2) `/cinema/uci-cinemas-bicocca-milano/info` → 404;
-(3) `/prezzi` → 404; (4) search for a UCI JSON/API endpoint → none exposed, site is Next.js `_ipx` SPA;
-(5) mobile/desktop variants both resolve to the same SPA shell; (6) iPhone UA impossible from this sandbox.
+(3) `/prezzi` → 404; (4) `/cinema/uci-cinemas-bicocca-milano/2026-11-13` → 404; (5) `/api/showtimes/5068?date=2026-11-13`
+→ 404; (6) `/film/se-domani-non-torno` → per-film page, cinema selector is JS; (7) mobile/desktop variants both resolve
+to the same Next.js `_ipx` SPA shell; (8) iPhone UA impossible from this sandbox; (9) Wayback has no Nov-2026 capture.
 Also want: the same page for https://ucicinemas.it/cinema/uci-cinemas-certosa-milano (its extraction came back as an
 empty showtimes shell + only promo banners).
 Save as: uci-bicocca__schedule__2026-11-13.webarchive (and 14, 15), uci-certosa__schedule__<date>.
@@ -53,8 +54,10 @@ Save as: pgc2026-calendario.pdf (the file itself) + the three day pages from the
 ### 5. Anteo Palazzo del Cinema / CityLife Anteo / Ariosto / Apollo — schedules + single ticket price
 URLs: https://anteo.spaziocinema.18tickets.it/ , https://citylife.spaziocinema.18tickets.it/ ,
 https://ariosto.spaziocinema.18tickets.it/ , https://www.spaziocinema.info/cinema
-Should contain: per-day showtimes 6–15 Nov (18tickets has a "Dates" strip: I could only extract "10 / 11 November" for
-one film) and the **intero/ridotto single-ticket tariff** (Anteo's own site publishes subscriptions only).
+Should contain: per-day showtimes 6–15 Nov and the **intero/ridotto single-ticket tariff** (Anteo's own site publishes
+subscriptions only). IMPORTANT finding: the 18tickets "Dates" strip offers **only 10 and 11 November** — Anteo sells on a
+rolling ~2-day window, so 12–15 Nov (incl. Fri 13) are simply not on sale yet. A human should re-open this on Thu 12 /
+Fri 13 Nov to archive the correct days.
 Why not fetched: 18tickets is a JS SPA — 19 chunks of film carousel, no day grid, no price until seat selection;
 spaziocinema.info's "prezzi" paths do not exist.
 Attempts: (1) https://www.spaziocinema.info/milano/prezzi → 404; (2) /milano/cinema/anteo-palazzo-del-cinema → 404;
@@ -109,10 +112,19 @@ has no /prezzi/ page (404).
 Attempts: (1) bandhi.it/bah/beltrade/ → huge markup, current-day block only; (2) /prezzi/ → 404;
 (3) beltrade.it + www.beltrade.it → register.it parking page / 500; (4) DICE venue page → chunk 0 ends on Fri 13.
 
-### 11. Not yet attempted in this pass (time/transport) — need a human or a later run
-- **Fondazione Prada – Cinema Godard**: https://www.fondazioneprada.org/ (cinema programme + free/€ prices).
-- **Cinema San Fedele** (Centro San Fedele, via Hoepli): https://www.centrosanfedele.it/ (cineforum schedule, €5–7).
-- **Sala Wagner / Osoppo / Oscar** individual parish pages (see #9).
+### 11. RESOLVED since the first pass (kept for the record)
+- **Fondazione Prada – Cinema Godard** ✅ captured via its monthly PDF (`CinemaGodard_programma.pdf`): full Nov
+  programme incl. Fri 13 Nov and all three price tiers.
+- **Cinema San Fedele** ✅ captured on the correct domain **centrosanfedele.net** (the `.it` is a broken stub);
+  calendar is walkable per day, and Fri 13 Nov genuinely has no screening.
+- **Cinema Teatro Agnelli** ✗ NOT a Milan venue — footer: Parrocchia San Giovanni Bosco, via Paolo Sarpi 111, Torino.
+
+### 11b. Still open
+- **Sala Oscar / Cinema Teatro Oscar** (via Lattanzio 58, Milano): needs the sala's own site — the municipal page
+  `fareimpresa.comune.milano.it/web/municipio-4/-/cineforum-oscar` is an older season (€5,00 / under-20 €3,00, two
+  shows every Monday 15:15 & 21:00, which lands on **Mon 9 Nov** in our window).
+- **Cinequattro Stella** (via Pezzotti 53) and **Sala Wagner** (p.zza Wagner 2): parish pages not identified yet.
+- **Sala Wagner / Osoppo San Protaso** individual parish sheets (see #9).
 - **AriAnteo pop-ups** (Palazzo Reale, Fabbrica del Vapore, Incoronata): off-season in November, but specials may exist:
   https://www.spaziocinema.info/milano/eventi-e-rassegne
 - **Wayback snapshots for 6–9 Nov** (already-past days): `web.archive.org/web/2026*/<venue schedule URL>` — not
