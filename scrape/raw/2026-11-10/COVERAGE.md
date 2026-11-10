@@ -1,0 +1,158 @@
+# Coverage (merged: two independent fetch runs)
+
+Part A = branch raw/fetch-2026-11-10 (curl + Chromium + browser pane). Part B = branch arena/88a3a587-movie. Venue folders differ between runs (e.g. `colosseo/` vs `cinema-colosseo/`); both are kept.
+
+---
+
+## Part A
+
+# COVERAGE (fetched 2026-11-10, first-party only)
+
+Schedule cell: `Y` = ISO date found in saved JSON/HTML (not parsed or validated), `.` = not found. Raw capture only.
+
+| venue | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | price source (has € in page) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| anteo-palazzo | Y | Y | . | Y | Y | Y | Y | Y | Y | Y | spaziocinema.info_milano__schedule__all.html |
+| arcobaleno | . | . | . | . | Y | Y | . | . | . | . | webtic_xhr_7_wtjsonservices_ashx_getLocalInfo__schedule__all.json |
+| ariosto-anteo | Y | Y | . | Y | Y | Y | Y | Y | Y | Y | spaziocinema.info_milano__schedule__all.html; spaziocinema.info_rendered__cinema_tariffe_milano_ariosto__prices__all.html |
+| arlecchino | . | . | . | . | Y | Y | Y | Y | Y | Y | cinetecamilano.it_luogo_cineteca_milano_arlecchino___schedule__all.html (full 8.50, reduced 7.50/5, Thu 6.50) |
+| auditorium-don-bosco | . | . | . | . | . | . | . | Y | . | . | MISSING |
+| beltrade | . | . | . | . | Y | Y | Y | Y | Y | Y | bandhi.it_bah_beltrade_biglietti___prices__all.html |
+| centrale | . | . | . | . | Y | Y | . | . | . | . | multisalacentrale.it_rendered____prices__all.html |
+| cinemino | . | . | . | . | Y | . | . | Y | . | . | MISSING |
+| citylife-anteo | Y | Y | . | Y | Y | Y | Y | Y | Y | Y | spaziocinema.info_cinema_abbonamenti_e_tessere__prices__all.html; spaziocinema.info_milano__schedule__all.html |
+| colosseo | . | . | . | . | Y | Y | . | . | . | . | ilregnodelcinema.com_rendered__colosseo_prezzi_php__prices__all.html; webtic_xhr_27_wtjsonservices_ashx_getLocalInfo__schedule__all.json |
+| ducale | . | . | . | . | Y | Y | . | . | . | . | webtic_xhr_22_wtjsonservices_ashx_getLocalInfo__schedule__all.json |
+| eliseo | . | . | . | . | Y | Y | . | . | . | . | ilregnodelcinema.com_rendered__eliseo_prezzi_php__prices__all.html; webtic_xhr_15_wtjsonservices_ashx_getLocalInfo__schedule__all.json |
+| gloria | . | . | . | . | Y | Y | . | . | . | . | notoriouscinemas.it_gloria_infocinema_php__prices__all.html; notoriouscinemas.it_gloria_prezzi_php__prices__all.html |
+| mexico | . | . | . | . | . | Y | Y | Y | . | . | progettolumiere.it_rendered__mexico_contact_php__prices__all.html |
+| orfeo | . | . | Y | Y | Y | Y | . | . | . | . | orfeomultisala.com_prezzi___prices__all.html |
+| osoppo | . | . | . | . | Y | . | . | . | . | . | MISSING |
+| palestrina | . | . | . | . | . | Y | . | . | . | . | progettolumiere.it_rendered__palestrina_contact_php__prices__all.html |
+| plinius | . | . | . | . | Y | Y | Y | Y | Y | Y | multisalaplinius.com_card_e_abbonamenti___prices__all.html; multisalaplinius.com_informazioni_e_prezzi___prices__all.html |
+| space-odeon | . | . | . | Y | . | Y | Y | . | . | . | MISSING |
+| uci-bicocca | Y | . | . | Y | Y | Y | Y | Y | Y | Y | ucicinemas.it_rendered__cinema_uci_cinemas_bicocca_mi__prices__all.html; webtic_xhr_6_wtjsonservices_ashx_getLocalInfo__schedule__all.json |
+| uci-certosa | . | . | . | . | Y | Y | Y | Y | Y | Y | cinelandia.it_faq___prices__all.html |
+
+## Findings
+- WebTic venues (UCI Bicocca/Certosa, Plinius full to 15 Nov; Gloria, Arcobaleno, Ducale, Colosseo, Eliseo, Centrale, Orfeo only to 11 Nov): WebTic publishes about 2 days ahead for these, so Fri 13 Nov is NOT published yet. Re-fetch on 11-12 Nov.
+- Anteo group (CityLife, Ariosto, Palazzo del Cinema): per-day calendar JSON saved for every day 6-15 Nov.
+- The Space Cinema: no Milan-city site exists in its own cinema list (nearest Cerro Maggiore, Rozzano, Vimercate), so only the cinema list is kept.
+- Newly found: Il Cinemino (ilcinemino.it), SdC Milano site (sdcmilano.it) as the Osoppo parent.
+- Beltrade (bandhi.it) fetched as static HTML; not rendered per day.
+- Not covered: Spazio Oberdan, Fondazione Prada, Cinema del Carbone, other parish halls, museum screenings.
+
+## Second pass
+- Arlecchino schedule 10-15 Nov captured from the rendered 18tickets listing DOM in the built-in browser pane at human pace (file `arlecchino/18tickets_listing-dom_extract__schedule__2026-11-10_to_15.json`, 18 showtimes). Dates 6-9 Nov are in the past and not listed. The earlier curl 429s are avoided by using the already-rendered page instead of per-performance requests.
+- Arlecchino prices were already in the saved venue page; the first coverage check missed them.
+
+## Third pass (built-in browser pane, human pace; Milan city only)
+- Il Cinemino: calendar published only for Tue 10 (4 shows) and Fri 13 Nov (Balcanica, 21:30); nothing listed 11, 12, 14, 15. Prices: full 9.00 + tessera, reduced 7.00, carnets 22/35/48 (cinemino/*ingressi*).
+- Auditorium Don Bosco (Cinebazin): hours Sun 16:00, Mon/Wed/Fri 21:00; La Grazia 8-13 Nov. No price stated anywhere on the site (members' tessera).
+- Osoppo: real SdC page found (/sale-della-comunita/sala-osoppo-san-protaso); parish's own cinema page 404, parish home has no cinema link. No schedule or price: still a gap.
+- Teatro Oscar (Via Lattanzio 58, Milano): a theatre with a Cineforum menu; no film dates for 6-15 Nov found on incamminati.teatrooscar.it. Not a film venue for this window.
+- Spazio Oberdan: still 503, in LINKS-FOR-HUMAN.
+
+
+---
+
+## Part B
+
+# COVERAGE — Milan cinema schedules & prices, 6–15 Nov 2026 (captures 2026-11-10, ~10:30–12:00 CET)
+
+Transport reality first, because it shapes everything below: **this sandbox cannot open arbitrary HTTP directly.**
+`curl` to cinema hosts fails (exit 6/35 — egress allow-list is github.com, api.github.com, codeload.github.com,
+registry.npmjs.org, pypi.org, files.pythonhosted.org). Playwright is unusable (binaries come from cdn.playwright.dev,
+blocked) and GitHub Actions cannot be pushed (token lacks `workflows` permission). Every capture therefore went
+through the platform's server-side page-fetch service → **text/markdown extraction and PDF text, not byte-exact HTML**,
+default UA (the mandated iPhone-Safari UA is not settable). See MANIFEST.json → `transport`.
+
+Today is Tue 10 Nov 2026, so **6–9 Nov are already past**; venues no longer publish them. Wayback holds **no Nov-2026
+captures** of these pages (cinearcobaleno /programmazione: newest 19 May 2026; uci-bicocca: newest 24 Sep 2026) and
+silently serves the nearest older snapshot, so past days cannot be reconstructed there.
+
+Legend: ✅ captured · 🟡 partial · ⬜ nothing published · ❌ gap · 🚫 venue closed
+
+## 1. Schedule matrix (venue × date)
+
+| venue (id) | 6 Fr | 7 Sa | 8 Su | 9 Mo | 10 Tu | 11 We | 12 Th | 13 **Fr** | 14 Sa | 15 Su |
+|---|---|---|---|---|---|---|---|---|---|---|
+| fondazione-prada (Cinema Godard) | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ✅ | ✅ | ✅ | ✅ |
+| cineteca-arlecchino (PGC 19) | ⬜ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 18:30 Wang Bing masterclass (PDF cap) | ❌ | ❌ |
+| cineteca-mic (PGC + Cinema da paura) | ⬜ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ 1 event | ❌ |
+| cinema-beltrade | ⬜ | ⬜ | ⬜ | ⬜ | ✅ | ✅ | ✅ | ✅ 7 titles | 🟡 cut off | 🟡 cut off |
+| cinema-san-fedele | ⬜ | ⬜ | ⬜ | ⬜ | ✅ 15.15 | ⬜ | ✅ 15.00+20.00 | ⬜ none (Tue/Thu only) | ⬜ | ⬜ |
+| notorious-gloria | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| notorious-merlata | ⬜ | ⬜ | ⬜ | 🟡 4 titles | ✅ 4 titles | ✅ 4 titles | 🟡 Godzilla | 🟡 Godzilla | 🟡 Godzilla | 🟡 Godzilla |
+| uci-bicocca | ⬜ | ⬜ | ⬜ | ⬜ | ✅ | 🟡 tab only | 🟡 tab only | 🟡 tab only | 🟡 tab only | 🟡 tab only |
+| anteo-palazzo | ⬜ | ⬜ | ⬜ | ⬜ | 🟡 1 film | 🟡 1 film | ❌ | ❌ | ❌ | ❌ |
+| citylife-anteo | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| ariosto-spaziocinema | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| apollo-spaziocinema | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| cineteatro-arcobaleno | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ✅ | ✅ |
+| arcobaleno-filmcenter | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| cinema-mexico | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| cinema-colosseo (Il Regno del Cinema) | ❌ | ❌ | ❌ | ❌ | ✅ 5 titles | ✅ 5 titles | ❌ | ❌ | ❌ | ❌ |
+| cinema-eliseo (Il Regno del Cinema) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| sala-oscar (via Lattanzio 58) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| other parish halls (Cinequattro Stella, Osoppo San Protaso, Wagner) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| uci-certosa (unlisted, possibly closed) | – | – | – | – | ❌ shell | ❌ | ❌ | ❌ | ❌ | ❌ |
+| the-space-odeon (via S. Radegonda) | 🚫 closed for redevelopment, cinema reopening slated H2 2027 — nothing to capture |
+
+Notes: **Anteo** — 18tickets exposes only a **rolling ~2-day sale window** (the date strip offers 10 and 11 Nov only),
+which is why 12–15 Nov are absent there rather than merely hidden; `?ref_date=` is accepted in links but ignored by
+the server. **UCI** — per-day grids are injected on tab click, `?date=`/`/2026-11-13`/`/api/showtimes` all 404 or
+return the 10 Nov payload. **Notorious Merlata** — weekly grid is a JS carousel; Merlata's print view 404s (Gloria's works). **Arlecchino Fri 13 Nov** —
+the festival PDF extract dies at 12 Nov, but the venue page itself gives the 18:30 Wang Bing masterclass (booking link
+`arlecchino.cinetecadimilano.18tickets.it/film/120533`), so 13 Nov is no longer a bare gap for that room.
+
+## 2. Prices (the priority)
+
+| venue | prices? | what the capture proves | source URL |
+|---|---|---|---|
+| fondazione-prada / Cinema Godard | ✅ full, tiered | base **Intero 6 € / Ridotto 4 €** (under 26, over 65); selected first-run titles **8,50 / 7 €** (incl. *Look Back*, *Wild Horse Nine*, *Fjord*); *2001* **10 / 8,50 €**; *You Can See Everything* **15 / 13 €**; free for disabled + companion; Human Brains free | CinemaGodard_programma.pdf |
+| notorious-merlata | ✅ full tariff | festivo intero €10,70/rid. €8,90; feriale dopo 18.55 €10,50/8,40; pomeridiano €8,50/6,50; mercoledì €8,50; matinée €6,00; Card €38/5; fee €1,20; Top +€1,00 / Super Top +€1,50 | notoriouscinemas.it/merlata/prezzi.php |
+| notorious-gloria | ✅ full tariff | festivo/feriale €9,00/6,50; pomeridiano €6,50/5,00; mercoledì €6,50; matinée €5,00; Card €30/5; fee €1,20 | notoriouscinemas.it/gloria/prezzi.php |
+| uci-bicocca | 🟡 per-showtime | "Da 6,90 €" (2D), "Da 7,90 €" (XL), "Da 8,40 €" (3D) printed pre-checkout on 10 Nov | ucicinemas.it/cinema/uci-cinemas-bicocca-milano |
+| cineteca-mic | ✅ | sala cinema €6,50 / cinetessera+under25+univ. €5 / disabile €3,50 / family €6 a testa; museo €9 / €7 / €6; Cinetessera €15 (u25 €3) | cinetecamilano.it/luogo/cineteca-milano-mic/ |
+| cineteca (PGC festival) | ✅ | PGC intero €5,00; Cinetessera 2026 €3,00; Super8 €12/8 proiezioni; Gerima Tour €9; masterclass + Wang Bing trilogy free w/ booking | PGC2026_CALENDARIO_DIGITALE_V2.pdf |
+| arcobaleno-filmcenter + cineteca-arlecchino | ✅ | Intero €8,50 / ridotto €7,50 (u25, over 65) / VR €4 / disabilità €5; MIC intero €5 | filmmakerfest.com/Festival/2542 |
+| cinema-san-fedele | 🟡 season block (page still headed "Stagione 2024-2025") | S.F.1 biglietto intero €8 / studenti €6; S.F.2 intero €7 / studenti €6; abbonamenti 20 film €88–108, Under 25 (10 film) €20, Oro 40 film €132–144 | centrosanfedele.net/cinema/abbonamenti-e-biglietti/ |
+| anteo-palazzo | 🟡 cards only | tessere 7 spett. €42, 10 spett. €65, 6 serali €21, Under25 €20/28gg, Tessera Milano €140/20ingr. o €70/10; single intero/ridotto not published on that page | spaziocinema.info/…/abbonamenti-e-tessere/… |
+| cinema-beltrade | 🟡 "From" | DICE: every performance "From €7"; *Mustang* + Kasia Smutniak (Fri 13) "From €9" | dice.fm/venue/cinema-beltrade-bd3k |
+| cineteatro-arcobaleno | ❌ | a "Prezzi Film" block exists on the programmazione page (indexed text: intero €8,00 / ridotto €5,00 / lunedì €6,50) but did not come through extraction | cinearcobaleno.com/programmazione/ |
+| sala-oscar | 🟡 municipal lead | Comune di Milano sportello page: biglietto €5,00 / ridotto under 20 €3,00, two shows each Monday 15:15 & 21:00 (that page is from a previous season — needs the sala's own tariff) | fareimpresa.comune.milano.it/web/municipio-4/-/cineforum-oscar |
+| cinema-colosseo / cinema-eliseo | ❌ | no tariff page found (`/colosseo/prezzi.php` errors); per-showtime prices not printed in the extraction | — |
+| uci-certosa, arcobaleno-filmcenter (schedules), cinema-mexico, other parish halls | ❌ | see LINKS-FOR-HUMAN.md | — |
+
+## 3. Venues discovered / traps found
+
+- **Cinema Godard (Fondazione Prada)** publishes a *monthly programme PDF* — far richer than its HTML page, and the only
+  venue in this set with three price tiers by title.
+- **Cinema San Fedele's real domain is `centrosanfedele.net`** (the `.it` serves a single image). It runs two cineforum
+  rooms, **Tue 15:15 and Thu 15:15/20:45 only** — so Friday 13 Nov has no San Fedele screening at all.
+- **Trap avoided: "Cinema Teatro Agnelli"** (cineteatroagnelli.it) looks exactly like a Milan parish "sala della
+  Comunità", publishes clean prices and a live programme — but its footer reads *Parrocchia San Giovanni Bosco,
+  Via Paolo Sarpi 111, 10135 **Torino***. It is in Turin, so it is deliberately **not** captured. Same trap family:
+  "Cinema Famiglia" and the "Sala della Comunità di Noventa Vicentina" that surface on Milan-oriented queries.
+- **Filmmaker Fest (filmmakerfest.com) runs Arcobaleno Film Center** (viale Tunisia 11) and publishes the prices for
+  both Arcobaleno and Cineteca Milano Arlecchino; its WebTic local id is 5066. Arlecchino's 18tickets subsite also
+  carries the **Filmmaker Festival 2026** line-up (Le rocce rosse, Selfie – Lato B, [Odio], Heaven, Ubersang…), i.e.
+  Arlecchino is double-booked with PGC that week.
+- **Notorious Cinemas has two Milan venues**: Merlata Bloom Milano **and Gloria Milano**.
+- **Only ONE UCI is inside Milan city**: Bicocca. UCI's index files Lissone, MilanoFiori (Assago) and Pioltello under
+  "Milano" and has **no Certosa entry** although a Certosa page still resolves — treat Certosa as unlisted/closed.
+- **spaziocinema.info is the Anteo group** (Anteo Palazzo del Cinema, CityLife Anteo, Ariosto, Apollo spazioCinema, plus
+  AriAnteo labels and "Fuoricinema"). It is **not** "Circuito Cinema": **circuitocinema.com is a Rome/Bologna circuit**
+  (Nazionale, Giulio Cesare, 4 Fontane, Olimpia, Metropolitan, Fossolo…), excluded after checking its own venue list.
+- **CineTeatro Arcobaleno** (cinearcobaleno.com) ≠ Arcobaleno Film Center; it sells via **cinebot**
+  (`ticket.cinebot.it/cinearcobaleno/`).
+- **Cinema Beltrade's** real domain is **cinemabeltrade.net**, now inside a shared WordPress network
+  `bandhi.it/bah/beltrade/`; beltrade.it is a parked register.it page.
+- **cinemamexico.it has served HTTP 500 since at least 17 Sep 2026** (Wayback shows the same ARR-OK error) — broken origin.
+- **Il Regno del Cinema** (ilregnodelcinema.com) — one of the platforms named in the brief — runs **two Milan venues**:
+  Multisala Colosseo (viale Monte Nero 84) **and Multisala Eliseo**. Careful: Milan's Eliseo (Regno del Cinema) is a
+  different house from the Rome Eliseo in circuitocinema.com's list. Its print view redirects to a generic landing, so
+  the day grid is JS-only.
+- **The Space Odeon (Duomo)** is closed for redevelopment (reopening H2 2027).
+

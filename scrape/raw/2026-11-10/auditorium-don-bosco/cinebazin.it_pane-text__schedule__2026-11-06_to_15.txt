@@ -1,0 +1,5 @@
+Source: https://www.cinebazin.it/new/ (home, Orari Proiezioni id=3, Chi Siamo id=1), built-in browser pane text, fetched 2026-11-10
+Orari Proiezioni: Domenica ore 16.00; lunedi, mercoledi e venerdi ore 21.
+Home: LA GRAZIA (regia Paolo Sorrentino), "da domenica 8 a venerdi 13 novembre 2026" => Sun 8 16:00, Mon 9 21:00, Wed 11 21:00, Fri 13 21:00 by the stated pattern (not individually listed).
+Next film for Sun 15 Nov not stated on the home page.
+Prices: none stated on the home, Orari or Chi Siamo pages (members' "tessera" model, booklet given to cardholders). No tariff page found.

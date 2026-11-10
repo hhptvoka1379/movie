@@ -264,6 +264,45 @@
       "published_until": "2026-11-15",
       "status": "ok",
       "notes": "Programme read from a saved copy of the site (node beltrade-archive.mjs <saved page>); the live site blocks automated access | Reserve without paying: yes — by email to prenota@cinemabeltrade.net; box office sale; presale on DICE | Group policy: not stated | Prices: as stated by https://bandhi.it/bah/beltrade/biglietti/: Intero €8,00"
+    },
+    {
+      "id": "anteo-palazzo",
+      "name": "Anteo Palazzo del Cinema",
+      "address": "Piazza XXV Aprile 8, Milano",
+      "lat": 45.4800568,
+      "lng": 9.1877898,
+      "website": "https://www.spaziocinema.info/milano",
+      "booking_url": "https://www.spaziocinema.info/milano",
+      "source_used": "anteo-capture",
+      "notes": "Programme from the venue's own calendar endpoint (spaziocinema.info/cinema/@@get-calendario), captured 10 Nov; Palazzo lists only a few shows per day after 11 Nov | Prices: not captured for this room (see the spazioCinema tariff page)",
+      "published_until": "2026-11-15",
+      "status": "ok"
+    },
+    {
+      "id": "cinemino",
+      "name": "Il Cinemino",
+      "address": "Via Seneca 6, Milano",
+      "lat": 45.4541227,
+      "lng": 9.2083301,
+      "website": "https://www.ilcinemino.it",
+      "booking_url": "https://www.ilcinemino.it/ingressi/",
+      "source_used": "snapshot",
+      "notes": "Programme read from the rendered programmazione page on 10 Nov; only 10 and 13 Nov were published | Membership card (tessera Seiseneca) is always required | Carnets: 4 ingressi €22, 7 €35, 10 €48",
+      "published_until": "2026-11-13",
+      "status": "ok"
+    },
+    {
+      "id": "cinema-godard",
+      "name": "Cinema Godard (Fondazione Prada)",
+      "address": "Largo Isarco 2, Milano",
+      "lat": 45.4443737,
+      "lng": 9.2053306,
+      "website": "https://www.fondazioneprada.org/cinema/",
+      "booking_url": "https://www.fondazioneprada.org/cinema/",
+      "source_used": "snapshot",
+      "notes": "Programme from the venue's own monthly programme PDF (10 Nov); no screenings listed 9-11 Nov | Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "published_until": "2026-11-15",
+      "status": "ok"
     }
   ],
   "films": [
@@ -275,10 +314,31 @@
       "runtime_min": 155
     },
     {
+      "id": "45-anni-45-years",
+      "title": "45 anni (45 years)",
+      "original_title": null,
+      "type": "classic",
+      "runtime_min": 95
+    },
+    {
+      "id": "8-e-mezzo",
+      "title": "8 e mezzo",
+      "original_title": null,
+      "type": "classic",
+      "runtime_min": 138
+    },
+    {
       "id": "angelo-il-principe-del-vintage",
       "title": "Angelo - Il principe del vintage",
       "original_title": null,
       "type": "film",
+      "runtime_min": null
+    },
+    {
+      "id": "balcanica-incontro-con-sceneggiatore",
+      "title": "BALCANICA - INCONTRO CON SCENEGGIATORE",
+      "original_title": null,
+      "type": "event",
       "runtime_min": null
     },
     {
@@ -317,6 +377,20 @@
       "runtime_min": 116
     },
     {
+      "id": "caro-mondo-crudele",
+      "title": "Caro mondo crudele",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 105
+    },
+    {
+      "id": "cenere-e-diamanti",
+      "title": "Cenere e diamanti",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 103
+    },
+    {
       "id": "clayface",
       "title": "Clayface",
       "original_title": "Clayface",
@@ -338,6 +412,20 @@
       "runtime_min": 90
     },
     {
+      "id": "d-o-a-a-right-of-passage",
+      "title": "D.O.A. - A Right of Passage",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    },
+    {
+      "id": "danton",
+      "title": "Danton",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 136
+    },
+    {
       "id": "digger",
       "title": "digger",
       "original_title": "Digger",
@@ -350,6 +438,20 @@
       "original_title": "Dio ride",
       "type": "film",
       "runtime_min": 113
+    },
+    {
+      "id": "douglas-gordon-by-douglas-gordon",
+      "title": "Douglas Gordon by Douglas Gordon",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    },
+    {
+      "id": "east-of-paradise",
+      "title": "East of Paradise",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
     },
     {
       "id": "ecco-l-impero-dei-sensi",
@@ -366,6 +468,13 @@
       "runtime_min": 91
     },
     {
+      "id": "elon-musk-uncovered-the-tesla-experiment",
+      "title": "Elon musk uncovered. the tesla experiment",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 89
+    },
+    {
       "id": "fatherland",
       "title": "Fatherland",
       "original_title": "Ojczyzna",
@@ -378,6 +487,27 @@
       "original_title": "Ferine",
       "type": "film",
       "runtime_min": 105
+    },
+    {
+      "id": "firenze-vr-me-moire-the-italian-baba-proto-vr",
+      "title": "Firenze vr - me/moire -the italian baba - proto vr",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 50
+    },
+    {
+      "id": "fjord",
+      "title": "fjord",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 146
+    },
+    {
+      "id": "generazione",
+      "title": "Generazione",
+      "original_title": null,
+      "type": "classic",
+      "runtime_min": 87
     },
     {
       "id": "george-michael-the-faith-tour",
@@ -443,6 +573,13 @@
       "runtime_min": 115
     },
     {
+      "id": "incontro-con-angela-davis-a-seguire-the-black-power-mixtape-1967-1975",
+      "title": "Incontro con Angela Davis, a seguire The Black Power Mixtape 1967-1975",
+      "original_title": null,
+      "type": "event",
+      "runtime_min": null
+    },
+    {
       "id": "indocili-1-indocili-queer",
       "title": "INDOCILI #1 - INDOCILI QUEER",
       "original_title": null,
@@ -462,6 +599,13 @@
       "original_title": "Je so’ pazzo",
       "type": "film",
       "runtime_min": 104
+    },
+    {
+      "id": "l-assurda-storia-della-gialappa-s-band",
+      "title": "L'assurda storia della gialappa's band",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 105
     },
     {
       "id": "l-essere-amato",
@@ -499,6 +643,20 @@
       "runtime_min": 109
     },
     {
+      "id": "la-ballata-del-re-delle-api",
+      "title": "la ballata del re delle api",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 131
+    },
+    {
+      "id": "la-bambola",
+      "title": "LA BAMBOLA",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    },
+    {
       "id": "la-citta-dei-bambini",
       "title": "LA CITTÀ DEI BAMBINI",
       "original_title": null,
@@ -520,11 +678,25 @@
       "runtime_min": 96
     },
     {
+      "id": "la-linea-dell-orizzonte",
+      "title": "La linea dell'orizzonte",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 67
+    },
+    {
       "id": "la-storia-infinita-die-unendliche-geschichte",
       "title": "La storia infinita (die unendliche geschichte)",
       "original_title": null,
       "type": "classic",
       "runtime_min": 94
+    },
+    {
+      "id": "le-signorine-di-wilko",
+      "title": "Le signorine di wilko",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": 116
     },
     {
       "id": "league-of-legends-worlds-26",
@@ -737,6 +909,20 @@
       "runtime_min": 94
     },
     {
+      "id": "tuttaunanotte-2-programma-1",
+      "title": "Tuttaunanotte 2 - Programma 1",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    },
+    {
+      "id": "tuttaunanotte-2-programma-2",
+      "title": "Tuttaunanotte 2 - Programma 2",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
+    },
+    {
       "id": "twin-peaks-stag-03-ep-11-e-12",
       "title": "TWIN PEAKS – STAG. 03 EP 11 e 12",
       "original_title": null,
@@ -777,6 +963,13 @@
       "original_title": null,
       "type": "film",
       "runtime_min": 100
+    },
+    {
+      "id": "white-lies-doc-italiani",
+      "title": "WHITE LIES - DOC ITALIANI",
+      "original_title": null,
+      "type": "film",
+      "runtime_min": null
     },
     {
       "id": "wild-horse-nine",
@@ -9900,6 +10093,1656 @@
       "price_eur": null,
       "price_note": "Dal lunedì al giovedì fino alle 18:55 Intero €7,00; Mercoledì Intero €7,00; Dal lunedì al giovedì dalle 19:00 Sale 7 e 8 Intero €7,00; Dal lunedì al giovedì dalle 19:00 altre sale Intero €9,00; Venerdì fino alle 18:55 Sale 7 e 8 Intero €7,50 +4 altre",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5868"
+    },
+    {
+      "film_id": "naza",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "12:45",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/naza_2026/855734#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "12:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/minotaur-nel-labirinto-del-potere-minotaure-_2026/855787#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "16:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/minotaur-nel-labirinto-del-potere-minotaure-_2026/855717#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/minotaur-nel-labirinto-del-potere-minotaure-_2026/855712#sala"
+    },
+    {
+      "film_id": "primetime",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "12:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-primetime_2026/855737#sala"
+    },
+    {
+      "film_id": "primetime",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-primetime_2026/855763#sala"
+    },
+    {
+      "film_id": "primetime",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "14:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/primetime_2026-f74418c3-1a7e-430d-9d74-f5ab3487464d/855731#sala"
+    },
+    {
+      "film_id": "un-weekend-artificiale",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/un-weekend-artificiale_2026-e0db7b0d-992b-4d49-bd83-f05b866b6bc8/851669#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minotaur-_2026/855719#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "14:45",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minotaur-_2026/855780#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "19:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minotaur-_2026/855720#sala"
+    },
+    {
+      "film_id": "l-estranea",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-estranea_2026-7a1d5e14-ab72-4f5d-8f59-e81eaeeb2018/855738#sala"
+    },
+    {
+      "film_id": "l-estranea",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "17:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-estranea_2026-7a1d5e14-ab72-4f5d-8f59-e81eaeeb2018/855706#sala"
+    },
+    {
+      "film_id": "l-estranea",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "19:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-estranea_2026-7a1d5e14-ab72-4f5d-8f59-e81eaeeb2018/855707#sala"
+    },
+    {
+      "film_id": "l-estranea",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:40",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-estranea_2026-7a1d5e14-ab72-4f5d-8f59-e81eaeeb2018/855709#sala"
+    },
+    {
+      "film_id": "zustissia",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "15:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/zustissia_2026-5a1ea452-41b6-4d4e-96c1-385b0104aa25/855870#sala"
+    },
+    {
+      "film_id": "caro-mondo-crudele",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/caro-mondo-crudele_2026-7383256d-ff50-44d8-8ce7-4654ad1f3c94/855727#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland_2026-8d1b510a-12f8-4527-b949-dc6a97836d5d/855856#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "12:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland_2026-8d1b510a-12f8-4527-b949-dc6a97836d5d/855773#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "16:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland_2026-8d1b510a-12f8-4527-b949-dc6a97836d5d/855849#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "19:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland_2026-8d1b510a-12f8-4527-b949-dc6a97836d5d/855778#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "14:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland-v-o-_2026/855853#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "18:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland-v-o-_2026/855854#sala"
+    },
+    {
+      "film_id": "digger",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/digger_2026-c68fc0e1-6187-490a-91d8-dcbf0f423527/855567#sala"
+    },
+    {
+      "film_id": "digger",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "14:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/digger_2026-c68fc0e1-6187-490a-91d8-dcbf0f423527/855568#sala"
+    },
+    {
+      "film_id": "digger",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "16:50",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/digger_2026-c68fc0e1-6187-490a-91d8-dcbf0f423527/855569#sala"
+    },
+    {
+      "film_id": "digger",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "19:10",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/digger_2026-c68fc0e1-6187-490a-91d8-dcbf0f423527/855570#sala"
+    },
+    {
+      "film_id": "digger",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/digger_2026-c68fc0e1-6187-490a-91d8-dcbf0f423527/855571#sala"
+    },
+    {
+      "film_id": "je-so-pazzo",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "12:20",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/je-so-pazzo_2026-d00ab3b4-33cb-4c4c-96cd-0ef018a0075b/855703#sala"
+    },
+    {
+      "film_id": "je-so-pazzo",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "20:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/je-so-pazzo_2026-c9774cb1-ff4c-4e17-980a-6d0bafc215f6/854613#sala"
+    },
+    {
+      "film_id": "je-so-pazzo",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/je-so-pazzo_2026-d00ab3b4-33cb-4c4c-96cd-0ef018a0075b/855701#sala"
+    },
+    {
+      "film_id": "nel-silenzio-delle-stanze",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "12:50",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-nel-silenzio-delle-stanze_2025/855888#sala"
+    },
+    {
+      "film_id": "nel-silenzio-delle-stanze",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "17:10",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-nel-silenzio-delle-stanze_2025/855889#sala"
+    },
+    {
+      "film_id": "minnie-moskowitz",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "12:40",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minnie-moskowitz-ried-4k-_1971-a20e309a-a5a3-4714-af29-1eb017db3ff4/855863#sala"
+    },
+    {
+      "film_id": "minnie-moskowitz",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "19:20",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minnie-moskowitz-ried-4k-_1971-a20e309a-a5a3-4714-af29-1eb017db3ff4/855867#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-wild-horse-nine_2026-404dad21-a6e6-4504-8b17-3c520efd67c3/855907#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "14:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-wild-horse-nine_2026-404dad21-a6e6-4504-8b17-3c520efd67c3/855908#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "19:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-wild-horse-nine_2026-404dad21-a6e6-4504-8b17-3c520efd67c3/855909#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "12:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/wild-horse-nine_2026-9a4c11f3-5920-4421-9817-dd68613d6ff0/855919#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "16:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/wild-horse-nine_2026-9a4c11f3-5920-4421-9817-dd68613d6ff0/855925#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/wild-horse-nine_2026-9a4c11f3-5920-4421-9817-dd68613d6ff0/855920#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855818#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "15:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855817#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "17:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855806#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "19:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855807#sala"
+    },
+    {
+      "film_id": "l-assurda-storia-della-gialappa-s-band",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-assurda-storia-della-gialappa-s-band_2026-129b0263-7acb-4e57-a0c1-084f2907b145/856063#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "10:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/856062#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "14:40",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855744#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "16:50",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855745#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "19:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855746#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:40",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855753#sala"
+    },
+    {
+      "film_id": "george-michael-the-faith-tour",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "21:45",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-george-michael-the-faith-tour_2026-7c3d6c18-428f-47a8-bbd4-0769f3e65970/857193#sala"
+    },
+    {
+      "film_id": "firenze-vr-me-moire-the-italian-baba-proto-vr",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "18:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/firenze-vr-me-moire-the-italian-baba-proto-vr_2025/854626#sala"
+    },
+    {
+      "film_id": "firenze-vr-me-moire-the-italian-baba-proto-vr",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-10",
+      "time": "20:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/firenze-vr-me-moire-the-italian-baba-proto-vr_2025/854627#sala"
+    },
+    {
+      "film_id": "naza",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "17:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/naza_2026/855735#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "12:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/minotaur-nel-labirinto-del-potere-minotaure-_2026/855835#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "21:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/minotaur-nel-labirinto-del-potere-minotaure-_2026/856955#sala"
+    },
+    {
+      "film_id": "primetime",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "13:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-primetime_2026/855739#sala"
+    },
+    {
+      "film_id": "primetime",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "21:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-primetime_2026/856953#sala"
+    },
+    {
+      "film_id": "primetime",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "14:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/primetime_2026-f74418c3-1a7e-430d-9d74-f5ab3487464d/855732#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "10:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minotaur-_2026/855723#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "14:45",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minotaur-_2026/855770#sala"
+    },
+    {
+      "film_id": "minotaur-nel-labirinto-del-potere",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "19:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minotaur-_2026/855724#sala"
+    },
+    {
+      "film_id": "l-estranea",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "17:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-estranea_2026-7a1d5e14-ab72-4f5d-8f59-e81eaeeb2018/855704#sala"
+    },
+    {
+      "film_id": "l-estranea",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "19:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-estranea_2026-7a1d5e14-ab72-4f5d-8f59-e81eaeeb2018/855705#sala"
+    },
+    {
+      "film_id": "zustissia",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "14:50",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/zustissia_2026-5a1ea452-41b6-4d4e-96c1-385b0104aa25/855871#sala"
+    },
+    {
+      "film_id": "caro-mondo-crudele",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "10:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/caro-mondo-crudele_2026-7383256d-ff50-44d8-8ce7-4654ad1f3c94/855728#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "10:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland_2026-737070ca-b2d9-401d-8b5e-f31100bb2c8e/855573#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "12:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland_2026-8d1b510a-12f8-4527-b949-dc6a97836d5d/855774#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "17:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland_2026-8d1b510a-12f8-4527-b949-dc6a97836d5d/855779#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "15:15",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/fatherland-v-o-_2026/855855#sala"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "19:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-fatherland_2026/853422#sala"
+    },
+    {
+      "film_id": "je-so-pazzo",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "12:40",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/je-so-pazzo_2026-d00ab3b4-33cb-4c4c-96cd-0ef018a0075b/856096#sala"
+    },
+    {
+      "film_id": "je-so-pazzo",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "17:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/je-so-pazzo_2026-d00ab3b4-33cb-4c4c-96cd-0ef018a0075b/855725#sala"
+    },
+    {
+      "film_id": "je-so-pazzo",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "21:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/je-so-pazzo_2026-d00ab3b4-33cb-4c4c-96cd-0ef018a0075b/855702#sala"
+    },
+    {
+      "film_id": "nel-silenzio-delle-stanze",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "12:40",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-nel-silenzio-delle-stanze_2025/855890#sala"
+    },
+    {
+      "film_id": "nel-silenzio-delle-stanze",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "15:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/nel-silenzio-delle-stanze_2025-7a251698-f353-49c3-a6d2-2b6b150ccaed/855885#sala"
+    },
+    {
+      "film_id": "nel-silenzio-delle-stanze",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "17:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-nel-silenzio-delle-stanze_2025/855891#sala"
+    },
+    {
+      "film_id": "minnie-moskowitz",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "12:40",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minnie-moskowitz-ried-4k-_1971-a20e309a-a5a3-4714-af29-1eb017db3ff4/855865#sala"
+    },
+    {
+      "film_id": "minnie-moskowitz",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "19:10",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-minnie-moskowitz-ried-4k-_1971-a20e309a-a5a3-4714-af29-1eb017db3ff4/855866#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "10:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-wild-horse-nine_2026-404dad21-a6e6-4504-8b17-3c520efd67c3/855910#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "15:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-wild-horse-nine_2026-404dad21-a6e6-4504-8b17-3c520efd67c3/855917#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "19:15",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-wild-horse-nine_2026-404dad21-a6e6-4504-8b17-3c520efd67c3/855915#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "12:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/wild-horse-nine_2026-9a4c11f3-5920-4421-9817-dd68613d6ff0/855922#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "16:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/wild-horse-nine_2026-9a4c11f3-5920-4421-9817-dd68613d6ff0/855926#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "21:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/wild-horse-nine_2026-9a4c11f3-5920-4421-9817-dd68613d6ff0/855923#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "10:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855814#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "14:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855815#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "16:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855816#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "19:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855811#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "20:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-df78d352-b43b-4e8b-bc60-963c234584e7/854612#sala"
+    },
+    {
+      "film_id": "dio-ride",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "21:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/dio-ride_2026-f5f36df9-2d88-4e4d-b567-0c804098d93e/855812#sala"
+    },
+    {
+      "film_id": "l-assurda-storia-della-gialappa-s-band",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "10:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-assurda-storia-della-gialappa-s-band_2026-129b0263-7acb-4e57-a0c1-084f2907b145/855916#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "10:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855747#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "12:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855748#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "15:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855749#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "17:10",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855750#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "19:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855775#sala"
+    },
+    {
+      "film_id": "se-domani-non-torno",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "21:40",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/se-domani-non-torno_2026-7b237ae5-32c0-4df9-aabe-1fb2641f423c/855754#sala"
+    },
+    {
+      "film_id": "la-linea-dell-orizzonte",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "19:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/la-linea-dell-orizzonte_2026/852828#sala"
+    },
+    {
+      "film_id": "digger",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "10:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-digger_2026/855901#sala"
+    },
+    {
+      "film_id": "digger",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "21:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-digger_2026/856954#sala"
+    },
+    {
+      "film_id": "george-michael-the-faith-tour",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "21:45",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-george-michael-the-faith-tour_2026-7c3d6c18-428f-47a8-bbd4-0769f3e65970/857194#sala"
+    },
+    {
+      "film_id": "firenze-vr-me-moire-the-italian-baba-proto-vr",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "18:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/firenze-vr-me-moire-the-italian-baba-proto-vr_2025/854628#sala"
+    },
+    {
+      "film_id": "firenze-vr-me-moire-the-italian-baba-proto-vr",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-11",
+      "time": "20:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/firenze-vr-me-moire-the-italian-baba-proto-vr_2025/854629#sala"
+    },
+    {
+      "film_id": "mustang",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-12",
+      "time": "18:20",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/mustang_2026-23fe0957-5316-48ec-baee-faa16c448701/856524#sala"
+    },
+    {
+      "film_id": "mustang",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-12",
+      "time": "18:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/mustang_2026-5035e469-cc6c-476c-ae55-41a41f17c6d6/847482#sala"
+    },
+    {
+      "film_id": "45-anni-45-years",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-12",
+      "time": "19:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/45-anni-45-years-_2015-b951a44d-6171-4917-b2b4-26ad5d0a9291/857283#sala"
+    },
+    {
+      "film_id": "look-back",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-12",
+      "time": "21:45",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/look-back-_2026-912f6aab-5003-4f9a-8c8c-f35b31c97b99/858456#sala"
+    },
+    {
+      "film_id": "fjord",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-12",
+      "time": "14:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-fjord_2026-576b99e2-792a-43e9-8ddd-4d715a39d78c/855930#sala"
+    },
+    {
+      "film_id": "l-essere-amato-el-ser-querido",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-13",
+      "time": "18:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-essere-amato-el-ser-querido-_2026-44f6bbde-0653-4422-9d4b-57a985accd79/858981#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-13",
+      "time": "21:15",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/wild-horse-nine_2026-1bfd9fed-dc88-4c19-8ca6-db71d2f0c0ec/858935#sala"
+    },
+    {
+      "film_id": "l-estranea",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-14",
+      "time": "13:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/l-estranea_2026-dfa48c31-4f49-49d8-a36c-f1d39970466a/858973#sala"
+    },
+    {
+      "film_id": "il-rumore-delle-cose-nuove",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-14",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/il-rumore-delle-cose-nuove_2026-3bf142ca-0dd8-4b1f-ba04-e95d41c005d7/858985#sala"
+    },
+    {
+      "film_id": "cenere-e-diamanti",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-14",
+      "time": "12:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/cenere-e-diamanti_2026/848638#sala"
+    },
+    {
+      "film_id": "generazione",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-14",
+      "time": "10:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/generazione_2026/848637#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-14",
+      "time": "18:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-wild-horse-nine_2026-315b022f-ee9d-4291-b0d0-91373b46b419/858944#sala"
+    },
+    {
+      "film_id": "il-canto-della-foresta-le-chant-des-forets",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-15",
+      "time": "13:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/il-canto-della-foresta-le-chant-des-forets-_2025-6a08fe4b-232a-4548-96f0-9c4babf4952c/858993#sala"
+    },
+    {
+      "film_id": "le-signorine-di-wilko",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-15",
+      "time": "10:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/le-signorine-di-wilko_2026/848639#sala"
+    },
+    {
+      "film_id": "danton",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-15",
+      "time": "12:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/danton_2026/858814#sala"
+    },
+    {
+      "film_id": "la-ballata-del-re-delle-api",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-15",
+      "time": "10:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/la-ballata-del-re-delle-api-v-o-_2025/857580#sala"
+    },
+    {
+      "film_id": "8-e-mezzo",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-15",
+      "time": "10:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/8-e-mezzo_1963-376c3d2a-e834-4c7e-badb-532454cba294/854145#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-15",
+      "time": "20:30",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/v-o-sott-ita-wild-horse-nine_2026-315b022f-ee9d-4291-b0d0-91373b46b419/858950#sala"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-15",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/wild-horse-nine_2026-1bfd9fed-dc88-4c19-8ca6-db71d2f0c0ec/858938#sala"
+    },
+    {
+      "film_id": "elon-musk-uncovered-the-tesla-experiment",
+      "cinema_id": "anteo-palazzo",
+      "date": "2026-11-15",
+      "time": "13:40",
+      "language": "vos",
+      "format": null,
+      "price_eur": null,
+      "price_note": null,
+      "booking_url": "https://anteo.spaziocinema.18tickets.it/film/elon-musk-uncovered-the-tesla-experiment_2025-1bb793c7-1c6f-4ccd-929c-2189cfdef771/853455#sala"
+    },
+    {
+      "film_id": "je-so-pazzo",
+      "cinema_id": "cinemino",
+      "date": "2026-11-10",
+      "time": "15:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 9,
+      "price_note": "Biglietto unico €9,00 + tessera associativa; ridotto €7,00 (under 18, over 65, universitari under 25; first weekday afternoon show and weekend matinee always ridotto)",
+      "booking_url": "https://www.ilcinemino.it/programmazione/"
+    },
+    {
+      "film_id": "la-bambola",
+      "cinema_id": "cinemino",
+      "date": "2026-11-10",
+      "time": "17:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 9,
+      "price_note": "Biglietto unico €9,00 + tessera associativa; ridotto €7,00 (under 18, over 65, universitari under 25; first weekday afternoon show and weekend matinee always ridotto)",
+      "booking_url": "https://www.ilcinemino.it/programmazione/"
+    },
+    {
+      "film_id": "nel-silenzio-delle-stanze",
+      "cinema_id": "cinemino",
+      "date": "2026-11-10",
+      "time": "19:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 9,
+      "price_note": "Biglietto unico €9,00 + tessera associativa; ridotto €7,00 (under 18, over 65, universitari under 25; first weekday afternoon show and weekend matinee always ridotto)",
+      "booking_url": "https://www.ilcinemino.it/programmazione/"
+    },
+    {
+      "film_id": "white-lies-doc-italiani",
+      "cinema_id": "cinemino",
+      "date": "2026-11-10",
+      "time": "21:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 9,
+      "price_note": "Biglietto unico €9,00 + tessera associativa; ridotto €7,00 (under 18, over 65, universitari under 25; first weekday afternoon show and weekend matinee always ridotto)",
+      "booking_url": "https://www.ilcinemino.it/programmazione/"
+    },
+    {
+      "film_id": "balcanica-incontro-con-sceneggiatore",
+      "cinema_id": "cinemino",
+      "date": "2026-11-13",
+      "time": "21:30",
+      "language": "ita",
+      "format": null,
+      "price_eur": 9,
+      "price_note": "Biglietto unico €9,00 + tessera associativa; ridotto €7,00 (under 18, over 65, universitari under 25; first weekday afternoon show and weekend matinee always ridotto)",
+      "booking_url": "https://www.ilcinemino.it/programmazione/"
+    },
+    {
+      "film_id": "naza",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-06",
+      "time": "16:30",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-06",
+      "time": "18:00",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "fatherland",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-06",
+      "time": "20:30",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "east-of-paradise",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-07",
+      "time": "16:00",
+      "language": "other",
+      "format": null,
+      "price_eur": 6,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-07",
+      "time": "18:00",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "douglas-gordon-by-douglas-gordon",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-07",
+      "time": "20:30",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "tuttaunanotte-2-programma-1",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-08",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 6,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "tuttaunanotte-2-programma-2",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-08",
+      "time": "17:45",
+      "language": "ita",
+      "format": null,
+      "price_eur": 6,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-08",
+      "time": "20:45",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "look-back",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-12",
+      "time": "17:45",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "fjord",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-12",
+      "time": "19:45",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-13",
+      "time": "16:00",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "look-back",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-13",
+      "time": "18:15",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "d-o-a-a-right-of-passage",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-13",
+      "time": "20:30",
+      "language": "other",
+      "format": null,
+      "price_eur": 6,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "look-back",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-14",
+      "time": "15:00",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "wild-horse-nine",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-14",
+      "time": "21:00",
+      "language": "other",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "incontro-con-angela-davis-a-seguire-the-black-power-mixtape-1967-1975",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-14",
+      "time": "17:30",
+      "language": "other",
+      "format": null,
+      "price_eur": 6,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "trainspotting",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-15",
+      "time": "16:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 6,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "v-m-18-ecco-l-impero-dei-sensi-o-v",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-15",
+      "time": "18:00",
+      "language": "ita",
+      "format": null,
+      "price_eur": 6,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
+    },
+    {
+      "film_id": "look-back",
+      "cinema_id": "cinema-godard",
+      "date": "2026-11-15",
+      "time": "20:15",
+      "language": "vos",
+      "format": null,
+      "price_eur": 8.5,
+      "price_note": "Intero €6 / ridotto €4 (under 26, over 65) base; €8,50 / €7 for selected films; the ticket does not include access to the Foundation exhibitions",
+      "booking_url": "https://www.fondazioneprada.org/cinema/"
     }
   ]
 }

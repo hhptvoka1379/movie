@@ -1,0 +1,20 @@
+{"source":"https://arlecchino.cinetecadimilano.18tickets.it/","method":"built-in browser pane (Chromium, human pace), extracted from .schedule-section-show elements in the rendered listing DOM; cookies: non-essential rejected","fetched_at":"2026-11-10","dates_covered":"2026-11-10..2026-11-15 (6-9 Nov are in the past, none listed)","rows":[
+{"date":"2026-11-10","filmId":"118782","time":"14:30","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/118782/1ca00024-a871-4fb4-8a9a-c8c01ed0d625"},
+{"date":"2026-11-10","filmId":"119411","time":"17:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/119411/94638cad-31c7-4b4d-9e2d-738fa4e94b73"},
+{"date":"2026-11-10","filmId":"120238","time":"19:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/120238/c2504c1b-aa07-4810-8ef2-a9aa4fe7567d"},
+{"date":"2026-11-10","filmId":"123865","time":"21:15","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/123865/d9c10b53-a281-43bc-83b4-932f9c3323ac"},
+{"date":"2026-11-11","filmId":"118785","time":"14:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/118785/520dff27-905b-48b1-9746-558e28e21068"},
+{"date":"2026-11-11","filmId":"120242","time":"17:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/120242/a374f3fc-47f0-40ee-bc37-ae0def730d1b"},
+{"date":"2026-11-11","filmId":"119343","time":"19:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/119343/ca7a914d-2784-4708-b6b6-d802b4d7d713"},
+{"date":"2026-11-12","filmId":"118848","time":"14:45","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/118848/0e226bbd-84e8-428a-acbc-579e70ba4b5f"},
+{"date":"2026-11-12","filmId":"120240","time":"17:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/120240/318c468e-27ee-4038-8ce8-b6a7141b28e6"},
+{"date":"2026-11-12","filmId":"119376","time":"19:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/119376/4da1556a-3246-4694-a0d9-b4d11f395a5d"},
+{"date":"2026-11-13","filmId":"118815","time":"15:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/118815/f120a8be-fbab-4b01-bbf0-bec6e953950d"},
+{"date":"2026-11-13","filmId":"120533","time":"18:30","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/120533/449df0c4-f11f-406b-b422-ae7911360289"},
+{"date":"2026-11-14","filmId":"119377","time":"17:00","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/119377/43e503bf-1940-4be0-b345-c9e27528983b"},
+{"date":"2026-11-14","filmId":"120498","time":"20:30","sala":"Piccolo Grande Cinema","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/120498/f9506f9b-49be-47dc-9d59-9a66a3d67557"},
+{"date":"2026-11-15","filmId":"58858","time":"15:00","sala":"","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/58858/b5f0b1e6-ec2d-4cb4-a0f4-6dc8a12a27eb"},
+{"date":"2026-11-15","filmId":"58858","time":"17:00","sala":"","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/58858/826c2fba-d41a-4a42-9981-806d3046722e","note":"data-time epoch maps to a different day; listed under 15 Nov by the page"},
+{"date":"2026-11-15","filmId":"120466","time":"19:00","sala":"FilmMaker Fest","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/120466/ed7e6d70-9030-44cb-a0cf-65b58e6f53db"},
+{"date":"2026-11-15","filmId":"127990","time":"21:00","sala":"FilmMaker Fest","href":"https://arlecchino.cinetecadimilano.18tickets.it/film/127990/f3506a64-c61d-4efc-ace0-dbace2562650"}
+]}
