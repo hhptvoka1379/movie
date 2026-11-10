@@ -285,6 +285,19 @@
       "dates_covered": "n/a",
       "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
       "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cineteca-milano/cinetecamilano.it__arlecchino-venue__2026-11-10_to_2026-11-13.md",
+      "url": "https://www.cinetecamilano.it/luogo/cineteca-milano-arlecchino/",
+      "fetched_at": "2026-11-10T12:25:00Z",
+      "http_status": 200,
+      "bytes": 2023,
+      "sha256": "3bfb5c0845a262d0",
+      "venue": "cineteca-arlecchino",
+      "kind": "schedule (venue page) + Fri 13 Nov masterclass anchor",
+      "dates_covered": "2026-11-10..2026-11-11 + 2026-11-13 18:30 masterclass",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
     }
   ],
   "failed_attempts": [

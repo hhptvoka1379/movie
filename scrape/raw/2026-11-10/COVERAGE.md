@@ -18,7 +18,7 @@ Legend: ✅ captured · 🟡 partial · ⬜ nothing published · ❌ gap · 🚫
 | venue (id) | 6 Fr | 7 Sa | 8 Su | 9 Mo | 10 Tu | 11 We | 12 Th | 13 **Fr** | 14 Sa | 15 Su |
 |---|---|---|---|---|---|---|---|---|---|---|
 | fondazione-prada (Cinema Godard) | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ✅ | ✅ | ✅ | ✅ |
-| cineteca-arlecchino (PGC 19) | ⬜ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ PDF cap | ❌ | ❌ |
+| cineteca-arlecchino (PGC 19) | ⬜ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 18:30 Wang Bing masterclass (PDF cap) | ❌ | ❌ |
 | cineteca-mic (PGC + Cinema da paura) | ⬜ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ 1 event | ❌ |
 | cinema-beltrade | ⬜ | ⬜ | ⬜ | ⬜ | ✅ | ✅ | ✅ | ✅ 7 titles | 🟡 cut off | 🟡 cut off |
 | cinema-san-fedele | ⬜ | ⬜ | ⬜ | ⬜ | ✅ 15.15 | ⬜ | ✅ 15.00+20.00 | ⬜ none (Tue/Thu only) | ⬜ | ⬜ |
@@ -42,7 +42,9 @@ Legend: ✅ captured · 🟡 partial · ⬜ nothing published · ❌ gap · 🚫
 Notes: **Anteo** — 18tickets exposes only a **rolling ~2-day sale window** (the date strip offers 10 and 11 Nov only),
 which is why 12–15 Nov are absent there rather than merely hidden; `?ref_date=` is accepted in links but ignored by
 the server. **UCI** — per-day grids are injected on tab click, `?date=`/`/2026-11-13`/`/api/showtimes` all 404 or
-return the 10 Nov payload. **Notorious Merlata** — weekly grid is a JS carousel; Merlata's print view 404s (Gloria's works).
+return the 10 Nov payload. **Notorious Merlata** — weekly grid is a JS carousel; Merlata's print view 404s (Gloria's works). **Arlecchino Fri 13 Nov** —
+the festival PDF extract dies at 12 Nov, but the venue page itself gives the 18:30 Wang Bing masterclass (booking link
+`arlecchino.cinetecadimilano.18tickets.it/film/120533`), so 13 Nov is no longer a bare gap for that room.
 
 ## 2. Prices (the priority)
 
