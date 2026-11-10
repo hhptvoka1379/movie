@@ -570,10 +570,11 @@ function createMap(adapter = {}) {
       markerZoomAnimation: motion
     });
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
-    L.control.zoom({ position: 'bottomleft' }).addTo(map);
+    // Leaflet stacks later bottom controls on top, so add attribution first to sit below the zoom.
     const attrib = L.control.attribution({ position: 'bottomleft', prefix: false }).addTo(map);
     attrib.addAttribution(OSM_NOTE);
     attrib.addAttribution(TMDB_NOTE);
+    L.control.zoom({ position: 'bottomleft' }).addTo(map);
     cluster = L.markerClusterGroup({
       showCoverageOnHover: false,
       spiderfyOnMaxZoom: true,
