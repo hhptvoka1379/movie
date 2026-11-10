@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T20:00:00+01:00",
+  "generated_at": "2026-11-10T12:00:00+01:00",
   "range": {
     "from": "2026-11-06",
     "to": "2026-11-15"
@@ -647,8 +647,18 @@
       "cinema": "mexico",
       "adapter": "progettolumiere",
       "status": "ok",
-      "rates": [],
-      "preserve_showing_prices": true,
+      "rates": [
+        {
+          "label": "Intero",
+          "eur": 8.5,
+          "source": "https://www.progettolumiere.it/mexico/contact.php"
+        },
+        {
+          "label": "Mercoledì feriale Intero",
+          "eur": 7,
+          "source": "https://www.progettolumiere.it/mexico/contact.php"
+        }
+      ],
       "prices_checked": true,
       "price_source": "https://www.progettolumiere.it/mexico/contact.php",
       "price_reason": null,
@@ -666,11 +676,21 @@
       "cinema": "palestrina",
       "adapter": "progettolumiere",
       "status": "ok",
-      "rates": [],
-      "preserve_showing_prices": true,
+      "rates": [
+        {
+          "label": "Intero",
+          "eur": 8.5,
+          "source": "https://www.progettolumiere.it/palestrina/contact.php"
+        },
+        {
+          "label": "Pomeridiano feriale",
+          "eur": 7,
+          "source": "https://www.progettolumiere.it/palestrina/contact.php"
+        }
+      ],
       "prices_checked": true,
       "price_source": "https://www.progettolumiere.it/palestrina/contact.php",
-      "price_reason": "weekday 18:00–19:59 cutoff between pomeridiano (€7) and intero (€8,50) not stated on contact.php",
+      "price_reason": "weekday prices: contact.php lists Intero 8,50 and Pomeridiano feriale 7,00 without stating the cutoff time, so weekday showings stay null",
       "policy": {
         "reserve": "not stated",
         "group": "not stated"
@@ -728,6 +748,30 @@
       "online_sale": null,
       "booking": null,
       "tariff_urls": null
+    },
+    "beltrade": {
+      "cinema": "beltrade",
+      "adapter": "snapshot",
+      "status": "ok",
+      "rates": [
+        {
+          "label": "Intero",
+          "eur": 8,
+          "source": "https://bandhi.it/bah/beltrade/biglietti/"
+        }
+      ],
+      "prices_checked": true,
+      "price_source": "https://bandhi.it/bah/beltrade/biglietti/",
+      "price_reason": null,
+      "policy": {
+        "reserve": "yes — by email to prenota@cinemabeltrade.net; box office sale; presale on DICE",
+        "group": "not stated"
+      },
+      "online_sale": "presale on DICE.fm (Cinema Revolution 3,50 tariff box office only)",
+      "booking": null,
+      "tariff_urls": [
+        "https://bandhi.it/bah/beltrade/biglietti/"
+      ]
     }
   }
 }
