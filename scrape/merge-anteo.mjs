@@ -66,6 +66,9 @@ for (const [id, fallback] of Object.entries(VENUES)) {
   // days, so earlier backfilled rows (and anything outside the captured days) are left exactly as they are.
   const live = new Set(incoming.map(s => s.date));
   const old = new Map(data.showings.filter(s => s.cinema_id === id && live.has(s.date)).map(s => [key(s), s]));
+  // Prices at these venues depend on day, time and format, not on the film: a new showing can borrow the price of an
+  // existing one at the same slot.
+  const slot = new Map(data.showings.filter(s => s.cinema_id === id && s.price_eur != null).map(s => [[s.date, s.time, s.format || ''].join('|'), s]));
   const fresh = new Map();   // key -> row, in capture order
 
   const seen = new Set(); let until = null, kept = 0;
@@ -80,6 +83,7 @@ for (const [id, fallback] of Object.entries(VENUES)) {
     const prev = old.get(k);
     if (prev && prev.price_eur != null) { row.price_eur = prev.price_eur; row.price_note = prev.price_note ?? null; kept++; }
     else if (PRICERS[id]) Object.assign(row, PRICERS[id](row));
+    else { const t = slot.get([row.date, row.time, row.format || ''].join('|')); if (t) { row.price_eur = t.price_eur; row.price_note = t.price_note ?? null; } }
     fresh.set(k, row);
     if (!until || row.date > until) until = row.date;
     if (!filmIdx.has(fid)) {
