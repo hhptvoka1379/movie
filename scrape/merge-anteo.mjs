@@ -62,10 +62,15 @@ for (const [id, fallback] of Object.entries(VENUES)) {
   const from = dates[0], to = dates[dates.length - 1];
   const incoming = anteoToShowings({ rows, tariffs: null }, null).filter(s => s.date >= from && s.date <= to);
 
-  const old = new Map(data.showings.filter(s => s.cinema_id === id).map(s => [key(s), s]));
+  // Only days the capture actually has programme for are replaced. The site returns an empty list for past
+  // days, so earlier backfilled rows (and anything outside the captured days) are left exactly as they are.
+  const live = new Set(incoming.map(s => s.date));
+  const old = new Map(data.showings.filter(s => s.cinema_id === id && live.has(s.date)).map(s => [key(s), s]));
   const fresh = new Map();   // key -> row, in capture order
 
   const seen = new Set(); let until = null, kept = 0;
+  const prior = data.showings.filter(s => s.cinema_id === id && !live.has(s.date)).map(s => s.date);
+  for (const d of prior) if (!until || d > until) until = d;
   for (const x of incoming) {
     const fid = normalizeTitle(String(x.title).trim());
     const row = { film_id: fid, cinema_id: id, date: x.date, time: x.time, language: x.language, format: x.format || null,
@@ -87,7 +92,7 @@ for (const [id, fallback] of Object.entries(VENUES)) {
   // drop rows the capture no longer has, append genuinely new ones at the end.
   const placed = new Set();
   data.showings = data.showings.flatMap(s => {
-    if (s.cinema_id !== id) return [s];
+    if (s.cinema_id !== id || !live.has(s.date)) return [s];
     const k = key(s), row = fresh.get(k);
     if (!row || placed.has(k)) return [];
     placed.add(k);
