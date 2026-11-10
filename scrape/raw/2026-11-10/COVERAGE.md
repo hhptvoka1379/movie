@@ -37,3 +37,10 @@ Schedule cell: `Y` = ISO date found in saved JSON/HTML (not parsed or validated)
 ## Second pass
 - Arlecchino schedule 10-15 Nov captured from the rendered 18tickets listing DOM in the built-in browser pane at human pace (file `arlecchino/18tickets_listing-dom_extract__schedule__2026-11-10_to_15.json`, 18 showtimes). Dates 6-9 Nov are in the past and not listed. The earlier curl 429s are avoided by using the already-rendered page instead of per-performance requests.
 - Arlecchino prices were already in the saved venue page; the first coverage check missed them.
+
+## Third pass (built-in browser pane, human pace; Milan city only)
+- Il Cinemino: calendar published only for Tue 10 (4 shows) and Fri 13 Nov (Balcanica, 21:30); nothing listed 11, 12, 14, 15. Prices: full 9.00 + tessera, reduced 7.00, carnets 22/35/48 (cinemino/*ingressi*).
+- Auditorium Don Bosco (Cinebazin): hours Sun 16:00, Mon/Wed/Fri 21:00; La Grazia 8-13 Nov. No price stated anywhere on the site (members' tessera).
+- Osoppo: real SdC page found (/sale-della-comunita/sala-osoppo-san-protaso); parish's own cinema page 404, parish home has no cinema link. No schedule or price: still a gap.
+- Teatro Oscar (Via Lattanzio 58, Milano): a theatre with a Cineforum menu; no film dates for 6-15 Nov found on incamminati.teatrooscar.it. Not a film venue for this window.
+- Spazio Oberdan: still 503, in LINKS-FOR-HUMAN.

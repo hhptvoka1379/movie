@@ -14,3 +14,7 @@
 ## Added in second pass
 - 18tickets (arlecchino.cinetecadimilano.18tickets.it) rate-limits: 37 of 60 per-performance requests at 1 req/s returned HTTP 429. Remaining performance pages (`/film/<id>/<uuid>`) and per-day views need a slow pass (3s+ spacing) or a manual Safari save.
 - WebTic getFullScheduling (secure.webtic.it) directly with date params: it ignores them; only 10-11 Nov exist. Not a fetch gap, the data is not published yet.
+
+- https://www.parrocchiasanprotaso.org/ (Osoppo): ask the parish or check its Facebook/bulletin for the cinema programme and price; own SalaCinema.html is a 404, root has no cinema link (tried http/https, www/non-www, SalaCinema.html, sala-cinema/, SdC listing).
+- https://www.cinetecamilano.it/luogo/spazio-oberdan/ : still 503 on retry via curl; not retried in the browser pane.
+- https://www.ilcinemino.it/programmazione/ : re-check Thu 12 Nov, only 10 and 13 Nov are published today.
