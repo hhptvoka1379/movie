@@ -228,8 +228,7 @@ async function main() {
       assert.ok(/^\d{2}:\d{2}$/.test(s.time), `bad time ${s.time}`);
       assert.ok(filmIds.has(s.film_id), `missing film ${s.film_id}`);
       if (s.price_eur !== null) {
-        // cap 30: live-event tickets (e.g. a 26 EUR concert viewing) are real prices
-        assert.ok(typeof s.price_eur === 'number' && s.price_eur >= 3 && s.price_eur <= 30, `implausible price ${s.price_eur}`);
+        assert.ok(typeof s.price_eur === 'number' && s.price_eur >= 3 && s.price_eur <= 25, `implausible price ${s.price_eur}`);
         priced++;
       }
     }
@@ -404,8 +403,7 @@ async function main() {
         const cards = await page.locator('#list .lcard').count();
         const notes = await page.locator('#list .cnote').count();
         assert.ok(cards >= 15, `expected >= 15 film cards in list view, got ${cards}`);
-        const expectedNotes = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'showtimes.json'), 'utf8')).cinemas.filter(c => c.status !== 'ok').length;
-        assert.equal(notes, expectedNotes, `expected ${expectedNotes} non-ok cinema note cards, got ${notes}`);
+        assert.equal(notes, 3, `expected 3 non-ok cinema note cards, got ${notes}`);
         await checkTapTargets(page, `${vp.label} list view`);
         await runAxe(page, `${vp.label} list view`);
         if (SHOT_DIR) await page.screenshot({ path: path.join(SHOT_DIR, `${vp.label}-05-list.png`) });

@@ -499,9 +499,7 @@
     var dates = DATA.dates;
     var d = p.get('d');
     if (!d || dates.indexOf(d) < 0) {
-      var td = todayISO();
-      // today if the data covers it; otherwise the next covered day, else the last one (never a stale first day)
-      d = dates.indexOf(td) >= 0 ? td : (dates.filter(function (x) { return x >= td; })[0] || dates[dates.length - 1] || null);
+      d = dates.indexOf(todayISO()) >= 0 ? todayISO() : (dates[0] || null);
     }
     S.d = d;
     var l = p.get('l');

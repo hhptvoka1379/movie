@@ -7,10 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "node --test tests/prices.test.mjs tests/fetch-missing-prices.test.mjs tests/fetch-prices-fast.test.mjs && node verify-prices.mjs",
+    "test": "node --test tests/prices.test.mjs tests/fetch-missing-prices.test.mjs && node verify-prices.mjs",
     "smoke": "node ../tests/smoke.mjs",
-    "prices:missing": "node fetch-missing-prices.mjs",
-    "prices:fast": "node fetch-prices-fast.mjs"
+    "prices:missing": "node fetch-missing-prices.mjs"
   },
   "keywords": [],
   "author": "",
