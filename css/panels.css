@@ -199,3 +199,6 @@
 .btn-solid[data-act="retry"], .btn-solid[data-act="reset"] { min-height: var(--tap); }
 
 /* reduced motion respected globally in app.css; nothing here animates beyond it */
+
+.empty-days { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.empty-days .btn-ghost { padding: 6px 10px; font-size: 0.756rem; }

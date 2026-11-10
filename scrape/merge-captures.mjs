@@ -6,7 +6,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { normalizeTitle, displayTitle, filmType } from './lib/normalize.mjs';
-import { anteoToShowings } from './adapters/anteo.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const RAW = path.join(HERE, 'raw/2026-11-10');
@@ -17,23 +16,7 @@ const data = JSON.parse(fs.readFileSync(DATA, 'utf8'));
 
 const venues = [];
 
-// ---- Anteo Palazzo del Cinema: per-day calendar JSON saved from the site's own endpoint --------------
-{
-  const dir = path.join(RAW, 'anteo-palazzo');
-  const rows = [];
-  for (const f of fs.readdirSync(dir).filter(x => /get-calendario/.test(x)).sort()) {
-    for (const film of JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))) for (const o of film.orari || []) rows.push({ film, o });
-  }
-  venues.push({
-    cinema: {
-      id: 'anteo-palazzo', name: 'Anteo Palazzo del Cinema', address: 'Piazza XXV Aprile 8, Milano', lat: 45.4800568, lng: 9.1877898,
-      website: 'https://www.spaziocinema.info/milano', booking_url: 'https://www.spaziocinema.info/milano',
-      source_used: 'anteo-capture',
-      notes: 'Programme from the venue\'s own calendar endpoint (spaziocinema.info/cinema/@@get-calendario), captured 10 Nov; Palazzo lists only a few shows per day after 11 Nov | Prices: not captured for this room (see the spazioCinema tariff page)',
-    },
-    showings: anteoToShowings({ rows, tariffs: null }, null),
-  });
-}
+// Anteo venues (Palazzo, CityLife, Ariosto) are merged by scrape/merge-anteo.mjs.
 
 // ---- Il Cinemino: schedule read from the rendered page (browser pane text), prices from /ingressi -----
 {
