@@ -32,6 +32,8 @@ Legend: ✅ captured · 🟡 partial · ⬜ nothing published · ❌ gap · 🚫
 | cineteatro-arcobaleno | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ✅ | ✅ |
 | arcobaleno-filmcenter | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | cinema-mexico | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| cinema-colosseo (Il Regno del Cinema) | ❌ | ❌ | ❌ | ❌ | ✅ 5 titles | ✅ 5 titles | ❌ | ❌ | ❌ | ❌ |
+| cinema-eliseo (Il Regno del Cinema) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | sala-oscar (via Lattanzio 58) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | other parish halls (Cinequattro Stella, Osoppo San Protaso, Wagner) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | uci-certosa (unlisted, possibly closed) | – | – | – | – | ❌ shell | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -58,6 +60,7 @@ return the 10 Nov payload. **Notorious Merlata** — weekly grid is a JS carouse
 | cinema-beltrade | 🟡 "From" | DICE: every performance "From €7"; *Mustang* + Kasia Smutniak (Fri 13) "From €9" | dice.fm/venue/cinema-beltrade-bd3k |
 | cineteatro-arcobaleno | ❌ | a "Prezzi Film" block exists on the programmazione page (indexed text: intero €8,00 / ridotto €5,00 / lunedì €6,50) but did not come through extraction | cinearcobaleno.com/programmazione/ |
 | sala-oscar | 🟡 municipal lead | Comune di Milano sportello page: biglietto €5,00 / ridotto under 20 €3,00, two shows each Monday 15:15 & 21:00 (that page is from a previous season — needs the sala's own tariff) | fareimpresa.comune.milano.it/web/municipio-4/-/cineforum-oscar |
+| cinema-colosseo / cinema-eliseo | ❌ | no tariff page found (`/colosseo/prezzi.php` errors); per-showtime prices not printed in the extraction | — |
 | uci-certosa, arcobaleno-filmcenter (schedules), cinema-mexico, other parish halls | ❌ | see LINKS-FOR-HUMAN.md | — |
 
 ## 3. Venues discovered / traps found
@@ -85,4 +88,8 @@ return the 10 Nov payload. **Notorious Merlata** — weekly grid is a JS carouse
 - **Cinema Beltrade's** real domain is **cinemabeltrade.net**, now inside a shared WordPress network
   `bandhi.it/bah/beltrade/`; beltrade.it is a parked register.it page.
 - **cinemamexico.it has served HTTP 500 since at least 17 Sep 2026** (Wayback shows the same ARR-OK error) — broken origin.
+- **Il Regno del Cinema** (ilregnodelcinema.com) — one of the platforms named in the brief — runs **two Milan venues**:
+  Multisala Colosseo (viale Monte Nero 84) **and Multisala Eliseo**. Careful: Milan's Eliseo (Regno del Cinema) is a
+  different house from the Rome Eliseo in circuitocinema.com's list. Its print view redirects to a generic landing, so
+  the day grid is JS-only.
 - **The Space Odeon (Duomo)** is closed for redevelopment (reopening H2 2027).

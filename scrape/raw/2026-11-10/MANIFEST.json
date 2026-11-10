@@ -259,6 +259,32 @@
       "dates_covered": "all",
       "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
       "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cinema-colosseo/ilregnodelcinema.com__schedule__2026-11-10_to_2026-11-11.md",
+      "url": "https://www.ilregnodelcinema.com/colosseo/",
+      "fetched_at": "2026-11-10T12:10:00Z",
+      "http_status": 200,
+      "bytes": 1681,
+      "sha256": "c25987f560079242",
+      "venue": "cinema-colosseo",
+      "kind": "schedule (partial: titles with rendered day-times)",
+      "dates_covered": "2026-11-10..2026-11-11",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
+    },
+    {
+      "path": "scrape/raw/2026-11-10/cinema-eliseo/ilregnodelcinema.com__venue-discovery__all.md",
+      "url": "https://www.ilregnodelcinema.com/generic/landing.php",
+      "fetched_at": "2026-11-10T12:10:00Z",
+      "http_status": 200,
+      "bytes": 753,
+      "sha256": "b409d6b02ac98aee",
+      "venue": "cinema-eliseo",
+      "kind": "venue-inventory",
+      "dates_covered": "n/a",
+      "user_agent": "platform-fetch-service-default (requested: iPhone Safari 18 UA — not settable)",
+      "representation": "text-extraction (see transport.note)"
     }
   ],
   "failed_attempts": [
@@ -417,6 +443,36 @@
       "status": "not needed",
       "venue": "fondazione-prada",
       "tried": "resolved via search to the monthly PDF, which is richer than the HTML page"
+    },
+    {
+      "url": "https://www.ilregnodelcinema.com/colosseo/printProg.php",
+      "status": "302->landing",
+      "venue": "cinema-colosseo",
+      "tried": "print view (works on Notorious Gloria, not here)"
+    },
+    {
+      "url": "https://www.ilregnodelcinema.com/colosseo/printProg.php?week=next",
+      "status": "302->landing",
+      "venue": "cinema-colosseo",
+      "tried": "next-week print view -> generic landing, no grid"
+    },
+    {
+      "url": "https://www.ilregnodelcinema.com/colosseo/prezzi.php",
+      "status": "fetch-error",
+      "venue": "cinema-colosseo",
+      "tried": "guessed tariff path (Notorious-style)"
+    },
+    {
+      "url": "https://ucicinemas.it/cinema/uci-cinemas-bicocca-milano/2026-11-13",
+      "status": 404,
+      "venue": "uci-bicocca",
+      "tried": "date as path segment"
+    },
+    {
+      "url": "https://ucicinemas.it/api/showtimes/5068?date=2026-11-13",
+      "status": 404,
+      "venue": "uci-bicocca",
+      "tried": "guessed JSON API"
     }
   ]
 }

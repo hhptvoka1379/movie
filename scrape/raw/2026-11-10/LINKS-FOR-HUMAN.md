@@ -119,6 +119,15 @@ Attempts: (1) bandhi.it/bah/beltrade/ → huge markup, current-day block only; (
   calendar is walkable per day, and Fri 13 Nov genuinely has no screening.
 - **Cinema Teatro Agnelli** ✗ NOT a Milan venue — footer: Parrocchia San Giovanni Bosco, via Paolo Sarpi 111, Torino.
 
+### 11a. Newly found, needs a human
+- **Multisala Colosseo** (viale Monte Nero 84) + **Multisala Eliseo**, both run by **Il Regno del Cinema**:
+  https://www.ilregnodelcinema.com/colosseo/ and https://www.ilregnodelcinema.com/eliseo/
+  Should contain: day grids for 6–15 Nov and the tariff. Why not fetched: this CMS renders "Scegli il giorno" by JS and
+  `printProg.php` (which works on notoriouscinemas.it/gloria) 302s to a generic landing here; `/colosseo/prezzi.php` errors.
+  Attempts: (1) /colosseo/ → only 10–11 Nov for 5 titles; (2) /colosseo/printProg.php → 302 landing;
+  (3) /colosseo/printProg.php?week=next → same; (4) /colosseo/prezzi.php → fetch error; (5) /generic/landing.php → venue
+  picker only, no day selector; (6) /generic/landing_milano.php → not a schedule page.
+
 ### 11b. Still open
 - **Sala Oscar / Cinema Teatro Oscar** (via Lattanzio 58, Milano): needs the sala's own site — the municipal page
   `fareimpresa.comune.milano.it/web/municipio-4/-/cineforum-oscar` is an older season (€5,00 / under-20 €3,00, two
