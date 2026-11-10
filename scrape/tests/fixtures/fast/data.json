@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-11-06T00:00:00.000Z",
+  "range": { "from": "2026-11-06", "to": "2026-11-15" },
+  "note": "SYNTHETIC showtimes for fetch-prices-fast tests - invented cinema, films and prices",
+  "cinemas": [ { "id": "ducale", "name": "Cinema Sintetico", "notes": "Vendita online. Tariffa intera mostrata solo dopo la scelta del posto." } ],
+  "films": [],
+  "showings": [
+    { "film_id": "film-sintetico-uno", "cinema_id": "ducale", "date": "2026-11-09", "time": "18:00", "language": "ita", "format": "2D", "price_eur": null, "booking_url": "x" },
+    { "film_id": "film-sintetico-uno", "cinema_id": "ducale", "date": "2026-11-09", "time": "21:00", "language": "ita", "format": "2D", "price_eur": null, "booking_url": "x" },
+    { "film_id": "film-sintetico-uno", "cinema_id": "ducale", "date": "2026-11-10", "time": "18:00", "language": "ita", "format": "2D", "price_eur": 6.0, "booking_url": "x" },
+    { "film_id": "film-sintetico-due", "cinema_id": "ducale", "date": "2026-11-09", "time": "18:00", "language": "vo", "format": "2D", "price_eur": null, "booking_url": "x" },
+    { "film_id": "film-sintetico-tre", "cinema_id": "ducale", "date": "2026-11-09", "time": "20:00", "language": "ita", "format": "2D", "price_eur": null, "booking_url": "x" },
+    { "film_id": "film-fantasma", "cinema_id": "ducale", "date": "2026-11-12", "time": "19:00", "language": "ita", "format": "2D", "price_eur": null, "booking_url": "x" }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+ "userdata": {
+  "StatusOk": true,
+  "Message": ""
+ },
+ "DS": {
+  "Scheduling": {
+   "Events": [
+    {
+     "EventId": 9001,
+     "Title": "Film Sintetico Uno",
+     "OriginalTitle": "Film Sintetico Uno",
+     "Year": "2026",
+     "Duration": "01:50",
+     "Is3D": false,
+     "Properties": [
+      "2D"
+     ],
+     "Days": [
+      {
+       "Day": "2026-11-09T00:00:00",
+       "Performances": [
+        {
+         "PerformanceId": 900101,
+         "Time": "18:00",
+         "Screen": "sala 1",
+         "ScreenId": 1,
+         "StartTime": "2026-11-09T18:00:00",
+         "Duration": 110.0
+        },
+        {
+         "PerformanceId": 900102,
+         "Time": "21:00",
+         "Screen": "sala 1",
+         "ScreenId": 1,
+         "StartTime": "2026-11-09T21:00:00",
+         "Duration": 110.0
+        }
+       ]
+      },
+      {
+       "Day": "2026-11-10T00:00:00",
+       "Performances": [
+        {
+         "PerformanceId": 900103,
+         "Time": "18:00",
+         "Screen": "sala 1",
+         "ScreenId": 1,
+         "StartTime": "2026-11-10T18:00:00",
+         "Duration": 110.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "EventId": 9002,
+     "Title": "Film Sintetico Due",
+     "OriginalTitle": "Film Sintetico Due",
+     "Year": "2026",
+     "Duration": "01:50",
+     "Is3D": false,
+     "Properties": [
+      "2D",
+      "O.V."
+     ],
+     "Days": [
+      {
+       "Day": "2026-11-09T00:00:00",
+       "Performances": [
+        {
+         "PerformanceId": 900201,
+         "Time": "18:00",
+         "Screen": "sala 1",
+         "ScreenId": 1,
+         "StartTime": "2026-11-09T18:00:00",
+         "Duration": 110.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "EventId": 9003,
+     "Title": "Film Sintetico Tre",
+     "OriginalTitle": "Film Sintetico Tre",
+     "Year": "2026",
+     "Duration": "01:50",
+     "Is3D": false,
+     "Properties": [
+      "2D"
+     ],
+     "Days": [
+      {
+       "Day": "2026-11-09T00:00:00",
+       "Performances": [
+        {
+         "PerformanceId": 900301,
+         "Time": "20:00",
+         "Screen": "sala 1",
+         "ScreenId": 1,
+         "StartTime": "2026-11-09T20:00:00",
+         "Duration": 110.0
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "userdata": {
+  "StatusOk": true,
+  "Message": ""
+ },
+ "DS": {
+  "Performance": {
+   "Tickets": {
+    "Sectors": [
+     {
+      "SectorId": "PT",
+      "SectorName": "PT",
+      "PriceList": [
+       {
+        "PriceOrigin": "****",
+        "PriceId": 1,
+        "PriceDescription": "RIDOTTO",
+        "PriceTypeDescription": "INTERNET RIDOTTO",
+        "SectorId": "PT",
+        "SectorName": "PLATEA",
+        "NetPrice": 5.5,
+        "ExtraPrice": 1.0,
+        "TotalPrice": 6.5
+       },
+       {
+        "PriceOrigin": "SKIN",
+        "PriceId": 1,
+        "PriceDescription": "CARD",
+        "PriceTypeDescription": "SKIN1",
+        "SectorId": "PT",
+        "SectorName": "PLATEA",
+        "NetPrice": 3,
+        "ExtraPrice": 0,
+        "TotalPrice": 3
+       }
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

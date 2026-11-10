@@ -1,0 +1,53 @@
+{
+ "userdata": {
+  "StatusOk": true,
+  "Message": ""
+ },
+ "DS": {
+  "Performance": {
+   "Tickets": {
+    "Sectors": [
+     {
+      "SectorId": "CL",
+      "SectorName": "CL",
+      "PriceList": [
+       {
+        "PriceOrigin": "****",
+        "PriceId": 1,
+        "PriceDescription": "Intero CLAS",
+        "PriceTypeDescription": "INTERNET INTERO",
+        "SectorId": "CL",
+        "SectorName": "CLASSIC",
+        "NetPrice": 5.5,
+        "ExtraPrice": 1.2,
+        "TotalPrice": 6.7
+       }
+      ]
+     },
+     {
+      "SectorId": "VP",
+      "SectorName": "VP",
+      "PriceList": [
+       {
+        "PriceOrigin": "****",
+        "PriceId": 1,
+        "PriceDescription": "Intero VIP",
+        "PriceTypeDescription": "INTERNET INTERO",
+        "SectorId": "VP",
+        "SectorName": "VIP",
+        "NetPrice": 10.5,
+        "ExtraPrice": 2.2,
+        "TotalPrice": 12.7
+       }
+      ]
+     },
+     {
+      "SectorId": "XX",
+      "SectorName": "XX",
+      "PriceList": []
+     }
+    ]
+   }
+  }
+ }
+}
