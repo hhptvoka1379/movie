@@ -7,7 +7,7 @@ Schedule cell: `Y` = ISO date found in saved JSON/HTML (not parsed or validated)
 | anteo-palazzo | Y | Y | . | Y | Y | Y | Y | Y | Y | Y | spaziocinema.info_milano__schedule__all.html |
 | arcobaleno | . | . | . | . | Y | Y | . | . | . | . | webtic_xhr_7_wtjsonservices_ashx_getLocalInfo__schedule__all.json |
 | ariosto-anteo | Y | Y | . | Y | Y | Y | Y | Y | Y | Y | spaziocinema.info_milano__schedule__all.html; spaziocinema.info_rendered__cinema_tariffe_milano_ariosto__prices__all.html |
-| arlecchino | . | Y | Y | Y | Y | Y | Y | Y | Y | Y | MISSING |
+| arlecchino | . | . | . | . | Y | Y | Y | Y | Y | Y | cinetecamilano.it_luogo_cineteca_milano_arlecchino___schedule__all.html (full 8.50, reduced 7.50/5, Thu 6.50) |
 | auditorium-don-bosco | . | . | . | . | . | . | . | Y | . | . | MISSING |
 | beltrade | . | . | . | . | Y | Y | Y | Y | Y | Y | bandhi.it_bah_beltrade_biglietti___prices__all.html |
 | centrale | . | . | . | . | Y | Y | . | . | . | . | multisalacentrale.it_rendered____prices__all.html |
@@ -33,3 +33,7 @@ Schedule cell: `Y` = ISO date found in saved JSON/HTML (not parsed or validated)
 - Newly found: Il Cinemino (ilcinemino.it), SdC Milano site (sdcmilano.it) as the Osoppo parent.
 - Beltrade (bandhi.it) fetched as static HTML; not rendered per day.
 - Not covered: Spazio Oberdan, Fondazione Prada, Cinema del Carbone, other parish halls, museum screenings.
+
+## Second pass
+- Arlecchino schedule 10-15 Nov captured from the rendered 18tickets listing DOM in the built-in browser pane at human pace (file `arlecchino/18tickets_listing-dom_extract__schedule__2026-11-10_to_15.json`, 18 showtimes). Dates 6-9 Nov are in the past and not listed. The earlier curl 429s are avoided by using the already-rendered page instead of per-performance requests.
+- Arlecchino prices were already in the saved venue page; the first coverage check missed them.
