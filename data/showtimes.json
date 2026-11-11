@@ -29,7 +29,7 @@
       "source_used": "webtic",
       "published_until": "2026-12-29",
       "status": "ok",
-      "notes": "Online sale: yes (WebTic). Reserve without paying: tickets can be reserved online, at the cinema or via app (cinenauta.it); payment terms not stated. Group policy: not stated. | Prices: WebTic page exposes no tariff endpoint without entering the purchase flow (checked isLoggedWebticAccount, getLocalInfo, getEnvironment, getFullScheduling); prices only appear after seat selection. Venue tariff page(s) tried: https://cinenauta.it/ (page states no euro amount). | Reserve without paying: yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price. | Booking link: no public per-performance URL: the WebTic SPA addresses venues by localId only."
+      "notes": "Online sale: yes (WebTic). Reserve without paying: tickets can be reserved online, at the cinema or via app (cinenauta.it); payment terms not stated. Group policy: not stated. | Prices: WebTic page exposes no tariff endpoint without entering the purchase flow (checked isLoggedWebticAccount, getLocalInfo, getEnvironment, getFullScheduling); prices only appear after seat selection. Venue tariff page(s) tried: https://cinenauta.it/ (page states no euro amount). | Reserve without paying: yes — bookings must be collected at the box office at least 30 minutes before the show; booking costs €1,00 per ticket on top of the ticket price. | Booking link: no public per-performance URL: the WebTic SPA addresses venues by localId only. | Prezzo fisso €10,50 indicato dall'utente (non verificato sul sito). MYmovies 6573 mostra solo i film di oggi e 'Acquista da € 7,79'."
     },
     {
       "id": "ariosto-anteo",
@@ -5014,8 +5014,8 @@
       "time": "15:00",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5025,8 +5025,8 @@
       "time": "15:00",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5036,8 +5036,8 @@
       "time": "15:00",
       "language": "ita",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5047,8 +5047,8 @@
       "time": "17:00",
       "language": "vos",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5058,8 +5058,8 @@
       "time": "17:10",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5069,8 +5069,8 @@
       "time": "17:10",
       "language": "ita",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5080,8 +5080,8 @@
       "time": "19:20",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5091,8 +5091,8 @@
       "time": "19:40",
       "language": "vo",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5102,8 +5102,8 @@
       "time": "19:40",
       "language": "ita",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5113,8 +5113,8 @@
       "time": "21:30",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5124,8 +5124,8 @@
       "time": "21:30",
       "language": "vos",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5135,8 +5135,8 @@
       "time": "21:40",
       "language": "ita",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5146,8 +5146,8 @@
       "time": "15:00",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5157,8 +5157,8 @@
       "time": "15:00",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5168,8 +5168,8 @@
       "time": "15:00",
       "language": "ita",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5179,8 +5179,8 @@
       "time": "17:00",
       "language": "vos",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5190,8 +5190,8 @@
       "time": "17:10",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5201,8 +5201,8 @@
       "time": "17:10",
       "language": "ita",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5212,8 +5212,8 @@
       "time": "19:20",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5223,8 +5223,8 @@
       "time": "19:40",
       "language": "vo",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5234,8 +5234,8 @@
       "time": "19:40",
       "language": "ita",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5245,8 +5245,8 @@
       "time": "21:30",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5256,8 +5256,8 @@
       "time": "21:30",
       "language": "vos",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5267,8 +5267,8 @@
       "time": "21:40",
       "language": "ita",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5278,8 +5278,8 @@
       "time": "19:00",
       "language": "vo",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5289,8 +5289,8 @@
       "time": "19:15",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5300,8 +5300,8 @@
       "time": "19:00",
       "language": "vo",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5311,8 +5311,8 @@
       "time": "19:15",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5322,8 +5322,8 @@
       "time": "19:00",
       "language": "vo",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5333,8 +5333,8 @@
       "time": "19:15",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5344,8 +5344,8 @@
       "time": "11:45",
       "language": "vo",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5355,8 +5355,8 @@
       "time": "16:00",
       "language": "vo",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5366,8 +5366,8 @@
       "time": "17:10",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5377,8 +5377,8 @@
       "time": "19:30",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5388,8 +5388,8 @@
       "time": "21:30",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5399,8 +5399,8 @@
       "time": "17:10",
       "language": "vos",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5410,8 +5410,8 @@
       "time": "19:30",
       "language": "vos",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5421,8 +5421,8 @@
       "time": "21:30",
       "language": "vos",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5432,8 +5432,8 @@
       "time": "17:10",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5443,8 +5443,8 @@
       "time": "19:30",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5454,8 +5454,8 @@
       "time": "21:30",
       "language": "ita",
       "format": "2D",
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
@@ -5465,8 +5465,8 @@
       "time": "12:45",
       "language": "vo",
       "format": null,
-      "price_eur": null,
-      "price_note": null,
+      "price_eur": 10.5,
+      "price_note": "Prezzo fisso €10,50 (indicato dall'utente). MYmovies (cinema 6573) mostra 'Acquista da € 7,79'.",
       "booking_url": "https://www.webtic.it/#/shopping?action=loadLocal&localId=5066"
     },
     {
