@@ -16,13 +16,19 @@ import { resolvePrice, ratesNote, cleanRates, coverageRow } from './lib/prices.m
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
 const CINEMAS_FILE = path.join(HERE, 'cinemas.json');
-const OUT_FILE = path.join(ROOT, 'data', 'showtimes.json');
-const MERGE_LOG = path.join(HERE, 'logs', 'merges.log');
+// Swarm mode (parallel agents, one cinema group each, never touching the real data file):
+//   SCRAPE_ONLY=id1,id2  run only these cinema ids
+//   SCRAPE_OUT=path      write the rows to this file; logs go next to it (<path>.merges.log, <path>.prices.json)
+//   SCRAPE_TO=YYYY-MM-DD last day to keep (default 2026-11-15)
+const SWARM_OUT = process.env.SCRAPE_OUT ? path.resolve(process.env.SCRAPE_OUT) : null;
+const SCRAPE_ONLY = process.env.SCRAPE_ONLY ? new Set(process.env.SCRAPE_ONLY.split(',').map(s => s.trim()).filter(Boolean)) : null;
+const OUT_FILE = SWARM_OUT || path.join(ROOT, 'data', 'showtimes.json');
+const MERGE_LOG = SWARM_OUT ? SWARM_OUT + '.merges.log' : path.join(HERE, 'logs', 'merges.log');
 const FROM = '2026-11-06';
-const TO = '2026-11-15';
+const TO = process.env.SCRAPE_TO || '2026-11-15';
 const LANGS = new Set(['ita', 'vo', 'vos', 'other']);
 const BLOCK_RE = /\b(403|429)\b|captcha|cloudflare|access denied|forbidden|too many requests|bot detection|blocked/i;
-const PRICE_EVIDENCE = path.join(HERE, 'logs', 'prices.json');
+const PRICE_EVIDENCE = SWARM_OUT ? SWARM_OUT + '.prices.json' : path.join(HERE, 'logs', 'prices.json');
 
 // --replay [dir]: rebuild a venue from a payload already captured in scrape/logs instead of
 // fetching it. Runs the whole normalization, price and coverage path offline on a machine that
@@ -212,8 +218,15 @@ if (REPLAY) console.log(`[replay] rebuilding from captured payloads in ${REPLAY_
 else if (!FORCE) await preflight();
 
 const cinemas = JSON.parse(fs.readFileSync(CINEMAS_FILE, 'utf8'));
+// Geocode the whole file first: ensureGeocoded rewrites cinemas.json, so it must never see a subset.
 const unplaced = await ensureGeocoded(cinemas, CINEMAS_FILE);
 if (unplaced.length) console.warn(`[geocode] not placed inside Milan: ${unplaced.join(', ')}`);
+if (SCRAPE_ONLY) {
+  const known = new Set(cinemas.map(c => c.id));
+  const unknown = [...SCRAPE_ONLY].filter(id => !known.has(id));
+  if (unknown.length) { console.error(`SCRAPE_ONLY has unknown ids: ${unknown.join(', ')}`); process.exit(2); }
+  cinemas.splice(0, cinemas.length, ...cinemas.filter(c => SCRAPE_ONLY.has(c.id)));
+}
 
 const generic = await loadGeneric();
 if (!generic) console.warn('[mymovies] adapters/generic.mjs not present; MyMovies cinemas marked no_schedule.');
