@@ -509,10 +509,11 @@
     }
   }
 
-  function readHash() {
+  function readHash(initial) {
     var p = new URLSearchParams(location.hash.replace(/^#/, ''));
     var dates = DATA.dates;
-    var d = p.get('d');
+    // On a fresh load the day always starts at today; a saved #d= only applies to later hash changes.
+    var d = initial ? null : p.get('d');
     if (!d || dates.indexOf(d) < 0) {
       d = dates.indexOf(todayISO()) >= 0 ? todayISO() : (dates[0] || null);
     }
@@ -675,7 +676,7 @@
       LOAD_STATE = 'ready';
       buildStrip();
       buildFormats();
-      readHash();
+      readHash(true);
       writeHash();
       render();
     }).catch(function (err) {
